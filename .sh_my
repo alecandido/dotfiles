@@ -1,0 +1,40 @@
+# ╔════════════════════════════╗
+# ║ My shellhrc further stuffs ║
+# ╚════════════════════════════╝
+
+# Mybin
+export PATH=$PATH:~/.bin
+export PATH=$PATH:~/.local/bin
+
+# Anaconda
+#source ~/anaconda3/etc/profile.d/conda.sh
+#export PATH+=:~/anaconda3/bin
+
+# PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:~/.local/lib
+export PYTHONPATH=$PYTHONPATH:~/.local/lib/python3.7/site-packages/ 
+export PYTHONPATH=$PYTHONPATH:~/.local/lib/python2.7/site-packages/
+
+# LD LIBRARY PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib/
+
+# PKG_CONFIG
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/.local/lib/pkgconfig/
+
+# ROOT
+#source /home/alessandro/projects/PDF/root-6.18.04/obj/bin/thisroot.sh
+
+# Autocompletion for aliases
+# source make-completion-wrapper.sh
+
+# Disable Suspend, enabling the forward search (Ctrl+S)
+stty -ixon
+
+export BROWSER=firefox
+export EDITOR=vim
+
+# go command
+# (https://blog.patshead.com/2011/05/my-take-on-the-go-command.html)
+
+source $HOME/.bin/go.sh
+source $HOME/.bin/vims.sh

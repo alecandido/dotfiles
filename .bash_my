@@ -1,0 +1,17 @@
+# ╔═══════════════════════════╗
+# ║ My .bashrc further stuffs ║
+# ╚═══════════════════════════╝
+
+# inter shell confs
+source $HOME/.sh_my
+
+# History of visited directories in BASH
+source ~/.bin/acd_func.sh
+
+# fasd
+source /home/alessandro/.config/fasd/bash.sh
+
+# broot
+source /home/alessandro/.config/broot/launcher/bash/br
+
+
