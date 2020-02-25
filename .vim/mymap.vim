@@ -8,3 +8,5 @@ nnoremap <S-w> :q<CR>
 nnoremap <S-s> :w<CR>
 
 inoremap òò <Esc>
+
+noremap <C-d> :call NERDComment(0,"toggle")<CR>
