@@ -38,3 +38,6 @@ export EDITOR=vim
 
 source $HOME/.bin/go.sh
 source $HOME/.bin/vims.sh
+
+# nnn settings
+source $HOME/.my/nnn

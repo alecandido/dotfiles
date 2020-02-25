@@ -1,0 +1,2 @@
+export NNN_BMS='h:~;d:~/Documents;p:~/projects'
+export NNN_OPENER='xdg-open'
