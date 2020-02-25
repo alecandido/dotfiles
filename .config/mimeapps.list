@@ -1,0 +1,36 @@
+[Added Associations]
+application/epub+zip=calibre-gui.desktop;
+application/x-extension-htm=firefox-esr.desktop;thunderbird.desktop;
+application/x-extension-html=firefox-esr.desktop;thunderbird.desktop;
+application/x-extension-shtml=firefox-esr.desktop;thunderbird.desktop;
+application/x-extension-xht=firefox-esr.desktop;thunderbird.desktop;
+application/x-extension-xhtml=firefox-esr.desktop;thunderbird.desktop;
+application/xhtml+xml=firefox-esr.desktop;thunderbird.desktop;
+attachment/json=org.kde.kate.desktop;
+image/svg+xml=inkscape.desktop;
+text/html=firefox-esr.desktop;org.kde.kate.desktop;thunderbird.desktop;
+text/markdown=org.kde.kate.desktop;chromium.desktop;
+x-scheme-handler/chrome=firefox-esr.desktop;thunderbird.desktop;
+x-scheme-handler/ftp=firefox-esr.desktop;thunderbird.desktop;
+x-scheme-handler/http=firefox-esr.desktop;thunderbird.desktop;
+x-scheme-handler/https=firefox-esr.desktop;thunderbird.desktop;
+
+[Default Applications]
+application/epub+zip=calibre-gui.desktop;
+application/x-extension-htm=firefox-esr.desktop
+application/x-extension-html=firefox-esr.desktop
+application/x-extension-shtml=firefox-esr.desktop
+application/x-extension-xht=firefox-esr.desktop
+application/x-extension-xhtml=firefox-esr.desktop
+application/xhtml+xml=firefox-esr.desktop
+image/svg+xml=inkscape.desktop;
+text/html=firefox-esr.desktop;
+text/markdown=org.kde.kate.desktop;
+x-scheme-handler/chrome=firefox-esr.desktop
+x-scheme-handler/ftp=firefox-esr.desktop
+x-scheme-handler/http=firefox-esr.desktop
+x-scheme-handler/https=firefox-esr.desktop
+x-scheme-handler/kite=kite-copilot.desktop
+application/pdf=org.pwmt.zathura.desktop
+text=vim.desktop
+application/x-tex=texstudio.desktop
