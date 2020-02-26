@@ -1,0 +1,14 @@
+# Misc 
+# to be moved into bind.mutt
+
+bind index                      ?   search-reverse
+bind index                      z   collapse-thread
+bind index                      Z   collapse-all
+#bind pager,index                d   noop
+bind pager,index                dd  delete-message
+macro index,pager c '<change-folder>?<toggle-mailboxes>' 'open a different folder'
+macro index A \
+    "<tag-pattern>~O<enter><tag-prefix><clear-flag>O<untag-pattern>.<enter>" \
+    "mark all old as read" 
+bind index,pager                r   group-reply
+

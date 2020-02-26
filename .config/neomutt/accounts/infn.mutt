@@ -1,0 +1,9 @@
+# Addresses
+
+set folder = "imaps://acandido@idefix.mi.infn.it:993"
+set smtp_url = "smtp://acandido@mboxauth.mi.infn.it:465"
+
+# Further infos
+
+set realname = "Alessandro Candido"
+set from = "alessandro.candido@mi.infn.it"
