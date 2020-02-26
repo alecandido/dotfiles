@@ -23,8 +23,10 @@ alias t='tmux'
 alias m='neomutt'
 alias mutt='neomutt'
 
+alias ipy='ipython'
 alias ipylab='ipython --pylab'
 
+alias py='python3'
 alias p3='python3'
 alias pip='python3 -m pip'
 alias pip3='python3 -m pip'

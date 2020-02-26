@@ -28,6 +28,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin for project tree
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Add NERD commenter plugin here "
+Plugin 'scrooloose/nerdcommenter'
 
 " Plugin for status bar
 Plugin 'itchyny/lightline.vim'
@@ -36,16 +38,19 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
 
 " Plugin for Python autocompletion (with jedi)
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
+
+" Plugin for autocompletion (kite)
+Plugin 'kiteco/vim-plugin'
 
 " Plugin for autocompletion
 Plugin 'Valloric/YouCompleteMe'
 
+" Plugin for python syntax check
+Plugin 'psf/black'
+
 " Add Syntastic plugin here "
 Plugin 'scrooloose/syntastic'
-
-" Add NERD commenter plugin here "
-Plugin 'scrooloose/nerdcommenter'
 
 " Fasd like file opening"
 
