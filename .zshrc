@@ -119,3 +119,5 @@ if [ -f ~/.zsh_my ]; then
     . ~/.zsh_my
 fi
 
+
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

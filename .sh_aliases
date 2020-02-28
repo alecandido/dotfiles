@@ -19,6 +19,7 @@ alias g='go'
 alias fd='fdfind'
 
 alias t='tmux'
+alias tbase='tmux attach -t base || tmux new -s base'
 
 alias m='neomutt'
 alias mutt='neomutt'
