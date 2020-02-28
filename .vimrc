@@ -3,7 +3,8 @@ filetype off                  " required
 
 let $VIM='$HOME/.vim'
 
-:source $VIM/vundle.vim
+":source $VIM/vundle.vim
+:source $VIM/plug.vim
 
 " Drop Syntastic settings at the end of the config file "
 set statusline+=%#warningmsg#
@@ -121,5 +122,6 @@ endfunction
 
 :source $VIM/ftypes.vim
 :source $VIM/my.vim
+:source $VIM/style.vim
 :source $VIM/mymap.vim
 

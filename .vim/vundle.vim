@@ -47,7 +47,7 @@ Plugin 'kiteco/vim-plugin'
 Plugin 'Valloric/YouCompleteMe'
 
 " Plugin for python syntax check
-Plugin 'psf/black'
+"Plugin 'psf/black'
 
 " Add Syntastic plugin here "
 Plugin 'scrooloose/syntastic'

@@ -3,6 +3,7 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+set -g default-terminal "tmux-256color"
 
 # -- navigation ----------------------------------------------------------------
 
@@ -295,3 +296,8 @@ tmux_conf_copy_to_os_clipboard=false
 # move status line to top
 #set -g status-position top
 
+# -- change default dir --------------------------------------------------------
+
+bind c new-window -c "#{pane_current_path}"
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
