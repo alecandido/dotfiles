@@ -1,200 +1,28 @@
 # ╔════════════╗
 # ║ My aliases ║
 # ╚════════════╝
+#
+# aliases working on most the shells
+#
+# in this file there are only the files strictly related 
+# to the os operations
 
 alias la='ls -a'
 alias ll='ls -l'
+
 #alias rm='safe-rm'
 alias rm='rm -i'
+
 alias dfree='df -h | grep -v tmpfs'
 alias sudo='sudo '
 
-# ┌────────┐
-# │programs│
-# └────────┘
-alias vi='vim'
-
-alias fd='fdfind'
-
-alias t='tmux attach -t base || tmux new -s base'
-alias tbase='tmux attach -t base || tmux new -s base'
-alias tn='tmux new'
-
-alias m='neomutt'
-alias mutt='neomutt'
-
-alias ipy='ipython'
-alias ipylab='ipython --pylab'
-
-alias py='python3'
-alias p3='python3'
-alias pip='python3 -m pip'
-alias pip3='python3 -m pip'
-alias jupyter_here='jupyter notebook --notebook-dir .'
-
-alias sass='sass --sourcemap=none'
-
-# sh utilities
-alias cal='gcal'
-
-# fasd
-alias v='f -t -e vim -b viminfo'
-c () { # cd in the dir of the file
-    cd $(dirname `fasd -i $@`)
-
-# instead of:
-# alias c='fasd -e cd' 
-}
-unalias g
-g () { # run go command
-    go `fasd -i $@`
-
-# instead of:
-# alias g='fasd -e go' 
-}
-
-## weather
-weather () {
-    # defaults
-    city="Milan"
-    format=""
-
-    while getopts ":c:o" opt; do
-        case ${opt} in
-            c ) # select city 
-                city=$OPTARG
-                ;;
-            o ) # format one line 
-                format="?format=3"
-                ;;
-            \? ) echo "Usage: cmd [-c CITY] [-o]"
-                ;;
-        esac
-    done
-    curl "wttr.in/${city}${format}"
-}
-
-# ┌────┐
-# │envs│
-# └────┘
-
-alias cact='. ~/.miniconda3/bin/activate'
-alias cdact='conda deactivate'
-
-aenv() { 
-    env_path=$(python3 ~/.bin/scripts/activate_environment.py $PWD)
-    if [ ! -z $env_path ]; then
-        source $env_path
-    fi
-}
-
-# ┌───┐
-# │ssh│
-# └───┘
-
-alias infn_grid='ssh -X acandido@gridui3.pi.infn.it'
-alias piero='ssh -X acandido@131.114.142.201'
-alias marco='ssh -X acandido@login.marconi.cineca.it'
-
-# ┌──────┐
-# │backup│
-# └──────┘
-
-alias bkp-conf="~/.bin/scripts/backup_configs.sh"
-
 # ┌──────────────┐
-# │misc functions│
+# │ more aliases │
 # └──────────────┘
 
-# See ToDo list
-alias todo='~/.mybin/ToDo.sh'
-alias plan='~/.mybin/Plan.sh'
-alias week='~/.mybin/week_plan.py'
-alias Paperopoli='~/.mybin/Paperopoli.py'
+if [ -f ~/.sh/extra.aliases ]; then
+    source ~/.sh/extra.aliases
+fi
 
-# Show term stuffs
-keys(){
-    # from arch wiki
-    xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-}
-showcolors(){
-    # select colored element
-    if [[ ! -z $1 && "$1" == "-b" ]] ; then
-        c_el=48 # colored background
-    else
-        c_el=38 # colored text
-    fi
 
-    echo "\\\033[${c_el};5;#m"
-    echo ''
 
-    for i in {0..31}; do
-        for j in {0..7}; do
-            n=$((i*8 + j))
-            padded="$n   "
-            echo -n "\033[${c_el};5;${n}m ${padded:0:3}   Ciao  \033[0m\033[38;5;255m │  "
-        done
-        echo " "
-    done
-
-    echo ''
-    echo 'reset with:'
-    echo "\\\033[0m"
-}
-
-# older funcs
-pdf_words(){
-	if [ ! -z "$2" ] && ( [ "$2" = "--char" ] || [ "$2" = "-c" ] )
-	then
-		pdftotext $1 - | wc -c
-	else
-		pdftotext $1 - | wc -w
-	fi
-}
-pdf_to_gray(){
-    if [ -f "$1" ] && [ "${1#*.}" = "pdf" ]; then
-        if [ -z "$2" ]; then
-            OUT="${1%.pdf}_gs.pdf"
-        else
-            OUT="$2"
-        fi
-		gs -o $OUT -sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.4 $1
-	else
-		echo "Invalid first argument"
-	fi
-}
-img_to_gray(){
-    exts=("png" "jpg")
-    EXT="?"
-    TEST="${1#*.}"
-    for e in "${exts[@]}"; do 
-        if [ "$e" = "$TEST" ]; then
-            EXT="$TEST"
-        fi
-    done
-    if [ -f "$1" ] && [ "$EXT" != "?"  ]; then
-        if [ -z "$2" ]; then
-            OUT="${1%.${EXT}}_gs.${EXT}"
-        else
-            OUT="$2"
-        fi
-        #echo "$OUT"
-       	convert $1 -colorspace Gray $OUT
-	else
-		echo "Invalid first argument"
-	fi
-}
-
-# ... and similar
-
-# rclone "aliases"
-rclone(){
-	x="$@"
-    if [[ ${x:0:3} == "ls " ]] && [[ ${x:3:11} != "--max-depth" ]]; then
-        command rclone ls --max-depth 1 ${x:3}
-    elif [[ ${x:0:4} == "lsl " ]] && [[ ${x:3:11} != "--max-depth" ]]; then
-        command rclone lsl --max-depth 1 
-    else
-        command rclone "$@"
-    fi
-}
