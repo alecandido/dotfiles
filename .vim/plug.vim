@@ -8,16 +8,20 @@ call plug#begin('~/.vim/plugged')
 " Defaults for .vimrc
 Plug 'tpope/vim-sensible'
 
+" Status line
+Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"integration with git gutter
+
 " Color scheme
 Plug 'junegunn/seoul256.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'whatyouhide/vim-gotham'
 
-" Status line
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
+" Git Gutter
+Plug 'airblade/vim-gitgutter'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
