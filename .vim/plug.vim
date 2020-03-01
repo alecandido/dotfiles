@@ -23,6 +23,9 @@ Plug 'whatyouhide/vim-gotham'
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
 
+" tmux
+Plug 'tmux-plugins/vim-tmux'
+
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 

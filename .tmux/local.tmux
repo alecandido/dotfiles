@@ -178,20 +178,36 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
+
+# ------------ left bar --------------------
+
+# current
 tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} |#{simple_git_status}'
-#tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %R , %d %b | #{username}#{root} | #{hostname} '
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %R , %d %b || #(curl "wttr.in/Milan?format=3") '
+# with gitmux
+#tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} |#(gitmux "#{pane_current_path}")'
+
 
 # status left style
 tmux_conf_theme_status_left_fg='#2e3440,#080808,#080808'  # black, white , white
 tmux_conf_theme_status_left_bg='#88c0d0,#81a1c1,#5e81ac'  # yellow, pink, white blue
 tmux_conf_theme_status_left_attr='bold,none,none'
 
+# ------------ right bar -------------------
+
+# current
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %a %R , %d %b || #(curl "wttr.in/Milan?format=3") '
+# with battery plugin
+#tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{battery_color_fg} #{battery_graph} #{battery_percentage} , %a %R , %d %b || #(curl "wttr.in/Milan?format=3") '
+# old  
+#tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %R , %d %b | #{username}#{root} | #{hostname} '
+
 # status right style
 tmux_conf_theme_status_right_fg='#8a8a8a,#e4e4e4,#080808' # light gray, white, black
 #tmux_conf_theme_status_right_bg='#080808,#000000,#e4e4e4' # dark gray, red, white
 tmux_conf_theme_status_right_bg='#2e3440,#81a1c1,#81a1c1' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
+
+# -------------------------------------------
 
 # pairing indicator
 tmux_conf_theme_pairing='👓 '          # U+1F453

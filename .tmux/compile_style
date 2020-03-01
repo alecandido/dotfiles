@@ -2,6 +2,11 @@
 
 # example: ./compile_style nord.style
 
+if [ -z $1 ]; then
+    echo "style file required --> nothing done"
+    exit 1
+fi
+
 ifs=$IFS
 IFSf=' '
 IFSl=' ='
