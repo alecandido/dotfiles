@@ -20,6 +20,10 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'whatyouhide/vim-gotham'
 
 
+" Sessions' plugins
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
 
