@@ -29,6 +29,7 @@ Plug 'airblade/vim-gitgutter'
 
 " tmux
 Plug 'tmux-plugins/vim-tmux'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -81,10 +82,17 @@ Plug 'lervag/vimtex'
 
 
 " Plugin for autocompletion
+Plug 'ervandew/supertab'
 Plug 'Valloric/YouCompleteMe'
 
 " Plugin for python syntax check
 Plug 'psf/black'
+
+" Track the engine.
+Plug 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 
 " Add Syntastic plugin here "
 Plug 'scrooloose/syntastic'

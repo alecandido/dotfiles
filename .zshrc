@@ -69,6 +69,14 @@ ZSH_THEME="_my_first_theme"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
+#
+# ┌───────────────┐
+# │ My zsh stuffs │
+# └───────────────┘
+
+if [ -f ~/.zsh_my ]; then
+    . ~/.zsh_my
+fi
 
 # ┌─────────────────────┐
 # │ My oh-my-zsh stuffs │
@@ -96,15 +104,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# ┌───────────────┐
-# │ My zsh stuffs │
-# └───────────────┘
-
-if [ -f ~/.zsh_my ]; then
-    . ~/.zsh_my
-fi
-
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

@@ -11,6 +11,6 @@ let $VIM='$HOME/.vim'
 
 :source $VIM/ftypes.vim
 :source $VIM/my.vim
-:source $VIM/mymap.vim
+:source $VIM/map.vim
 :source $VIM/style.vim
 
