@@ -10,6 +10,8 @@ set splitright
 set wildmenu
 set wildmode=full
 
+set noswapfile
+
 " Set tabs
 "
 filetype plugin indent on

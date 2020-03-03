@@ -2,19 +2,22 @@
 set -g @plugin 'tmux-plugins/tpm'
 
 set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-battery'
 set -g @plugin 'tmux-plugins/tmux-logging'
 set -g @plugin 'tmux-plugins/tmux-copycat' 
-#set -g @plugin 'tmux-plugins/tmux-urlview' # issues when run `tmux source-file ~/.tmux.conf`
 set -g @plugin 'tmux-plugins/tmux-open'
 set -g @plugin 'tmux-plugins/tmux-yank'
-set -g @plugin 'tmux-plugins/tmux-sessionist'
 set -g @plugin 'tmux-plugins/tmux-sidebar'
+#set -g @plugin 'tmux-plugins/tmux-battery' # currently oh-my-tmux is better
+#set -g @plugin 'tmux-plugins/tmux-urlview' # issues when run `tmux source-file ~/.tmux.conf`
+
+# vim integration
+set -g @plugin 'christoomey/vim-tmux-navigator'
 
 # sessions plugin
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @resurrect-strategy-vim 'session'
 set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/tmux-sessionist'
 
 # git plugins
 set -g @plugin 'kristijanhusak/tmux-simple-git-status'
