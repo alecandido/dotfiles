@@ -85,6 +85,16 @@ Plug 'lervag/vimtex'
 Plug 'ervandew/supertab'
 Plug 'Valloric/YouCompleteMe'
 
+" Folding
+" Plug 'tmhedberg/SimpylFold'
+" Plug 'Konfekt/FastFold'
+
+" Searching
+" Plug 'kien/ctrlp.vim'
+
+" Sublime multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
 " Plugin for python syntax check
 Plug 'psf/black'
 
