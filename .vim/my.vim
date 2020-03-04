@@ -23,9 +23,23 @@ set shiftwidth=4
 set expandtab
 
 
-" Autorun Black
-"autocmd BufWritePre *.py silent! execute ':Black'
-autocmd BufWritePre *.py execute ':Black'
+" Set folding
+"set foldmethod=indent   "fold based on indent
+set foldmethod=syntax   "fold based on syntax
+set foldnestmax=10      "deepest fold is 10 levels
+set foldlevel=2         "this is just what i use
+set nofoldenable        "dont fold by default
+
+"python with virtualenv support
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+  "project_base_dir = os.environ['VIRTUAL_ENV']
+  "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  "execfile(activate_this, dict(__file__=activate_this))
+"EOF
+
 
 "Fasd 
 "
