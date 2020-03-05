@@ -6,4 +6,5 @@ let $VIM='$HOME/.vim'
 :source $VIM/_plugins/snippets/settings.vim
 :source $VIM/_plugins/folding/settings.vim
 :source $VIM/_plugins/filebrowsing/settings.vim
+:source $VIM/_plugins/python/settings.vim
 

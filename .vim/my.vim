@@ -22,10 +22,9 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-
 " Set folding
-"set foldmethod=indent   "fold based on indent
-set foldmethod=syntax   "fold based on syntax
+set foldmethod=indent   "fold based on indent
+"set foldmethod=syntax   "fold based on syntax
 set foldnestmax=10      "deepest fold is 10 levels
 set foldlevel=2         "this is just what i use
 set nofoldenable        "dont fold by default
