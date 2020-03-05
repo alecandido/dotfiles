@@ -98,6 +98,9 @@ Plug 'terryma/vim-multiple-cursors'
 " Plugin for python syntax check
 Plug 'psf/black'
 
+" Plugin for docstring generation
+Plug 'heavenshell/vim-pydocstring'
+
 " Track the engine.
 Plug 'SirVer/ultisnips'
 

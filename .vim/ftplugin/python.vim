@@ -1,3 +1,5 @@
+" Python settings
+
 " Autorun Black
 "autocmd BufWritePre *.py silent! execute ':Black'
 autocmd BufWritePre *.py execute ':Black'
@@ -14,7 +16,8 @@ autocmd BufWritePre *.py execute ':Black'
 
 " Set encoding for python
 au BufNewFile, BufRead *.py
-    set encoding=utf-8
-    let python_highlight_all=1
-    syntax on
+    \ set encoding=utf-8
+    \ let python_highlight_all=1
+    \ syntax on
 
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4

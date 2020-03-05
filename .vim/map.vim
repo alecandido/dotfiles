@@ -6,6 +6,8 @@ nnoremap <C-n>                   :NERDTreeToggle<CR>
 nnoremap <S-w>                   :q<CR>
 nnoremap <space>                 za
 nnoremap <F9>                    :Black<CR>
+nnoremap <silent> <C-u>          <Plug>(pydocstring)
+
 
 inoremap òò                      <Esc>
 
