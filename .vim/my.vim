@@ -21,6 +21,7 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+set smarttab
 
 " Set folding
 set foldmethod=indent   "fold based on indent
