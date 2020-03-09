@@ -3,9 +3,14 @@
 
 # launched with crontab
 # once a day make it clean
-#
-# sort tmux-* and tail (or head)
-# xargs into rm
-# print a log that has run (append to a log file in this dir)
 
-fdfind | grep tmux_resurrect | sort | head -n -2 | xargs rm
+cd ~/.tmux/resurrect
+
+if [ ! -f last_clean ]; then
+  touch last_clean
+fi
+
+if [ ! -z "$(date +%F | diff last_clean -)" ]; then
+  fdfind | grep tmux_resurrect | sort | head -n -2 | xargs rm 2> /dev/null
+  date +%F > last_clean
+fi
