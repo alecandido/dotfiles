@@ -1,16 +1,12 @@
 #!/usr/bin/env sh
 # Script for cleaning old sessions
 
-# launched with crontab
+# launched with anacron 
 # once a day make it clean
 
-cd ~/.tmux/resurrect
+# anacron scheduling:
+# 1       10      tmux.clean      /home/alessandro/.tmux/resurrect/clean.sh
 
-if [ ! -f last_clean ]; then
-  touch last_clean
-fi
+cd /home/alessandro/.tmux/resurrect
 
-if [ ! -z "$(date +%F | diff last_clean -)" ]; then
-  fdfind | grep tmux_resurrect | sort | head -n -2 | xargs rm 2> /dev/null
-  date +%F > last_clean
-fi
+fdfind | grep tmux_resurrect | sort | head -n -2 | xargs rm 2> /dev/null
