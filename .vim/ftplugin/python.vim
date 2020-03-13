@@ -2,7 +2,7 @@
 
 " Autorun Black
 "autocmd BufWritePre *.py silent! execute ':Black'
-autocmd BufWritePre *.py execute ':Black'
+autocmd BufWritePre *.py execute ':silent Black'
 
 " Indent for python
 "au BufNewFile,BufRead *.py
