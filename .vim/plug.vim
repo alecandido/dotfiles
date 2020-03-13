@@ -80,6 +80,9 @@ Plug 'easymotion/vim-easymotion'
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
 
+" Plugin for HTML
+Plug 'mattn/emmet-vim'
+
 
 " Plugin for autocompletion
 Plug 'ervandew/supertab'
