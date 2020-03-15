@@ -3,7 +3,7 @@ nnoremap o                       o<Esc>
 nnoremap O                       O<Esc>
 nnoremap à                       :
 nnoremap <silent> <C-n>          :NERDTreeToggle<CR>
-nnoremap <S-w>                   :q<CR>
+"nnoremap <S-w>                   :q<CR>
 nnoremap <space>                 za
 nnoremap <silent> <F9>           :Black<CR>
 nnoremap <silent> <C-u>          <Plug>(pydocstring)
