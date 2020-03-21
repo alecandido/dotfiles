@@ -77,6 +77,12 @@ Plug 'easymotion/vim-easymotion'
 " Plugin for autocompletion (kite)
 "Plug 'kiteco/vim-plugin', { 'for': 'python' }
 
+" Typescript
+Plug 'Quramy/tsuquyomi'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'leafgarland/typescript-vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
 
