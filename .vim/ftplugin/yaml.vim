@@ -1,4 +1,4 @@
 setl foldmethod=indent
 setl nowrap
-setl softtabstop=2
-setl tabstop=2
+
+autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
