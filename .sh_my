@@ -6,6 +6,7 @@
 export PATH=$PATH:~/.bin
 export PATH=$PATH:~/.local/bin
 
+
 # Anaconda
 #source ~/anaconda3/etc/profile.d/conda.sh
 #export PATH+=:~/anaconda3/bin
@@ -14,6 +15,10 @@ export PATH=$PATH:~/.local/bin
 export PYTHONPATH=$PYTHONPATH:~/.local/lib
 export PYTHONPATH=$PYTHONPATH:~/.local/lib/python3.7/site-packages/ 
 export PYTHONPATH=$PYTHONPATH:~/.local/lib/python2.7/site-packages/
+
+# Ruby rbenv
+export PATH=$PATH:~/.rbenv/bin:~/.rbenv/shims
+eval "$(rbenv init -)"
 
 # LD LIBRARY PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib/
