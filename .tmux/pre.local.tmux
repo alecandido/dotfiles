@@ -202,7 +202,7 @@ tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_stat
 #tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %R , %d %b | #{username}#{root} | #{hostname} '
 
 # status right style
-tmux_conf_theme_status_right_fg='#8a8a8a,#e4e4e4,#{fg01}' # light gray, white, black
+tmux_conf_theme_status_right_fg='#8a8a8a,#e4e4e4,#{fg11}' # light gray, white, black
 #tmux_conf_theme_status_right_bg='#080808,#000000,#e4e4e4' # dark gray, red, white
 tmux_conf_theme_status_right_bg='#{bg11},#{bg33},#{bg33}' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
