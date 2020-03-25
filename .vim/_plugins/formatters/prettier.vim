@@ -1,5 +1,5 @@
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
+"let g:prettier#autoformat = 1
+"let g:prettier#autoformat_require_pragma = 0
 
 " Max line length that prettier will wrap on: a number or 'auto' (use
 " textwidth).
@@ -11,4 +11,5 @@ let g:prettier#config#print_width = 'auto'
 " default: 'auto'
 let g:prettier#config#tab_width = 'auto'
 
-autocmd BufWritePre *.ts *.js execute ':silent Black'
+autocmd BufWritePre *.ts,*.js,*.yml,*.yaml execute ':silent Prettier'
+
