@@ -6,8 +6,7 @@ nnoremap <silent> <C-n>          :NERDTreeToggle<CR>
 "nnoremap <S-w>                   :q<CR>
 nnoremap <expr> <space>          foldclosed('.') != -1 ? 'zO' : 'zc'
 nnoremap <silent> <F9>           :Black<CR>
-nnoremap <silent> <C-u>          <Plug>(pydocstring)
-
+"nnoremap <silent> <C-_>          :Pydocstring<CR>
 
 inoremap òò                      <Esc>
 
