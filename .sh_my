@@ -47,6 +47,9 @@ source $HOME/.bin/vims.sh
 # nnn settings
 source $HOME/.my/nnn
 
+# fasd
+eval "$(fasd --init auto)"
+
 # npm config (install user-wide, i.e. global w/o sudo)
 NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"

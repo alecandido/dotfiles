@@ -105,10 +105,10 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors'
 
 " Plugin for python syntax check
-Plug 'psf/black'
+Plug 'psf/black', {'tag': '*'}
 
 " Plugin for docstring generation
-Plug 'heavenshell/vim-pydocstring'
+Plug 'heavenshell/vim-pydocstring', {'tag': '*'}
 
 " Track the engine.
 Plug 'SirVer/ultisnips'

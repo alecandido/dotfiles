@@ -15,7 +15,7 @@ function virtualenv_info {
 }
 
 # fasd
-source /home/alessandro/.config/fasd/zsh.sh
+#source /home/alessandro/.config/fasd/zsh.sh
 
 # fzf
 
