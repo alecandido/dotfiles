@@ -77,6 +77,10 @@ Plug 'easymotion/vim-easymotion'
 " Plugin for autocompletion (kite)
 "Plug 'kiteco/vim-plugin', { 'for': 'python' }
 
+" Julia
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'AtsushiSakai/julia.vim'
+
 " Typescript
 Plug 'Quramy/tsuquyomi'
 Plug 'Quramy/vim-js-pretty-template'

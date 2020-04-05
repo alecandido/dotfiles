@@ -5,7 +5,7 @@
     ----------
     {%- for p in params %}
     {{ p.argument }} :{% if p.annotation %} {{ p.annotation }}{% endif %}
-        {{ p.argument }}
+        {{ p.argument }}{% if p.default %} (default: {{ p.default }}){% endif %}
     {%- endfor %}
 
     {% if return_type -%}
@@ -13,6 +13,14 @@
     -------
     {{ return_type }}
 
+    {% endif -%}
+    {% if exceptions %}
+    Raises
+    ------
+    {%- for e in exceptions %}
+    {{ e }}
+        description
+    {%- endfor %}
     {% endif -%}
 
     .. todo::
