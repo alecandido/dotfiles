@@ -79,7 +79,7 @@ Plug 'easymotion/vim-easymotion'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
-Plug 'AtsushiSakai/julia.vim'
+Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
 " Typescript
 Plug 'Quramy/tsuquyomi'
