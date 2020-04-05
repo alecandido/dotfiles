@@ -6,6 +6,8 @@
 #
 # part 2: continues from `.sh_aliases`
 
+alias happy='cat ~/.my/ascii_art/happy | lolcat'
+alias surprised='cat ~/.my/ascii_art/surprised_pikachu | lolcat'
 
 # ┌────────┐
 # │programs│
