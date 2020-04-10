@@ -14,21 +14,23 @@
     {{ return_type }}
 
     {% endif -%}
-    {% if yields %}
+    {%- if yields -%}
     Yields
     ------
     {%- for y in yields %}
     {{ y }}
         description
     {%- endfor %}
+
     {% endif -%}
-    {% if exceptions %}
+    {% if exceptions -%}
     Raises
     ------
     {%- for e in exceptions %}
     {{ e }}
         description
     {%- endfor %}
+
     {% endif -%}
 
 
