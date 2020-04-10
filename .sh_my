@@ -16,6 +16,9 @@ export PYTHONPATH=$PYTHONPATH:~/.local/lib
 export PYTHONPATH=$PYTHONPATH:~/.local/lib/python3.7/site-packages/ 
 export PYTHONPATH=$PYTHONPATH:~/.local/lib/python2.7/site-packages/
 
+# Julia
+export PATH=$PATH:~/.julia/julia/bin
+
 # Ruby rbenv
 export PATH=$PATH:~/.rbenv/bin:~/.rbenv/shims
 eval "$(rbenv init -)"

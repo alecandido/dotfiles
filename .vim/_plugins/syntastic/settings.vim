@@ -21,3 +21,5 @@ let g:syntastic_python_flake8_args='--ignore=E302,W504'
 "endfunction
 
 
+let g:syntastic_rst_checkers = ['sphinx']
+
