@@ -16,8 +16,6 @@ alias wifi='~/.my/wifi.sh'
 # └────────┘
 alias vi='vim'
 
-alias fd='fdfind'
-
 alias t='tmux attach -t base || tmux new -s base'
 alias tbase='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
@@ -89,6 +87,12 @@ alias bkp-conf="~/.bin/scripts/backup_configs.sh"
 # ┌──────────────┐
 # │misc functions│
 # └──────────────┘
+
+# launch app
+launch () {
+    nohup $1 > /dev/null &
+}
+
 
 # See ToDo list
 alias todo='~/.mybin/ToDo.sh'

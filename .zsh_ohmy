@@ -1,0 +1,12 @@
+# Oh my zsh configs
+
+plugins=(
+    fasd
+    git
+    zsh-syntax-highlighting
+    zsh-completions
+    zsh-autosuggestions
+    history-substring-search
+)
+
+autoload -U compinit && compinit

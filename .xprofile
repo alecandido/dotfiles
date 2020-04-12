@@ -1,0 +1,5 @@
+# bind keys and shortcuts
+xbindkeys -f ~/.xbindkeysrc
+
+# desktop configs
+source $HOME/.desktoprc
