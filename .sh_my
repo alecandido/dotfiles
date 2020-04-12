@@ -38,6 +38,9 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/.local/lib/pkgconfig/
 # Disable Suspend, enabling the forward search (Ctrl+S)
 stty -ixon
 
+# Desktoprc should be sourced at login, not by any shell
+#source $HOME/.desktoprc
+
 export BROWSER=firefox
 export EDITOR=vim
 

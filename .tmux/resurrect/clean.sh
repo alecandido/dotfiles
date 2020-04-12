@@ -9,4 +9,4 @@
 
 cd /home/alessandro/.tmux/resurrect
 
-fdfind | grep tmux_resurrect | sort | head -n -2 | xargs rm 2> /dev/null
+fd | grep tmux_resurrect | sort | head -n -2 | xargs rm 2> /dev/null
