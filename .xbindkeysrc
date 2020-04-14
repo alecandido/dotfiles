@@ -49,7 +49,7 @@
   control+alt + f
 
 "dmenu_run"
-  control+alt + m
+  Mod4 + m
 
 # Increase volume
 "pactl set-sink-volume @DEFAULT_SINK@ +1000"

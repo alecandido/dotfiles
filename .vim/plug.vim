@@ -77,6 +77,14 @@ Plug 'easymotion/vim-easymotion'
 " Plugin for autocompletion (kite)
 "Plug 'kiteco/vim-plugin', { 'for': 'python' }
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" Data
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
+
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl

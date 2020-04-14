@@ -1,5 +1,8 @@
 # bind keys and shortcuts
 xbindkeys -f ~/.xbindkeysrc
 
+# transparency support
+xcompmgr -c &
+
 # desktop configs
 source $HOME/.desktoprc
