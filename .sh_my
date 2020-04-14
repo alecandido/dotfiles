@@ -5,7 +5,7 @@
 # Mybin
 export PATH=$PATH:~/.bin
 export PATH=$PATH:~/.local/bin
-
+export PATH=$PATH:~/.local/share/flatpak/exports/bin/ #flatpak apps
 
 # Anaconda
 #source ~/anaconda3/etc/profile.d/conda.sh
@@ -28,6 +28,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib/
 
 # PKG_CONFIG
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/.local/lib/pkgconfig/
+
+# XDG
+export XDG_CONFIG_HOME=$HOME/.config
 
 # ROOT
 #source /home/alessandro/projects/PDF/root-6.18.04/obj/bin/thisroot.sh

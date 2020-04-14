@@ -4,3 +4,6 @@ setlocal spell
 setlocal textwidth=80
 " autowrap text with textwidth
 setlocal formatoptions+=t
+
+
+noremap  <silent> <C-i>          :Toc<CR>
