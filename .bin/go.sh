@@ -10,7 +10,7 @@ go() {
     else
       if [ -e "`which xdg-open`" ]; then
         if [ -n "$DISPLAY" ]; then
-          xdg-open "$1" > /dev/null
+          nohup xdg-open "$1" > /dev/null &
         else
           echo "DISPLAY not set:  xdg-open requires X11"
         fi
