@@ -1,5 +1,5 @@
 # bind keys and shortcuts
-xbindkeys -f ~/.xbindkeysrc
+xbindkeys -f $HOME/.xutils/xbindkeysrc
 
 # transparency support
 xcompmgr -c &
@@ -10,24 +10,14 @@ systemctl enable --now slock@${USER}.service
 # idle actions
 ## Only exported variables can be used within the timer's command.
 export PRIMARY_DISPLAY="$(xrandr | awk '/ primary/{print $1}')"
-## Run xidlehook
-xidlehook \
-  `# Don't lock when there's a fullscreen application` \
-  --not-when-fullscreen \
-  `# Don't lock when there's audio playing` \
-  --not-when-audio \
-  `# Dim the screen after 60 seconds, undim if user becomes active` \
-  --timer 60 \
-    'xrandr --output "$PRIMARY_DISPLAY" --brightness .1' \
-    'xrandr --output "$PRIMARY_DISPLAY" --brightness 1' \
-  `# Undim & lock after 10 more seconds` \
-  --timer 10 \
-    'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; slock' \
-    '' \
-  `# Finally, suspend 20 minutes after it locks` \
-  --timer 1200 \
-    'systemctl suspend' \
-    '' &
+## times in seconds
+export TIME_DIM=60 # inactivity time before dimmming screen
+export TIME_LOCK=10 # inactivity time before locking - after dimming
+export TIME_SUSPEND=1200 # inactivity time before suspending - after locking
+export LOCKER=slock
+. $HOME/.xutils/xidlehook
 
+# ---------------
 # desktop configs
-source $HOME/.desktoprc
+# ---------------
+. $HOME/.xdesktop/desktoprc

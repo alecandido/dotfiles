@@ -3,7 +3,7 @@
 # ╚══════════════════════════╝
 
 # inter shell confs
-source $HOME/.sh_my
+source $SH_DIR/sh_my
 
 # ====================================
 
@@ -14,20 +14,6 @@ function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
-# fasd
-#source /home/alessandro/.config/fasd/zsh.sh
-
-# fzf
-
-export FZF_COMPLETION_TRIGGER=''
-#bindkey '^\t' fzf-completion
-#bindkey '^I' $fzf_default_completion
-
-# hstr
-
-export HISTFILE=~/.zsh_history   # ensure history file visibility                                                                        
-export HSTR_CONFIG=hicolor         # get more colors
-bindkey -s "\C-r" "\eqhstr\n"  # bind hstr to Ctrl-r (for Vi mode check doc, experiment with --)  
 
 # pip zsh completion
 function _pip_completion {
@@ -40,6 +26,8 @@ function _pip_completion {
 }
 compctl -K _pip_completion /usr/bin/python3 -m pip
 
+# vim sessions script (not compatible with bash)
+source $HOME/.bin/vims.sh
 
 # ┌───┐
 # │nnn│
@@ -80,7 +68,36 @@ setopt histignorespace           # skip cmds w/ leading space from history
 export HSTR_CONFIG=hicolor       # get more colors
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
+# ╔══════╗
+# ║ Misc ║
+# ╚══════╝
+
+# ---------------
+# vim keybindings
+# ---------------
 bindkey -v
+# Use vim cli mode
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# backspace and ^h working even after
+# returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+# delete key
+bindkey '^[[3~' delete-char
+bindkey -a '^[[3~' delete-char # command mode
+
+# ctrl-w removed word backwards
+bindkey '^w' backward-kill-word
+
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+# ---------------
+# suppress shared history
+# ---------------
+unsetopt share_history
 
 # ╔══════════════════════════════════════╗
 # ║ Stuffs executed just before entering ║

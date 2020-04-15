@@ -48,13 +48,6 @@ c () { # cd in the dir of the file
 # instead of:
 # alias c='fasd -e cd' 
 }
-unalias g
-g () { # run go command
-    go `fasd -i $@`
-
-# instead of:
-# alias g='fasd -e go' 
-}
 
 # ┌────┐
 # │envs│
@@ -64,7 +57,7 @@ alias cact='. ~/.miniconda3/bin/activate'
 alias cdact='conda deactivate'
 
 aenv() { 
-    env_path=$(python3 ~/.bin/scripts/activate_environment.py $PWD)
+    env_path=$(python3 ~/.bin/activate_environment.py $PWD)
     if [ ! -z $env_path ]; then
         source $env_path
     fi

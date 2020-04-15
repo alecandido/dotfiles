@@ -51,6 +51,9 @@
 "dmenu_run"
   Mod4 + m
 
+"slock"
+  Mod4 + shift + l
+
 # Increase volume
 "pactl set-sink-volume @DEFAULT_SINK@ +1000"
    XF86AudioRaiseVolume

@@ -20,8 +20,8 @@ alias sudo='sudo '
 # │ more aliases │
 # └──────────────┘
 
-if [ -f ~/.sh/extra.aliases ]; then
-    source ~/.sh/extra.aliases
+if [ -f $SH_DIR/extra.aliases ]; then
+    . $SH_DIR/extra.aliases
 fi
 
 
