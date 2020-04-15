@@ -27,7 +27,7 @@ xidlehook \
   `# Finally, suspend 20 minutes after it locks` \
   --timer 1200 \
     'systemctl suspend' \
-    ''
+    '' &
 
 # desktop configs
 source $HOME/.desktoprc
