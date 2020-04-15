@@ -46,15 +46,13 @@ stty -ixon
 
 export BROWSER=firefox
 export EDITOR=vim
+export VISUAL=ewrap
 
 # go command
 # (https://blog.patshead.com/2011/05/my-take-on-the-go-command.html)
 
 source $HOME/.bin/go.sh
 source $HOME/.bin/vims.sh
-
-# nnn settings
-source $HOME/.my/nnn
 
 # fasd
 eval "$(fasd --init auto)"
