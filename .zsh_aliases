@@ -1,8 +1,0 @@
-# ╔═════════════════╗
-# ║ My bash aliases ║
-# ╚═════════════════╝
-
-source $HOME/.sh_aliases
-
-alias zshrc='source $HOME/.zshrc'
-

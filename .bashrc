@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Path to other zshrc files
+export SH_DIR="$HOME/.sh"
+export BASH_DIR="$SH_DIR/bash"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -97,8 +101,8 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f $BASH_DIR/bash_aliases ]; then
+    . $BASH_DIR/bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -116,7 +120,7 @@ fi
 # │ My bash stuffs │
 # └────────────────┘
 
-if [ -f ~/.bash_my ]; then
-    . ~/.bash_my
+if [ -f $BASH_DIR/bash_my ]; then
+    . $BASH_DIR/bash_my
 fi
 

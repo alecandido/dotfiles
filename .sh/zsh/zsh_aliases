@@ -1,0 +1,20 @@
+# ╔═════════════════╗
+# ║ My bash aliases ║
+# ╚═════════════════╝
+
+source $SH_DIR/sh_aliases
+
+alias zshrc='source $HOME/.zshrc'
+
+# ┌────────────┐
+# │sh utilities│
+# └────────────┘
+
+unalias g
+g () { # run go command
+    go `fasd -i $@`
+
+# instead of:
+# alias g='fasd -e go' 
+}
+

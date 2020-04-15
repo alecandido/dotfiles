@@ -1,0 +1,12 @@
+# desktop wallpaper
+feh --bg-scale $HOME/Pictures/Desktop/KIKI-Cat.jpg
+
+. $HOME/.xdesktop/dwm-bar/dwm_bar.sh
+#status-bar () {
+    #while true; do
+        #xsetroot -name "$USER - $(date -u +'%H:%M %P - %a, %d %b %Y ')"
+        #sleep 30
+    #done
+#}
+
+#status-bar &

@@ -2,7 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/alessandro/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+# Path to other zshrc files
+export SH_DIR="$HOME/.sh"
+export ZSH_DIR="$SH_DIR/zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,23 +73,27 @@ ZSH_THEME="_my_first_theme"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
 #
-# ┌───────────────┐
-# │ My zsh stuffs │
-# └───────────────┘
 
-if [ -f ~/.zsh_my ]; then
-    . ~/.zsh_my
-fi
+. $ZSH_DIR/oh-my-zsh-pre.sh
 
 # ┌─────────────────────┐
 # │ My oh-my-zsh stuffs │
 # └─────────────────────┘
 
-if [ -f ~/.zsh_ohmy ]; then
-    . ~/.zsh_ohmy
+if [ -f $ZSH_DIR/zsh_ohmy ]; then
+    . $ZSH_DIR/zsh_ohmy
 fi
 
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
+
+# ┌───────────────┐
+# │ My zsh stuffs │
+# └───────────────┘
+
+if [ -f $ZSH_DIR/zsh_my ]; then
+    . $ZSH_DIR/zsh_my
+fi
+
 
 # User configuration
 
@@ -114,8 +121,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
+if [ -f $ZSH_DIR/zsh_aliases ]; then
+    . $ZSH_DIR/zsh_aliases
 fi
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
