@@ -47,7 +47,7 @@ export SEP2=""
 status-bar () {
   while true
   do
-    xsetroot -name "$USER - $(dwm_alsa) $(dwm_backlight) - $(dwm_battery)- $(dwm_date)"
+    xsetroot -name "$USER | $(dwm_alsa) $(dwm_backlight) | $(dwm_battery)| $(dwm_date)"
     #xsetroot -name "$USER - $(dwm_date)"
       #"$(dwm_countdown)$(dwm_alarm.sh)$(dwm_transmission)$(dwm_cmus)$(dwm_mpc)$(dwm_spotify)$(dwm_resources)$(dwm_battery)$(dwm_mail)$(dwm_backlight)$(dwm_alsa)$(dwm_pulse)$(dwm_weather)$(dwm_vpn)$(dwm_networkmanager)$(dwm_keyboard)$(dwm_ccurse)$(dwm_date)"
       sleep 0.1
