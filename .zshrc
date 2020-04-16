@@ -74,7 +74,7 @@ ZSH_THEME="_my_first_theme"
 # plugins=(git)
 #
 
-. $ZSH_DIR/oh-my-zsh-pre.sh
+. $ZSH_DIR/oh-my-zsh-pre
 
 # ┌─────────────────────┐
 # │ My oh-my-zsh stuffs │
