@@ -1,6 +1,12 @@
 # This is a keynavrc file. Yours should live in 
 # $HOME/.config/keynav/keynavrc
 #
+# +-----------------------------------------------+
+# | launch with:                                  |
+# | keynav "loadconfig ~/.config/keynav/keynavrc" |
+# +-----------------------------------------------+
+# https://github.com/jordansissel/keynav/blob/master/keynav.pod
+#
 # Lines beginning with '#' are comments.
 # Format is:
 #   keysequence cmd1,cmd2,cmd3...
@@ -19,12 +25,13 @@
 # Project page; http://www.semicomplete.com/projects/keynav
 
 # Use 'clear' to blow away any previous keybindings
-#clear
+clear
 
 # Use 'daemonize' to background ourselves.
-#daemonize
+daemonize
 
-ctrl+semicolon start
+#ctrl+semicolon start
+ctrl+Insert start
 Escape end
 ctrl+bracketleft end
 h cut-left
@@ -97,7 +104,7 @@ v sh "xdotool key shift+Insert"
 
 ### Drag examples
 # Start drag holding the left mouse button
-#q drag 1
+q drag 1
 # Start drag holding middle mouse + control and shift
 #w drag 2 ctrl+shift
 # Dragging with modifiers

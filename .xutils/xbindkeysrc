@@ -40,13 +40,17 @@
 # commands:
 
 "xbindkeys_show" 
-  control+shift + q
+  control + shift + q
 
 "st"
-  control+alt + t
+  control + alt + t
+
+#"$HOME/Software/Source/st/st"
+"kbswitch"
+  Control + Insert
 
 "firefox"
-  control+alt + f
+  control + alt + f
 
 "dmenu_run"
   Mod4 + m

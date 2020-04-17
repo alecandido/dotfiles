@@ -2,11 +2,6 @@
 # ║ My .zshrc further stuffs ║
 # ╚══════════════════════════╝
 
-# inter shell confs
-source $SH_DIR/sh_my
-
-# ====================================
-
 # virtualenv prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
@@ -16,15 +11,7 @@ function virtualenv_info {
 
 
 # pip zsh completion
-function _pip_completion {
-  local words cword
-  read -Ac words
-  read -cn cword
-  reply=( $( COMP_WORDS="$words[*]" \
-             COMP_CWORD=$(( cword-1 )) \
-             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
-}
-compctl -K _pip_completion /usr/bin/python3 -m pip
+eval "$(pip completion --zsh)"
 
 # vim sessions script (not compatible with bash)
 source $HOME/.bin/vims.sh
@@ -96,15 +83,24 @@ bindkey '^N' down-history
 # returning from command mode
 bindkey '^?' backward-delete-char       # insert mode
 bindkey -a '^?' backward-delete-char    # command mode
-# delete key
-bindkey '^[[3~' delete-char             # insert mode
-bindkey -a '^[[3~' delete-char          # command mode
+# [Delete] - delete forward
+if [[ "${terminfo[kdch1]}" != "" ]]; then
+  bindkey "${terminfo[kdch1]}" delete-char      # insert mode
+  bindkey -a "${terminfo[kdch1]}" delete-char   # command mode
+else
+  bindkey "^[[3~" delete-char    	# insert mode
+  bindkey "^[3;5~" delete-char		# insert mode
+  bindkey "\e[3~" delete-char		# insert mode
+  bindkey -a "^[[3~" delete-char    # command mode
+  bindkey -a "^[3;5~" delete-char   # command mode
+  bindkey -a "\e[3~" delete-char    # command mode
+fi
 
 # MOVEMENTS
 #
 # arrows
 # [Ctrl-RightArrow]
-# [Ctrl-LeftArrow] 
+# [Ctrl-LeftArrow]
 bindkey '^[[1;5C' vi-forward-word
 bindkey '^[[1;5D' vi-backward-word-end
 bindkey -a '^[[1;5C' vi-forward-blank-word
@@ -128,12 +124,12 @@ fi
 # [Home] - Go to beginning of line
 # [End] - Go to end of line
 if [[ "${terminfo[khome]}" != "" ]]; then
-      bindkey "${terminfo[khome]}" beginning-of-line      
+      bindkey "${terminfo[khome]}" beginning-of-line
       bindkey -a "${terminfo[khome]}" beginning-of-line
 fi
 if [[ "${terminfo[kend]}" != "" ]]; then
-      bindkey "${terminfo[kend]}"  end-of-line    
-      bindkey -a "${terminfo[kend]}"  end-of-line    
+      bindkey "${terminfo[kend]}"  end-of-line
+      bindkey -a "${terminfo[kend]}"  end-of-line
 fi
 
 # [Shift-Tab] - move through the completion menu backwards

@@ -2,9 +2,10 @@
 # ║ My bash aliases ║
 # ╚═════════════════╝
 
-source $SH_DIR/sh_aliases
+alias zshrc='source $ZSH_DIR/zshrc'
 
-alias zshrc='source $HOME/.zshrc'
+# override oh my zsh
+alias la='ls -a'
 
 # ┌────────────┐
 # │sh utilities│
@@ -14,7 +15,7 @@ unalias g
 g () { # run go command
     go `fasd -i $@`
 
-# instead of:
-# alias g='fasd -e go' 
+    # instead of:
+    # alias g='fasd -e go'
 }
 

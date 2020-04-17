@@ -46,7 +46,7 @@ c () { # cd in the dir of the file
     cd $(dirname `fasd -i $@`)
 
 # instead of:
-# alias c='fasd -e cd' 
+# alias c='fasd -e cd'
 }
 
 # ┌────┐
@@ -56,7 +56,7 @@ c () { # cd in the dir of the file
 alias cact='. ~/.miniconda3/bin/activate'
 alias cdact='conda deactivate'
 
-aenv() { 
+aenv() {
     env_path=$(python3 ~/.bin/activate_environment.py $PWD)
     if [ ! -z $env_path ]; then
         source $env_path
@@ -101,10 +101,10 @@ weather () {
 
     while getopts ":c:o" opt; do
         case ${opt} in
-            c ) # select city 
+            c ) # select city
                 city=$OPTARG
                 ;;
-            o ) # format one line 
+            o ) # format one line
                 format="?format=3"
                 ;;
             \? ) echo "Usage: cmd [-c CITY] [-o]"
@@ -146,30 +146,30 @@ showcolors(){
 
 # older funcs
 pdf_words(){
-	if [ ! -z "$2" ] && ( [ "$2" = "--char" ] || [ "$2" = "-c" ] )
-	then
-		pdftotext $1 - | wc -c
-	else
-		pdftotext $1 - | wc -w
-	fi
+  if [ ! -z "$2" ] && ( [ "$2" = "--char" ] || [ "$2" = "-c" ] )
+  then
+    pdftotext $1 - | wc -c
+  else
+    pdftotext $1 - | wc -w
+  fi
 }
 pdf_to_gray(){
-    if [ -f "$1" ] && [ "${1#*.}" = "pdf" ]; then
-        if [ -z "$2" ]; then
-            OUT="${1%.pdf}_gs.pdf"
-        else
-            OUT="$2"
-        fi
-		gs -o $OUT -sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.4 $1
-	else
-		echo "Invalid first argument"
-	fi
+  if [ -f "$1" ] && [ "${1#*.}" = "pdf" ]; then
+    if [ -z "$2" ]; then
+      OUT="${1%.pdf}_gs.pdf"
+    else
+      OUT="$2"
+    fi
+    gs -o $OUT -sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.4 $1
+  else
+    echo "Invalid first argument"
+  fi
 }
 img_to_gray(){
     exts=("png" "jpg")
     EXT="?"
     TEST="${1#*.}"
-    for e in "${exts[@]}"; do 
+    for e in "${exts[@]}"; do
         if [ "$e" = "$TEST" ]; then
             EXT="$TEST"
         fi
@@ -181,21 +181,21 @@ img_to_gray(){
             OUT="$2"
         fi
         #echo "$OUT"
-       	convert $1 -colorspace Gray $OUT
-	else
-		echo "Invalid first argument"
-	fi
+        convert $1 -colorspace Gray $OUT
+  else
+    echo "Invalid first argument"
+  fi
 }
 
 # ... and similar
 
 # rclone "aliases"
 rclone(){
-	x="$@"
+  x="$@"
     if [[ ${x:0:3} == "ls " ]] && [[ ${x:3:11} != "--max-depth" ]]; then
         command rclone ls --max-depth 1 ${x:3}
     elif [[ ${x:0:4} == "lsl " ]] && [[ ${x:3:11} != "--max-depth" ]]; then
-        command rclone lsl --max-depth 1 
+        command rclone lsl --max-depth 1
     else
         command rclone "$@"
     fi

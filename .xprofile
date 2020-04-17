@@ -1,3 +1,6 @@
+# Load env vars
+. $HOME/.xutils/xenvvar
+
 # bind keys and shortcuts
 xbindkeys -f $HOME/.xutils/xbindkeysrc
 
@@ -17,7 +20,19 @@ export TIME_SUSPEND=1200 # inactivity time before suspending - after locking
 export LOCKER=slock
 . $HOME/.xutils/xidlehook
 
-# ---------------
+# -----------------
+# Mouse
+# -----------------
+# set acceleration
+# xset m 3/2 0
+xset m default
+
+# -----------------
+# Keyboard Layouts
+# -----------------
+. $HOME/.xutils/xkeyboard
+
+# -----------------
 # desktop configs
-# ---------------
+# -----------------
 . $HOME/.xdesktop/desktoprc
