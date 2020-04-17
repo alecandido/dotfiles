@@ -1,0 +1,22 @@
+# reset environment
+rm -f "${KB_LAYOUTS_DIR}/current_layout"
+rm -f "${KB_LAYOUTS_DIR}/layouts"
+
+# load keyboard layouts
+
+kb_layouts=""
+
+# 1. MY ITALIAN
+# default `it.map` customized by me
+kb_layouts="${kb_layouts}:${KB_LAYOUTS_DIR}/main_it.layout"
+# load immediately main layout
+xmodmap "${KB_LAYOUTS_DIR}/main_it.layout"
+
+# 2. MOUSE POINTER - EMULATOR
+# load mouse pointer keyboard layout only if `xkbset` available
+if xkbset > /dev/null ; then
+    xkbset m  # activate mouse buttons (from keyboard)
+    kb_layouts="${kb_layouts}:${KB_LAYOUTS_DIR}/mouse.layout"
+fi
+
+echo $kb_layouts > $KB_LAYOUTS_DIR/layouts

@@ -1,5 +1,7 @@
+. $HOME/.xdesktop/desktopenvvar
+
 # desktop wallpaper
-feh --bg-scale $HOME/Pictures/Desktop/KIKI-Cat.jpg
+feh --bg-scale $DESKTOP_BG 
 
 . $HOME/.xdesktop/dwm-bar/dwm_bar.sh
 #status-bar () {

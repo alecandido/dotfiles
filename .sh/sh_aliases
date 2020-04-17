@@ -4,7 +4,7 @@
 #
 # aliases working on most the shells
 #
-# in this file there are only the files strictly related 
+# in this file there are only the files strictly related
 # to the os operations
 
 alias la='ls -a'

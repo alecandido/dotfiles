@@ -1,0 +1,14 @@
+# ╔══════════════════════════════╗
+# ║ Configs common across shells ║
+# ╚══════════════════════════════╝
+#
+# source all files with definitions in common to all shells
+
+export SH_DIR=$HOME/.sh
+
+# load x environment variables
+. $HOME/.xutils/xenvvar
+
+. $SH_DIR/sh_my
+. $SH_DIR/sh_aliases
+
