@@ -9,7 +9,13 @@
 alias happy='cat ~/.my/ascii_art/happy | lolcat'
 alias surprised='cat ~/.my/ascii_art/surprised_pikachu | lolcat'
 
+
+# ┌──────┐
+# │system│
+# └──────┘
+
 alias wifi='~/.my/wifi.sh'
+alias mydev='mount | grep -E "/dev/sd\w[[:digit:]]*"'
 
 # ┌────────┐
 # │programs│
@@ -19,6 +25,8 @@ alias vi='vim'
 alias t='tmux attach -t base || tmux new -s base'
 alias tbase='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
+
+alias canto='canto-curses'
 
 alias m='neomutt'
 alias mutt='neomutt'

@@ -8,6 +8,9 @@ call plug#begin('~/.vim/plugged')
 " Defaults for .vimrc
 Plug 'tpope/vim-sensible'
 
+" Define your own submode
+Plug 'kana/vim-submode'
+
 " Status line
 Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'

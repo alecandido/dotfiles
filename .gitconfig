@@ -1,8 +1,8 @@
 [user]
-	name = AleCandido
-	email = candido.ale@gmail.com
+    name = AleCandido
+    email = candido.ale@gmail.com
 [core]
-	editor = vim 
+    editor = vim
 [alias]
     co = checkout
     ci = commit
