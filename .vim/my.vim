@@ -43,7 +43,7 @@ set nofoldenable        "dont fold by default
 "EOF
 
 
-"Fasd 
+"Fasd
 "
 " Z - cd to recent / frequent directories
 command! -nargs=* Z :call Z(<f-args>)

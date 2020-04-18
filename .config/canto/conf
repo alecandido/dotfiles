@@ -272,10 +272,14 @@
             "unread": 1
         },
         "config_version": 1,
+        "reader": {
+            "show_enclosures": true
+        },
         "tagorder": [
             "maintag:Giacomo Petrillo",
             "maintag:Learning Julia",
             "maintag:The Latest from Luke",
+            "maintag:tbaggery",
             "maintag:Canto",
             "maintag:Reddit"
         ]
@@ -306,6 +310,10 @@
         {
             "name": "The Latest from Luke",
             "url": "https://lukesmith.xyz/rss.xml"
+        },
+        {
+            "name": "tbaggery",
+            "url": "http://tpo.pe/feed"
         }
     ],
     "tags": {
@@ -325,6 +333,9 @@
             "collapsed": true
         },
         "maintag:The Latest from Luke": {
+            "collapsed": true
+        },
+        "maintag:tbaggery": {
             "collapsed": true
         }
     }
