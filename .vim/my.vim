@@ -1,3 +1,14 @@
+" Enable filetype recognition and specific settings
+filetype plugin on
+" check if terminal has colors
+"if &t_Co > 2
+syntax on
+
+" search
+set hlsearch         " highlight search terms
+set incsearch        " show search matches as you type
+" endif
+
 " Set line numbers style
 " shortcut: set nu rnu
 set number relativenumber
@@ -11,6 +22,25 @@ set wildmenu
 set wildmode=full
 
 set noswapfile
+
+set nocompatible	" Use Vim defaults (much better!)
+set history=50		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
+
+" modifyOtherKeys
+" the following definitions work only for xterm, in order to make it work for
+" st it should be used something else, but this will make the whole
+" configuration less portable, because dependent on the terminal emulator
+" if &term=="xterm"
+"     let &t_TI = "\<Esc>[>4;2m"
+"     let &t_TE = "\<Esc>[>4;m"
+"
+" other xterm specific settings 
+"     set t_Co=8
+"     set t_Sb=[4%dm
+"     set t_Sf=[3%dm
+" endif
+
 
 " Set tabs
 "

@@ -13,14 +13,19 @@ au BufNewFile, BufRead *.py
 " Indent for python
 setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 setlocal autoindent
-" not necessary -> Black
 " setlocal textwidth=79
+" not necessary -> Black
 
 " mappings
 " --------
 "
 "  <C-p> is "control-python"
 
+" SOURCE:
+" ------
+" source other files
+
+:source $VIM/submodes/python.vim
 
 " -------
 " PLUGINS:

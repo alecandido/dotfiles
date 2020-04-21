@@ -14,4 +14,7 @@ let $VIM='$HOME/.vim'
 :source $VIM/submodes.vim
 :source $VIM/style.vim
 
-"FileType settings have top priority, so they should overwrite everything else
+" FileType settings have top priority, so they should overwrite everything else
+" and they do
+
+
