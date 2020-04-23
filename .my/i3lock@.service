@@ -1,0 +1,21 @@
+# to be copied to /etc/systemd/system/i3lock@.service
+# enable with `sudo systemctl enable i3lock@username` (e.g. `i3lock@alessandro`)
+# add option `--now` to enable in order to make a try immediately
+
+[Unit]
+Description=Lock X session using i3lock for user %i
+
+[Service]
+User=%i
+Type=forking
+Environment=DISPLAY=:0
+# ExecStartPre executed immediately
+# use xset to suspend screen immediately, in order not to show
+# lock screen before suspending
+ExecStartPre=/usr/bin/xset dpms force suspend
+ExecStart=/home/%i/.bin/lock-screen
+
+[Install]
+WantedBy=sleep.target suspend.target
+Before=sleep.traget suspend.target
+

@@ -52,8 +52,11 @@
 "firefox"
   control + alt + f
 
-"dmenu_run"
-  Mod4 + m
+"lock-screen"
+  control + alt + l
+
+#"dmenu_run"
+  #Mod4 + m
 
 "slock"
   Mod4 + shift + l
