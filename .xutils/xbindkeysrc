@@ -52,7 +52,7 @@
 "firefox"
   control + alt + f
 
-"lock-screen"
+"$HOME/.bin/lock-screen"
   control + alt + l
 
 #"dmenu_run"

@@ -98,7 +98,7 @@ while getopts :o:pdcs:S:r:h:P:Bb flag; do
 
 			((${#rgb_values[*]} > 3)) && transparency=${rgb_values[0]}
 			rgb="${rgb_values[*]:-3}"
-			hsv=( $(~/.orw/scripts/rgb_to_hsv.py "$rgb") )
+			hsv=( $($HOME/.config/i3lock/rgb_to_hsv.py "$rgb") )
 
 			#read x y <<< $(~/.config/i3lock/windowctl.sh -p | awk '{ print $3 + ($5 - 100), $4 + ($2 - $1) }')
 			#~/.orw/scripts/set_class_geometry.sh -c image_preview -x $x -y $y

@@ -25,7 +25,9 @@ setlocal autoindent
 " ------
 " source other files
 
-:source $VIM/submodes/python.vim
+" if repeated actions not needed avoid submode, just use consistently the
+" prefix <C-p>
+":source $VIM/submodes/python.vim
 
 " -------
 " PLUGINS:
@@ -47,6 +49,9 @@ let g:pydocstring_enable_mapping = 0
 
 " Plugin mappings
 " ---------------
+"
+"  <C-p> is "control-python"
+
 nnoremap <silent> <F9>           :Black<CR>
-" control-python-comment
+" c -> comment
 nnoremap <silent> <C-p>c          :Pydocstring<CR>

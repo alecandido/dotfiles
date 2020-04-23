@@ -22,6 +22,8 @@ setlocal formatoptions+=t
 " ------
 " source other files
 
+" if repeated actions not needed avoid submode, just use consistently the
+" prefix <C-m>
 ":source $VIM/submodes/markdown.vim
 
 " -------
@@ -45,9 +47,15 @@ let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
 
+" Code
+" ----
+
 " From a SO answer
 " https://vi.stackexchange.com/questions/18079
 function s:TocToggle()
+    if index(["markdown", "qf"], &filetype) == -1
+        return
+    endif
     if get(getloclist(0, {'winid':0}), 'winid', 0)
         " the location window is open
         lclose
@@ -57,7 +65,7 @@ function s:TocToggle()
     endif
 endfunction
 
-command -buffer TocToggle call s:TocToggle()
+command TocToggle call s:TocToggle()
 
 " Plugin mappings
 " ---------------
