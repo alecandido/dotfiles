@@ -62,6 +62,23 @@ nnoremap <C-w>#                  <C-w>s#
 noremap <M-k>                    mx
 noremap <M-l>                    lmy"zy`x/<C-r>z<CR>`y
 
+" Buffers
+" -------
+"  if needed you can swap all of this commands in a submode, but don't use
+"  submodes if you don't need repeated actions
+"
+" use <C-u>, because <C-b> is the tmux prefix
+" (on the other hand <C-u> is the partner of <C-d>, that is already
+" overwritten for toggling comments)
+
+nnoremap <silent> <C-u>n         :bn<cr>
+nnoremap <silent> <C-u>p         :bp<cr>
+nnoremap <silent> <C-u>gg        :bf<cr>
+nnoremap <silent> <C-u>G         :bl<cr>
+nnoremap <silent> <C-u>l         :ls<cr>
+nnoremap <C-u>a                  :badd<space>
+" TODO: add split commands
+
 " -------
 " PLUGINS:
 " -------
