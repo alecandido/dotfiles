@@ -1,3 +1,7 @@
+#  --timer $TIME_DIM_LOCK \
+#    'xrandr --output "$PRIMARY_DISPLAY" --brightness .1' \
+#    'xrandr --output "$PRIMARY_DISPLAY" --brightness 1' \
+
 ## Run xidlehook
 xidlehook \
   `# Don't lock when there's a fullscreen application` \
@@ -10,7 +14,7 @@ xidlehook \
     'xrandr --output "$PRIMARY_DISPLAY" --brightness 1' \
   `# Undim & lock after 10 more seconds` \
   --timer $TIME_LOCK \
-    'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; $LOCKER' \
+    'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; $LOCKER;' \
     '' \
   `# Finally, suspend 20 minutes after it locks` \
   --timer $TIME_SUSPEND \
