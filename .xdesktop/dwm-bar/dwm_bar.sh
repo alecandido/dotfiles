@@ -44,7 +44,7 @@ export SEP2=""
 . "$DIR/bar-functions/dwm_date.sh"
 
 # Update dwm status bar every second
-status-bar () {
+status_bar () {
   while true
   do
     xsetroot -name "$USER | $(dwm_alsa) $(dwm_backlight) | $(dwm_battery)| $(dwm_date)"
@@ -54,4 +54,4 @@ status-bar () {
   done
 }
 
-status-bar &
+status_bar &

@@ -49,6 +49,7 @@ export BROWSER=firefox
 export EDITOR=vim
 export VISUAL=ewrap
 
+export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 # go command
 # (https://blog.patshead.com/2011/05/my-take-on-the-go-command.html)
 

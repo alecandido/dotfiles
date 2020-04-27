@@ -13,3 +13,6 @@ nmap  <silent> <C-i>              <plug>(vimtex-toc-toggle)
 let g:vimtex_complete_close_braces = 1
 
 :execute "normal \<plug>(vimtex-toc-open)"
+
+" syntastic
+"let g:syntastic_quiet_messages = { 'regex': 'possible unwanted space at "{"' }

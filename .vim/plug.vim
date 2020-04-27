@@ -7,6 +7,10 @@ call plug#begin('~/.vim/plugged')
 
 " Defaults for .vimrc
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
 
 " Define your own submode
 Plug 'kana/vim-submode'
@@ -33,6 +37,9 @@ Plug 'airblade/vim-gitgutter'
 " tmux
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
+
+" toggle location list and quickfix
+Plug 'Valloric/ListToggle'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -83,6 +90,10 @@ Plug 'easymotion/vim-easymotion'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+
+" ReStructuredText
+Plug 'gu-fan/riv.vim'
+Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
 
 " Data
 Plug 'cespare/vim-toml'

@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# launch with:
+# startx $HOME/.xutils/xinitrc_backup
+
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
+
+#xrdb -merge ~/.Xresources         # update x resources db
+
+#xscreensaver -no-splash &         # start xscreensaver daemon
+#xsetroot -cursor_name left_ptr &  # set X cursor
+#sh ~/.fehbg &                     # set background with feh
+
+export X_STARTING_FROM_XINITRC_BACKUP=true
+. $HOME/.xprofile
+xset r rate 300 50; exec dwm    # avvia il window manager
+#systemctl start dwm    # it is not working properly

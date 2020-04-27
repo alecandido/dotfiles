@@ -1,21 +1,47 @@
 # Load env vars
 . $HOME/.xutils/xenvvar
 
+# -----------------
 # bind keys and shortcuts
+# -----------------
+# good to kill other instances, but I would like to kill those related to the
+# same tty, otherwise it will kill the one running on main when using the others
+#killall xbindkeys
 xbindkeys -f $HOME/.xutils/xbindkeysrc
 
-# transparency support
-xcompmgr -c &
+# -----------------
+# Composite manager:
+# -----------------
+# - transparency support
+# - and more
+#
+# easy option: run xcompmgr
+# contra: still to figure out how disabling shadow for zoom screen sharing
+#xcompmgr -c &
+# good option: use picom
+# good to kill other instances, but I would like to kill those related to the
+# same tty, otherwise it will kill the one running on main when using the others
+#killall picom
+picom -c -b
 
+
+# -----------------
 # screen locker
-systemctl enable --now slock@${USER}.service
+# -----------------
+if [ -z "${X_STARTING_FROM_XINITRC_BACKUP+x}" ]; then
+  # if started from xinitrc_backup systemd not available
+  systemctl enable --now i3lock@${USER}.service
+fi
 
+# -----------------
 # idle actions
+# -----------------
 ## Only exported variables can be used within the timer's command.
 export PRIMARY_DISPLAY="$(xrandr | awk '/ primary/{print $1}')"
 ## times in seconds
 export TIME_DIM=60 # inactivity time before dimmming screen
 export TIME_LOCK=10 # inactivity time before locking - after dimming
+export TIME_DIM_LOCK=30 # inactivity time before locking - after dimming
 export TIME_SUSPEND=1200 # inactivity time before suspending - after locking
 export LOCKER=$HOME/.bin/lock-screen
 . $HOME/.xutils/xidlehook
