@@ -10,6 +10,8 @@
 
 export SH_DIR="$HOME/.sh"
 
+anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
   # include .bashrc if it exists

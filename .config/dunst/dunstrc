@@ -1,14 +1,14 @@
 [global]
     monitor = 0
     follow = keyboard
-    geometry = "350x5-0+24"
+    geometry = "350x5-0-50"
     indicate_hidden = yes
     shrink = yes
     transparency = 10
     notification_height = 0
     separator_height = 2
-    padding = 0
-    horizontal_padding = 8
+    padding = 20
+    horizontal_padding = 25
     frame_width = 2
     frame_color = "#434c5e"
 
@@ -24,8 +24,8 @@
     sort = yes
 
     idle_threshold = 120
-    font = Noto Sans 11 # Noto Serif 11
-    line_height = 0
+    font = Noto Sans 10 # Noto Serif 11
+    line_height = 2
     markup = full
 
     # The format of the message.  Possible variables are:
@@ -49,7 +49,7 @@
     hide_duplicate_count = true
     show_indicators = yes
     icon_position = left
-    max_icon_size = 40
+    max_icon_size = 70
     icon_path = /usr/share/icons/breeze/status/16:/usr/share/icons/breeze/devices/16:/usr/share/icons/breeze/status/symbolic
     sticky_history = yes
     history_length = 20
@@ -67,10 +67,10 @@
     per_monitor_dpi = false
 
 [shortcuts]
-    close = ctrl+space
-    close_all = ctrl+shift+space
-    history = ctrl+grave
-    context = ctrl+shift+period
+    close = ctrl+F1
+    close_all = ctrl+Escape
+    history = ctrl+F2
+    #context = ctrl+F1
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
