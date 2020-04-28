@@ -110,7 +110,7 @@ alias bkp-conf="~/.bin/scripts/backup_configs.sh"
 
 # launch app
 launch () {
-    nohup $1 > /dev/null &
+    nohup $1 > /dev/null 2>&1 &
 }
 
 

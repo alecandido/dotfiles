@@ -1,0 +1,13 @@
+#!/bin/bash
+
+killall dunst
+
+nohup dunst > /dev/null 2>&1 &
+
+notify-send "CIAO" "come va? bene e tu?" -i \
+mail-attachment-symbolic -u low; \
+notify-send "EHILA" "bla bla sadno asodi, oasdo oasdoj oaaksd, asdjojaooi" -u low; \
+notify-send "CIAO NORMAL" "bla bla sadno asodi, oasdo oasdoj oaaksd, asdjojaooi"; \
+notify-send "EHILA" "bla bla sadno asodi, oasdo oasdoj oaaksd, asdjojaooi"; \
+notify-send "CIAO CRITICAL" "come va? bene e tu? asdoajojoa asodjoia asodno" \
+-i mail-attachment-symbolic -u critical
