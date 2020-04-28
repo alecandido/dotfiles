@@ -12,3 +12,6 @@ feh --bg-scale $DESKTOP_BG
 #}
 
 #status-bar &
+
+# notifications
+dunst &

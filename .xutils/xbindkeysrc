@@ -52,6 +52,9 @@
 "firefox"
   control + alt + f
 
+"nautilus"
+  control + alt + h
+
 "$HOME/.bin/lock-screen"
   control + alt + l
 
