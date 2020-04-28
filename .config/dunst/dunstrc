@@ -4,13 +4,13 @@
     geometry = "350x5-0+24"
     indicate_hidden = yes
     shrink = yes
-    transparency = 20
+    transparency = 10
     notification_height = 0
     separator_height = 2
     padding = 0
     horizontal_padding = 8
-    frame_width = 3
-    frame_color = "#282828"
+    frame_width = 2
+    frame_color = "#434c5e"
 
     # Define a color for the separator.
     # possible values are:
@@ -24,7 +24,7 @@
     sort = yes
 
     idle_threshold = 120
-    font = Monospace 14
+    font = Noto Sans 11 # Noto Serif 11
     line_height = 0
     markup = full
 
@@ -50,7 +50,7 @@
     show_indicators = yes
     icon_position = left
     max_icon_size = 40
-    #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/Adwaita/256x256/status/
+    icon_path = /usr/share/icons/breeze/status/16:/usr/share/icons/breeze/devices/16:/usr/share/icons/breeze/status/symbolic
     sticky_history = yes
     history_length = 20
     dmenu = /usr/bin/dmenu -p dunst:
@@ -76,20 +76,20 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#282828"
-    foreground = "#928374"
+    foreground = "#a4a8b0"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#458588"
-    foreground = "#ebdbb2"
+    background = "#2e3440"
+    foreground = "#d8dee9"
     timeout = 5
 
 [urgency_critical]
-    background = "#cc2421"
-    foreground = "#ebdbb2"
-    frame_color = "#fabd2f"
+    background = "#81a1c1"
+    foreground = "#2e3440"
+    frame_color = "#434c5e"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules to

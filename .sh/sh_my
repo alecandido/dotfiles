@@ -45,9 +45,13 @@ stty -ixon
 # Desktoprc should be sourced at login, not by any shell
 #source $HOME/.desktoprc
 
+export SHELL=zsh
+export PAGER=less # most is too strange to use it as default pager
 export BROWSER=firefox
 export EDITOR=vim
-export VISUAL=ewrap
+export VISUAL=vim
+
+export FILEMANAGER=nautilus
 
 export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 # go command
