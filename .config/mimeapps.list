@@ -15,6 +15,7 @@ x-scheme-handler/chrome=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/ftp=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/http=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/https=firefox.desktop;thunderbird.desktop;
+x-scheme-handler/terminal=st.desktop
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
@@ -33,6 +34,7 @@ text=vim.desktop
 text/html=firefox.desktop
 text/markdown=vim.desktop;
 text/plain=vim.desktop
+text/x-python=vim.desktop
 x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/ferdi=ferdi.desktop
 x-scheme-handler/ftp=firefox.desktop
