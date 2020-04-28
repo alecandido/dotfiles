@@ -50,7 +50,7 @@
     show_indicators = yes
     icon_position = left
     max_icon_size = 70
-    icon_path = /usr/share/icons/breeze/status/16:/usr/share/icons/breeze/devices/16:/usr/share/icons/breeze/status/symbolic
+    icon_path = /usr/share/icons/breeze-dark/status/16:/usr/share/icons/breeze-dark/devices/16:/usr/share/icons/breeze-dark/status/symbolic
     sticky_history = yes
     history_length = 20
     dmenu = /usr/bin/dmenu -p dunst:
