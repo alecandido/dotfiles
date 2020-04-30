@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+import pathlib
+import argparse
+
+from jinja2 import Environment, FileSystemLoader
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-n', '--name', type=str, default="env", help="environment name")
+args = parser.parse_args()
+
+here = pathlib.Path(__file__).parent.absolute()
+env = Environment(loader=FileSystemLoader(str(here)))
+
+pwd = pathlib.Path.cwd()
+data = dict(pwd=str(pwd), env_name=args.name)
+
+venv_this = env.get_template("venv_this")
+stream = venv_this.stream(data)
+stream.dump(str(pwd / ".venv_this"))
+
+
