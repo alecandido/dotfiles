@@ -86,7 +86,7 @@ alias cdact='conda deactivate'
 aenv() {
     env_path=$(python3 ~/.bin/activate_environment.py $PWD)
     if [ ! -z $env_path ]; then
-        source $env_path
+        . $env_path
     fi
 }
 
