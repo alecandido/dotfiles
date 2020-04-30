@@ -3,6 +3,7 @@
 augroup filetypedetect
 au BufNewFile,BufRead *.txt			setf text
 au BufNewFile,BufRead *.yml			setf yaml
+au BufNewFile,BufRead *.bib			setf bibtex
 
 " Shell init files
 au BufNewFile,BufRead bashrc        setf bash
