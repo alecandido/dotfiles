@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Tint2 Menu
+Comment=Tint2 Menu Hack
+X-GNOME-FullName=Tint2 Menu
+Exec=xdotool key F2
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/alessandro/.icons/menu.png
+Categories=Menu;
+MimeType=
+StartupNotify=true
