@@ -61,4 +61,4 @@ xset m default
 # -----------------
 # desktop configs
 # -----------------
-. $HOME/.xdesktop/desktoprc
+. $HOME/.xutils/desktoprc

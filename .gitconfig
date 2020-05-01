@@ -75,6 +75,9 @@
     # new repo
     shallow = clone --depth 1
 
+    # tag
+    pytag = !git tag -a v$(python setup.py --version) -m
+
     # revert
     undo = reset --soft --keep HEAD^
     unstage = reset HEAD --
@@ -103,6 +106,8 @@
     fd = !git ls-files | grep -i
     find = !git ls-files | grep -i
     gr = grep
+    rg = "!git grep $1 `git show-ref --heads` #"
+    ;rg = "!echo $1; echo ciao;#"
 
     # info
     type = cat-file -t

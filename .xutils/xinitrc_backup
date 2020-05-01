@@ -18,5 +18,5 @@ fi
 
 export X_STARTING_FROM_XINITRC_BACKUP=true
 . $HOME/.xprofile
-xset r rate 300 50; exec dwm    # avvia il window manager
-#systemctl start dwm    # it is not working properly
+#xset r rate 300 50; exec dwm    # avvia il window manager
+xset r rate 300 50; exec awesome    # avvia il window manager
