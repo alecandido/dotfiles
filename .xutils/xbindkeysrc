@@ -39,10 +39,10 @@
 
 # commands:
 
-"xbindkeys_show"
-  control + shift + q
+#"xbindkeys_show"
+  #control + shift + q
 
-"st"
+"kitty"
   control + alt + t
 
 #"$HOME/Software/Source/st/st"
@@ -55,34 +55,34 @@
 "nautilus"
   control + alt + h
 
-"$HOME/.bin/lock-screen"
-  control + alt + l
+#"$HOME/.bin/lock-screen"
+  #control + alt + l
 
 #"dmenu_run"
   #Mod4 + m
 
-"slock"
-  Mod4 + shift + l
+#"slock"
+  #Mod4 + shift + l
 
 # Increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +1000"
-   XF86AudioRaiseVolume
+#"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+   #XF86AudioRaiseVolume
 
-# Decrease volume
-"pactl set-sink-volume @DEFAULT_SINK@ -1000"
-   XF86AudioLowerVolume
+## Decrease volume
+#"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+   #XF86AudioLowerVolume
 
-# Mute volume
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
-   XF86AudioMute
+## Mute volume
+#"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+   #XF86AudioMute
 
-# Increase backlight
-"xbacklight -inc 3"
-   XF86MonBrightnessUp
+## Increase backlight
+#"xbacklight -inc 3"
+   #XF86MonBrightnessUp
 
-# Decrease backlight
-"xbacklight -dec 3"
-   XF86MonBrightnessDown
+## Decrease backlight
+#"xbacklight -dec 3"
+   #XF86MonBrightnessDown
 
 
 

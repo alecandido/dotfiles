@@ -28,10 +28,10 @@ picom -c -b
 # -----------------
 # screen locker
 # -----------------
-if [ -z "${X_STARTING_FROM_XINITRC_BACKUP+x}" ]; then
-  # if started from xinitrc_backup systemd not available
-  systemctl enable --now i3lock@${USER}.service
-fi
+# if [ -z "${X_STARTING_FROM_XINITRC_BACKUP+x}" ]; then
+#   # if started from xinitrc_backup systemd not available
+#   systemctl enable --now i3lock@${USER}.service
+# fi
 
 # -----------------
 # idle actions
@@ -44,7 +44,7 @@ export TIME_LOCK=10 # inactivity time before locking - after dimming
 export TIME_DIM_LOCK=30 # inactivity time before locking - after dimming
 export TIME_SUSPEND=1200 # inactivity time before suspending - after locking
 export LOCKER=$HOME/.bin/lock-screen
-. $HOME/.xutils/xidlehook
+#. $HOME/.xutils/xidlehook
 
 # -----------------
 # Mouse

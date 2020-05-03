@@ -95,6 +95,9 @@ fi
 if [ -f $ZSH_DIR/zsh_my ]; then
     . $ZSH_DIR/zsh_my
 fi
+if [ -f $ZSH_DIR/zsh_keys ]; then
+    . $ZSH_DIR/zsh_keys
+fi
 
 
 # User configuration

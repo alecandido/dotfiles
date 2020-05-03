@@ -8,6 +8,10 @@
 
 alias happy='cat ~/.my/ascii_art/happy | lolcat'
 alias surprised='cat ~/.my/ascii_art/surprised_pikachu | lolcat'
+alias knf='neofetch --kitty'
+alias knf-profile='neofetch --kitty ~/.face.icon'
+alias kittynf='neofetch --kitty ~/Pictures/Desktop/KIKI-Cat.jpg --crop_mode fill'
+alias star-wars='telnet towel.blinkenlights.nl'
 
 
 # ┌──────┐
@@ -22,6 +26,8 @@ win-info () {
   /^WM_NAME/{sub(/.* =/, "title:"); print}
   '
 }
+alias current-term='ps -p $(ps -p $$ -o ppid=) o args='
+alias test-color='sh -c "$(curl -fsSL https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh)"'
 
 # ┌──────┐
 # │pacman│
@@ -37,6 +43,9 @@ alias vi='vim'
 alias t='tmux attach -t base || tmux new -s base'
 alias tbase='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
+
+alias kcat="kitty +kitten icat"
+alias kdiff="kitty +kitten diff"
 
 alias canto='canto-curses'
 
