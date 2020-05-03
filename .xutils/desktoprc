@@ -1,7 +1,8 @@
 . $HOME/.xutils/desktopenvvar
 
 # desktop wallpaper
-feh --bg-scale $DESKTOP_BG
+# TODO:
+#feh --bg-scale $DESKTOP_BG
 
 #. $HOME/.xutils/dwm-bar/dwm_bar.sh
 #status-bar () {
@@ -14,4 +15,4 @@ feh --bg-scale $DESKTOP_BG
 #status-bar &
 
 # notifications
-dunst &
+#dunst &

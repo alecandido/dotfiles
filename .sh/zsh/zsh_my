@@ -71,82 +71,20 @@ fi
 # ║ Misc ║
 # ╚══════╝
 
-# ---------------
-# vim keybindings
-# ---------------
-bindkey -v
-# Use vim cli mode
-bindkey '^P' up-history
-bindkey '^N' down-history
-
-# backspace working even after
-# returning from command mode
-bindkey '^?' backward-delete-char       # insert mode
-bindkey -a '^?' backward-delete-char    # command mode
-# [Delete] - delete forward
-if [[ "${terminfo[kdch1]}" != "" ]]; then
-  bindkey "${terminfo[kdch1]}" delete-char      # insert mode
-  bindkey -a "${terminfo[kdch1]}" delete-char   # command mode
-else
-  bindkey "^[[3~" delete-char    	# insert mode
-  bindkey "^[3;5~" delete-char		# insert mode
-  bindkey "\e[3~" delete-char		# insert mode
-  bindkey -a "^[[3~" delete-char    # command mode
-  bindkey -a "^[3;5~" delete-char   # command mode
-  bindkey -a "\e[3~" delete-char    # command mode
-fi
-
-# MOVEMENTS
-#
-# arrows
-# [Ctrl-RightArrow]
-# [Ctrl-LeftArrow]
-bindkey '^[[1;5C' vi-forward-word
-bindkey '^[[1;5D' vi-backward-word-end
-bindkey -a '^[[1;5C' vi-forward-blank-word
-bindkey -a '^[[1;5D' vi-backward-blank-word-end
-
-
-# start typing + [Up-Arrow] - fuzzy find history forward
-if [[ "${terminfo[kcuu1]}" != "" ]]; then
-  autoload -U up-line-or-beginning-search
-  zle -N up-line-or-beginning-search
-  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-fi
-# start typing + [Down-Arrow] - fuzzy find history backward
-if [[ "${terminfo[kcud1]}" != "" ]]; then
-  autoload -U down-line-or-beginning-search
-  zle -N down-line-or-beginning-search
-  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-fi
-
-# other
-# [Home] - Go to beginning of line
-# [End] - Go to end of line
-if [[ "${terminfo[khome]}" != "" ]]; then
-      bindkey "${terminfo[khome]}" beginning-of-line
-      bindkey -a "${terminfo[khome]}" beginning-of-line
-fi
-if [[ "${terminfo[kend]}" != "" ]]; then
-      bindkey "${terminfo[kend]}"  end-of-line
-      bindkey -a "${terminfo[kend]}"  end-of-line
-fi
-
-# [Shift-Tab] - move through the completion menu backwards
-if [[ "${terminfo[kcbt]}" != "" ]]; then
-  bindkey "${terminfo[kcbt]}" reverse-menu-complete
-fi
-
-# ctrl-w removed word backwards
-bindkey '^w' backward-kill-word
-
-# ctrl-r starts searching history backward
-bindkey '^r' history-incremental-search-backward
 
 # ---------------
 # suppress shared history
 # ---------------
 unsetopt share_history
+
+# ---------------
+# screensaver
+# ---------------
+TMOUT=120
+
+TRAPALRM() {
+    cmatrix -s
+}
 
 # ╔══════════════════════════════════════╗
 # ║ Stuffs executed just before entering ║
