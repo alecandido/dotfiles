@@ -39,6 +39,8 @@ alias autoremove='pacman -Rs $(pacman -Qtdq)'
 # │programs│
 # └────────┘
 alias vi='vim'
+alias vimexec='vim -i NONE -u NORC -U NONE -nNES'
+alias ve=vimexec
 
 alias t='tmux attach -t base || tmux new -s base'
 alias tbase='tmux attach -t base || tmux new -s base'

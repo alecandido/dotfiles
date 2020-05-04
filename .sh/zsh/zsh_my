@@ -80,7 +80,7 @@ unsetopt share_history
 # ---------------
 # screensaver
 # ---------------
-TMOUT=120
+TMOUT=300
 
 TRAPALRM() {
     cmatrix -s
