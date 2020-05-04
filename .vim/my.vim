@@ -31,15 +31,24 @@ set ruler		" show the cursor position all the time
 " the following definitions work only for xterm, in order to make it work for
 " st it should be used something else, but this will make the whole
 " configuration less portable, because dependent on the terminal emulator
-" if &term=="xterm"
-"     let &t_TI = "\<Esc>[>4;2m"
-"     let &t_TE = "\<Esc>[>4;m"
-"
-" other xterm specific settings 
-"     set t_Co=8
-"     set t_Sb=[4%dm
-"     set t_Sf=[3%dm
-" endif
+if &term == "xterm"
+  let &t_TI = "\<Esc>[>4;2m"
+  let &t_TE = "\<Esc>[>4;m"
+" other xterm specific settings
+    "set t_Co=8
+    "set t_Sb=[4%dm
+    "set t_Sf=[3%dm
+" 256 colors
+    "set t_Co=256
+    "set t_AB=^"[[48;5;%dm
+    "set t_AF=^"[[38;5;%dm
+elseif &term == "kitty"
+  "let &t_TI = "<Esc>[?2017h<Esc>"
+  "let &t_TE = "<Esc>[?2017l<Esc>"
+endif
+" suggested test
+"imap <C-[> [[[
+"imap <C-{> {{{
 
 
 " Set tabs
