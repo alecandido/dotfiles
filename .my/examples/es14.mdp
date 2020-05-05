@@ -1,0 +1,21 @@
+---
+documentclass: standalone
+classoption:
+  - preview
+  - border=20pt
+header-includes: |
+   \usepackage{physics}
+   \newcommand{\bps}{\bra{\psi}}
+   \newcommand{\kph}{\ket{\phi}}
+---
+<!--compile with:-->
+<!--pandoc -s -o es14.pdf es14.md-->
+
+# Esercizio 14
+\begin{align}
+  \bps  \hat{p} \hat{x}^n \kph &= -i\hbar\int \dd x \dd y \dd z ~\psi^*(z)
+  \delta(y-z) \dv{y} x^n \delta(x-y) \phi(x) \\
+  &= -i\hbar\int \dd x \dd y ~\psi^*(y) \dv{y} x^n \delta(x-y) \phi(x) \\
+  &= -i\hbar\int \dd y ~\psi^*(y) \dv{y} \int \dd x \left[x^n \delta(x-y) \phi(x)\right] \\
+  &= -i\hbar\int \dd y ~\psi^*(y) \dv{y} \left[y^n \phi(y) \right]
+\end{align}

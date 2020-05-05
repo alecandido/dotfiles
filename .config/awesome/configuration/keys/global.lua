@@ -174,42 +174,42 @@ local globalKeys = awful.util.table.join(
         {},
         'XF86MonBrightnessUp',
         function()
-            awful.spawn('light -A 1', false)
+            awful.spawn('light -A 2', false)
             awesome.emit_signal('widget::brightness')
             awesome.emit_signal('module::brightness_osd:show', true)
         end,
-        {description = 'increase brightness by 1%', group = 'hotkeys'}
+        {description = 'increase brightness by 2%', group = 'hotkeys'}
     ),
     awful.key(
         {},
         'XF86MonBrightnessDown',
         function()
-            awful.spawn('light -U 1', false)
+            awful.spawn('light -U 2', false)
             awesome.emit_signal('widget::brightness')
             awesome.emit_signal('module::brightness_osd:show', true)
         end,
-        {description = 'decrease brightness by 1%', group = 'hotkeys'}
+        {description = 'decrease brightness by 2%', group = 'hotkeys'}
     ),
     -- ALSA volume control
     awful.key(
         {},
         'XF86AudioRaiseVolume',
         function()
-            awful.spawn('amixer -D pulse sset Master 1%+', false)
+            awful.spawn('amixer -D pulse sset Master 2%+', false)
             awesome.emit_signal('widget::volume')
             awesome.emit_signal('module::volume_osd:show', true)
         end,
-        {description = 'increase volume up by 1%', group = 'hotkeys'}
+        {description = 'increase volume up by 2%', group = 'hotkeys'}
     ),
     awful.key(
         {},
         'XF86AudioLowerVolume',
         function()
-            awful.spawn('amixer -D pulse sset Master 1%-', false)
+            awful.spawn('amixer -D pulse sset Master 2%-', false)
             awesome.emit_signal('widget::volume')
             awesome.emit_signal('module::volume_osd:show', true)
         end,
-        {description = 'decrease volume up by 1%', group = 'hotkeys'}
+        {description = 'decrease volume up by 2%', group = 'hotkeys'}
     ),
     awful.key(
         {},

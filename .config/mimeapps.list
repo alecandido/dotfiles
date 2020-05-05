@@ -16,6 +16,7 @@ x-scheme-handler/ftp=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/http=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/https=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/terminal=st.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=firefox.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;

@@ -1,6 +1,7 @@
 " Detect filetype
 
 augroup filetypedetect
+
 au BufNewFile,BufRead *.txt			setf text
 au BufNewFile,BufRead *.yml			setf yaml
 au BufNewFile,BufRead *.bib			setf bibtex
@@ -23,4 +24,7 @@ au BufNewFile,BufRead */.xutils/*   setf sh
 au BufNewFile,BufRead *.tmux        setf tmux
 
 au BufNewFile,BufRead *.mutt        setf neomuttrc
+
+au BufNewFile,BufRead *.mdp         setf pandoc
+
 augroup END
