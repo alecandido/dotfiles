@@ -5,9 +5,11 @@ let $VIM='$HOME/.vim'
 
 source $VIM/default.vim
 
+" keep myplugins before plug/vundle in order not to break padoc.vim
+" if swapped: pandoc_markdown = 0 uneffective
+source $VIM/myplugins.vim
 "source $VIM/vundle.vim
 source $VIM/plug.vim
-source $VIM/myplugins.vim
 
 source $VIM/my.vim
 source $VIM/map.vim

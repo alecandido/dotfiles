@@ -91,6 +91,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" Pandoc
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc-after'
+
 " ReStructuredText
 Plug 'gu-fan/riv.vim'
 Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
@@ -98,6 +103,9 @@ Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant
 " Data
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
+
+" Jekyll
+Plug 'parkr/vim-jekyll'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
