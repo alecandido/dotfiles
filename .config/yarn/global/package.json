@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "npms": "^0.3.2",
+    "npms-cli": "^1.6.0"
+  },
+  "license": "UNLICENSED"
+}

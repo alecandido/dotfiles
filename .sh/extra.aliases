@@ -49,6 +49,8 @@ alias tn='tmux new'
 alias kcat="kitty +kitten icat"
 alias kdiff="kitty +kitten diff"
 
+alias mixer="ncpamixer"
+
 alias canto='canto-curses'
 
 alias m='neomutt'
