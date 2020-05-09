@@ -18,4 +18,3 @@ venv_this = env.get_template("venv_this")
 stream = venv_this.stream(data)
 stream.dump(str(pwd / ".venv_this"))
 
-

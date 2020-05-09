@@ -39,12 +39,12 @@ picom -c -b
 ## Only exported variables can be used within the timer's command.
 export PRIMARY_DISPLAY="$(xrandr | awk '/ primary/{print $1}')"
 ## times in seconds
-export TIME_DIM=60 # inactivity time before dimmming screen
-export TIME_LOCK=10 # inactivity time before locking - after dimming
+export TIME_DIM=180 # inactivity time before dimmming screen
+export TIME_LOCK=120 # inactivity time before locking - after dimming
 export TIME_DIM_LOCK=30 # inactivity time before locking - after dimming
 export TIME_SUSPEND=1200 # inactivity time before suspending - after locking
-export LOCKER=$HOME/.bin/lock-screen
-#. $HOME/.xutils/xidlehook
+export LOCKER='/usr/bin/awesome-client "_G.show_lockscreen()"'
+. $HOME/.xutils/xidlehook
 
 # -----------------
 # Mouse

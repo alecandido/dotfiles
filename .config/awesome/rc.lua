@@ -7,6 +7,14 @@
 
 -- Banner generated using `toilet -f mono9 AwesomeWM"
 
+
+--  ========================================
+-- 			     Splash
+--	        Load all the modules
+--  ========================================
+
+-- ==========================================
+
 local gears = require('gears')
 local awful = require('awful')
 local beautiful = require('beautiful')
