@@ -42,11 +42,16 @@ setlocal formatoptions+=t
 "autocmd BufWritePre *.py silent! execute ':Black'
 autocmd BufWritePre *.py execute ':silent Black'
 
+" Pylint
+" since it is quite slow disable on opening to speed up navigation
+let g:syntastic_check_on_open = 0
+
 " Pydocstring
 let g:pydocstring_doq_path = '~/.local/bin/doq'
 "let g:pydocstring_formatter = 'numpy'
 let g:pydocstring_templates_path = '~/.vim/_plugins/python/pydocstring'
 let g:pydocstring_enable_mapping = 0
+
 " Riv
 let g:riv_python_rst_hl=1
 
@@ -56,6 +61,7 @@ let g:riv_python_rst_hl=1
 "
 "  <C-p> is "control-python"
 
+nnoremap <silent> <F8>           :SyntasticCheck<CR>
 nnoremap <silent> <F9>           :Black<CR>
 " c -> comment
 nnoremap <silent> <C-p>c          :Pydocstring<CR>

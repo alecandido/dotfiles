@@ -11,7 +11,6 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
-
 " Define your own submode
 Plug 'kana/vim-submode'
 
@@ -101,15 +100,25 @@ Plug 'gu-fan/riv.vim'
 Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
 
 " Data
+Plug 'elzr/vim-json'
+Plug 'neoclide/jsonc.vim'
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 
-" Jekyll
-Plug 'parkr/vim-jekyll'
+" Plugin for python:
+"  - formatter
+"  - docstring generation
+"  - refactoring
+Plug 'psf/black', {'tag': '*'}
+Plug 'heavenshell/vim-pydocstring', {'tag': '*'}
+Plug 'python-rope/ropevim'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
+
+" Jekyll
+Plug 'parkr/vim-jekyll'
 
 " Typescript
 Plug 'Quramy/tsuquyomi'
@@ -122,7 +131,6 @@ Plug 'lervag/vimtex'
 
 " Plugin for HTML
 Plug 'mattn/emmet-vim'
-
 
 " Plugin for autocompletion
 Plug 'ervandew/supertab'
@@ -137,12 +145,6 @@ Plug 'Valloric/YouCompleteMe'
 
 " Sublime multiple cursors
 Plug 'terryma/vim-multiple-cursors'
-
-" Plugin for python syntax check
-Plug 'psf/black', {'tag': '*'}
-
-" Plugin for docstring generation
-Plug 'heavenshell/vim-pydocstring', {'tag': '*'}
 
 " Track the engine.
 Plug 'SirVer/ultisnips'

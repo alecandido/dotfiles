@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "gulp-cli": "^2.2.0",
     "npms": "^0.3.2",
-    "npms-cli": "^1.6.0"
+    "npms-cli": "^1.6.0",
+    "typescript": "^3.9.2"
   },
   "license": "UNLICENSED"
 }

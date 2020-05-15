@@ -9,8 +9,8 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_python_checkers = ['flake8', 'pylint']
-let g:syntastic_python_flake8_args='--ignore=E302,W504'
+let g:syntastic_python_checkers = ['pylint']
+"let g:syntastic_python_flake8_args='--ignore=E302,W504'
 "let g:syntastic_error_symbol = 'Put a symbol or an emoji you like'
 "let g:syntastic_warning_symbol = 'Put a symbol or an emoji you like'
 
@@ -23,3 +23,7 @@ let g:syntastic_python_flake8_args='--ignore=E302,W504'
 
 let g:syntastic_rst_checkers = ['sphinx']
 
+let g:syntastic_mode_map = {
+        \ "mode": "active",
+        \ "active_filetypes": ["rst"],
+        \ "passive_filetypes": ["python"] }
