@@ -80,11 +80,11 @@ unsetopt share_history
 # ---------------
 # screensaver
 # ---------------
-TMOUT=1800
+# TMOUT=1800
 
-TRAPALRM() {
-    cmatrix -s
-}
+# TRAPALRM() {
+     #cmatrix -s
+# }
 
 # ╔══════════════════════════════════════╗
 # ║ Stuffs executed just before entering ║
