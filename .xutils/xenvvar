@@ -7,7 +7,7 @@ export KB_LAYOUTS_DIR=$HOME/.config/kbd/keymaps
 
 export PATH=$PATH:$HOME/.bin
 export BROWSER=firefox
-export FILEMANAGER=nautilus
-export TERM=kitty
+#export FILEMANAGER=nautilus
+#export TERM=kitty
 
 . $HOME/.xutils/desktopenvvar
