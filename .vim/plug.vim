@@ -109,8 +109,8 @@ Plug 'stephpy/vim-yaml'
 "  - formatter
 "  - docstring generation
 "  - refactoring
-Plug 'psf/black', {'tag': '*'}
-Plug 'heavenshell/vim-pydocstring', {'tag': '*'}
+Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
+Plug 'heavenshell/vim-pydocstring', { 'tag': '*' }
 Plug 'python-rope/ropevim'
 
 " Julia
@@ -124,7 +124,7 @@ Plug 'parkr/vim-jekyll'
 Plug 'Quramy/tsuquyomi'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'leafgarland/typescript-vim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn global install' }
 
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
