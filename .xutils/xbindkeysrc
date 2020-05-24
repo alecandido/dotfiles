@@ -46,8 +46,8 @@
   control + alt + t
 
 #"$HOME/Software/Source/st/st"
-"kbswitch"
-  Control + Insert
+#"kbswitch"
+  #Control + Insert
 
 "firefox"
   control + alt + f
