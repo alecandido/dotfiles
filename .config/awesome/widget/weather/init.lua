@@ -11,18 +11,18 @@ local widget_icon_dir = config_dir .. 'widget/weather/icons/'
 
 local clickable_container = require('widget.clickable-container')
 
--- Retrieve credentials
 local secrets = require('configuration.secrets')
 
--- Credentials
-local key       = secrets.weather.key        -- openweathermap_api_key
-local city_id  = secrets.weather.city_id    -- openweathermap_city_id
-local units     = secrets.weather.units      -- weather_units  metric(°C)/imperial(°F)
+local key     = secrets.weather.key
+local city_id = secrets.weather.city_id
+local units   = secrets.weather.units
+
+local update_interval = 1200
 
 local weather_icon_widget = wibox.widget {
 	{
 		id = 'icon',
-		image = widget_icon_dir .. 'weather-error' .. '.svg',
+		image = widget_icon_dir .. 'weather-error.svg',
 		resize = true,
 		forced_height = dpi(45),
 		forced_width = dpi(45),
@@ -34,7 +34,7 @@ local weather_icon_widget = wibox.widget {
 local sunrise_icon_widget = wibox.widget {
 	{
 		id = 'sunrise_icon',
-		image = widget_icon_dir .. 'sunrise' .. '.svg',
+		image = widget_icon_dir .. 'sunrise.svg',
 		resize = true,
 		forced_height = dpi(18),
 		forced_width = dpi(18),
@@ -46,7 +46,7 @@ local sunrise_icon_widget = wibox.widget {
 local sunset_icon_widget = wibox.widget {
 	{
 		id = 'sunset_icon',
-		image = widget_icon_dir .. 'sunset' .. '.svg',
+		image = widget_icon_dir .. 'sunset.svg',
 		resize = true,
 		forced_height = dpi(18),
 		forced_width = dpi(18),
@@ -55,10 +55,10 @@ local sunset_icon_widget = wibox.widget {
 	layout = wibox.layout.fixed.horizontal
 }
 
-refresh_icon_widget = wibox.widget {
+local refresh_icon_widget = wibox.widget {
 	{
 		id = 'refresh_icon',
-		image = widget_icon_dir .. 'refresh' .. '.svg',
+		image = widget_icon_dir .. 'refresh.svg',
 		resize = true,
 		forced_height = dpi(18),
 		forced_width = dpi(18),
@@ -89,23 +89,47 @@ local refresh_widget = wibox.widget {
 }
 
 local weather_desc_temp = wibox.widget {
-	text   = "dust & clouds, -1000°C",
-	font   = 'SF Pro Text Bold 12',
-	align  = 'left',
-	valign = 'center',
-	widget = wibox.widget.textbox
+	{
+		id 	   = 'description',
+		markup = 'dust and clouds, -1000°C',
+		font   = 'SF Pro Text Bold 12',
+		align  = 'left',
+		valign = 'center',
+		widget = wibox.widget.textbox
+	},
+	id = 'scroll_container',
+	max_size = 345,
+	speed = 75,
+	expand = true,
+	direction = 'h',
+	step_function = wibox.container.scroll
+					.step_functions.waiting_nonlinear_back_and_forth,
+	fps = 30,
+	layout = wibox.container.scroll.horizontal,
 }
 
 local weather_location = wibox.widget {
-	text   = "Earth, Milky Way",
-	font   = 'SF Pro Text Regular 12',
-	align  = 'left',
-	valign = 'center',
-	widget = wibox.widget.textbox
+	{
+		id 	   = 'location',
+		markup = 'Earth, Milky Way',
+		font   = 'SF Pro Text Regular 12',
+		align  = 'left',
+		valign = 'center',
+		widget = wibox.widget.textbox
+	},
+	id = 'scroll_container',
+	max_size = 345,
+	speed = 75,
+	expand = true,
+	direction = 'h',
+	step_function = wibox.container.scroll
+					.step_functions.waiting_nonlinear_back_and_forth,
+	fps = 30,
+	layout = wibox.container.scroll.horizontal,
 }
 
 local weather_sunrise = wibox.widget {
-	text   = "00:00",
+	markup = "00:00",
 	font   = 'SF Pro Text Regular 10',
 	align  = 'center',
 	valign = 'center',
@@ -113,7 +137,7 @@ local weather_sunrise = wibox.widget {
 }
 
 local weather_sunset = wibox.widget {
-	text   = "00:00",
+	markup = "00:00",
 	font   = 'SF Pro Text Regular 10',
 	align  = 'center',
 	valign = 'center',
@@ -121,7 +145,7 @@ local weather_sunset = wibox.widget {
 }
 
 local weather_data_time = wibox.widget {
-	text   = "00:00",
+	markup = "00:00",
 	font   = 'SF Pro Text Regular 10',
 	align  = 'center',
 	valign = 'center',
@@ -181,18 +205,15 @@ local weather_report =  wibox.widget {
 	forced_height = dpi(92),
 	bg = beautiful.groups_bg,
 	shape = function(cr, width, height)
-	gears.shape.partially_rounded_rect(cr, width, height, true, true, true, true, beautiful.groups_radius) end,
+		gears.shape.partially_rounded_rect(cr, width, height, true, true, true, true, beautiful.groups_radius) 
+	end,
 	widget = wibox.container.background	
 }
 
--- Don't update too often, because your requests might get blocked for 24 hours
-local update_interval = 1200
-
--- Check units
 if units == "metric" then
-		weather_temperature_symbol = "°C"
+	weather_temperature_symbol = "°C"
 elseif units == "imperial" then
-		weather_temperature_symbol = "°F"
+	weather_temperature_symbol = "°F"
 end
 
 --  Weather script using your API KEY
@@ -226,70 +247,63 @@ else
 fi	
 ]]
 
-awesome.connect_signal('widget::weather_fetch', function() 
+awesome.connect_signal(
+	'widget::weather_fetch',
+	function() 
 
-	awful.spawn.easy_async_with_shell(weather_details_script, function(stdout)
+		awful.spawn.easy_async_with_shell(
+			weather_details_script,
+			function(stdout)
 
-		local weather_data_tbl = {}
+				local weather_data_tbl = {}
 
-		-- Populate weather_data_tbl
-		for data in stdout:gmatch("[^\n]+") do
-			local key = data:match("(.*)=")
-			local value = data:match("=(.*)")
-			weather_data_tbl[key] = value
+				for data in stdout:gmatch("[^\n]+") do
+					local key = data:match("(.*)=")
+					local value = data:match("=(.*)")
+					weather_data_tbl[key] = value
+				end
+
+				local icon_code = weather_data_tbl['icon']
+
+				if icon_code == '...' then
+
+					awesome.emit_signal("widget::weather_update", 
+						icon_code, 
+						'dust and clouds, -1000°C', 
+						'Earth, Milky Way', 
+						'00:00', 
+						'00:00', 
+						'00:00'
+					)
+					
+				else
+					local location = weather_data_tbl['location']
+					local country = weather_data_tbl['country']
+					local sunrise = weather_data_tbl['sunrise']
+					local sunset = weather_data_tbl['sunset']
+					local update_time = weather_data_tbl['update']
+					local temperature = weather_data_tbl['temperature']
+					local details = weather_data_tbl['details']
+
+					local description = details:sub(1, 1):upper() .. details:sub(2)
+					local weather_description = description .. ', ' .. temperature .. weather_temperature_symbol
+					local weather_location = location .. ', ' .. country
+					
+					awesome.emit_signal("widget::weather_update", 
+						icon_code, 
+						weather_description, 
+						weather_location, 
+						sunrise, 
+						sunset, 
+						update_time
+					)
+				end
+				collectgarbage('collect')
 		end
-
-		local icon_code = weather_data_tbl['icon']
-
-		-- No internet / no credentials
-		if icon_code == '...' then
-
-			awesome.emit_signal("widget::weather_update", 
-				icon_code, 
-				'dust & clouds, -1000°C', 
-				'Earth, Milky Way', 
-				'00:00', 
-				'00:00', 
-				'00:00'
-			)
-			
-		else
-
-			local location = weather_data_tbl['location']
-			local country = weather_data_tbl['country']
-			local sunrise = weather_data_tbl['sunrise']
-			local sunset = weather_data_tbl['sunset']
-			local update_time = weather_data_tbl['update']
-			local temperature = weather_data_tbl['temperature']
-			local details = weather_data_tbl['details']
-
-			local weather_description = details .. ', ' .. temperature .. weather_temperature_symbol
-			
-			if #weather_description >= 33 then
-				weather_desc_temp:set_font('SF Pro Text Bold 11')
-			else
-				weather_desc_temp:set_font('SF Pro Text Bold 12')
-			end
-
-			awesome.emit_signal("widget::weather_update", 
-				icon_code, 
-				weather_description, 
-				location, 
-				sunrise, 
-				sunset, 
-				update_time
-			)
-
-		end
-
-		collectgarbage('collect')
-
-	end)
+	)
 end)
 
-
--- Update weather every after update_interval seconds
-gears.timer {
+local update_widget_timer = gears.timer {
 	timeout = update_interval,
 	autostart = true,
 	call_now  = true,
@@ -299,51 +313,57 @@ gears.timer {
 	end
 }
 
--- Update widget if connecte to wifi
-awesome.connect_signal('system::wifi_connected', function() 
-	-- Add a delay of 3 seconds
-	gears.timer.start_new(3, function() 
-		awesome.emit_signal('widget::weather_fetch')
-	end)
-end)
+awesome.connect_signal(
+	'system::wifi_connected',
+	function() 
+		gears.timer.start_new(
+			5,
+			function() 
+				awesome.emit_signal('widget::weather_fetch')
+			end
+		)
+	end
+)
 
-awesome.connect_signal("widget::weather_update", 
+awesome.connect_signal(
+	"widget::weather_update", 
 	function(code, desc, location, sunrise, sunset, data_receive)
 		local widget_icon_name = 'weather-error'
 
-		-- Yes, I'm learning Lua tables
 		local icon_tbl = {
-			['01d'] = 'sun_icon',
-			['01n'] = 'moon_icon',
-			['02d'] = 'dfew_clouds',
-			['02n'] = 'nfew_clouds',
-			['03d'] = 'dscattered_clouds',
-			['03n'] = 'nscattered_clouds',
-			['04d'] = 'dbroken_clouds',
-			['04n'] = 'nbroken_clouds',
-			['09d'] = 'dshower_rain',
-			['09n'] = 'nshower_rain',
-			['10n'] = 'drain_icon',
-			['10d'] = 'nrain_icon',
-			['11d'] = 'dthunderstorm',
-			['11n'] = 'nhunderstorm',
-			['13d'] = 'snow',
-			['13n'] = 'snow',
-			['50d'] = 'dmist',
-			['50n'] = 'nmist',
-			['...'] = 'weather-error'
+			['01d'] = 'sun_icon.svg',
+			['01n'] = 'moon_icon.svg',
+			['02d'] = 'dfew_clouds.svg',
+			['02n'] = 'nfew_clouds.svg',
+			['03d'] = 'dscattered_clouds.svg',
+			['03n'] = 'nscattered_clouds.svg',
+			['04d'] = 'dbroken_clouds.svg',
+			['04n'] = 'nbroken_clouds.svg',
+			['09d'] = 'dshower_rain.svg',
+			['09n'] = 'nshower_rain.svg',
+			['10d'] = 'd_rain.svg',
+			['10n'] = 'n_rain.svg',
+			['11d'] = 'dthunderstorm.svg',
+			['11n'] = 'nhunderstorm.svg',
+			['13d'] = 'snow.svg',
+			['13n'] = 'snow.svg',
+			['50d'] = 'dmist.svg',
+			['50n'] = 'nmist.svg',
+			['...'] = 'weather-error.svg'
 		}
 
 		widget_icon_name = icon_tbl[code]
 
-		weather_icon_widget.icon:set_image(widget_icon_dir .. widget_icon_name .. '.svg')
-		weather_desc_temp:set_text(desc)
-		weather_location:set_text(location)
-		weather_sunrise:set_text(sunrise)
-		weather_sunset:set_text(sunset)
-		weather_data_time:set_text(data_receive)
+		weather_icon_widget.icon:set_image(widget_icon_dir .. widget_icon_name)
+		weather_icon_widget.icon:emit_signal('widget::redraw_needed')
+		
+		weather_desc_temp.description:set_markup(desc)
+		weather_location.location:set_markup(location)
+		weather_sunrise:set_markup(sunrise)
+		weather_sunset:set_markup(sunset)
+		weather_data_time:set_markup(data_receive)
 
-end)
-
+	end
+)
 
 return weather_report

@@ -7,14 +7,6 @@
 
 -- Banner generated using `toilet -f mono9 AwesomeWM"
 
-
---  ========================================
--- 			     Splash
---	        Load all the modules
---  ========================================
-
--- ==========================================
-
 local gears = require('gears')
 local awful = require('awful')
 local beautiful = require('beautiful')
@@ -50,12 +42,12 @@ require('module.menu')
 require('module.volume-osd')
 require('module.brightness-osd')
 require('module.dynamic-wallpaper')
-require('module.battery-notifier')
+--require('module.battery-notifier')
 require('module.lockscreen')
 
 --  ========================================
 -- 				Configuration
---	     	Load your prefrences
+--	     	Load your preferences
 --  ========================================
 
 require('configuration.client')
