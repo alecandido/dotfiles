@@ -19,6 +19,7 @@ x-scheme-handler/terminal=st.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=firefox.desktop;
 text/plain=org.gnome.gedit.desktop;
 application/x-cd-image=gnome-disk-image-writer.desktop;
+application/postscript=org.pwmt.zathura-ps.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
