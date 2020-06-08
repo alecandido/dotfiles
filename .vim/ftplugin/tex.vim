@@ -14,5 +14,13 @@ let g:vimtex_complete_close_braces = 1
 
 :execute "normal \<plug>(vimtex-toc-open)"
 
+let g:vimtex_quickfix_warnings = {
+  \ 'default' : 0,
+  \}
+"\ 'undefined_reference' : 1,
+"\ 'multiply_defined_references' : 1,
+"\}
+
 " syntastic
 "let g:syntastic_quiet_messages = { 'regex': 'possible unwanted space at "{"' }
+"

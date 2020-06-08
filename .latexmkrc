@@ -1,1 +1,5 @@
-$pdflatex = "xelatex";
+# vim: set filetype=conf:
+
+$pdf_mode = 1;
+$pdflatex = "xelatex -synctex=1 %O %S";
+$xelatex = "xelatex -no-pdf -synctex=1 %O %S";
