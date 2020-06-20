@@ -17,9 +17,11 @@ x-scheme-handler/http=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/https=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/terminal=st.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=firefox.desktop;
-text/plain=org.gnome.gedit.desktop;
+text/plain=firefox.desktop;chromium.desktop;org.gnome.gedit.desktop;
 application/x-cd-image=gnome-disk-image-writer.desktop;
 application/postscript=org.pwmt.zathura-ps.desktop;
+image/gif=chromium.desktop;firefox.desktop;vlc.desktop;
+application/pdf=chromium.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;

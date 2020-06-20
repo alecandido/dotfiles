@@ -133,6 +133,7 @@ Plug 'rust-lang/rust.vim'
 
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Plugin for HTML
 Plug 'mattn/emmet-vim'
