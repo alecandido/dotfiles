@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "create-next-app": "^9.4.4",
     "github-wiki-sidebar": "^2.0.1",
     "gulp-cli": "^2.2.0",
     "npms": "^0.3.2",

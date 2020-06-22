@@ -20,11 +20,11 @@ au BufNewFile,BufRead .xprofile     setf sh
 au BufNewFile,BufRead .desktoprc    setf sh
 au BufNewFile,BufRead */.xutils/*   setf sh
 
-
 au BufNewFile,BufRead *.tmux        setf tmux
 
 au BufNewFile,BufRead *.mutt        setf neomuttrc
 
+au BufNewFile,BufRead *.mdx         setf markdown
 au BufNewFile,BufRead *.mdp         setf pandoc
 
 augroup END

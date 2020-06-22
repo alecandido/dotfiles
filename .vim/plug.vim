@@ -119,14 +119,22 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
+" Typescript/X & JS/X & MDX
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'jxnblk/vim-mdx-js'
+Plug 'prettier/vim-prettier', { 'do': 'yarn global install' }
+
+" Css
+Plug 'tpope/vim-haml'
+
+" Plugin for HTML
+Plug 'mattn/emmet-vim'
 " Jekyll
 Plug 'parkr/vim-jekyll'
-
-" Typescript
-Plug 'Quramy/tsuquyomi'
-Plug 'Quramy/vim-js-pretty-template'
-Plug 'leafgarland/typescript-vim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn global install' }
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -134,9 +142,6 @@ Plug 'rust-lang/rust.vim'
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
-
-" Plugin for HTML
-Plug 'mattn/emmet-vim'
 
 " Plugin for autocompletion
 Plug 'ervandew/supertab'
