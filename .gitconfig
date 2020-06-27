@@ -5,6 +5,7 @@
     editor = vim
     ;excludesFile = $XDG_CONFIG_HOME/git/ignore ;already the default
     quotepath = false
+    pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended Bright'
 [color]
     status = auto
     branch = auto
@@ -37,6 +38,8 @@
     ;commdands = -fetch,instaweb
 [diff]
     tool = vimdiff
+;[interactive]
+    ;diffFilter = delta --color-only 
 [difftool]
     prompt = false
 [instaweb]
