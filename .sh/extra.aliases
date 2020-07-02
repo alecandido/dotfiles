@@ -43,11 +43,12 @@ alias vimexec='vim -i NONE -u NORC -U NONE -nNES'
 alias ve=vimexec
 
 alias t='tmux attach -t base || tmux new -s base'
-alias tbase='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
 
 alias kcat="kitty +kitten icat"
 alias kdiff="kitty +kitten diff"
+
+alias brg="batgrep"
 
 alias mixer="ncpamixer"
 
@@ -72,6 +73,8 @@ alias jupyter_here='jupyter notebook --notebook-dir .'
 alias sass='sass --no-source-map'
 
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
+
+eval $(thefuck --alias)
 
 mkpdf() {
   latexmk -pdf $1

@@ -5,7 +5,9 @@
 alias zshrc='source $ZSH_DIR/zshrc'
 
 # override oh my zsh
-alias la='ls -a'
+alias ls='exa'
+alias la='exa -a'
+alias ll='exa -l'
 
 # ┌────────────┐
 # │sh utilities│
