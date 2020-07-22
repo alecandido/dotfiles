@@ -9,6 +9,8 @@ alias ls='exa'
 alias la='exa -a'
 alias ll='exa -l'
 
+unalias tldr # for oh-my-zsh `lol` plugin
+
 # ┌────────────┐
 # │sh utilities│
 # └────────────┘
