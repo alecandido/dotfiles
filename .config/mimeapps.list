@@ -21,7 +21,7 @@ text/plain=firefox.desktop;chromium.desktop;org.gnome.gedit.desktop;
 application/x-cd-image=gnome-disk-image-writer.desktop;
 application/postscript=org.pwmt.zathura-ps.desktop;
 image/gif=chromium.desktop;firefox.desktop;vlc.desktop;
-application/pdf=chromium.desktop;
+application/pdf=com.github.xournalpp.xournalpp.desktop;chromium.desktop;
 text/x-python=org.gnome.gedit.desktop;
 image/jpeg=gimp.desktop;
 
