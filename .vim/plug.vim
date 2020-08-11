@@ -113,12 +113,18 @@ Plug 'psf/black', {'tag': '*'}
 Plug 'heavenshell/vim-pydocstring', {'tag': '*'}
 Plug 'python-rope/ropevim'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
 " Jekyll
 Plug 'parkr/vim-jekyll'
+
+" Javascript
+Plug 'pangloss/vim-javascript'
 
 " Typescript
 Plug 'Quramy/tsuquyomi'

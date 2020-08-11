@@ -13,12 +13,15 @@ export PATH=$PATH:~/.local/share/flatpak/exports/bin/ #flatpak apps
 #export PATH+=:~/anaconda3/bin
 
 # PYTHONPATH
-export PYTHONPATH=$PYTHONPATH:~/.local/lib
-export PYTHONPATH=$PYTHONPATH:~/.local/lib/python3.8/site-packages/
-export PYTHONPATH=$PYTHONPATH:~/.local/lib/python2.7/site-packages/
+#export PYTHONPATH=$PYTHONPATH:~/.local/lib
+#export PYTHONPATH=$PYTHONPATH:~/.local/lib/python3.8/site-packages/
+#export PYTHONPATH=$PYTHONPATH:~/.local/lib/python2.7/site-packages/
 
 # Julia
 export PATH=$PATH:~/.julia/julia/bin
+
+# Rust
+export PATH=$PATH:~/.cargo/bin
 
 # Ruby rbenv
 export PATH=$PATH:~/.rbenv/bin:~/.gem/ruby/2.7.0/bin:

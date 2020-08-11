@@ -65,7 +65,7 @@ alias pip='python3 -m pip'
 alias pip3='python3 -m pip'
 alias jupyter_here='jupyter notebook --notebook-dir .'
 
-alias sass='sass --sourcemap=none'
+alias sass='sass --no-source-map'
 
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 

@@ -11,5 +11,5 @@ let g:prettier#config#print_width = 'auto'
 " default: 'auto'
 let g:prettier#config#tab_width = 'auto'
 
-autocmd BufWritePre *.ts,*.js,*.yml,*.yaml execute ':silent Prettier'
+autocmd BufWritePre *.ts,*.tsx,*.js,*.jsx,*.json,*.yml,*.yaml,*.css,*.scss,*.sass execute ':silent Prettier'
 
