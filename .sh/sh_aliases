@@ -7,8 +7,9 @@
 # in this file there are only the files strictly related
 # to the os operations
 
-alias la='ls -a'
-alias ll='ls -l'
+#alias ls='exa'
+#alias la='exa -a'
+#alias ll='exa -l'
 
 #alias rm='safe-rm'
 alias rm='rm -i'

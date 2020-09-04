@@ -1,0 +1,20 @@
+/*
+Placeholder for custom user CSS
+
+mainly to be overridden in profile/static/custom/custom.css
+
+This will always be an empty file in IPython
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+/* DEFINE MAIN STYLES */
+:root {
+    --main-font-family: 'Fira Mono';
+    --main-bg-color: #282C34;
+}
+/* Change code font */
+.CodeMirror pre, .CodeMirror-dialog, .CodeMirror-dialog .CodeMirror-search-field, .terminal-app .terminal {
+    font-family: var(--main-font-family) !important;
+    font-size: 9pt !important;
+}

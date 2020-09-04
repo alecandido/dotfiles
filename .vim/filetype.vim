@@ -20,7 +20,6 @@ au BufNewFile,BufRead .xprofile     setf sh
 au BufNewFile,BufRead .desktoprc    setf sh
 au BufNewFile,BufRead */.xutils/*   setf sh
 
-
 au BufNewFile,BufRead *.tmux        setf tmux
 
 au BufNewFile,BufRead *.mutt        setf neomuttrc
