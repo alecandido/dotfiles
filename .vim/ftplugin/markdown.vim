@@ -50,6 +50,9 @@ let g:vim_markdown_no_extensions_in_markdown = 1
 " Code
 " ----
 
+" Formatter
+autocmd BufWritePre * execute ':silent Prettier'
+
 " From a SO answer
 " https://vi.stackexchange.com/questions/18079
 function s:TocToggle()

@@ -109,28 +109,39 @@ Plug 'stephpy/vim-yaml'
 "  - formatter
 "  - docstring generation
 "  - refactoring
+"  - template engine
 Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
 Plug 'heavenshell/vim-pydocstring', { 'tag': '*' }
 Plug 'python-rope/ropevim'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
-" Jekyll
-Plug 'parkr/vim-jekyll'
-
-" Typescript
+" Typescript/X & JS/X & MDX
 Plug 'Quramy/tsuquyomi'
-Plug 'Quramy/vim-js-pretty-template'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'jxnblk/vim-mdx-js'
 Plug 'prettier/vim-prettier', { 'do': 'yarn global install' }
 
-" Plugin for LaTeX
-Plug 'lervag/vimtex'
+" Css
+Plug 'tpope/vim-haml'
 
 " Plugin for HTML
 Plug 'mattn/emmet-vim'
+" Jekyll
+Plug 'parkr/vim-jekyll'
+
+" Rust
+Plug 'rust-lang/rust.vim'
+
+" Plugin for LaTeX
+Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Plugin for autocompletion
 Plug 'ervandew/supertab'
