@@ -13,7 +13,7 @@ au BufNewFile, BufRead *.py
 " Indent for python
 setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 setlocal autoindent
-setlocal textwidth=80
+"setlocal textwidth=80
 " autowrap text with textwidth
 setlocal formatoptions+=t
 " Black is not acting on docstrings
