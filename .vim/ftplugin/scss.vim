@@ -1,8 +1,10 @@
 setl foldmethod=indent
 setl nowrap
 
-setlocal tabstop=3
-setlocal shiftwidth=3
-setlocal softtabstop=3
+setlocal tabstop=4
+setlocal shiftwidth=4
+setlocal softtabstop=4
 setlocal expandtab
 setlocal smarttab
+
+autocmd BufWritePre * execute ':silent Prettier'
