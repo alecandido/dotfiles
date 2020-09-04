@@ -43,11 +43,12 @@ alias vimexec='vim -i NONE -u NORC -U NONE -nNES'
 alias ve=vimexec
 
 alias t='tmux attach -t base || tmux new -s base'
-alias tbase='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
 
 alias kcat="kitty +kitten icat"
 alias kdiff="kitty +kitten diff"
+
+alias brg="batgrep"
 
 alias mixer="ncpamixer"
 
@@ -57,21 +58,48 @@ alias m='neomutt'
 alias mutt='neomutt'
 
 alias ipy='ipython'
+alias ipy3='ipython3'
+alias ipy2='ipython2'
 alias ipylab='ipython --pylab'
 
 alias py='python3'
-alias p3='python3'
+alias py3='python3'
+alias py2='python2'
 alias pip='python3 -m pip'
 alias pip3='python3 -m pip'
-alias jupyter_here='jupyter notebook --notebook-dir .'
+alias pip2='python2 -m pip'
+alias jupyter-here='jupyter notebook --notebook-dir .'
 
-alias sass='sass --sourcemap=none'
+alias sass='sass --no-source-map'
 
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 
-mkpdf () {
+eval $(thefuck --alias)
+
+mkpdf() {
   latexmk -pdf $1
   latexmk -c
+}
+
+todo() {
+  todo=''
+  done=''
+
+  #if [[ ! -z "${1+x}" ]]; then
+    #todo="$HOME/Documents/todo/$1.txt"
+    #done="$HOME/Documents/todo/$1-done.txt"
+  #fi
+
+  while getopts ":t" opt; do
+    case ${opt} in
+      t ) # select todofile
+        todo="$HOME/Documents/todo/$OPTARG.txt"
+        done="$HOME/Documents/todo/$OPTARG-done.txt"
+        ;;
+    esac
+  done
+
+  eval "todotxt-machine $todo $done --config $HOME/.config/todotxt-machine/todotxt-machinerc"
 }
 
 # ┌────────────┐
@@ -97,9 +125,11 @@ alias cact='. ~/.miniconda3/bin/activate'
 alias cdact='conda deactivate'
 
 aenv() {
-    env_path=$(python3 ~/.bin/activate_environment.py $PWD)
+    env_path=$(python3 $HOME/.bin/activate_environment.py $PWD)
     if [ ! -z $env_path ]; then
         . $env_path
+    else
+        echo "No environment found"
     fi
 }
 
@@ -128,10 +158,10 @@ launch () {
 
 
 # See ToDo list
-alias todo='~/.mybin/ToDo.sh'
-alias plan='~/.mybin/Plan.sh'
-alias week='~/.mybin/week_plan.py'
-alias Paperopoli='~/.mybin/Paperopoli.py'
+#alias todo='~/.mybin/ToDo.sh'
+#alias plan='~/.mybin/Plan.sh'
+#alias week='~/.mybin/week_plan.py'
+#alias Paperopoli='~/.mybin/Paperopoli.py'
 
 # weather
 weather () {

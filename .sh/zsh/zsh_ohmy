@@ -1,8 +1,48 @@
 # Oh my zsh configs
 
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#ZSH_THEME="_my_first_theme"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 plugins=(
+    archlinux
+    bundler
+    cargo
+    cp
+    django
+    emoji
     fasd
+    fd
+    gem
     git
+    git-auto-fetch
+    git-escape-magic
+    git-extras
+    git-flow-avh
+    #git-hub-flow
+    github
+    #globalias
+    lol
+    man
+    node
+    #npm
+    npx
+    #pipenv
+    pylint
+    python
+    rbenv
+    react-native
+    ripgrep
+    ruby
+    rust
+    sudo
+    tmux
+    virtualenv
+    yarn
     zsh-syntax-highlighting
     zsh-completions
     zsh-autosuggestions

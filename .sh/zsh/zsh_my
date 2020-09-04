@@ -71,6 +71,10 @@ fi
 # ║ Misc ║
 # ╚══════╝
 
+# ---------------
+# suppress shared history
+# ---------------
+setopt extendedglob
 
 # ---------------
 # suppress shared history

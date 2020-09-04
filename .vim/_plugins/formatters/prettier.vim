@@ -10,6 +10,3 @@ let g:prettier#config#print_width = 'auto'
 " softtabstop)
 " default: 'auto'
 let g:prettier#config#tab_width = 'auto'
-
-autocmd BufWritePre *.ts,*.js,*.yml,*.yaml execute ':silent Prettier'
-
