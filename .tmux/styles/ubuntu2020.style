@@ -1,0 +1,41 @@
+# COLORSCHEME: nordtheme
+
+# BACKGROUND
+bg11='#412f41'        #Dark 1
+bg12='#3b4252'        #Dark 2
+bg13='#5f445f'        #Dark 3
+bg14='#6a4d6a'        #Dark 4
+
+bg21='#e8d8e9'        #Light1
+bg22='#efe5f0'        #Light2
+bg23='#f3ecf4'        #Light3
+
+bg31='#bc918f'        #HighLight 1
+bg32='#cf8987'        #HighLight 2
+bg33='#c18381'        #HighLight 3
+bg34='#ac605d'        #HighLight 4
+
+bg41='#bf616a'        #Color 1
+bg42='#d08770'        #Color 2
+bg43='#ebcb8b'        #Color 3
+bg44='#a3be8c'        #Color 4
+bg45='#b48ead'        #Color 5
+
+# FOREGROUND
+fg00='#000000'        #black
+fg01='#080808'        #black - less
+
+fg11='#412f41'        #Dark 1
+fg12='#3b4252'        #Dark 2
+fg13='#5f445f'        #Dark 3
+fg14='#6a4d6a'        #Dark 4
+
+fg21='#e8d8e9'        #Light1
+fg22='#efe5f0'        #Light2
+fg23='#f3ecf4'        #Light3
+
+# GENERIC
+black='#000000'
+dark-grey='#444444'
+grey='#8a8a8a'
+light-grey='#e4e4e4'

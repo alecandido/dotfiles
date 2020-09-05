@@ -62,7 +62,7 @@ tmux_conf_theme_focused_pane_bg='#{bg32}'               # light blue
 tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
-tmux_conf_theme_pane_border='#444444'                   # gray
+tmux_conf_theme_pane_border='#{dark-grey}'                   # gray
 tmux_conf_theme_pane_active_border='#{bg32}'            # light blue
 
 # pane indicator colours
@@ -76,16 +76,16 @@ tmux_conf_theme_message_attr='bold'
 
 # status line command style (<prefix> : Escape)
 tmux_conf_theme_message_command_fg='#{bg32}'            # yellow
-tmux_conf_theme_message_command_bg='#000000'            # black
+tmux_conf_theme_message_command_bg='#{black}'            # black
 tmux_conf_theme_message_command_attr='bold'
 
 # window modes style
-tmux_conf_theme_mode_fg='#000000'                       # black
+tmux_conf_theme_mode_fg='#{black}'                       # black
 tmux_conf_theme_mode_bg='#{bg32}'                       # yellow
 tmux_conf_theme_mode_attr='bold'
 
 # status line style
-tmux_conf_theme_status_fg='#8a8a8a'                     # light gray
+tmux_conf_theme_status_fg='#{grey}'                     # light gray
 tmux_conf_theme_status_bg='#{bg11}'                      # dark gray
 tmux_conf_theme_status_attr='none'
 
@@ -107,7 +107,7 @@ tmux_conf_theme_terminal_title='#h ❐ #S ● #I #W'
 #     - #{hostname_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_window_status_fg='#8a8a8a'              # light gray
+tmux_conf_theme_window_status_fg='#{grey}'              # light gray
 tmux_conf_theme_window_status_bg='#{bg11}'              # dark gray
 tmux_conf_theme_window_status_attr='none'
 tmux_conf_theme_window_status_format='#I #W'
@@ -195,14 +195,15 @@ tmux_conf_theme_status_left_attr='bold,none,none'
 # ------------ right bar -------------------
 
 # current
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %a %R , %d %b || #(curl "wttr.in/Milan?format=3") '
+#tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %a %R , %d %b || #(curl "wttr.in/Milan?format=3") '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %a %R , %d %b '
 # with battery plugin
 #tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{battery_color_fg} #{battery_graph} #{battery_percentage} , %a %R , %d %b || #(curl "wttr.in/Milan?format=3") '
 # old  
 #tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %R , %d %b | #{username}#{root} | #{hostname} '
 
 # status right style
-tmux_conf_theme_status_right_fg='#8a8a8a,#e4e4e4,#{fg11}' # light gray, white, black
+tmux_conf_theme_status_right_fg='#{grey},#{light-grey},#{fg11}' # light gray, white, black
 #tmux_conf_theme_status_right_bg='#080808,#000000,#e4e4e4' # dark gray, red, white
 tmux_conf_theme_status_right_bg='#{bg11},#{bg33},#{bg33}' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'

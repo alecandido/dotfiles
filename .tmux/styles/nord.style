@@ -33,3 +33,9 @@ fg14='#4c566a'        #Polar Night 4
 fg21='#d8dee9'        #Snow Storm 1
 fg22='#e5e9f0'        #Snow Storm 2
 fg23='#eceff4'        #Snow Storm 3
+
+# GENERIC
+black='#000000'
+dark-grey='#444444'
+grey='#8a8a8a'
+light-grey='#e4e4e4'
