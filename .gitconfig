@@ -108,7 +108,7 @@
     ooanward = commit -am
     rulz = push
     violenz = rebase
-    yolo = commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
+    yolo = "!git commit -m "\"$(curl -s http://whatthecommit.com/index.txt)\"
 
     # history aliases
     hist = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%C(white)\\ |\\ %s%C(green)%d\\ %C(blue)[%an]" --graph --date=short --decorate
