@@ -10,10 +10,10 @@
 augroup nord-theme-overrides
     autocmd!
     " Set LineNr colour
-    autocmd ColorScheme nord highlight LineNr ctermfg=242
+    "autocmd ColorScheme nord highlight LineNr ctermfg=242
 
     "Use 'nord7' as foreground color for Vim comment titl79es.
-    autocmd ColorScheme nord highlight Comment ctermfg=243
+    "autocmd ColorScheme nord highlight Comment ctermfg=243
 
     autocmd ColorScheme nord highlight Visual cterm=reverse
     "autocmd ColorScheme nord highlight Visual ctermfg=23 ctermbg=255

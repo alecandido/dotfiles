@@ -1,10 +1,7 @@
-setl foldmethod=indent
-setl nowrap
+" CSS settings
 
-setlocal tabstop=4
-setlocal shiftwidth=4
-setlocal softtabstop=4
-setlocal expandtab
-setlocal smarttab
+"autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 
 autocmd BufWritePre * execute ':silent Prettier'

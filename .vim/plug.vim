@@ -133,6 +133,7 @@ Plug 'tpope/vim-haml'
 
 " Plugin for HTML
 Plug 'mattn/emmet-vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
 " Jekyll
 Plug 'parkr/vim-jekyll'
 
