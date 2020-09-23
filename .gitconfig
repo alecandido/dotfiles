@@ -99,6 +99,17 @@
     chs = diff --compact-summary
     diffword = diff --word-diff
 
+    # lol
+    bringz = pull
+    chicken = add
+    hackzor = init
+    letcat = checkout
+    oanward = commit -m
+    ooanward = commit -am
+    rulz = push
+    violenz = rebase
+    yolo = commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
+
     # history aliases
     hist = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%C(white)\\ |\\ %s%C(green)%d\\ %C(blue)[%an]" --graph --date=short --decorate
     first = !sh -c 'git log origin/master --pretty=format:%H  --reverse | head -1'
@@ -126,6 +137,8 @@
     # external
     aliases = "!git config -l | grep alias | cut -c 7- | awk 'BEGIN { FS = \"=\" }; { printf \"%15s   %s\\n\", $1, $2 }'"
     visual = !gitk --all&
+    rm-updated = "!f() { echo "Removing updated files matching the \"(grep)\" pattern: \\\"${1:-'^ M.*'}\\\""; echo; git status --porcelain | grep -v "^?" | grep "${1:-'^ M.*'}" | cut -c4- | xargs git rm --cached; }; f"
+    example-alias = "!f() { echo "value passed as parameter is ${1}"; }; f"
 
     ;a = add --all
     ;ai = add -i

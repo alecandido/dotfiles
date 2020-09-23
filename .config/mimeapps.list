@@ -18,6 +18,9 @@ x-scheme-handler/https=firefox.desktop;thunderbird.desktop;
 x-scheme-handler/terminal=st.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=firefox.desktop;
 text/plain=org.gnome.gedit.desktop;
+application/rtf=calibre-ebook-viewer.desktop;calibre-gui.desktop;
+application/pdf=org.gnome.Evince.desktop;inkscape.desktop;glimpse-editor_glimpse-editor.desktop;
+application/rss+xml=thunderbird_thunderbird.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
@@ -35,7 +38,7 @@ image/svg+xml=inkscape.desktop;
 text=vim.desktop
 text/html=firefox.desktop
 text/markdown=vim.desktop;
-text/plain=vim.desktop
+text/plain=org.gnome.gedit.desktop
 text/x-python=vim.desktop
 x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/ferdi=ferdi.desktop
