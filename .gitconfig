@@ -1,5 +1,5 @@
 [user]
-    name = AleCandido
+    name = Alessandro Candido
     email = candido.ale@gmail.com
 [core]
     editor = vim
@@ -333,3 +333,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[merge]
+	log = true
