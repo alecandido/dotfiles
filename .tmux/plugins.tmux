@@ -8,7 +8,7 @@ set -g @plugin 'tmux-plugins/tmux-open'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-sidebar'
 #set -g @plugin 'tmux-plugins/tmux-battery' # currently oh-my-tmux is better
-#set -g @plugin 'tmux-plugins/tmux-urlview' # issues when run `tmux source-file ~/.tmux.conf`
+set -g @plugin 'tmux-plugins/tmux-urlview' # issues when run `tmux source-file ~/.tmux.conf`
 
 # vim integration
 set -g @plugin 'christoomey/vim-tmux-navigator'
