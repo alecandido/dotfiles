@@ -367,7 +367,7 @@ c.NotebookApp.browser = "chromium"
 #
 #  Disabling this setting to False will disable this behavior, allowing the
 #  browser  to launch by using a URL and visible token (as before).
-# c.NotebookApp.use_redirect_file = True
+c.NotebookApp.use_redirect_file = False
 
 ## DEPRECATED, use tornado_settings
 # c.NotebookApp.webapp_settings = {}

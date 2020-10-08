@@ -14,6 +14,9 @@ Plug 'tpope/vim-repeat'
 " Define your own submode
 Plug 'kana/vim-submode'
 
+" Search / replace current text
+Plug 'nelstrom/vim-visual-star-search'
+
 " Status line
 Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
