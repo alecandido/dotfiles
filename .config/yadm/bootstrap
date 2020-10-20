@@ -1,0 +1,43 @@
+# gnome extensions
+sudo apt install gnome-tweaks
+sudo apt install gnome-tweak-tool
+
+# terminal installation
+sudo apt install kitty
+
+# zsh
+sudo apt install zsh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# python pip installation
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo apt-get install python3-distutils
+python3 get-pip.py
+rm -f get-pip.py
+
+# yarn installation
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+
+# vim installation
+sudo apt install vim
+pip install black
+yarn global add prettier
+pip install doq
+
+# tmux installation
+sudo apt install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "\e[94mRemember to install plugins: https://github.com/tmux-plugins/tpm#installing-plugins\e[0m"
+
+# utils
+sudo apt install tree
+sudo apt install fasd
+sudo apt install thefuck
+sudo apt install exa
+# sudo apt install rbenv
+
+# clean up
+sudo apt autoremove -y
