@@ -30,7 +30,7 @@ plugins=(
     man
     node
     #npm
-    npx
+    #npx
     #pipenv
     pylint
     python

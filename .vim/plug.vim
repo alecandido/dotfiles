@@ -117,7 +117,7 @@ Plug 'stephpy/vim-yaml'
 "  - refactoring
 "  - template engine
 Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
-Plug 'heavenshell/vim-pydocstring', { 'tag': '*' }
+Plug 'heavenshell/vim-pydocstring', { 'tag': '*', 'do': 'pip install doq' }
 Plug 'python-rope/ropevim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 
@@ -133,7 +133,7 @@ Plug 'Quramy/vim-js-pretty-template'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'prettier/vim-prettier', { 'do': 'yarn global install' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn global add prettier' }
 Plug 'jparise/vim-graphql'
 
 " Css

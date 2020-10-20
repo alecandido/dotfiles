@@ -31,6 +31,9 @@ export PATH="$(yarn global bin --offline):$PATH"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Go
+export PATH="$HOME/.go/bin:$PATH"
+
 # C/C++
 export CPATH=$CPATH:$HOME/.local/include
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/.local/lib/
@@ -70,7 +73,7 @@ export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 # go command
 # (https://blog.patshead.com/2011/05/my-take-on-the-go-command.html)
 
-source $HOME/.bin/go.sh
+source $HOME/.bin/open.sh
 
 # Wrap git automatically by adding the following to ~/.zshrc:
 eval "$(hub alias -s)"

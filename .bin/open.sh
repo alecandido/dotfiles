@@ -1,4 +1,4 @@
-go() {
+open() {
   if [ -f "$1" ]; then
     if [ -n "`file $1 | grep '\(text\|empty\|no magic\)'`" ]; then
       if [ -w "$1" ]; then
@@ -28,6 +28,3 @@ go() {
     echo "Ran out of things to do with '$1'"
   fi
 }
-
-alias g=go
-
