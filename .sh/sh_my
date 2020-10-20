@@ -31,6 +31,10 @@ export PATH="$(yarn global bin --offline):$PATH"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# C/C++
+export CPATH=$CPATH:$HOME/.local/include
+export LIBRARY_PATH=$LIBRARY_PATH:$HOME/.local/lib/
+
 # LD LIBRARY PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib/
 
