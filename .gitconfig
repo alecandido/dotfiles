@@ -335,3 +335,5 @@
 	required = true
 [merge]
 	log = true
+[init]
+	defaultBranch = main

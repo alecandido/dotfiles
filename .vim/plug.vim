@@ -46,6 +46,9 @@ Plug 'Valloric/ListToggle'
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
+" Match parenthesis
+Plug 'jiangmiao/auto-pairs'
+
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
@@ -129,7 +132,9 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jxnblk/vim-mdx-js'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn global install' }
+Plug 'jparise/vim-graphql'
 
 " Css
 Plug 'tpope/vim-haml'
