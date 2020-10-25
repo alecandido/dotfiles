@@ -42,6 +42,7 @@
     diffFilter = delta --color-only 
 [delta]
     features = decorations
+	side-by-side = true
     whitespace-error-style = 22 reverse
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
