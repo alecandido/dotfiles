@@ -8,6 +8,15 @@ export PATH=$PATH:~/.bin
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.local/share/flatpak/exports/bin/ #flatpak apps
 
+# cluster stuffs
+TERM=xterm-256color
+PATH="${HOME}/.local/bin:${HOME}/.local/usr/bin:${PATH}"
+SPATH="/usr/local/sbin:/usr/sbin:/sbin"
+CPATH="${HOME}/.local/include:${CPATH}"
+LIBRARY_PATH="${HOME}/.local/lib:${HOME}/.local/usr/lib:${LIBRARY_PATH}"
+LD_LIBRARY_PATH="${HOME}/.local/lib:${HOME}/.local/usr/lib:${LD_LIBRARY_PATH}"
+PKG_CONFIG_PATH="${HOME}/.local/lib/pkgconfig/:${HOME}/.local/usr/lib/pkgconfig/:${PKG_CONFIG_PATH}"
+
 # Anaconda
 #source ~/anaconda3/etc/profile.d/conda.sh
 #export PATH+=:~/anaconda3/bin

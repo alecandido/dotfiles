@@ -137,6 +137,10 @@ if [ -f $ZSH_DIR/zsh_aliases ]; then
     . $ZSH_DIR/zsh_aliases
 fi
 
+if [ -f $ZSH_DIR/zsh_cluster ]; then
+    . $ZSH_DIR/zsh_cluster
+fi
+
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
