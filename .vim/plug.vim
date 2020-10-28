@@ -53,7 +53,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
 " Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
@@ -154,7 +154,7 @@ Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Plugin for autocompletion
 Plug 'ervandew/supertab'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 
 " Folding
 " Plug 'tmhedberg/SimpylFold'
@@ -167,7 +167,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors'
 
 " Track the engine.
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'

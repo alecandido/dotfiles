@@ -31,8 +31,8 @@ export PYTHONPATH=''
 export PATH=$PATH:~/.julia/julia/bin
 
 # Ruby rbenv
-export PATH=$PATH:~/.rbenv/bin:~/.gem/ruby/2.7.0/bin:
-eval "$(rbenv init -)"
+# export PATH=$PATH:~/.rbenv/bin:~/.gem/ruby/2.7.0/bin:
+# eval "$(rbenv init -)"
 
 # yarn
 export PATH="$(yarn global bin --offline):$PATH"

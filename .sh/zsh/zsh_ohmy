@@ -49,4 +49,6 @@ plugins=(
     history-substring-search
 )
 
+fpath="ias"
+
 autoload -U compinit && compinit
