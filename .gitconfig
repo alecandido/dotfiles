@@ -39,10 +39,10 @@
 [diff]
     tool = vimdiff
 [interactive]
-    diffFilter = delta --color-only 
+    diffFilter = delta --color-only
 [delta]
     features = decorations
-	side-by-side = true
+    side-by-side = true
     whitespace-error-style = 22 reverse
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
@@ -141,9 +141,9 @@
     rm-updated = "!f() { echo "Removing updated files matching the \"(grep)\" pattern: \\\"${1:-'^ M.*'}\\\""; echo; git status --porcelain | grep -v "^?" | grep "${1:-'^ M.*'}" | cut -c4- | xargs git rm --cached; }; f"
     example-alias = "!f() { echo "value passed as parameter is ${1}"; }; f"
 
-	# co-authore-commit: https://github.com/nagoya-foundation/co-authored-commit
-	co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
-	ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
+    # co-authore-commit: https://github.com/nagoya-foundation/co-authored-commit
+    co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
+    ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
 
     ;a = add --all
     ;ai = add -i
@@ -332,13 +332,13 @@
     ;subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
     ;human = name-rev --name-only --refs=refs/heads/*
 [pull]
-	rebase = false
+    rebase = false
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [merge]
-	log = true
+    log = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
