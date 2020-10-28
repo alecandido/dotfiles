@@ -18,14 +18,7 @@ alias star-wars='telnet towel.blinkenlights.nl'
 # │system│
 # └──────┘
 
-alias wifi='~/.my/wifi.sh'
-alias mydev='mount | grep -E "/dev/sd\w[[:digit:]]*"'
-win-info () {
-  xprop | awk '
-  /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
-  /^WM_NAME/{sub(/.* =/, "title:"); print}
-  '
-}
+alias pdftheory="cd /projects/pdftheory"
 alias current-term='ps -p $(ps -p $$ -o ppid=) o args='
 alias test-color='sh -c "$(curl -fsSL https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh)"'
 
