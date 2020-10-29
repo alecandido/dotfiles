@@ -108,8 +108,8 @@ Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant
 " Data
 Plug 'elzr/vim-json'
 Plug 'neoclide/jsonc.vim'
-Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
+Plug 'cespare/vim-toml', { 'do': 'cargo install toml-fmt' }
 
 " Plugin for python:
 "  - formatter
