@@ -16,15 +16,16 @@ export CPATH="${HOME}/.local/include:${CPATH}"
 export LIBRARY_PATH="${HOME}/.local/lib:${HOME}/.local/usr/lib:${LIBRARY_PATH}"
 export LD_LIBRARY_PATH="${HOME}/.local/lib:${HOME}/.local/usr/lib:${LD_LIBRARY_PATH}"
 export PKG_CONFIG_PATH="${HOME}/.local/lib/pkgconfig/:${HOME}/.local/usr/lib/pkgconfig/:${PKG_CONFIG_PATH}"
-# cluster groups
-cluster_groups="pdftheory"
 
-for g in $cluster_groups; do
-  export PATH="${PATH}:/projects/$g/.local/bin"
-  export CPATH="${CPATH}:/projects/$g/.local/include"
-  export LIBRARY_PATH="${LIBRARY_PATH}:/projects/$g/.local/lib"
-  export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/projects/$g/.local/lib"
-  export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/projects/$g/.local/lib/pkgconfig"
+# cluster folders
+cluster_groups="/projects/pdftheory/.local /projects/pdftheory/miniconda3"
+
+for folder in `echo $cluster_groups`; do
+  export PATH="${PATH}:$folder/bin"
+  export CPATH="${CPATH}:$folder/include"
+  export LIBRARY_PATH="${LIBRARY_PATH}:$folder/lib"
+  export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:$folder/lib"
+  export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:$folder/lib/pkgconfig"
 done
 
 # Anaconda
