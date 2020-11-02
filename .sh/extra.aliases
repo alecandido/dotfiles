@@ -78,6 +78,8 @@ alias sass='dart-sass --no-source-map'
 # ruby-sass
 #alias sass='sass --sourcemap=none'
 
+alias paste-image='xclip -selection clipboard -t image/png -o >'
+
 alias backup-home-to='rsync -aAXHv ~'
 
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
