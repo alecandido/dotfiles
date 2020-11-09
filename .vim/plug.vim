@@ -109,7 +109,7 @@ Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant
 Plug 'elzr/vim-json'
 Plug 'neoclide/jsonc.vim'
 Plug 'stephpy/vim-yaml'
-Plug 'cespare/vim-toml', { 'do': 'cargo install toml-fmt' }
+Plug 'cespare/vim-toml'
 
 " Plugin for python:
 "  - formatter
@@ -133,7 +133,7 @@ Plug 'Quramy/vim-js-pretty-template'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'prettier/vim-prettier', { 'do': 'yarn global install' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn global install; yarn global add prettier-plugin-toml' }
 Plug 'jparise/vim-graphql'
 
 " Css
