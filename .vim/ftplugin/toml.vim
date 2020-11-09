@@ -7,7 +7,4 @@ setlocal softtabstop=2
 setlocal expandtab
 setlocal smarttab
 
-set formatprg=toml-fmt
-command! FormatToml normal! ggVGgq
-
-autocmd BufWritePre * execute ':silent FormatToml'
+autocmd BufWritePre * execute ':silent Prettier'
