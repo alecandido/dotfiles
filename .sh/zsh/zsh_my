@@ -147,6 +147,13 @@ unsetopt share_history
      #cmatrix -s
 # }
 
+
+# ╔════════════════════════╗
+# ║ Autocompletion scripts ║
+# ╚════════════════════════╝
+
+source <(inv --print-completion-script zsh)
+
 # ╔══════════════════════════════════════╗
 # ║ Stuffs executed just before entering ║
 # ╚══════════════════════════════════════╝
