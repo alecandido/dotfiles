@@ -99,6 +99,7 @@
     # enhanced diffs
     chs = diff --compact-summary
     diffword = diff --word-diff
+    vimdiff = difftool -t vimdiff -y
 
     # lol
     bringz = pull
@@ -156,14 +157,14 @@
     ;amr = am --resolved
     ;ams = am --skip
     ;#############
-    ;b = branch
-    ;ba = branch -a
-    ;bd = branch -d
-    ;bdd = branch -D
-    ;br = branch -r
-    ;bc = rev-parse --abbrev-ref HEAD
-    ;bu = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
-    ;bs = !git-branch-status
+    ;br = branch
+    ;bra = branch -a
+    ;brd = branch -d
+    ;brdd = branch -D
+    ;brr = branch -r
+    brc = rev-parse --abbrev-ref HEAD
+    bru = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+    ;brs = !git-branch-status
     ;#############
     ;c = commit
     ;ca = commit -a
@@ -209,6 +210,22 @@
     ;#############
     ;pr = prune -v
     ;#############
+    ;pl = pull
+    ;pb = pull --rebase
+    ;#############
+    ;plo = pull origin
+    ;pbo = pull --rebase origin
+    ;plom = pull origin master
+    ;ploc = !git pull origin $(git bc)
+    ;pbom = pull --rebase origin master
+    ;pboc = !git pull --rebase origin $(git bc)
+    ;#############
+    ;plu = pull upstream
+    ;plum = pull upstream master
+    ;pluc = !git pull upstream $(git bc)
+    ;pbum = pull --rebase upstream master
+    ;pbuc = !git pull --rebase upstream $(git bc)
+    ;#############
     ;ps = push
     ;psf = push -f
     ;psu = push -u
@@ -226,24 +243,8 @@
     ;psoc = !git push origin $(git bc)
     ;psaoc = !git push --all origin $(git bc)
     ;psfoc = !git push -f origin $(git bc)
-    ;psuoc = !git push -u origin $(git bc)
+    psuoc = !git push -u origin $(git bc)
     ;psdc = !git push origin :$(git bc)
-    ;#############
-    ;pl = pull
-    ;pb = pull --rebase
-    ;#############
-    ;plo = pull origin
-    ;pbo = pull --rebase origin
-    ;plom = pull origin master
-    ;ploc = !git pull origin $(git bc)
-    ;pbom = pull --rebase origin master
-    ;pboc = !git pull --rebase origin $(git bc)
-    ;#############
-    ;plu = pull upstream
-    ;plum = pull upstream master
-    ;pluc = !git pull upstream $(git bc)
-    ;pbum = pull --rebase upstream master
-    ;pbuc = !git pull --rebase upstream $(git bc)
     ;#############
     ;rb = rebase
     ;rba = rebase --abort
@@ -291,7 +292,7 @@
     ;ss = stash save
     ;ssk = stash save -k
     ;sw = stash show
-    ;st = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
+    stash-num = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
     ;#############
     ;t = tag
     ;td = tag -d
