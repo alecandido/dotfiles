@@ -60,6 +60,9 @@ alias canto='canto-curses'
 alias m='neomutt'
 alias mutt='neomutt'
 
+alias gcc='gcc-10'
+alias gfortran='gfortran-10'
+
 alias ipy='ipython3'
 alias ipy3='ipython3'
 alias ipy2='ipython2'
@@ -72,6 +75,10 @@ alias pip='python3 -m pip'
 alias pip3='python3 -m pip'
 alias pip2='python2 -m pip'
 alias jupyter-here='jupyter notebook --notebook-dir .'
+
+rust-err () { 
+  rustc --explain $1 | vim -c 'set filetype=markdown' -
+}
 
 # dart-sass
 alias sass='dart-sass --no-source-map'
