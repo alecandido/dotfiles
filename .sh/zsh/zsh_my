@@ -9,14 +9,6 @@ function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
-
-# pip zsh completion
-eval "$(pip completion --zsh)"
-# gh zsh completion
-eval "$(gh completion -s zsh)"
-
-autoload -U compinit && compinit
-
 # vim sessions script (not compatible with bash)
 source $HOME/.bin/vims.sh
 
@@ -150,13 +142,6 @@ unsetopt share_history
 # TRAPALRM() {
      #cmatrix -s
 # }
-
-
-# ╔════════════════════════╗
-# ║ Autocompletion scripts ║
-# ╚════════════════════════╝
-
-source <(inv --print-completion-script zsh)
 
 # ╔══════════════════════════════════════╗
 # ║ Stuffs executed just before entering ║
