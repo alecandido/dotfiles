@@ -12,6 +12,10 @@ function virtualenv_info {
 
 # pip zsh completion
 eval "$(pip completion --zsh)"
+# gh zsh completion
+eval "$(gh completion -s zsh)"
+
+autoload -U compinit && compinit
 
 # vim sessions script (not compatible with bash)
 source $HOME/.bin/vims.sh

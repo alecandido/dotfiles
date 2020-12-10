@@ -46,6 +46,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-completions
     zsh-autosuggestions
+    zsh-autocomplete
     history-substring-search
 )
 

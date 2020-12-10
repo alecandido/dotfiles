@@ -46,7 +46,5 @@ autocmd BufWritePre *.rs execute ':silent RustFmt'
 "
 "  <C-> is "control-rust"
 
-nnoremap <silent> <F8>           :SyntasticCheck<CR>
-nnoremap <silent> <F9>           :Black<CR>
 " c -> comment
 "nnoremap <silent> <C-p>c          :Pydocstring<CR>
