@@ -69,6 +69,7 @@ sudo apt install hub
 sudo apt install fasd
 sudo apt install ripgrep
 sudo apt install fd-find
+sudo apt install htop
 #sudo apt install exa
 cargo install exa
 cargo install git-delta
@@ -79,6 +80,10 @@ sudo apt install thefuck
 cargo install --locked bat
 git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
 # sudo apt install rbenv
+
+# python
+pip install glances
+pip install invoke
 
 # gnome extensions
 sudo apt install gnome-tweaks
