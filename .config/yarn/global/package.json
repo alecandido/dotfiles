@@ -6,6 +6,7 @@
     "expo-cli": "^3.27.4",
     "fixme": "^0.6.0",
     "github-wiki-sidebar": "^2.0.1",
+    "gitignore": "^0.6.0",
     "gulp-cli": "^2.2.0",
     "npms": "^0.3.2",
     "npms-cli": "^1.6.0",
