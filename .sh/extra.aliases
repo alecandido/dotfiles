@@ -26,6 +26,7 @@ win-info () {
   /^WM_NAME/{sub(/.* =/, "title:"); print}
   '
 }
+alias dim-screen='xset dpms force off'
 alias current-term='ps -p $(ps -p $$ -o ppid=) o args='
 alias test-color='sh -c "$(curl -fsSL https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh)"'
 
