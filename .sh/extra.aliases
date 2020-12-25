@@ -8,11 +8,13 @@
 
 alias happy='cat ~/.my/ascii_art/happy | lolcat'
 alias surprised='cat ~/.my/ascii_art/surprised_pikachu | lolcat'
+alias tuxsay='cowsay -f tux'
+alias tuxthink='cowthink -f tux'
+alias manycows='apt-get moo | cowthink -n -e"♥♥" | cowthink -n | cowthink -nt'
 alias knf='neofetch --kitty'
 alias knf-profile='neofetch --kitty ~/.face.icon'
 alias kittynf='neofetch --kitty ~/Pictures/Desktop/KIKI-Cat.jpg --crop_mode fill'
 alias star-wars='telnet towel.blinkenlights.nl'
-
 
 # ┌──────┐
 # │system│
@@ -20,12 +22,13 @@ alias star-wars='telnet towel.blinkenlights.nl'
 
 alias wifi='~/.my/wifi.sh'
 alias mydev='mount | grep -E "/dev/sd\w[[:digit:]]*"'
-win-info () {
-  xprop | awk '
+win-info() {
+	xprop | awk '
   /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
   /^WM_NAME/{sub(/.* =/, "title:"); print}
   '
 }
+alias dim-screen='xset dpms force off'
 alias current-term='ps -p $(ps -p $$ -o ppid=) o args='
 alias test-color='sh -c "$(curl -fsSL https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh)"'
 
@@ -57,6 +60,9 @@ alias canto='canto-curses'
 alias m='neomutt'
 alias mutt='neomutt'
 
+alias gcc='gcc-10'
+alias gfortran='gfortran-10'
+
 alias ipy='ipython3'
 alias ipy3='ipython3'
 alias ipy2='ipython2'
@@ -69,6 +75,10 @@ alias pip='python3 -m pip'
 alias pip3='python3 -m pip'
 alias pip2='python2 -m pip'
 alias jupyter-here='jupyter notebook --notebook-dir .'
+
+rust-err() {
+	rustc --explain $1 | vim -c 'set filetype=markdown' -
+}
 
 alias bat="batcat"
 alias brg="batgrep"
@@ -83,6 +93,8 @@ alias sass='dart-sass --no-source-map'
 # ruby-sass
 #alias sass='sass --sourcemap=none'
 
+alias paste-image='xclip -selection clipboard -t image/png -o >'
+
 alias backup-home-to='rsync -aAXHv ~'
 
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
@@ -90,29 +102,29 @@ alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 eval $(thefuck --alias)
 
 mkpdf() {
-  latexmk -pdf $1
-  latexmk -c
+	latexmk -pdf $1
+	latexmk -c
 }
 
 todo() {
-  todo=''
-  done=''
+	todo=''
+	done=''
 
-  #if [[ ! -z "${1+x}" ]]; then
-    #todo="$HOME/Documents/todo/$1.txt"
-    #done="$HOME/Documents/todo/$1-done.txt"
-  #fi
+	#if [[ ! -z "${1+x}" ]]; then
+	#todo="$HOME/Documents/todo/$1.txt"
+	#done="$HOME/Documents/todo/$1-done.txt"
+	#fi
 
-  while getopts ":t" opt; do
-    case ${opt} in
-      t ) # select todofile
-        todo="$HOME/Documents/todo/$OPTARG.txt"
-        done="$HOME/Documents/todo/$OPTARG-done.txt"
-        ;;
-    esac
-  done
+	while getopts ":t" opt; do
+		case ${opt} in
+		t) # select todofile
+			todo="$HOME/Documents/todo/$OPTARG.txt"
+			done="$HOME/Documents/todo/$OPTARG-done.txt"
+			;;
+		esac
+	done
 
-  eval "todotxt-machine $todo $done --config $HOME/.config/todotxt-machine/todotxt-machinerc"
+	eval "todotxt-machine $todo $done --config $HOME/.config/todotxt-machine/todotxt-machinerc"
 }
 
 # ┌────────────┐
@@ -123,11 +135,11 @@ alias cal='gcal'
 
 # fasd
 alias v='f -t -e vim -b viminfo'
-c () { # cd in the dir of the file
-    cd $(dirname `fasd -i $@`)
+c() { # cd in the dir of the file
+	cd $(dirname $(fasd -i $@))
 
-# instead of:
-# alias c='fasd -e cd'
+	# instead of:
+	# alias c='fasd -e cd'
 }
 
 # ┌────┐
@@ -138,12 +150,12 @@ alias cact='. ~/.miniconda3/bin/activate'
 alias cdact='conda deactivate'
 
 aenv() {
-    env_path=$(python3 $HOME/.bin/activate_environment.py $PWD)
-    if [ ! -z $env_path ]; then
-        . $env_path
-    else
-        echo "No environment found"
-    fi
+	env_path=$(python3 $HOME/.bin/activate_environment.py $PWD)
+	if [ ! -z $env_path ]; then
+		. $env_path
+	else
+		echo "No environment found"
+	fi
 }
 
 # ┌───┐
@@ -165,10 +177,9 @@ alias bkp-conf="~/.bin/scripts/backup_configs.sh"
 # └──────────────┘
 
 # launch app
-launch () {
-    nohup $1 > /dev/null 2>&1 &
+launch() {
+	nohup $1 >/dev/null 2>&1 &
 }
-
 
 # See ToDo list
 #alias todo='~/.mybin/ToDo.sh'
@@ -177,109 +188,109 @@ launch () {
 #alias Paperopoli='~/.mybin/Paperopoli.py'
 
 # weather
-weather () {
-    # defaults
-    city="Milan"
-    format=""
+weather() {
+	# defaults
+	city="Milan"
+	format=""
 
-    while getopts ":c:o" opt; do
-        case ${opt} in
-            c ) # select city
-                city=$OPTARG
-                ;;
-            o ) # format one line
-                format="?format=3"
-                ;;
-            \? ) echo "Usage: cmd [-c CITY] [-o]"
-                ;;
-        esac
-    done
-    curl "wttr.in/${city}${format}"
+	while getopts ":c:o" opt; do
+		case ${opt} in
+		c) # select city
+			city=$OPTARG
+			;;
+		o) # format one line
+			format="?format=3"
+			;;
+		\?)
+			echo "Usage: cmd [-c CITY] [-o]"
+			;;
+		esac
+	done
+	curl "wttr.in/${city}${format}"
 }
 
 # Show term stuffs
-keys(){
-    # from arch wiki
-    xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+keys() {
+	# from arch wiki
+	xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 }
-showcolors(){
-    # select colored element
-    if [[ ! -z $1 && "$1" == "-b" ]] ; then
-        c_el=48 # colored background
-    else
-        c_el=38 # colored text
-    fi
+showcolors() {
+	# select colored element
+	if [[ ! -z $1 && "$1" == "-b" ]]; then
+		c_el=48 # colored background
+	else
+		c_el=38 # colored text
+	fi
 
-    echo "\\\033[${c_el};5;#m"
-    echo ''
+	echo "\\\033[${c_el};5;#m"
+	echo ''
 
-    for i in {0..31}; do
-        for j in {0..7}; do
-            n=$((i*8 + j))
-            padded="$n   "
-            echo -n "\033[${c_el};5;${n}m ${padded:0:3}   Ciao  \033[0m\033[38;5;255m │  "
-        done
-        echo " "
-    done
+	for i in {0..31}; do
+		for j in {0..7}; do
+			n=$((i * 8 + j))
+			padded="$n   "
+			echo -n "\033[${c_el};5;${n}m ${padded:0:3}   Ciao  \033[0m\033[38;5;255m │  "
+		done
+		echo " "
+	done
 
-    echo ''
-    echo 'reset with:'
-    echo "\\\033[0m"
+	echo ''
+	echo 'reset with:'
+	echo "\\\033[0m"
 }
 
 # older funcs
-pdf_words(){
-  if [ ! -z "$2" ] && ( [ "$2" = "--char" ] || [ "$2" = "-c" ] )
-  then
-    pdftotext $1 - | wc -c
-  else
-    pdftotext $1 - | wc -w
-  fi
+pdf_words() {
+	if [ ! -z "$2" ] && ([ "$2" = "--char" ] || [ "$2" = "-c" ]); then
+		pdftotext $1 - | wc -c
+	else
+		pdftotext $1 - | wc -w
+	fi
 }
-pdf_to_gray(){
-  if [ -f "$1" ] && [ "${1#*.}" = "pdf" ]; then
-    if [ -z "$2" ]; then
-      OUT="${1%.pdf}_gs.pdf"
-    else
-      OUT="$2"
-    fi
-    gs -o $OUT -sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.4 $1
-  else
-    echo "Invalid first argument"
-  fi
+pdf_to_gray() {
+	if [ -f "$1" ] && [ "${1#*.}" = "pdf" ]; then
+		if [ -z "$2" ]; then
+			OUT="${1%.pdf}_gs.pdf"
+		else
+			OUT="$2"
+		fi
+		gs -o $OUT -sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.4 $1
+	else
+		echo "Invalid first argument"
+	fi
 }
-img_to_gray(){
-    exts=("png" "jpg")
-    EXT="?"
-    TEST="${1#*.}"
-    for e in "${exts[@]}"; do
-        if [ "$e" = "$TEST" ]; then
-            EXT="$TEST"
-        fi
-    done
-    if [ -f "$1" ] && [ "$EXT" != "?"  ]; then
-        if [ -z "$2" ]; then
-            OUT="${1%.${EXT}}_gs.${EXT}"
-        else
-            OUT="$2"
-        fi
-        #echo "$OUT"
-        convert $1 -colorspace Gray $OUT
-  else
-    echo "Invalid first argument"
-  fi
+img_to_gray() {
+	exts=("png" "jpg")
+	EXT="?"
+	TEST="${1#*.}"
+	for e in "${exts[@]}"; do
+		if [ "$e" = "$TEST" ]; then
+			EXT="$TEST"
+		fi
+	done
+	if [ -f "$1" ] && [ "$EXT" != "?" ]; then
+		if [ -z "$2" ]; then
+			OUT="${1%.${EXT}}_gs.${EXT}"
+		else
+			OUT="$2"
+		fi
+		#echo "$OUT"
+		convert $1 -colorspace Gray $OUT
+	else
+		echo "Invalid first argument"
+	fi
 }
 
 # ... and similar
 
 # rclone "aliases"
-rclone(){
-  x="$@"
-    if [[ ${x:0:3} == "ls " ]] && [[ ${x:3:11} != "--max-depth" ]]; then
-        command rclone ls --max-depth 1 ${x:3}
-    elif [[ ${x:0:4} == "lsl " ]] && [[ ${x:3:11} != "--max-depth" ]]; then
-        command rclone lsl --max-depth 1
-    else
-        command rclone "$@"
-    fi
+rclone() {
+	x="$@"
+	if [[ ${x:0:3} == "ls " ]] && [[ ${x:3:11} != "--max-depth" ]]; then
+		command rclone ls --max-depth 1 ${x:3}
+	elif [[ ${x:0:4} == "lsl " ]] && [[ ${x:3:11} != "--max-depth" ]]; then
+		command rclone lsl --max-depth 1
+	else
+		command rclone "$@"
+	fi
 }

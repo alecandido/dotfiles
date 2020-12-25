@@ -26,4 +26,6 @@ au BufNewFile,BufRead *.mutt        setf neomuttrc
 
 au BufNewFile,BufRead *.mdp         setf pandoc
 
+au BufNewFile,BufRead *Containerfile setf dockerfile
+
 augroup END

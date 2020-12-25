@@ -9,10 +9,6 @@ function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
-
-# pip zsh completion
-eval "$(pip completion --zsh)"
-
 # vim sessions script (not compatible with bash)
 source $HOME/.bin/vims.sh
 

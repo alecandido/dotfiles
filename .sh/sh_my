@@ -64,7 +64,7 @@ fi
 #source $HOME/.desktoprc
 
 export SHELL=zsh
-export PAGER=less # most is too strange to use it as default pager
+export PAGER='less -r' # most is too strange to use it as default pager
 export BROWSER=firefox
 export EDITOR=vim
 export VISUAL=vim
