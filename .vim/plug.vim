@@ -121,10 +121,6 @@ Plug 'heavenshell/vim-pydocstring', { 'tag': '*', 'do': 'pip install doq' }
 Plug 'python-rope/ropevim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 
-" Julia
-Plug 'JuliaEditorSupport/julia-vim'
-Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
-
 " Typescript/X & JS/X & MDX
 Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
@@ -151,6 +147,13 @@ Plug 'rust-lang/rust.vim'
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+
+" shfmt
+Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
+
+" Julia
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
 " Plugin for autocompletion
 Plug 'ervandew/supertab'

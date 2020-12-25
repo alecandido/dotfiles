@@ -32,7 +32,9 @@ export PATH="$(yarn global bin --offline):$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Go
-export PATH="$HOME/.go/bin:$PATH"
+export GOPATH="$HOME/.go/gopath"
+export GOROOT="$HOME/.go"
+export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 
 # C/C++
 export CPATH=$CPATH:$HOME/.local/include

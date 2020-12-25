@@ -54,6 +54,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 vim +PlugInstall
 sudo apt install build-essential cmake python3-dev
 python3 $HOME/.vim/plugged/YouCompleteMe/install.py --all
+# vim externals
+go get -u github.com/mvdan/sh/cmd/shfmt
 
 # tmux installation
 sudo apt install tmux
