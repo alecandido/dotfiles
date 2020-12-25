@@ -70,20 +70,23 @@ sudo apt install fasd
 sudo apt install ripgrep
 sudo apt install fd-find
 sudo apt install htop
-#sudo apt install exa
-cargo install exa
-cargo install git-delta
+sudo apt install ncdu
 sudo apt install tldr
 sudo apt install jq
-sudo apt install tree
-sudo apt install thefuck
-cargo install --locked bat
+sudo apt install pdfgrep
+sudo apt install network-manager-vpnc-gnome
+sudo apt install rename
+#
+sudo apt install thefuck figlet lolcat cowsay neofetch
 git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
 # sudo apt install rbenv
-
-# python
+# --- through python
 pip install glances bpytop speedtest-cli
 pip install invoke
+# --- through rust
+cargo install exa
+cargo install git-delta
+cargo install --locked bat
 
 # gnome extensions
 sudo apt install gnome-tweaks
