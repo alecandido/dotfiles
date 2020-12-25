@@ -82,7 +82,7 @@ git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
 # sudo apt install rbenv
 
 # python
-pip install glances
+pip install glances bpytop speedtest-cli
 pip install invoke
 
 # gnome extensions
