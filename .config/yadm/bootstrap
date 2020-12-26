@@ -98,7 +98,6 @@ yarn global add prettier tsc tsserver webpack webpack-cli
 yarn global add dockerfile-language-server-nodejs \
                 graphql-language-service-cli \
                 sql-language-server
-# --- themes lua
 
 # gnome extensions
 sudo apt install gnome-tweaks
