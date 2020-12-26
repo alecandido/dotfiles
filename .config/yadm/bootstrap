@@ -48,6 +48,9 @@ wget https://golang.org/dl/go1.15.3.linux-amd64.tar.gz
 tar -C $HOME/.local -xzf go1.15.3.linux-amd64.tar.gz
 rm -f go1.15.3.linux-amd64.tar.gz
 
+# lua
+sudo apt install lua5.3
+
 # vim installation
 sudo apt install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -83,10 +86,19 @@ git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
 # --- through python
 pip install glances bpytop speedtest-cli
 pip install invoke
+pip install fortran-language-server
 # --- through rust
 cargo install exa
 cargo install git-delta
 cargo install --locked bat
+# --- through yarn
+yarn global add npms npms-cli
+yarn global add gitignore fixme
+yarn global add prettier tsc tsserver webpack webpack-cli
+yarn global add dockerfile-language-server-nodejs \
+                graphql-language-service-cli \
+                sql-language-server
+# --- themes lua
 
 # gnome extensions
 sudo apt install gnome-tweaks

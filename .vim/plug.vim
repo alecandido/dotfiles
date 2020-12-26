@@ -3,13 +3,38 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Make sure you use single quotes
-
 " Defaults for .vimrc
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive' | Plug 'tpope/vim-rhubarb'
+
+" Sessions' plugins
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+
+" Plugin for autocompletion
+"Plug 'ervandew/supertab'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Folding
+ Plug 'tmhedberg/SimpylFold'
+ Plug 'Konfekt/FastFold'
+
+" Searching
+" Plug 'kien/ctrlp.vim'
+
+" Sublime multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
+" Snippets : engine + snippets
+" Plug 'SirVer/ultisnips' " Engine already provided by coc
+Plug 'honza/vim-snippets'
+
+" Add Syntastic plugin here "
+Plug 'scrooloose/syntastic'
 
 " Define your own submode
 Plug 'kana/vim-submode'
@@ -21,17 +46,7 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 "integration with git gutter
-
-" Color scheme
-Plug 'junegunn/seoul256.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'lifepillar/vim-solarized8'
-Plug 'whatyouhide/vim-gotham'
-
-
-" Sessions' plugins
-Plug 'tpope/vim-obsession'
-Plug 'dhruvasagar/vim-prosession'
+Plug 'itchyny/lightline.vim'
 
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
@@ -39,6 +54,15 @@ Plug 'airblade/vim-gitgutter'
 " tmux
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
+
+" Color scheme
+"Plug 'junegunn/seoul256.vim'
+Plug 'arcticicestudio/nord-vim'
+"Plug 'lifepillar/vim-solarized8'
+"Plug 'whatyouhide/vim-gotham'
+
+" Paranthesis highlight
+Plug 'luochen1990/rainbow'
 
 " toggle location list and quickfix
 Plug 'Valloric/ListToggle'
@@ -52,20 +76,6 @@ Plug 'jiangmiao/auto-pairs'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-" Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Using a non-master branch
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -79,9 +89,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Add NERD commenter plugin here "
 Plug 'scrooloose/nerdcommenter'
-
-" Plugin for status bar
-Plug 'itchyny/lightline.vim'
 
 " Plugin for fast motion through the text
 Plug 'easymotion/vim-easymotion'
@@ -106,12 +113,13 @@ Plug 'gu-fan/riv.vim'
 Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
 
 " Data
-Plug 'elzr/vim-json'
 Plug 'neoclide/jsonc.vim'
+Plug 'elzr/vim-json'
 Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
 
 " Plugin for python:
+"  - autocompletion
 "  - formatter
 "  - docstring generation
 "  - refactoring
@@ -144,39 +152,24 @@ Plug 'parkr/vim-jekyll'
 " Rust
 Plug 'rust-lang/rust.vim'
 
+" Go
+Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+" Dart
+
+
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
-" shfmt
+" Shell
 Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
-" Plugin for autocompletion
-Plug 'ervandew/supertab'
-Plug 'Valloric/YouCompleteMe'
-
-" Folding
-" Plug 'tmhedberg/SimpylFold'
-" Plug 'Konfekt/FastFold'
-
-" Searching
-" Plug 'kien/ctrlp.vim'
-
-" Sublime multiple cursors
-Plug 'terryma/vim-multiple-cursors'
-
-" Track the engine.
-Plug 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
-
-" Add Syntastic plugin here "
-Plug 'scrooloose/syntastic'
 
 " Initialize plugin system
 call plug#end()
