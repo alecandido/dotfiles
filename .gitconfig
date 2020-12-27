@@ -1,10 +1,11 @@
 [user]
-    name = AleCandido
+    name = Alessandro Candido
     email = candido.ale@gmail.com
 [core]
     editor = vim
     ;excludesFile = $XDG_CONFIG_HOME/git/ignore ;already the default
     quotepath = false
+    pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended Bright'
 [color]
     status = auto
     branch = auto
@@ -37,6 +38,16 @@
     ;commdands = -fetch,instaweb
 [diff]
     tool = vimdiff
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    features = decorations
+    side-by-side = true
+    whitespace-error-style = 22 reverse
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
 [difftool]
     prompt = false
 [instaweb]
@@ -88,6 +99,18 @@
     # enhanced diffs
     chs = diff --compact-summary
     diffword = diff --word-diff
+    vimdiff = difftool -t vimdiff -y
+
+    # lol
+    bringz = pull
+    chicken = add
+    hackzor = init
+    letcat = checkout
+    oanward = commit -m
+    ooanward = commit -am
+    rulz = push
+    violenz = rebase
+    yolo = "!git commit -m "\"$(curl -s http://whatthecommit.com/index.txt)\"
 
     # history aliases
     hist = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%C(white)\\ |\\ %s%C(green)%d\\ %C(blue)[%an]" --graph --date=short --decorate
@@ -116,6 +139,12 @@
     # external
     aliases = "!git config -l | grep alias | cut -c 7- | awk 'BEGIN { FS = \"=\" }; { printf \"%15s   %s\\n\", $1, $2 }'"
     visual = !gitk --all&
+    rm-updated = "!f() { echo "Removing updated files matching the \"(grep)\" pattern: \\\"${1:-'^ M.*'}\\\""; echo; git status --porcelain | grep -v "^?" | grep "${1:-'^ M.*'}" | cut -c4- | xargs git rm --cached; }; f"
+    example-alias = "!f() { echo "value passed as parameter is ${1}"; }; f"
+
+    # co-authore-commit: https://github.com/nagoya-foundation/co-authored-commit
+    co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
+    ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
 
     ;a = add --all
     ;ai = add -i
@@ -128,14 +157,14 @@
     ;amr = am --resolved
     ;ams = am --skip
     ;#############
-    ;b = branch
-    ;ba = branch -a
-    ;bd = branch -d
-    ;bdd = branch -D
-    ;br = branch -r
-    ;bc = rev-parse --abbrev-ref HEAD
-    ;bu = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
-    ;bs = !git-branch-status
+    ;br = branch
+    ;bra = branch -a
+    ;brd = branch -d
+    ;brdd = branch -D
+    ;brr = branch -r
+    brc = rev-parse --abbrev-ref HEAD
+    bru = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+    ;brs = !git-branch-status
     ;#############
     ;c = commit
     ;ca = commit -a
@@ -181,6 +210,22 @@
     ;#############
     ;pr = prune -v
     ;#############
+    ;pl = pull
+    ;pb = pull --rebase
+    ;#############
+    ;plo = pull origin
+    ;pbo = pull --rebase origin
+    ;plom = pull origin master
+    ;ploc = !git pull origin $(git bc)
+    ;pbom = pull --rebase origin master
+    ;pboc = !git pull --rebase origin $(git bc)
+    ;#############
+    ;plu = pull upstream
+    ;plum = pull upstream master
+    ;pluc = !git pull upstream $(git bc)
+    ;pbum = pull --rebase upstream master
+    ;pbuc = !git pull --rebase upstream $(git bc)
+    ;#############
     ;ps = push
     ;psf = push -f
     ;psu = push -u
@@ -198,24 +243,8 @@
     ;psoc = !git push origin $(git bc)
     ;psaoc = !git push --all origin $(git bc)
     ;psfoc = !git push -f origin $(git bc)
-    ;psuoc = !git push -u origin $(git bc)
+    psuoc = !git push -u origin $(git bc)
     ;psdc = !git push origin :$(git bc)
-    ;#############
-    ;pl = pull
-    ;pb = pull --rebase
-    ;#############
-    ;plo = pull origin
-    ;pbo = pull --rebase origin
-    ;plom = pull origin master
-    ;ploc = !git pull origin $(git bc)
-    ;pbom = pull --rebase origin master
-    ;pboc = !git pull --rebase origin $(git bc)
-    ;#############
-    ;plu = pull upstream
-    ;plum = pull upstream master
-    ;pluc = !git pull upstream $(git bc)
-    ;pbum = pull --rebase upstream master
-    ;pbuc = !git pull --rebase upstream $(git bc)
     ;#############
     ;rb = rebase
     ;rba = rebase --abort
@@ -263,7 +292,7 @@
     ;ss = stash save
     ;ssk = stash save -k
     ;sw = stash show
-    ;st = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
+    stash-num = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
     ;#############
     ;t = tag
     ;td = tag -d
@@ -304,4 +333,13 @@
     ;subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
     ;human = name-rev --name-only --refs=refs/heads/*
 [pull]
-	rebase = false
+    rebase = false
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[merge]
+    log = true
+[init]
+    defaultBranch = main

@@ -33,10 +33,10 @@ inoremap <silent> <C-q>          <C-o>:qa<CR>
 " Move with ctrl in insert mode
 " ACTHUNG: interfer with vim-mux-navigator. but it is not because in this you
 " need to leave views always in normal mode
-inoremap <C-h>                   <C-o>h
-inoremap <C-j>                   <C-o>j
-inoremap <C-k>                   <C-o>k
-inoremap <C-l>                   <C-o>l
+"inoremap <C-h>                   <C-o>h
+"inoremap <C-j>                   <C-o>j
+"inoremap <C-k>                   <C-o>k
+"inoremap <C-l>                   <C-o>l
 
 " Cut & paste stuffs
 " delete till the end of line
