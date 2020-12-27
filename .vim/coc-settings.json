@@ -14,10 +14,6 @@
       "command": "graphql-lsp",
       "args": ["server", "-m", "stream"],
       "filetypes": ["typescript", "typescriptreact", "graphql"]
-    },
-    "digestif": {
-      "command": "digestif",
-      "filetypes": ["tex", "plaintex", "context"]
     }
   }
 }
