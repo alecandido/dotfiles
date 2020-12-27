@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "gitignore.cli": "^1.4.2",
     "gulp-cli": "^2.2.0",
     "npms": "^0.3.2",
     "npms-cli": "^1.6.0",

@@ -74,6 +74,8 @@ mkpdf () {
   latexmk -c
 }
 
+alias gtk-title-remove="xprop -format _MOTIF_WM_HINTS 32i -set _MOTIF_WM_HINTS 2"
+
 # ┌────────────┐
 # │sh utilities│
 # └────────────┘
