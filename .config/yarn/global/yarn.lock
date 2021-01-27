@@ -5000,10 +5000,10 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-next-app@^9.4.4:
-  version "9.5.3"
-  resolved "https://registry.yarnpkg.com/create-next-app/-/create-next-app-9.5.3.tgz#39ff362d6566133019fea3c877c1f2a000e0dfa1"
-  integrity sha512-YpSqgqBZ+MvoSzBPXoWSA5A39mtz76Lg/iOdwSfsdhEVI+QxmmeAN9iuucWNnHxAHH1LzqntmljB3T37wUOdaw==
+create-next-app@^10.0.5:
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/create-next-app/-/create-next-app-10.0.5.tgz#e1e7f999fcec09bf2b905bbeb87be4812524619e"
+  integrity sha512-KAqgjnVIfrqH2nT/9zbNiUGqTsTvHWa6mMP2xRprAsGJ8hU2vNR/yKVKhjfx266kdNF37MmJsC0ZnPa3BOk2JQ==
 
 create-react-app@^3.4.1:
   version "3.4.1"
@@ -5026,6 +5026,11 @@ create-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
+
+create-wasm-app@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/create-wasm-app/-/create-wasm-app-0.1.0.tgz#63b4ab45e6235b07dcc14879261d0562d27e17db"
+  integrity sha512-BzClfEAxwfZxE5IDNbNzutr5W6EXZrC0m1ax2R3sOKdQeHo8QKB6e/79vFQU9mtlNxLO6IeT7Lxy8FxOV+awQg==
 
 cross-fetch@3.0.6:
   version "3.0.6"
