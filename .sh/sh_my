@@ -21,8 +21,8 @@ export PYTHONPATH=''
 export PATH=$PATH:~/.julia/julia/bin
 
 # Ruby rbenv
-export PATH=$PATH:~/.rbenv/bin:~/.gem/ruby/2.7.0/bin:
-eval "$(rbenv init -)"
+#export PATH=$PATH:~/.rbenv/bin:~/.gem/ruby/2.7.0/bin:
+#eval "$(rbenv init -)"
 
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$(yarn global bin --offline):$PATH"
@@ -88,3 +88,6 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 # Preserve MANPATH if you already defined it somewhere in your config.
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
+anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool
+
