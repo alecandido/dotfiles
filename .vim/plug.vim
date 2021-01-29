@@ -121,6 +121,7 @@ Plug 'neoclide/jsonc.vim'
 Plug 'elzr/vim-json'
 Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
+Plug 'chrisbra/csv.vim'
 
 " Plugin for python:
 "  - autocompletion
@@ -130,7 +131,7 @@ Plug 'cespare/vim-toml'
 "  - template engine
 Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
 Plug 'heavenshell/vim-pydocstring', { 'tag': '*', 'do': 'pip install doq' }
-Plug 'python-rope/ropevim'
+Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'Glench/Vim-Jinja2-Syntax'
 
 " Typescript/X & JS/X & MDX
@@ -168,7 +169,8 @@ Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Shell
-Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
+Plug 'z0mbix/vim-shfmt'
+Plug 'meatballs/vim-xonsh'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
