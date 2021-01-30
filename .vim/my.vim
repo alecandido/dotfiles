@@ -1,13 +1,8 @@
 " Enable filetype recognition and specific settings
 filetype plugin on
-" check if terminal has colors
-"if &t_Co > 2
-syntax enable
 
 " search
 set hlsearch         " highlight search terms
-set incsearch        " show search matches as you type
-" endif
 
 " Set line numbers style
 " shortcut: set nu rnu
@@ -18,7 +13,6 @@ set number relativenumber
 set splitbelow
 set splitright
 
-set wildmenu
 set wildmode=full
 
 set noswapfile
@@ -49,7 +43,6 @@ endif
 
 " Set tabs
 "
-filetype plugin indent on
 " Set default lenghts
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -58,7 +51,6 @@ set shiftwidth=4
 
 " On pressing tab, insert 4 spaces
 set expandtab
-set smarttab
 
 " Set folding
 set foldmethod=indent   "fold based on indent
@@ -94,13 +86,8 @@ function! Z(...)
   endif
 endfunction
 
-
 " Don't wake up system with blinking cursor:
 let &guicursor = &guicursor . ",a:blinkoff0"
-
-if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-   set fileencodings=ucs-bom,utf-8,latin1
-endif
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")

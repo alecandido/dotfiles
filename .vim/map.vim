@@ -39,12 +39,13 @@ inoremap <silent> <C-q>          <C-o>:qa<CR>
 "inoremap <C-l>                   <C-o>l
 
 " Cut & paste stuffs
-" delete till the end of line
-inoremap <C-Del>                 <C-\><C-O>D
 " yank till the end of line
 nnoremap Y                       y$
 " copy one line above
-nnoremap _                       ggY``P
+" TODO: nnoremap _                       ggY``P
+"   - reuse the key '_'
+"   - learn `` trick
+"
 " toggle paste mode
 set pastetoggle=<F3>
 
@@ -53,14 +54,9 @@ vnoremap >                       >gv
 vnoremap <                       <gv
 
 " Search for word under cursor with * or # in new window:
-nnoremap <C-w>*                  <C-w>s*
-nnoremap <C-w>#                  <C-w>s#
+"nnoremap <C-w>*                  <C-w>s*
+"nnoremap <C-w>#                  <C-w>s#
 
-" Highlight text on the screen matching that under the cursor: Press Ctrl-k to
-" start; each subsequent Ctrl-l matches one more character. Uses marks "x" and
-" "y", and register "z".
-noremap <M-k>                    mx
-noremap <M-l>                    lmy"zy`x/<C-r>z<CR>`y
 
 " Buffers
 " -------
@@ -83,7 +79,8 @@ nnoremap <C-u>a                  :badd<space>
 " PLUGINS:
 " -------
 " alias <C-/> ('/' as root)
-nnoremap <silent> <C-_>          :NERDTreeToggle<CR>
+execute "set <M-w>=\ew"
+nnoremap <silent> <M-w>          :NERDTreeToggle<CR>
 
 " toggle comment in every mode
 noremap  <silent> <C-d>          :call NERDComment(0,"toggle")<CR>

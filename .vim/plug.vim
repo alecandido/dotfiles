@@ -87,14 +87,19 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
-" Plugin for project tree
+" Start screen
+Plug 'mhinz/vim-startify'
+
+" Project tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Add NERD commenter plugin here "
 Plug 'scrooloose/nerdcommenter'
 
-" Plugin for fast motion through the text
+" Fast motion through the text
 Plug 'easymotion/vim-easymotion'
 
 " Plugin for Python autocompletion (with jedi)
