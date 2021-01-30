@@ -103,6 +103,8 @@ Plug 'easymotion/vim-easymotion'
 " Plugin for autocompletion (kite)
 "Plug 'kiteco/vim-plugin', { 'for': 'python' }
 
+Plug 'sotte/presenting.vim'
+
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -124,7 +126,6 @@ Plug 'cespare/vim-toml'
 Plug 'chrisbra/csv.vim'
 
 " Plugin for python:
-"  - autocompletion
 "  - formatter
 "  - docstring generation
 "  - refactoring
