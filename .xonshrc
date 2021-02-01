@@ -1,5 +1,4 @@
 source $HOME/.sh/xonsh/xonshrc
 
-#source-bash $HOME/.sh/extra.aliases
 source-bash $HOME/.sh/shrc
 

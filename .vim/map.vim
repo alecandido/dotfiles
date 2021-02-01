@@ -7,7 +7,7 @@ nnoremap O                       O<Esc>
 nnoremap à                       :
 
 " remap esc
-inoremap òò                      <Esc>
+inoremap jk                      <Esc>
 
 " foldings
 vnoremap <space>                 zf
@@ -48,6 +48,9 @@ nnoremap Y                       y$
 "
 " toggle paste mode
 set pastetoggle=<F3>
+
+" toggle tagbar
+nmap <F8> :TagbarToggle<CR>
 
 " visual mode blockwise indent
 vnoremap >                       >gv

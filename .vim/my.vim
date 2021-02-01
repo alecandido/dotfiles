@@ -4,6 +4,10 @@ filetype plugin on
 " search
 set hlsearch         " highlight search terms
 
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
 " Set line numbers style
 " shortcut: set nu rnu
 set number relativenumber

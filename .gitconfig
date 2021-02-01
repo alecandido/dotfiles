@@ -343,3 +343,4 @@
     log = true
 [init]
     defaultBranch = main
+	templatedir = ~/.git_template

@@ -20,12 +20,14 @@ Plug 'dhruvasagar/vim-prosession'
 
 " Plugin for autocompletion
 "Plug 'ervandew/supertab'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Tags
+Plug 'preservim/tagbar'
+
 " Folding
- Plug 'tmhedberg/SimpylFold'
- Plug 'Konfekt/FastFold'
+Plug 'tmhedberg/SimpylFold'
+Plug 'Konfekt/FastFold'
 
 " Searching
 " Plug 'kien/ctrlp.vim'

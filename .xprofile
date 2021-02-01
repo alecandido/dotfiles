@@ -4,12 +4,13 @@
 # -----------------
 # bind keys and shortcuts
 # -----------------
+xmodmap $HOME/.xutils/xmodmap
 # good to kill other instances, but I would like to kill those related to the
 # same tty, otherwise it will kill the one running on main when using the others
-if [[ ${HOST#*-} = "arch" ]]; then
-  killall xbindkeys
-  xbindkeys -f $HOME/.xutils/xbindkeysrc
-fi
+#if [[ ${HOST#*-} = "arch" ]]; then
+killall xbindkeys
+xbindkeys -f $HOME/.xutils/xbindkeysrc
+#fi
 
 # -----------------
 # Composite manager:
@@ -26,7 +27,6 @@ fi
 #killall picom
 #picom -c -b
 
-
 # -----------------
 # screen locker
 # -----------------
@@ -38,14 +38,14 @@ fi
 # -----------------
 # idle actions
 # -----------------
-## Only exported variables can be used within the timer's command.
-export PRIMARY_DISPLAY="$(xrandr | awk '/ primary/{print $1}')"
-## times in seconds
-export TIME_DIM=180 # inactivity time before dimmming screen
-export TIME_LOCK=120 # inactivity time before locking - after dimming
-export TIME_DIM_LOCK=30 # inactivity time before locking - after dimming
-export TIME_SUSPEND=1200 # inactivity time before suspending - after locking
-export LOCKER='/usr/bin/awesome-client "_G.show_lockscreen()"'
+# Only exported variables can be used within the timer's command.
+#export PRIMARY_DISPLAY="$(xrandr | awk '/ primary/{print $1}')"
+# times in seconds
+#export TIME_DIM=180 # inactivity time before dimmming screen
+#export TIME_LOCK=120 # inactivity time before locking - after dimming
+#export TIME_DIM_LOCK=30 # inactivity time before locking - after dimming
+#export TIME_SUSPEND=1200 # inactivity time before suspending - after locking
+#export LOCKER='/usr/bin/awesome-client "_G.show_lockscreen()"'
 #. $HOME/.xutils/xidlehook
 
 # -----------------
