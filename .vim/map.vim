@@ -6,6 +6,9 @@ nnoremap o                       o<Esc>
 nnoremap O                       O<Esc>
 nnoremap à                       :
 
+" move down
+noremap <C-f>                    :normal! <C-D><CR>
+
 " remap esc
 inoremap jk                      <Esc>
 
@@ -27,6 +30,9 @@ inoremap <silent> <C-s>          <C-o>:update<CR>
 noremap  <silent> <C-q>          :qa<CR>
 vnoremap <silent> <C-q>          <C-c>:qa<CR>
 inoremap <silent> <C-q>          <C-o>:qa<CR>
+noremap  <silent> <C-w>          :q<CR>
+vnoremap <silent> <C-w>          <C-c>:q<CR>
+inoremap <silent> <C-w>          <C-o>:q<CR>
 " not use the following to not overwrite WORD jumping
 "nnoremap <S-w>                   :q<CR>
 
@@ -50,7 +56,7 @@ nnoremap Y                       y$
 set pastetoggle=<F3>
 
 " toggle tagbar
-nmap <F8> :TagbarToggle<CR>
+noremap <F8>                     :TagbarToggle<CR>
 
 " visual mode blockwise indent
 vnoremap >                       >gv
@@ -70,12 +76,12 @@ vnoremap <                       <gv
 " (on the other hand <C-u> is the partner of <C-d>, that is already
 " overwritten for toggling comments)
 
-nnoremap <silent> <C-u>n         :bn<cr>
-nnoremap <silent> <C-u>p         :bp<cr>
-nnoremap <silent> <C-u>gg        :bf<cr>
-nnoremap <silent> <C-u>G         :bl<cr>
-nnoremap <silent> <C-u>l         :ls<cr>
-nnoremap <C-u>a                  :badd<space>
+"nnoremap <silent> <C-u>n         :bn<cr>
+"nnoremap <silent> <C-u>p         :bp<cr>
+"nnoremap <silent> <C-u>gg        :bf<cr>
+"nnoremap <silent> <C-u>G         :bl<cr>
+"nnoremap <silent> <C-u>l         :ls<cr>
+"nnoremap <C-u>a                  :badd<space>
 " TODO: add split commands
 
 " -------

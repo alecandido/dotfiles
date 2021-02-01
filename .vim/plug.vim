@@ -33,7 +33,7 @@ Plug 'Konfekt/FastFold'
 " Plug 'kien/ctrlp.vim'
 
 " Sublime multiple cursors
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 
 " Snippets : engine + snippets
 " Plug 'SirVer/ultisnips' " Engine already provided by coc

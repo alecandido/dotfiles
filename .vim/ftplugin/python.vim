@@ -61,7 +61,5 @@ let g:riv_python_rst_hl=1
 "
 "  <C-p> is "control-python"
 
-nnoremap <silent> <F8>           :SyntasticCheck<CR>
-nnoremap <silent> <F9>           :Black<CR>
 " c -> comment
 nnoremap <silent> <C-p>c          :Pydocstring<CR>
