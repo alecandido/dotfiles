@@ -11,11 +11,19 @@ nnoremap o                       o<Esc>
 nnoremap O                       O<Esc>
 nnoremap à                       :
 
+" Cut & paste stuffs
+" yank till the end of line
+nnoremap Y                       y$
+nnoremap H                       0
+nnoremap L                       $
+nnoremap 0                       H
+nnoremap $                       L
+
+" reload (source) vimrc
+nnoremap <leader>sv              :source $MYVIMRC<cr>
+
 " move down
 noremap <C-f>                    :normal! <C-D><CR>
-
-" remap esc
-inoremap jk                      <Esc>
 
 " foldings
 vnoremap <space>                 zf
@@ -41,22 +49,14 @@ inoremap <silent> <C-w>          <C-o>:q<CR>
 " not use the following to not overwrite WORD jumping
 "nnoremap <S-w>                   :q<CR>
 
-" Move with ctrl in insert mode
-" ACTHUNG: interfer with vim-mux-navigator. but it is not because in this you
-" need to leave views always in normal mode
+" Insert mode
+" -----------
 "inoremap <C-h>                   <C-o>h
 "inoremap <C-j>                   <C-o>j
 "inoremap <C-k>                   <C-o>k
 "inoremap <C-l>                   <C-o>l
+inoremap <C-u>                   <Esc>gUawa
 
-" Cut & paste stuffs
-" yank till the end of line
-nnoremap Y                       y$
-" copy one line above
-" TODO: nnoremap _                       ggY``P
-"   - reuse the key '_'
-"   - learn `` trick
-"
 " toggle paste mode
 set pastetoggle=<F3>
 
@@ -99,5 +99,3 @@ nnoremap <silent> <M-w>          :NERDTreeToggle<CR>
 " toggle comment in every mode
 noremap  <silent> <C-d>          :call NERDComment(0,"toggle")<CR>
 inoremap <silent> <C-d>          <C-o>:call NERDComment(0,"toggle")<CR>
-
-
