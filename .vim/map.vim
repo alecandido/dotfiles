@@ -2,6 +2,11 @@
 " My remap
 " ========
 "
+let mapleader = "\<Tab>"
+let localleader = "\\"
+
+noremap  <C-p>                   <C-i>
+
 nnoremap o                       o<Esc>
 nnoremap O                       O<Esc>
 nnoremap à                       :

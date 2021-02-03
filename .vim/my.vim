@@ -1,6 +1,8 @@
 " Enable filetype recognition and specific settings
 filetype plugin on
 
+let g:netrw_http_cmd = "$BROWSER"
+let g:netrw_http_xcmd = "-o"
 " search
 set hlsearch         " highlight search terms
 
@@ -52,6 +54,7 @@ endif
 set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
+set shiftround
 
 " On pressing tab, insert 4 spaces
 set expandtab
