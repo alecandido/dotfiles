@@ -34,9 +34,10 @@ sudo apt install gfortran
 
 # python pip installation
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo apt-get install python3-distutils
-python3 get-pip.py
-rm -f get-pip.py
+sudo apt-get install python3-distutils python3-venv
+python3 -m ensurepip
+#python3 get-pip.py
+#rm -f get-pip.py
 pip install virtualenv
 
 # yarn installation
@@ -58,7 +59,7 @@ rm -f go1.15.7.linux-amd64.tar.gz
 sudo apt install lua5.3
 
 # vim installation
-sudo apt install vim
+sudo apt install vim neovim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PlugInstall

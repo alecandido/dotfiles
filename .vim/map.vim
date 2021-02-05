@@ -5,8 +5,16 @@
 let mapleader = "\<Tab>"
 let localleader = "\\"
 
+" Movements and general
+" ---------------------
 noremap  <C-p>                   <C-i>
+noremap H                        0
+noremap L                        $
+noremap 0                        H
+noremap $                        L
 
+" Normal mode
+" -----------
 nnoremap o                       o<Esc>
 nnoremap O                       O<Esc>
 nnoremap à                       :
@@ -14,10 +22,6 @@ nnoremap à                       :
 " Cut & paste stuffs
 " yank till the end of line
 nnoremap Y                       y$
-nnoremap H                       0
-nnoremap L                       $
-nnoremap 0                       H
-nnoremap $                       L
 
 " reload (source) vimrc
 nnoremap <leader>sv              :source $MYVIMRC<cr>
@@ -93,7 +97,7 @@ vnoremap <                       <gv
 " PLUGINS:
 " -------
 " alias <C-/> ('/' as root)
-execute "set <M-w>=\ew"
+"execute "set <M-w>=\ew"
 nnoremap <silent> <M-w>          :NERDTreeToggle<CR>
 
 " toggle comment in every mode
