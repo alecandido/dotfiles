@@ -97,7 +97,9 @@ vnoremap <                       <gv
 " PLUGINS:
 " -------
 " alias <C-/> ('/' as root)
-"execute "set <M-w>=\ew"
+if has('nvim') != 1
+    execute "set <M-w>=\ew"
+endif
 nnoremap <silent> <M-w>          :NERDTreeToggle<CR>
 
 " toggle comment in every mode
