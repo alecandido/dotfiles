@@ -1,0 +1,10 @@
+# Addresses
+
+set folder = "imaps://alessandro.candido1@mailserver.unimi.it:993"
+set smtp_url = "smtp://alessandro.candido1@smtp.unimi.it:465"
+set imap_pass = $my_unimi_pass
+
+# Further infos
+
+set realname = "Alessandro Candido"
+set from = "alessandro.candido@unimi.it"

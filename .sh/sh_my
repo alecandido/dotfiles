@@ -65,8 +65,8 @@ fi
 export SHELL=zsh
 export PAGER='less -r' # most is too strange to use it as default pager
 export BROWSER=firefox
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 export FILEMANAGER=nautilus
 
@@ -90,4 +90,3 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool
-

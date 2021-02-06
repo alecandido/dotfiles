@@ -3,9 +3,9 @@ set nocompatible              " be iMproved, required
 let $VIMDIR='$HOME/.vim'
 
 filetype off                  " required
-" keep myplugins before plug/vundle in order not to break padoc.vim
-" if swapped: pandoc_markdown = 0 uneffective
-source $VIMDIR/myplugins.vim
+" keep plugins_settings before plug/vundle in order not to break padoc.vim if
+" swapped: pandoc_markdown = 0 uneffective
+source $VIMDIR/plugins_settings.vim
 "source $VIMDIR/vundle.vim
 source $VIMDIR/plug.vim
 

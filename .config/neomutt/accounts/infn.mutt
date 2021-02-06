@@ -1,7 +1,9 @@
 # Addresses
 
-set folder = "imaps://acandido@idefix.mi.infn.it:993"
+set folder = "imaps://bastione@idefix.mi.infn.it:993"
 set smtp_url = "smtp://acandido@mboxauth.mi.infn.it:465"
+set imap_pass = $my_infn_pass
+
 
 # Further infos
 

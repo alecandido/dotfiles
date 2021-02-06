@@ -14,6 +14,7 @@
     "npms": "^0.3.2",
     "npms-cli": "^1.6.0",
     "prettier": "^2.2.1",
+    "prettier-plugin-toml": "^0.3.1",
     "sql-language-server": "^0.12.0",
     "typescript": "^3.9.2",
     "webpack": "^4.43.0",

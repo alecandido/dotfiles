@@ -5,14 +5,32 @@ call plug#begin('~/.vim/plugged')
 
 " Defaults for .vimrc
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-capslock'
+Plug 'tpope/vim-apathy'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive' | Plug 'tpope/vim-rhubarb'
+"Plug 'tpope/vim-scriptease'
+
+" Copy, cut, and paste
+Plug 'svermeulen/vim-subversive'
+Plug 'svermeulen/vim-cutlass'
+Plug 'svermeulen/vim-yoink'
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tomtom/tlib_vim'
+Plug 'amiorin/vim-fasd'
+
+" values
+Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-speeddating'
 
 " Sessions' plugins
 Plug 'tpope/vim-obsession'
@@ -60,6 +78,7 @@ Plug 'airblade/vim-gitgutter'
 " tmux
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-tbone'
 
 " Color scheme
 "Plug 'junegunn/seoul256.vim'
@@ -100,9 +119,13 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Add NERD commenter plugin here "
 Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " Fast motion through the text
 Plug 'easymotion/vim-easymotion'
+
+" End complete for many languages
+Plug 'tpope/vim-endwise'
 
 " Plugin for Python autocompletion (with jedi)
 "Plugin 'davidhalter/jedi-vim'
@@ -111,6 +134,9 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'kiteco/vim-plugin', { 'for': 'python' }
 
 Plug 'sotte/presenting.vim'
+
+" git filetypes
+Plug 'tpope/vim-git'
 
 " Markdown
 Plug 'godlygeek/tabular'
@@ -126,11 +152,16 @@ Plug 'gu-fan/riv.vim'
 Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
 
 " Data
+Plug 'tpope/vim-dadbod'
 Plug 'neoclide/jsonc.vim'
 Plug 'elzr/vim-json'
+Plug 'tpope/vim-jdaddy'
 Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
 Plug 'chrisbra/csv.vim'
+
+" Pictures
+Plug 'tpope/vim-afterimage'
 
 " Plugin for python:
 "  - formatter

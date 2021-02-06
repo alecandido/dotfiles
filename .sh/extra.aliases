@@ -41,12 +41,15 @@ alias pacman-autoremove='pacman -Rs $(pacman -Qtdq)'
 # ┌────────┐
 # │programs│
 # └────────┘
-alias vi='vim'
-alias vimexec='vim -i NONE -u NORC -U NONE -nNES'
+alias vi='nvim'
+alias vimexec='nvim -i NONE -u NORC -U NONE -nNES'
 alias ve=vimexec
+alias nv=nvim
 
 alias t='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
+
+alias tel='telegramtui'
 
 alias kcat="kitty +kitten icat"
 alias kdiff="kitty +kitten diff"
@@ -77,7 +80,7 @@ alias pip2='python2 -m pip'
 alias jupyter-here='jupyter notebook --notebook-dir .'
 
 rust-err() {
-	rustc --explain $1 | vim -c 'set filetype=markdown' -
+	rustc --explain $1 | nvim -c 'set filetype=markdown' -
 }
 
 alias bat="batcat"
