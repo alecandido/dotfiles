@@ -28,6 +28,7 @@ text/csv=org.gnome.gedit.desktop;
 application/x-maker=org.gnome.gedit.desktop;
 image/webp=firefox.desktop;org.gnome.Evince.desktop;org.gnome.eog.desktop;
 application/x-mobipocket-ebook=org.gnome.gedit.desktop;
+image/x-xcf=glimpse-editor_glimpse-editor.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;

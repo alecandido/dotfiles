@@ -1,5 +1,7 @@
 let g:coc_global_extensions = ['coc-git', 
                                 \'coc-snippets',
+                                \'coc-lists',
+                                \'coc-yank',
                                 \'coc-highlight',
                                 \'coc-pyright',
                                 \'coc-rust-analyzer',

@@ -2,12 +2,9 @@
 " My remap
 " ========
 "
-let mapleader = "\<Tab>"
-let localleader = "\\"
 
 " Movements and general
 " ---------------------
-noremap  <C-p>                   <C-i>
 noremap H                        0
 noremap L                        $
 noremap 0                        H
@@ -17,14 +14,13 @@ noremap $                        L
 " -----------
 nnoremap o                       o<Esc>
 nnoremap O                       O<Esc>
-nnoremap à                       :
 
 " Cut & paste stuffs
 " yank till the end of line
 nnoremap Y                       y$
 
 " reload (source) vimrc
-nnoremap <leader>sv              :source $MYVIMRC<cr>
+nnoremap <silent> <leader>sv     :source $MYVIMRC<cr>
 
 " move down
 noremap <C-f>                    :normal! <C-D><CR>
@@ -34,8 +30,8 @@ vnoremap <space>                 zf
 nnoremap <expr> <space>          foldclosed('.') != -1 ? 'zO' : 'zc'
 " <c-space> seems to be special and not available,
 " <c-@> instead do the job (it works as ctrl + space)
-"nnoremap <expr> <C-space>            &foldlevel != 0 ? 'zM' :'zR'
-nnoremap <expr> <C-@>            &foldlevel != 0 ? 'zM' :'zR'
+"nnoremap <expr> <C-@>            &foldlevel != 0 ? 'zM' :'zR'
+nnoremap <expr> <C-space>            &foldlevel != 0 ? 'zM' :'zR'
 
 " Map commands in insert mode with <C-o>
 " to run command and keep position

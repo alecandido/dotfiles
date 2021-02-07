@@ -49,6 +49,7 @@ Plug 'Konfekt/FastFold'
 
 " Searching
 " Plug 'kien/ctrlp.vim'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Sublime multiple cursors
 "Plug 'terryma/vim-multiple-cursors'
@@ -99,14 +100,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
 
 " Any valid git URL is allowed
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-
-" Plugin outside ~/.vim/plugged with post-update hook
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Unmanaged plugin (manually installed and updated)
-Plug '~/my-prototype-plugin'
+Plug 'junegunn/vim-github-dashboard'
 
 " Start screen
 Plug 'mhinz/vim-startify'
@@ -123,9 +117,6 @@ Plug 'tpope/vim-commentary'
 
 " Fast motion through the text
 Plug 'easymotion/vim-easymotion'
-
-" End complete for many languages
-Plug 'tpope/vim-endwise'
 
 " Plugin for Python autocompletion (with jedi)
 "Plugin 'davidhalter/jedi-vim'

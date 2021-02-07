@@ -3,6 +3,9 @@ set nocompatible              " be iMproved, required
 let $VIMDIR='$HOME/.vim'
 
 filetype off                  " required
+
+let mapleader = "à"
+let localleader = "\\"
 " keep plugins_settings before plug/vundle in order not to break padoc.vim if
 " swapped: pandoc_markdown = 0 uneffective
 source $VIMDIR/plugins_settings.vim
