@@ -30,7 +30,6 @@ Plug 'amiorin/vim-fasd'
 
 " values
 Plug 'tpope/vim-characterize'
-Plug 'tpope/vim-speeddating'
 
 " Sessions' plugins
 Plug 'tpope/vim-obsession'
