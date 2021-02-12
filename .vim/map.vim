@@ -31,6 +31,7 @@ nnoremap <expr> <space>          foldclosed('.') != -1 ? 'zO' : 'zc'
 " <C-space> seems to be special and not available,
 " <C-@> instead do the job (it works as ctrl + space)
 "nnoremap <expr> <C-@>            &foldlevel != 0 ? 'zM' :'zR'
+nnoremap <expr> <silent> zl      ":set foldenable foldlevel=" . input("Fold Level: ") . "\<CR>"
 
 " Map commands in insert mode with <C-o>
 " to run command and keep position
@@ -62,6 +63,3 @@ noremap <F8>                     :TagbarToggle<CR>
 vnoremap >                       >gv
 vnoremap <                       <gv
 
-" Search for word under cursor with * or # in new window:
-"nnoremap <C-w>*                  <C-w>s*
-"nnoremap <C-w>#                  <C-w>s#

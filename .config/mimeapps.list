@@ -29,6 +29,7 @@ application/x-maker=org.gnome.gedit.desktop;
 image/webp=firefox.desktop;org.gnome.Evince.desktop;org.gnome.eog.desktop;
 application/x-mobipocket-ebook=org.gnome.gedit.desktop;
 image/x-xcf=glimpse-editor_glimpse-editor.desktop;
+text/x-tex=org.gnome.gedit.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;

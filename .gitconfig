@@ -98,6 +98,7 @@
 
     # enhanced diffs
     chs = diff --compact-summary
+    diffm = diff --diff-filter=M
     diffword = diff --word-diff
     vimdiff = difftool -t vimdiff -y
 

@@ -41,6 +41,8 @@ alias pacman-autoremove='pacman -Rs $(pacman -Qtdq)'
 # ┌────────┐
 # │programs│
 # └────────┘
+alias lspy="ls -T --ignore-glob='__pycache__'"
+
 alias vi='nvim'
 alias vimexec='nvim -i NONE -u NORC -U NONE -nNES'
 alias ve=vimexec
@@ -48,6 +50,8 @@ alias nv=nvim
 
 alias t='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
+
+#alias open="xdg-open"
 
 alias tel='telegramtui'
 

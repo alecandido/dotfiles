@@ -4,6 +4,7 @@ augroup filetypedetect
 
 au BufNewFile,BufRead *.txt			setf text
 au BufNewFile,BufRead *.yml			setf yaml
+au BufNewFile,BufRead *.conf		setf dosini
 au BufNewFile,BufRead *.bib			setf bibtex
 
 " Shell init files

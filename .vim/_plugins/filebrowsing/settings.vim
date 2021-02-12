@@ -10,7 +10,7 @@ nnoremap <silent> <M-w>          :NERDTreeToggle<CR>
 
 augroup NERDTree
     autocmd!
-    autocmd User StartifyReady execute "NERDTree"
+    autocmd User StartifyReady execute "NERDTree" | wincmd p
 augroup END
 
 " CtrlSpace

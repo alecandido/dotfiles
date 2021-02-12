@@ -68,9 +68,9 @@ Plug 'nelstrom/vim-visual-star-search'
 
 " Status line
 Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 "integration with git gutter
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
@@ -138,8 +138,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-pandoc-after'
 
 " ReStructuredText
-Plug 'gu-fan/riv.vim'
-Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
+"Plug 'gu-fan/riv.vim'
+"Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
 
 " Data
 Plug 'tpope/vim-dadbod'
@@ -162,6 +162,7 @@ Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
 Plug 'heavenshell/vim-pydocstring', { 'tag': '*', 'do': 'pip install doq' }
 Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Typescript/X & JS/X & MDX
 Plug 'Quramy/tsuquyomi'
@@ -204,6 +205,10 @@ Plug 'meatballs/vim-xonsh'
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
+
+" Games
+" =====
+Plug 'vim/killersheep'
 
 
 " Initialize plugin system

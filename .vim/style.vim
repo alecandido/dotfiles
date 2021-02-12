@@ -1,10 +1,5 @@
 " COLORSCHEME: === Choose the color scheme ===
 
-" set Vim-specific sequences for RGB colors
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-"
 " -- colorscheme: nord --
 " override: https://www.nordtheme.com/docs/ports/vim/customization
 augroup nord-theme-overrides
@@ -28,31 +23,16 @@ let g:nord_italic_comments = 1
 let g:nord_underline = 1
 
 colorscheme nord
-" -----------------
-
-"colorscheme seoul256
-
-"colorscheme one
-"set background=dark
-
-"colorscheme solarized8
-"set background=dark
-
-"colorscheme gotham256S
 
 " ================================
 
 " AIRLINE: === Airline ===
 
-"let g:Powerline_symbols = 'fancy'
-"let g:Powerline_dividers_override = ['', '', '', '']
-"let g:Powerline_symbols_override = { 'BRANCH': '', 'LINE': '', 'RO': '' }
 
-"let g:airline_theme='nord'
-"let g:airline#extensions#tmuxline#enabled = 0
+let g:airline_theme='nord'
+let g:airline#extensions#tmuxline#enabled = 0
 
-"let g:airline_powerline_fonts = 1
-"set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
+let g:airline_powerline_fonts = 1
 set laststatus=2
 
 set t_Co=256

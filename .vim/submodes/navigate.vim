@@ -42,6 +42,10 @@ call submode#map('navigate', 'n', '', '>', '10<C-w>>')
 call submode#map('navigate', 'n', 's', 'x', ':vsplit<cr>:Explore<cr>')
 call submode#map('navigate', 'n', 's', '<S-x>', ':split<cr>:Explore<cr>')
 
+" Search for word under cursor with * or # in new window:
+call submode#map('navigate', 'n', '', '*', '<C-w>s*')
+call submode#map('navigate', 'n', '', '#', '<C-w>s#')
+
 " ------
 " TABS:
 " ------
