@@ -87,13 +87,15 @@ rust-err() {
 	rustc --explain $1 | nvim -c 'set filetype=markdown' -
 }
 
-alias bat="batcat"
-alias brg="batgrep"
-alias batdiff="$HOME/.bin/bat-extras/src/batdiff.sh"
-alias batgrep="$HOME/.bin/bat-extras/src/batgrep.sh"
-alias batman="$HOME/.bin/bat-extras/src/batman.sh"
-alias batwatch="$HOME/.bin/bat-extras/src/batwatch.sh"
-alias prettybat="$HOME/.bin/bat-extras/src/prettybat.sh"
+alias dfree='df -h | grep -v tmpfs'
+
+#alias bat="batcat"
+#alias brg="batgrep"
+#alias batdiff="$HOME/.bin/bat-extras/src/batdiff.sh"
+#alias batgrep="$HOME/.bin/bat-extras/src/batgrep.sh"
+#alias batman="$HOME/.bin/bat-extras/src/batman.sh"
+#alias batwatch="$HOME/.bin/bat-extras/src/batwatch.sh"
+#alias prettybat="$HOME/.bin/bat-extras/src/prettybat.sh"
 
 # dart-sass
 alias sass='dart-sass --no-source-map'

@@ -20,7 +20,7 @@ nnoremap O                       O<Esc>
 nnoremap Y                       y$
 
 " reload (source) vimrc
-nnoremap <silent> <leader>sv     :source $MYVIMRC<cr>
+nnoremap <silent> <leader>sv     :source $MYVIMRC<cr> | :echo "vimrc sourced"
 
 " move down
 noremap <C-f>                    :normal! <C-D><CR>

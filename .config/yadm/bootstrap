@@ -88,6 +88,7 @@ sudo apt install jq
 sudo apt install pdfgrep
 sudo apt install network-manager-vpnc-gnome
 sudo apt install rename
+sudo apt install bat
 #
 sudo apt install thefuck figlet lolcat cowsay neofetch
 git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
@@ -107,6 +108,9 @@ yarn global add prettier tsc tsserver webpack webpack-cli
 yarn global add dockerfile-language-server-nodejs \
                 graphql-language-service-cli \
                 sql-language-server
+# --- with git
+git clone https://github.com/eth-p/bat-extras.git --depth 1 && cd bat-extras && ./build.sh --install --prefix=$HOME/.local
+rm -rf bat-extras; cd .. && rm -rf bat-extras
 
 # gnome extensions
 sudo apt install gnome-tweaks

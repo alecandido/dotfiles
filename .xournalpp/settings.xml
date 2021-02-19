@@ -4,7 +4,7 @@
   <property name="pressureSensitivity" value="false"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Toolbar Right Copy"/>
-  <property name="lastSavePath" value="file:///home/alessandro/Documents/PhD/ic"/>
+  <property name="lastSavePath" value="/home/alessandro"/>
   <property name="lastOpenPath" value=""/>
   <property name="lastImagePath" value=""/>
   <property name="zoomStep" value="10.00000000"/>

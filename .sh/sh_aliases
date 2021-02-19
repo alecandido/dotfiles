@@ -7,14 +7,8 @@
 # in this file there are only the files strictly related
 # to the os operations
 
-#alias ls='exa'
-#alias la='exa -a'
-#alias ll='exa -l'
+alias rm='rm -I'
 
-#alias rm='safe-rm'
-alias rm='rm -i'
-
-alias dfree='df -h | grep -v tmpfs'
 alias sudo='sudo '
 
 # ┌──────────────┐
@@ -22,8 +16,5 @@ alias sudo='sudo '
 # └──────────────┘
 
 if [ -f $SH_DIR/extra.aliases ]; then
-    . $SH_DIR/extra.aliases
+	. $SH_DIR/extra.aliases
 fi
-
-
-

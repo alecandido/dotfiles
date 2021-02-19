@@ -81,10 +81,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-tbone'
 
 " Color scheme
-"Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'arcticicestudio/nord-vim'
-"Plug 'lifepillar/vim-solarized8'
-"Plug 'whatyouhide/vim-gotham'
+Plug 'rafi/awesome-vim-colorschemes'
 
 " Paranthesis highlight
 Plug 'luochen1990/rainbow'

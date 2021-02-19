@@ -46,6 +46,9 @@ call submode#map('navigate', 'n', 's', '<S-x>', ':split<cr>:Explore<cr>')
 call submode#map('navigate', 'n', '', '*', '<C-w>s*')
 call submode#map('navigate', 'n', '', '#', '<C-w>s#')
 
+" Jump into floating window
+call submode#map('navigate', 'n', '', 'w', '<C-w>w')
+
 " ------
 " TABS:
 " ------
