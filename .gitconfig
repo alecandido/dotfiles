@@ -76,6 +76,7 @@
     cm = commit -m
     aacm = !git add -A . && git commit -m
     cob = checkout -b
+    coob = checkout --orphan
     amend = commit --amend -m
     unstage = reset HEAD --
 
