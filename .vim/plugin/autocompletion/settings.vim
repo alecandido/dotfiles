@@ -22,4 +22,4 @@ let g:coc_global_extensions = ['coc-git',
 
 let $VIM='$HOME/.vim'
 "source $VIM/_plugins/autocompletion/ycm.vim
-source $VIM/_plugins/autocompletion/coc.vim
+"source $VIM/plugin/autocompletion/coc.vim

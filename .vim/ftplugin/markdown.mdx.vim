@@ -1,3 +1,1 @@
-let $VIM='$HOME/.vim'
-
-source $VIM/ftplugin/markdown.vim
+source $HOME/.vim/ftplugin/markdown.vim

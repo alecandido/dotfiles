@@ -209,6 +209,5 @@ Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 " =====
 Plug 'vim/killersheep'
 
-
 " Initialize plugin system
 call plug#end()

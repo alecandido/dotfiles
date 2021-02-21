@@ -6,7 +6,7 @@
 " (on the other hand <C-u> is the partner of <C-d>, that is already
 " overwritten for toggling comments)
 
-call submode#enter_with('buffer', 'n', '', '<C-u>')
+"call submode#enter_with('buffer', 'n', '', '<C-u>')
 
 " Note: <C-c> will also get you out to the mode without this mapping.
 " Note: <C-[> also behaves as <ESC>

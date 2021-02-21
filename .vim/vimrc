@@ -1,22 +1,8 @@
 set nocompatible              " be iMproved, required
 
-let $VIMDIR='$HOME/.vim'
-
 filetype off                  " required
 
 let mapleader = "à"
 let localleader = "\\"
-" keep plugins_settings before plug/vundle in order not to break padoc.vim if
-" swapped: pandoc_markdown = 0 uneffective
-source $VIMDIR/plugins_settings.vim
-"source $VIMDIR/vundle.vim
-source $VIMDIR/plug.vim
 
-source $VIMDIR/my.vim
-source $VIMDIR/map.vim
-source $VIMDIR/submodes.vim
-source $VIMDIR/style.vim
-source $VIMDIR/abbreviations.vim
-
-" FileType settings have top priority, so they should overwrite everything else
-" and they do
+source $HOME/.vim/plug.vim

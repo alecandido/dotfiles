@@ -74,4 +74,4 @@ command TocToggle call s:TocToggle()
 " ---------------
 
 "noremap  <silent> <C-i>          :Toc<CR>
-noremap  <silent> <F7>          :TocToggle<CR>
+noremap  <silent> <F7>          :Toc<CR>
