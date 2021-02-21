@@ -1,3 +1,24 @@
+let g:coc_global_extensions = ['coc-git', 
+                                \'coc-snippets',
+                                \'coc-lists',
+                                \'coc-yank',
+                                \'coc-highlight',
+                                \'coc-pyright',
+                                \'coc-rust-analyzer',
+                                \'coc-html',
+                                \'coc-emmet',
+                                \'coc-css',
+                                \'coc-tsserver', 
+                                \'coc-json',  
+                                \'coc-yaml',  
+                                \'coc-flutter',  
+                                \'coc-clangd',
+                                \'coc-cmake',
+                                \'coc-go',
+                                \'coc-julia', 
+                                \'coc-sh',
+                                \'coc-texlab']
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -14,15 +35,6 @@ set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by

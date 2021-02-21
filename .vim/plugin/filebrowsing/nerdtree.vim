@@ -12,13 +12,3 @@ augroup NERDTree
     autocmd!
     autocmd User StartifyReady execute "NERDTree" | wincmd p
 augroup END
-
-" CtrlSpace
-
-let g:CtrlSpaceDefaultMappingKey = "<C-space> "
-
-" fzf.vim
-noremap <silent> <C-p>           :Files<CR>
-noremap <silent> <C-p>p          :Files<CR>
-noremap <silent> <C-p>b          :Buffers<CR>
-noremap <silent> <C-p>c          :Colors<CR>

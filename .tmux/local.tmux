@@ -195,8 +195,8 @@ tmux_conf_theme_status_left_attr='bold,none,none'
 # ------------ right bar -------------------
 
 # current
-#tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %a %R , %d %b || #(curl "wttr.in/Milan?format=3") '
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %a %R , %d %b '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %a %R , %d %b || #(curl "wttr.in/Milan?format=3") '
+#tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}  , %a %R , %d %b '
 # with battery plugin
 #tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{battery_color_fg} #{battery_graph} #{battery_percentage} , %a %R , %d %b || #(curl "wttr.in/Milan?format=3") '
 # old  

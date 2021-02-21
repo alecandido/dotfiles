@@ -53,25 +53,19 @@ let g:vim_markdown_no_extensions_in_markdown = 1
 " Formatter
 autocmd BufWritePre * execute ':silent Prettier'
 
-" From a SO answer
-" https://vi.stackexchange.com/questions/18079
-function s:TocToggle()
-    if index(["markdown", "qf"], &filetype) == -1
-        return
-    endif
-    if get(getloclist(0, {'winid':0}), 'winid', 0)
-        " the location window is open
-        lclose
-    else
-        " the location window is closed
-        Toc
-    endif
-endfunction
-
-command TocToggle call s:TocToggle()
-
 " Plugin mappings
 " ---------------
 
-"noremap  <silent> <C-i>          :Toc<CR>
-noremap  <silent> <F7>          :Toc<CR>
+function s:TocToggle()
+    try
+        Toc
+    catch /E492/
+        execute "lclose"
+    endtry
+endfunction
+
+if has('nvim') != 1
+    execute "set <M-i>=\ei"
+endif
+
+noremap <silent> <M-i> :call <SID>TocToggle()<CR>

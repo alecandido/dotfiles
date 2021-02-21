@@ -1,9 +1,6 @@
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Defaults for .vimrc
+" Tim Pope's first bunch
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-capslock'
@@ -14,8 +11,12 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-fugitive' | Plug 'tpope/vim-rhubarb'
 "Plug 'tpope/vim-scriptease'
+
+" Git
+Plug 'tpope/vim-fugitive' | Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-git' " Git filetypes
+Plug 'junegunn/vim-github-dashboard' " Ruby required
 
 " Copy, cut, and paste
 Plug 'svermeulen/vim-subversive'
@@ -25,80 +26,32 @@ Plug 'svermeulen/vim-yoink'
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'tomtom/tlib_vim'
-Plug 'amiorin/vim-fasd'
-
-" values
-Plug 'tpope/vim-characterize'
-
-" Sessions' plugins
-Plug 'tpope/vim-obsession'
-Plug 'dhruvasagar/vim-prosession'
+Plug 'gfanto/fzf-lsp.nvim'
+Plug 'antoinemadec/coc-fzf'
 
 " Plugin for autocompletion
-"Plug 'ervandew/supertab'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Tags
-Plug 'preservim/tagbar'
-
-" Folding
-Plug 'tmhedberg/SimpylFold'
-Plug 'Konfekt/FastFold'
-
-" Searching
-" Plug 'kien/ctrlp.vim'
-Plug 'vim-ctrlspace/vim-ctrlspace'
-
-" Sublime multiple cursors
-"Plug 'terryma/vim-multiple-cursors'
-
-" Snippets : engine + snippets
-" Plug 'SirVer/ultisnips' " Engine already provided by coc
-Plug 'honza/vim-snippets'
-
-" Add Syntastic plugin here "
+" Syntax highlight
 Plug 'scrooloose/syntastic'
+
+" Snippets : the engine is provided by coc
+Plug 'honza/vim-snippets'
 
 " Define your own submode
 Plug 'kana/vim-submode'
 
-" Search / replace current text
-Plug 'nelstrom/vim-visual-star-search'
+" Add NERD commenter plugin here "
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " Status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"integration with git gutter
-"Plug 'itchyny/lightline.vim'
+"Plug 'bagrat/vim-buffet'
 
-" Git Gutter
-Plug 'airblade/vim-gitgutter'
-
-" tmux
-Plug 'tmux-plugins/vim-tmux'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-tbone'
-
-" Color scheme
-Plug 'junegunn/seoul256.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'rafi/awesome-vim-colorschemes'
-
-" Paranthesis highlight
-Plug 'luochen1990/rainbow'
-
-" toggle location list and quickfix
-Plug 'Valloric/ListToggle'
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
-
-" Match parenthesis
-Plug 'jiangmiao/auto-pairs'
-
-" Any valid git URL is allowed
-Plug 'junegunn/vim-github-dashboard'
+" Tags
+Plug 'liuchengxu/vista.vim'
 
 " Start screen
 Plug 'mhinz/vim-startify'
@@ -109,23 +62,56 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" Add NERD commenter plugin here "
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-commentary'
+" File browser
+Plug 'Shougo/vimfiler.vim'
+
+" values
+Plug 'tpope/vim-characterize'
+
+" Sessions' plugins
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+
+" Folding
+Plug 'tmhedberg/SimpylFold'
+Plug 'Konfekt/FastFold'
+
+" Searching
+Plug 'vim-ctrlspace/vim-ctrlspace'
+
+" Search / replace current text
+Plug 'nelstrom/vim-visual-star-search'
+
+" Tmux
+Plug 'tmux-plugins/vim-tmux'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-tbone'
+
+" Color scheme
+Plug 'arcticicestudio/nord-vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'rafi/awesome-vim-colorschemes'
+
+" Paranthesis highlight and matching
+Plug 'luochen1990/rainbow'
+Plug 'jiangmiao/auto-pairs'
+
+" Toggle location list and quickfix
+Plug 'Valloric/ListToggle'
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
 
 " Fast motion through the text
 Plug 'easymotion/vim-easymotion'
 
-" Plugin for Python autocompletion (with jedi)
-"Plugin 'davidhalter/jedi-vim'
-
-" Plugin for autocompletion (kite)
-"Plug 'kiteco/vim-plugin', { 'for': 'python' }
-
+" Slides
 Plug 'sotte/presenting.vim'
 
-" git filetypes
-Plug 'tpope/vim-git'
+
+" ---------------------------
+"  Language specific plugins
+" ---------------------------
 
 " Markdown
 Plug 'godlygeek/tabular'
@@ -162,6 +148,8 @@ Plug 'heavenshell/vim-pydocstring', { 'tag': '*', 'do': 'pip install doq' }
 Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'davidhalter/jedi-vim'
+Plug 'jmcantrell/vim-virtualenv'
 
 " Typescript/X & JS/X & MDX
 Plug 'Quramy/tsuquyomi'
@@ -191,7 +179,7 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Dart
-
+Plug 'dart-lang/dart-vim-plugin'
 
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
@@ -205,8 +193,9 @@ Plug 'meatballs/vim-xonsh'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
-" Games
-" =====
+" -------
+"  Games
+" -------
 Plug 'vim/killersheep'
 
 " Initialize plugin system

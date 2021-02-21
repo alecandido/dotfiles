@@ -1,7 +1,6 @@
 " ========
 " My remap
 " ========
-"
 
 " Movements and general
 " ---------------------
@@ -46,20 +45,31 @@ inoremap <silent> <C-q>          <C-o>:qa<CR>
 noremap  <silent> <C-w>          :q<CR>
 vnoremap <silent> <C-w>          <C-c>:q<CR>
 inoremap <silent> <C-w>          <C-o>:q<CR>
-" not use the following to not overwrite WORD jumping
-"nnoremap <S-w>                   :q<CR>
 
 " Insert mode
 " -----------
 inoremap <C-u>                   <Esc>gUawa
 
-" toggle paste mode
-set pastetoggle=<F3>
-
-" toggle tagbar
-noremap <F8>                     :TagbarToggle<CR>
+" Visual mode
+" -----------
 
 " visual mode blockwise indent
 vnoremap >                       >gv
 vnoremap <                       <gv
+
+" tabs
+noremap <silent> <C-PageUp> :tabprevious<CR>
+noremap <silent> <C-PageDown> :tabnext<CR>
+noremap <silent> <M-PageUp> :tabmove +1<CR>
+noremap <silent> <M-PageDown> :tabmove -1<CR>
+noremap <silent> <C-t> :tabnew<CR>
+
+" Function keys
+" -------------
+
+" toggle paste mode
+set pastetoggle=<F3>
+
+" toggle tagbar
+noremap <F8>                     :Vista!!<CR>
 

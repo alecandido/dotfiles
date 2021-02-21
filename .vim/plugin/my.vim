@@ -8,12 +8,10 @@ set hlsearch         " highlight search terms
 
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
-set path+=**
+"set path+=**
 
 " Set line numbers style
-" shortcut: set nu rnu
 set number relativenumber
-" line number style in `style.vim`
 
 " Change default split behavior
 set splitbelow
@@ -42,9 +40,6 @@ elseif &term == "kitty"
   "let &t_TI = "<Esc>[?2017h<Esc>"
   "let &t_TE = "<Esc>[?2017l<Esc>"
 endif
-" suggested test
-"imap <C-[> [[[
-"imap <C-{> {{{
 
 
 " Set tabs
@@ -55,7 +50,6 @@ set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
 set shiftround
-
 " On pressing tab, insert 4 spaces
 set expandtab
 
@@ -66,50 +60,14 @@ set foldnestmax=10      "deepest fold is 10 levels
 set foldlevel=2         "this is just what i use
 set nofoldenable        "dont fold by default
 
-"python with virtualenv support
-"py << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-  "project_base_dir = os.environ['VIRTUAL_ENV']
-  "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  "execfile(activate_this, dict(__file__=activate_this))
-"EOF
-
-
-"Fasd
-"
-" Z - cd to recent / frequent directories
-command! -nargs=* Z :call Z(<f-args>)
-function! Z(...)
-  let cmd = 'fasd -d -e printf'
-  for arg in a:000
-    let cmd = cmd . ' ' . arg
-  endfor
-  let path = system(cmd)
-  if isdirectory(path)
-    echo path
-    exec 'cd' fnameescape(path)
-  endif
-endfunction
-
 " Don't wake up system with blinking cursor:
 let &guicursor = &guicursor . ",a:blinkoff0"
 
-" Only do this part when compiled with support for autocommands
-if has("autocmd")
-  augroup redhat
+augroup jumpcursor
   autocmd!
-  " In text files, always limit the width of text to 78 characters
-  " autocmd BufRead *.txt set tw=78
   " When editing a file, always jump to the last cursor position
   autocmd BufReadPost *
   \ if line("'\"") > 0 && line ("'\"") <= line("$") |
   \   exe "normal! g'\"" |
   \ endif
-  " don't write swapfile on most commonly used directories for NFS mounts or USB sticks
-  autocmd BufNewFile,BufReadPre /media/*,/run/media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
-  " start with spec file template
-  autocmd BufNewFile *.spec 0r /usr/share/vim/vimfiles/template.spec
-  augroup END
-endif
+augroup END

@@ -18,10 +18,20 @@ setlocal textwidth=80
 setlocal formatoptions+=t
 " Black is not acting on docstrings
 
-" mappings
+" COMMANDS:
 " --------
-"
-"  <C-p> is "control-python"
+
+function s:RunPython()
+    write
+    py3f %
+endfunction
+
+command Py call <SID>RunPython()
+
+" MAPPINGS:
+" --------
+
+noremap <F9> :Py<CR>
 
 " SOURCE:
 " ------
@@ -54,12 +64,3 @@ let g:pydocstring_enable_mapping = 0
 
 " Riv
 let g:riv_python_rst_hl=1
-
-
-" Plugin mappings
-" ---------------
-"
-"  <C-p> is "control-python"
-
-" c -> comment
-nnoremap <silent> <C-p>c          :Pydocstring<CR>
