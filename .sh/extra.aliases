@@ -51,6 +51,9 @@ alias nv=nvim
 alias t='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
 
+alias tzf="fzf-tmux --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+alias bzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+
 #alias open="xdg-open"
 
 alias tel='telegramtui'

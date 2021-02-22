@@ -118,6 +118,9 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+if [ -f $ZSH_DIR/completion.zsh ]; then
+    . $ZSH_DIR/completion.zsh
+fi
 if [ -f $ZSH_DIR/aliases.zsh ]; then
     . $ZSH_DIR/aliases.zsh
 fi

@@ -19,5 +19,6 @@
       "command": "digestif",
       "filetypes": ["tex", "plaintex", "context"]
     }
-  }
+  },
+  "coc.source.emoji.filetypes": ["markdown", "markdown.mdx", "pandoc"]
 }

@@ -62,7 +62,7 @@ noremap <silent> <C-PageUp> :tabprevious<CR>
 noremap <silent> <C-PageDown> :tabnext<CR>
 noremap <silent> <M-PageUp> :tabmove +1<CR>
 noremap <silent> <M-PageDown> :tabmove -1<CR>
-noremap <silent> <C-t> :tabnew<CR>
+noremap <silent> <C-t> :VimFilerTab<CR>
 
 " Function keys
 " -------------
@@ -70,6 +70,15 @@ noremap <silent> <C-t> :tabnew<CR>
 " toggle paste mode
 set pastetoggle=<F3>
 
+
+" open vimfiler in split
+noremap <F6>                     :VimFilerSplit<CR>
+
+" <F7> is reserved for open "local index" (like markdown)
+
 " toggle tagbar
 noremap <F8>                     :Vista!!<CR>
 
+" <F9> is reserved for "running" (like in Python)
+
+" <F11> is "Goio" like

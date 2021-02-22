@@ -4,7 +4,7 @@
 "
 " it will be available only in markdown files
 
-call submode#enter_with('markdown', 'n', '', '<C-m>')
+"call submode#enter_with('markdown', 'n', '', '<C-m>')
 
 
 " Note: <C-c> will also get you out to the mode without this mapping.

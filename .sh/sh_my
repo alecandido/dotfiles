@@ -39,6 +39,9 @@ export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 export CPATH=$CPATH:$HOME/.local/include
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/.local/lib/
 
+# fzf
+export PATH="$PATH:$HOME/.vim/plugged/fzf/bin"
+
 # LD LIBRARY PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib/
 

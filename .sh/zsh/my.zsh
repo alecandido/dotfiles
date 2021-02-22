@@ -146,5 +146,3 @@ unsetopt share_history
 # ╔══════════════════════════════════════╗
 # ║ Stuffs executed just before entering ║
 # ╚══════════════════════════════════════╝
-
-#tmux
