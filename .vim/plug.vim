@@ -48,6 +48,7 @@ Plug 'tpope/vim-commentary'
 " Status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 "Plug 'bagrat/vim-buffet'
 
 " Tags
