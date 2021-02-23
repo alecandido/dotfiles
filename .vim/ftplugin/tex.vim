@@ -8,6 +8,7 @@ setlocal spell
 " mapping
 nmap  <silent> <C-i>              <plug>(vimtex-toc-toggle)
 
+let g:tex_flavor = "latex"
 
 " close braces at the end
 let g:vimtex_complete_close_braces = 1

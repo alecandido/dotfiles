@@ -42,9 +42,9 @@ inoremap <silent> <C-s>          <C-o>:update<CR>
 noremap  <silent> <C-q>          :qa<CR>
 vnoremap <silent> <C-q>          <C-c>:qa<CR>
 inoremap <silent> <C-q>          <C-o>:qa<CR>
-noremap  <silent> <C-w>          :q<CR>
-vnoremap <silent> <C-w>          <C-c>:q<CR>
-inoremap <silent> <C-w>          <C-o>:q<CR>
+noremap  <silent> <C-w>          :bd<CR>
+vnoremap <silent> <C-w>          <C-c>:bd<CR>
+inoremap <silent> <C-w>          <C-o>:bd<CR>
 
 " Insert mode
 " -----------
@@ -64,20 +64,25 @@ noremap <silent> <M-PageUp> :tabmove +1<CR>
 noremap <silent> <M-PageDown> :tabmove -1<CR>
 noremap <silent> <C-t> :VimFilerTab<CR>
 
+" buffers
+noremap <silent> <S-PageUp> :bprevious<CR>
+noremap <silent> <S-PageDown> :bnext<CR>
+
 " Function keys
 " -------------
 
 " toggle paste mode
 set pastetoggle=<F3>
 
+" <F5> is reserved for open "undotree"
 
 " open vimfiler in split
-noremap <F6>                     :VimFilerSplit<CR>
+noremap <silent> <F6> :VimFilerSplit<CR>
 
 " <F7> is reserved for open "local index" (like markdown)
 
 " toggle tagbar
-noremap <F8>                     :Vista!!<CR>
+noremap <silent> <F8> :Vista!!<CR>
 
 " <F9> is reserved for "running" (like in Python)
 

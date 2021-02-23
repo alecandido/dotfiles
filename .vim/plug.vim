@@ -62,9 +62,6 @@ Plug 'edkolev/tmuxline.vim'
 " Tags
 Plug 'liuchengxu/vista.vim'
 
-" Start screen
-Plug 'mhinz/vim-startify'
-
 " Project tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -81,9 +78,16 @@ Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 
+" Start screen
+" keep it after prosession!!
+Plug 'mhinz/vim-startify'
+
 " Folding
 Plug 'tmhedberg/SimpylFold'
 Plug 'Konfekt/FastFold'
+
+" Undo
+Plug 'mbbill/undotree'
 
 " Search / replace current text
 Plug 'nelstrom/vim-visual-star-search'
@@ -92,6 +96,9 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-tbone'
+
+" Docstring generation
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 " Color scheme
 Plug 'arcticicestudio/nord-vim'
@@ -151,7 +158,6 @@ Plug 'tpope/vim-afterimage'
 "  - refactoring
 "  - template engine
 Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
-Plug 'heavenshell/vim-pydocstring', { 'tag': '*', 'do': 'pip install doq' }
 Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -201,9 +207,12 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
 " -------
-"  Games
+"  VimOS
 " -------
-Plug 'vim/killersheep'
+Plug 'jez/vim-superman' " manpages
+Plug 'soywod/iris.vim' " email client
+Plug 'itchyny/calendar.vim' " calendar
+Plug 'vim/killersheep' " just a game
 
 " Initialize plugin system
 call plug#end()

@@ -43,16 +43,19 @@ alias pacman-autoremove='pacman -Rs $(pacman -Qtdq)'
 # └────────┘
 alias lspy="ls -T --ignore-glob='__pycache__'"
 
-alias vi='nvim'
+alias vi='vim'
 alias vimexec='nvim -i NONE -u NORC -U NONE -nNES'
 alias ve=vimexec
 alias nv=nvim
+# alias vman='nvim '
 
 alias t='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
 
 alias tzf="fzf-tmux --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias bzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+
+alias bman="batman"
 
 #alias open="xdg-open"
 

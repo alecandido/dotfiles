@@ -26,7 +26,7 @@ function s:RunPython()
     py3f %
 endfunction
 
-command Py call <SID>RunPython()
+command! Py call <SID>RunPython()
 
 " MAPPINGS:
 " --------

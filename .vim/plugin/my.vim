@@ -19,6 +19,8 @@ set splitright
 
 set wildmode=full
 
+set scrolloff=5
+
 set noswapfile
 
 " modifyOtherKeys
