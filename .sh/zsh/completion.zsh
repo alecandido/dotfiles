@@ -18,8 +18,12 @@ if [ ! -f "$ZSH/completions/_gh" ]; then
     gh completion -s zsh > $ZSH/completions/_gh
 fi
 
-if [ ! -f "$ZSH_DIR/fzf.zsh" ]; then
+if [ -f "$ZSH_DIR/fzf.zsh" ]; then
     . $ZSH_DIR/fzf.zsh
+fi
+
+if [ -f "$ZSH_DIR/fzf-tab.zsh" ]; then
+    . $ZSH_DIR/fzf-tab.zsh
 fi
 
 # Vim-superman completion

@@ -1,3 +1,7 @@
+# ╔════════════════════════════╗
+# ║ Zinit - zsh plugin manager ║
+# ╚════════════════════════════╝
+
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
@@ -39,7 +43,7 @@ zinit wait lucid for \
     OMZP::git-flow-avh \
     OMZP::golang \
     OMZP::heroku \
-    OMZP::lol \
+    atload"unalias tldr" OMZP::lol \
     OMZP::man \
     OMZP::node \
     OMZP::pylint \
@@ -72,22 +76,31 @@ zinit wait lucid as"completion" for \
     OMZP::rust/_rust \
     OMZP::yarn/_yarn
 
+# fzf-tab completion
+# ------------------
 # NOTE: fzf-tab needs to be loaded after compinit, but before plugins which
 # will wrap widgets, such as zsh-autosuggestions or fast-syntax-highlighting!!
-# zinit light Aloxaf/fzf-tab
+zinit light Aloxaf/fzf-tab
+# LS_COLORS completion incompatible and not needed with fzf-tab
+zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
+    atpull'%atclone' pick"clrs.zsh" nocompile'!' 
+zinit light trapd00r/LS_COLORS
 
-# Default completion: incompatible with "fzf-tab"
+# Oh-my-zsh completion: 
+# ---------------------
+# incompatible with "fzf-tab"
+#
 # loaded immediately:
 #   - make use of LS_COLORS
 #   - not to spoil p10k transient prompt
-zinit lucid for \
-    OMZL::completion.zsh \
-    OMZL::key-bindings.zsh
-
-zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
-    atpull'%atclone' pick"clrs.zsh" nocompile'!' \
-    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
-zinit light trapd00r/LS_COLORS
+# zinit lucid for \
+    # OMZL::completion.zsh \
+    # OMZL::key-bindings.zsh
+# LS_COLORS completion compatible with OMZ completion
+# zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
+    # atpull'%atclone' pick"clrs.zsh" nocompile'!' \
+    # atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+# zinit light trapd00r/LS_COLORS
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
