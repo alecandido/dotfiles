@@ -83,7 +83,6 @@ Plug 'dhruvasagar/vim-prosession'
 Plug 'mhinz/vim-startify'
 
 " Folding
-Plug 'tmhedberg/SimpylFold'
 Plug 'Konfekt/FastFold'
 
 " Undo
@@ -159,6 +158,7 @@ Plug 'tpope/vim-afterimage'
 "  - template engine
 Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
 Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
+Plug 'tmhedberg/SimpylFold'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'davidhalter/jedi-vim'
@@ -200,6 +200,7 @@ Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Shell
 Plug 'z0mbix/vim-shfmt'
+Plug 'zinit-zsh/zinit-vim-syntax'
 Plug 'meatballs/vim-xonsh'
 
 " Julia

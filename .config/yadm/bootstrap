@@ -13,6 +13,7 @@
 # yadm bootstrap
 sudo apt install -y curl
 sudo apt install -y build-essential cmake autoconf libtool
+sudo apt install subversion
 
 # terminal installation
 sudo apt install kitty

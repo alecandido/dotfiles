@@ -26,6 +26,9 @@ export PATH=$PATH:~/.julia/julia/bin
 
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$(yarn global bin --offline):$PATH"
+# npm config (install user-wide, i.e. global w/o sudo)
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -73,6 +76,10 @@ export VISUAL=nvim
 
 export FILEMANAGER=nautilus
 
+# Preserve MANPATH if you already defined it somewhere in your config.
+# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
 export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 # go command
 # (https://blog.patshead.com/2011/05/my-take-on-the-go-command.html)
@@ -84,12 +91,6 @@ eval "$(hub alias -s)"
 
 # fasd
 eval "$(fasd --init auto)"
-
-# npm config (install user-wide, i.e. global w/o sudo)
-NPM_PACKAGES="${HOME}/.npm-packages"
-export PATH="$PATH:$NPM_PACKAGES/bin"
-# Preserve MANPATH if you already defined it somewhere in your config.
-# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
-export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+_FASD_BACKENDS="$_FASD_BACKENDS viminfo recently-used"
 
 anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool

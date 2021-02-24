@@ -4,7 +4,6 @@ let g:coc_global_extensions = ['coc-git',
                                 \'coc-word',
                                 \'coc-tag',
                                 \'coc-emoji',
-                                \'coc-syntax',
                                 \'coc-snippets',
                                 \'coc-yank',
                                 \'coc-highlight',
@@ -23,6 +22,7 @@ let g:coc_global_extensions = ['coc-git',
                                 \'coc-julia', 
                                 \'coc-sh',
                                 \'coc-texlab']
+                                " \'coc-syntax',
 
 " TextEdit might fail if hidden is not set.
 set hidden

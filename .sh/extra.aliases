@@ -20,7 +20,6 @@ alias star-wars='telnet towel.blinkenlights.nl'
 # │system│
 # └──────┘
 
-alias wifi='~/.my/wifi.sh'
 alias mydev='mount | grep -E "/dev/sd\w[[:digit:]]*"'
 win-info() {
 	xprop | awk '
@@ -30,13 +29,6 @@ win-info() {
 }
 alias dim-screen='xset dpms force off'
 alias current-term='ps -p $(ps -p $$ -o ppid=) o args='
-alias test-color='sh -c "$(curl -fsSL https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh)"'
-
-# ┌──────┐
-# │pacman│
-# └──────┘
-
-alias pacman-autoremove='pacman -Rs $(pacman -Qtdq)'
 
 # ┌────────┐
 # │programs│
@@ -47,7 +39,6 @@ alias vi='vim'
 alias vimexec='nvim -i NONE -u NORC -U NONE -nNES'
 alias ve=vimexec
 alias nv=nvim
-# alias vman='nvim '
 
 alias t='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'
@@ -56,8 +47,6 @@ alias tzf="fzf-tmux --preview 'bat --style=numbers --color=always --line-range :
 alias bzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
 alias bman="batman"
-
-#alias open="xdg-open"
 
 alias tel='telegramtui'
 
@@ -95,6 +84,7 @@ rust-err() {
 
 alias dfree='df -h | grep -v tmpfs'
 
+# bat stuffs
 #alias bat="batcat"
 #alias brg="batgrep"
 #alias batdiff="$HOME/.bin/bat-extras/src/batdiff.sh"
@@ -121,27 +111,6 @@ mkpdf() {
 	latexmk -c
 }
 
-todo() {
-	todo=''
-	done=''
-
-	#if [[ ! -z "${1+x}" ]]; then
-	#todo="$HOME/Documents/todo/$1.txt"
-	#done="$HOME/Documents/todo/$1-done.txt"
-	#fi
-
-	while getopts ":t" opt; do
-		case ${opt} in
-		t) # select todofile
-			todo="$HOME/Documents/todo/$OPTARG.txt"
-			done="$HOME/Documents/todo/$OPTARG-done.txt"
-			;;
-		esac
-	done
-
-	eval "todotxt-machine $todo $done --config $HOME/.config/todotxt-machine/todotxt-machinerc"
-}
-
 # ┌────────────┐
 # │sh utilities│
 # └────────────┘
@@ -161,8 +130,8 @@ c() { # cd in the dir of the file
 # │envs│
 # └────┘
 
-alias cact='. ~/.miniconda3/bin/activate'
-alias cdact='conda deactivate'
+# alias cact='. ~/.miniconda3/bin/activate'
+# alias cdact='conda deactivate'
 
 aenv() {
 	env_path=$(python3 $HOME/.bin/activate_environment.py $PWD)
@@ -177,15 +146,15 @@ aenv() {
 # │ssh│
 # └───┘
 
-alias infn_grid='ssh -X acandido@gridui3.pi.infn.it'
-alias piero='ssh -X acandido@131.114.142.201'
-alias marco='ssh -X acandido@login.marconi.cineca.it'
+# alias infn_grid='ssh -X acandido@gridui3.pi.infn.it'
+# alias piero='ssh -X acandido@131.114.142.201'
+# alias marco='ssh -X acandido@login.marconi.cineca.it'
 
 # ┌──────┐
 # │backup│
 # └──────┘
 
-alias bkp-conf="~/.bin/scripts/backup_configs.sh"
+# now use `yadm`
 
 # ┌──────────────┐
 # │misc functions│
@@ -195,12 +164,6 @@ alias bkp-conf="~/.bin/scripts/backup_configs.sh"
 launch() {
 	nohup $1 >/dev/null 2>&1 &
 }
-
-# See ToDo list
-#alias todo='~/.mybin/ToDo.sh'
-#alias plan='~/.mybin/Plan.sh'
-#alias week='~/.mybin/week_plan.py'
-#alias Paperopoli='~/.mybin/Paperopoli.py'
 
 # weather
 weather() {
@@ -229,6 +192,7 @@ keys() {
 	# from arch wiki
 	xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 }
+
 showcolors() {
 	# select colored element
 	if [[ ! -z $1 && "$1" == "-b" ]]; then
@@ -262,6 +226,7 @@ pdf_words() {
 		pdftotext $1 - | wc -w
 	fi
 }
+
 pdf_to_gray() {
 	if [ -f "$1" ] && [ "${1#*.}" = "pdf" ]; then
 		if [ -z "$2" ]; then
@@ -274,6 +239,7 @@ pdf_to_gray() {
 		echo "Invalid first argument"
 	fi
 }
+
 img_to_gray() {
 	exts=("png" "jpg")
 	EXT="?"

@@ -11,13 +11,13 @@ alias ll='exa -l'
 
 alias help="run-help"
 
-unalias tldr # for oh-my-zsh `lol` plugin
+unalias tldr 2>/dev/null # for oh-my-zsh `lol` plugin
 
 # ┌────────────┐
 # │sh utilities│
 # └────────────┘
 
-unalias g
+unalias g 2>/dev/null
 g () { # run go command
     go `fasd -i $@`
 
