@@ -14,11 +14,13 @@ autoload -Uz _zinit
 autoload -Uz compinit && compinit
 
 # Oh-my-zsh plugins
+# -----------------
+# load immediately not to overwrite alias for ls
+zinit lucid for OMZL::directories.zsh
 zinit wait lucid for \
     OMZL::clipboard.zsh \
     OMZL::compfix.zsh \
     OMZL::correction.zsh \
-    OMZL::directories.zsh \
     OMZL::functions.zsh \
     OMZL::git.zsh \
     OMZL::history.zsh \
@@ -75,9 +77,17 @@ zinit wait lucid as"completion" for \
 # zinit light Aloxaf/fzf-tab
 
 # Default completion: incompatible with "fzf-tab"
-zinit wait lucid for \
+# loaded immediately:
+#   - make use of LS_COLORS
+#   - not to spoil p10k transient prompt
+zinit lucid for \
     OMZL::completion.zsh \
     OMZL::key-bindings.zsh
+
+zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
+    atpull'%atclone' pick"clrs.zsh" nocompile'!' \
+    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+zinit light trapd00r/LS_COLORS
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
