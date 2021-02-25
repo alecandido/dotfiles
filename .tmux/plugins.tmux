@@ -13,6 +13,9 @@ set -g @plugin 'tmux-plugins/tmux-urlview' # issues when run `tmux source-file ~
 # vim integration
 set -g @plugin 'christoomey/vim-tmux-navigator'
 
+# fzf navigation
+set -g @plugin 'sainnhe/tmux-fzf'
+
 # sessions plugin
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @resurrect-strategy-vim 'session'
@@ -21,7 +24,6 @@ set -g @plugin 'tmux-plugins/tmux-sessionist'
 
 # git plugins
 set -g @plugin 'kristijanhusak/tmux-simple-git-status'
-#set -g @plugin 'arl/gitmux'
 
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'

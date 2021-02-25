@@ -22,12 +22,12 @@ source <(inv --print-completion-script zsh)
 
 # pip zsh completion
 if [ ! -f "$HOME/.zinit/completions/_pip" ]; then
-    pip completion --zsh > $ZSH/completions/_pip
+    pip completion --zsh > $HOME/.zinit/completions/_pip
 fi
 
 # gh zsh completion
 if [ ! -f "$ZSH/completions/_gh" ]; then
-    gh completion -s zsh > $ZSH/completions/_gh
+    gh completion -s zsh > $HOME/.zinit/completions/_gh
 fi
 
 if [ -f "$ZSH_DIR/fzf.zsh" ]; then

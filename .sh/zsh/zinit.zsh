@@ -30,6 +30,7 @@ zinit wait lucid for \
     OMZL::history.zsh \
     OMZL::misc.zsh \
     OMZL::termsupport.zsh \
+    OMZL::theme-and-appearance.zsh \
     OMZP::command-not-found \
     OMZP::copybuffer OMZP::copydir OMZP::copyfile \
     OMZP::cp \
