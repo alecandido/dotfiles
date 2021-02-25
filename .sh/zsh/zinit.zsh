@@ -119,4 +119,11 @@ zinit wait lucid for \
  atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions
 
+# More plugins
+# ------------
+zinit wait lucid for \
+     wfxr/forgit
+
+# Prompt theme
+# ------------
 zinit ice depth=1; zinit light romkatv/powerlevel10k

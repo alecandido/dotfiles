@@ -79,7 +79,9 @@ export FILEMANAGER=nautilus
 # Preserve MANPATH if you already defined it somewhere in your config.
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# notebook configurations
 export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 # go command
 # (https://blog.patshead.com/2011/05/my-take-on-the-go-command.html)

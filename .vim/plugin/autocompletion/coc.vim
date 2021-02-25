@@ -1,5 +1,6 @@
 let g:coc_global_extensions = ['coc-git', 
                                 \'coc-lists',
+                                \'coc-fzf-preview',
                                 \'coc-dictionary',
                                 \'coc-word',
                                 \'coc-tag',
@@ -99,8 +100,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>F  <Plug>(coc-format-selected)
+nmap <leader>F  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
