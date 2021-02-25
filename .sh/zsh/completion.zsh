@@ -2,14 +2,26 @@
 # ║ Autocompletion scripts ║
 # ╚════════════════════════╝
 
-if [ ! -d "$ZSH/completions" ]; then
-    mkdir -p $ZSH/completions
+# ┌───────────────────────┐
+# │ completion "managers" │
+# └───────────────────────┘
+
+if [ -f "$ZSH_DIR/omz-completion.zsh" ]; then
+    . $ZSH_DIR/omz-completion.zsh
 fi
+
+if [ -f "$ZSH_DIR/fzf-tab.zsh" ]; then
+    . $ZSH_DIR/fzf-tab.zsh
+fi
+
+# ┌──────────────────┐
+# │ program specific │
+# └──────────────────┘
 
 source <(inv --print-completion-script zsh)
 
 # pip zsh completion
-if [ ! -f "$ZSH/completions/_pip" ]; then
+if [ ! -f "$HOME/.zinit/completions/_pip" ]; then
     pip completion --zsh > $ZSH/completions/_pip
 fi
 
@@ -20,10 +32,6 @@ fi
 
 if [ -f "$ZSH_DIR/fzf.zsh" ]; then
     . $ZSH_DIR/fzf.zsh
-fi
-
-if [ -f "$ZSH_DIR/fzf-tab.zsh" ]; then
-    . $ZSH_DIR/fzf-tab.zsh
 fi
 
 # Vim-superman completion
