@@ -13,87 +13,85 @@
 # yadm bootstrap
 sudo apt install -y curl
 sudo apt install -y build-essential cmake autoconf libtool
-sudo apt install subversion
+sudo apt install -y subversion
 
 # terminal installation
-sudo apt install kitty
+sudo apt install -y kitty
 
 # zsh
-sudo apt install zsh
+sudo apt install -y zsh
 chsh --shell /bin/zsh $USER
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-yadm restore .zshrc
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-sudo apt install fonts-font-awesome
+sudo apt install -y fonts-font-awesome
 echo "\e[94mRemember to install further fonts (already in '$HOME/.local/share/fonts' but zipped)"
 
 # fortran installation
-sudo apt install gfortran
+sudo apt install -y gfortran
 
 # python pip installation
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo apt-get install python3-distutils python3-venv
-python3 -m ensurepip
-#python3 get-pip.py
-#rm -f get-pip.py
+# ensurepip is disabled in Debian/Ubuntu for the system python.
+#python3 -m ensurepip
+sudo apt-get install -y python3-pip
+pip install -U pip
+sudo apt remove python3-pip
+export PATH="$HOME/.local/bin:$PATH"
 pip install virtualenv
 
 # yarn installation
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install yarn
-sudo apt install npm
+sudo apt update && sudo apt install -y yarn
+sudo apt install -y npm
 
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # go
 wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
 tar -C $HOME/.local -xzf go1.15.7.linux-amd64.tar.gz
 mv $HOME/.local/go $HOME/.go
 rm -f go1.15.7.linux-amd64.tar.gz
+export PATH="$HOME/.go/bin:$PATH"
 
 # lua
-sudo apt install lua5.3
+sudo apt install -y lua5.3
 
 # vim installation
-sudo apt install vim neovim
+sudo apt install -y vim neovim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PlugInstall
-sudo apt install python3-dev
+sudo apt install -y python3-dev
 #python3 $HOME/.vim/plugged/YouCompleteMe/install.py --all
 # vim externals
 GO111MODULE=on go get mvdan.cc/sh/v3/cmd/shfmt
 echo "\e[35mInstall universal-ctags:\e[39m https://github.com/universal-ctags/ctags"
 
 
-# tmux installation
-sudo apt install tmux
+# tmux installation	
+sudo apt install -y tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-sudo apt install urlview
+sudo apt install -y urlview
 $HOME/.tmux/plugins/tpm/bin/install_plugins
 
 # utils
-sudo apt install hub
-sudo apt install fasd
-sudo apt install ripgrep
-sudo apt install fd-find
-sudo apt install htop
-sudo apt install ncdu
-sudo apt install tldr && tldr -u
-sudo apt install jq
-sudo apt install pdfgrep
-sudo apt install network-manager-vpnc-gnome
-sudo apt install rename
-sudo apt install bat
+sudo apt install -y hub
+sudo apt install -y fasd
+sudo apt install -y ripgrep
+sudo apt install -y fd-find
+sudo apt install -y htop
+sudo apt install -y ncdu
+sudo apt install -y tldr && tldr -u
+sudo apt install -y jq
+sudo apt install -y pdfgrep
+sudo apt install -y network-manager-vpnc-gnome
+sudo apt install -y rename
+sudo apt install -y bat
 #
-sudo apt install thefuck figlet lolcat cowsay neofetch
+sudo apt install -y thefuck figlet lolcat cowsay neofetch
 git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
-# sudo apt install rbenv
+# sudo apt install -y rbenv
 # --- through python
 pip install glances bpytop speedtest-cli
 pip install invoke
@@ -117,15 +115,19 @@ git clone https://github.com/eth-p/bat-extras.git --depth 1 && cd bat-extras && 
 rm -rf bat-extras; cd .. && rm -rf bat-extras
 
 # gnome extensions
-sudo apt install gnome-tweaks
-sudo apt install gnome-tweak-tool
+sudo apt install -y gnome-tweaks
+sudo apt install -y gnome-tweak-tool
 
+# github-cli
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
+sudo apt update && sudo apt install gh
 # xournalpp
 sudo add-apt-repository ppa:apandada1/xournalpp-stable
-sudo apt update && sudo apt install xournalpp
+sudo apt update && sudo apt install -y xournalpp
 # telegram
 sudo add-apt-repository ppa:atareao/telegram
-sudo apt update && sudo apt install telegram
+sudo apt update && sudo apt install -y telegram
 
 # clean up
 sudo apt autoremove -y
