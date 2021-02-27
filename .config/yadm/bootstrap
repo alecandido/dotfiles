@@ -111,6 +111,7 @@ yarn global add dockerfile-language-server-nodejs \
                 graphql-language-service-cli \
                 sql-language-server
 yarn global add serve
+yarn global add elm @elm-tooling/elm-language-server elm-format
 # --- with git
 git clone https://github.com/eth-p/bat-extras.git --depth 1 && cd bat-extras && ./build.sh --install --prefix=$HOME/.local
 rm -rf bat-extras; cd .. && rm -rf bat-extras

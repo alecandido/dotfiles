@@ -4,9 +4,10 @@
 
 " Movements and general
 " ---------------------
-noremap H                        0
+noremap H                        ^
 noremap L                        $
 noremap 0                        H
+noremap ^                        0
 noremap $                        L
 
 " Normal mode

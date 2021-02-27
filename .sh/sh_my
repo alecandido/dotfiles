@@ -62,7 +62,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # Disable Suspend, enabling the forward search (Ctrl+S)
 if [[ $- == *i* ]]; then
-	stty -ixon
+  stty -ixon
 fi
 
 # Desktoprc should be sourced at login, not by any shell

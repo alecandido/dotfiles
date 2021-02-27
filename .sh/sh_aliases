@@ -16,5 +16,5 @@ alias sudo='sudo '
 # └──────────────┘
 
 if [ -f $SH_DIR/extra.aliases ]; then
-	. $SH_DIR/extra.aliases
+  . $SH_DIR/extra.aliases
 fi

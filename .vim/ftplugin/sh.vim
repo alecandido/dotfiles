@@ -10,5 +10,12 @@ setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 "  Settings
 "  --------
 
-" Autorun Black
-autocmd BufWritePre * execute ':silent Shfmt'
+" Formatter
+let g:shfmt_extra_args = '-i 2'
+let g:shfmt_fmt_on_save = 1
+
+augroup LocalShell
+    autocmd! * <buffer>
+
+    autocmd BufWritePre <buffer> Shfmt
+augroup END

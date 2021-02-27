@@ -6,7 +6,7 @@
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 function virtualenv_info {
-	[ $VIRTUAL_ENV ] && echo '('$(basename $VIRTUAL_ENV)') '
+  [ $VIRTUAL_ENV ] && echo '('$(basename $VIRTUAL_ENV)') '
 }
 
 # ┌───┐
@@ -14,30 +14,30 @@ function virtualenv_info {
 # └───┘
 
 n() {
-	# Block nesting of nnn in subshells
-	if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
-		echo "nnn is already running"
-		return
-	fi
+  # Block nesting of nnn in subshells
+  if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
+    echo "nnn is already running"
+    return
+  fi
 
-	# The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
-	# To cd on quit only on ^G, remove the "export" as in:
-	#     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-	# NOTE: NNN_TMPFILE is fixed, should not be modified
-	export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+  # The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
+  # To cd on quit only on ^G, remove the "export" as in:
+  #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+  # NOTE: NNN_TMPFILE is fixed, should not be modified
+  export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
 
-	# Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
-	# stty start undef
-	# stty stop undef
-	# stty lwrap undef
-	# stty lnext undef
+  # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
+  # stty start undef
+  # stty stop undef
+  # stty lwrap undef
+  # stty lnext undef
 
-	nnn "$@"
+  nnn "$@"
 
-	if [ -f "$NNN_TMPFILE" ]; then
-		. "$NNN_TMPFILE"
-		rm -f "$NNN_TMPFILE" >/dev/null
-	fi
+  if [ -f "$NNN_TMPFILE" ]; then
+    . "$NNN_TMPFILE"
+    rm -f "$NNN_TMPFILE" >/dev/null
+  fi
 }
 
 # ╔═════════════════════╗
@@ -49,11 +49,11 @@ n() {
 # └──────────────┘
 
 # if [ ! -f "$ZSH_DIR/arch-key-bindings.zsh" ]; then
-    # . $ZSH_DIR/arch-key-bindings.zsh
+# . $ZSH_DIR/arch-key-bindings.zsh
 # fi
 
 if [ -f "$ZSH_DIR/omz-key-bindings.zsh" ]; then
-    . $ZSH_DIR/omz-key-bindings.zsh
+  . $ZSH_DIR/omz-key-bindings.zsh
 fi
 
 # ╔══════╗

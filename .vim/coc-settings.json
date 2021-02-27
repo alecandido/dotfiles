@@ -18,7 +18,13 @@
     "digestif": {
       "command": "digestif",
       "filetypes": ["tex", "plaintex", "context"]
+    },
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"]
     }
   },
-  "coc.source.emoji.filetypes": ["markdown", "markdown.mdx", "pandoc"]
+  "coc.source.emoji.filetypes": ["markdown", "markdown.mdx", "pandoc"],
+  "codeLens.enable": true
 }

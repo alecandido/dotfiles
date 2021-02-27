@@ -18,10 +18,9 @@ unalias tldr 2>/dev/null # for oh-my-zsh `lol` plugin
 # └────────────┘
 
 unalias g 2>/dev/null
-g () { # run go command
-    go `fasd -i $@`
+g() { # run go command
+  go $(fasd -i $@)
 
-    # instead of:
-    # alias g='fasd -e go'
+  # instead of:
+  # alias g='fasd -e go'
 }
-

@@ -84,10 +84,10 @@ zinit wait lucid as"completion" for \
 zinit light Aloxaf/fzf-tab
 # LS_COLORS completion incompatible and not needed with fzf-tab
 zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
-    atpull'%atclone' pick"clrs.zsh" nocompile'!' 
+    atpull'%atclone' pick"clrs.zsh" nocompile'!'
 zinit light trapd00r/LS_COLORS
 
-# Oh-my-zsh completion: 
+# Oh-my-zsh completion:
 # ---------------------
 # incompatible with "fzf-tab"
 #
