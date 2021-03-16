@@ -244,11 +244,11 @@
     ;psaom = push --all origin master
     ;psfom = push -f origin master
     ;psuom = push -u origin master
-    ;psoc = !git push origin $(git bc)
-    ;psaoc = !git push --all origin $(git bc)
-    ;psfoc = !git push -f origin $(git bc)
-    psuoc = !git push -u origin $(git bc)
-    ;psdc = !git push origin :$(git bc)
+    ;psoc = !git push origin $(git brc)
+    ;psaoc = !git push --all origin $(git brc)
+    ;psfoc = !git push -f origin $(git brc)
+    psuoc = !git push -u origin $(git brc)
+    ;psdc = !git push origin :$(git brc)
     ;#############
     ;rb = rebase
     ;rba = rebase --abort

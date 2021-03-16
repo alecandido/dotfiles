@@ -1,0 +1,41 @@
+name = "Alessandro Candido"
+
+[gmail]
+# default = true
+email = "candido.ale@gmail.com"
+downloads-dir = "~/Mail/gmail"
+imap-host = "imap.gmail.com"
+imap-port = 993
+imap-login = "candido.ale@gmail.com"
+imap-passwd-cmd = "bw get Password cbe2a9ed-4efd-43a4-80f1-ab140115e92d"
+smtp-host = "smtp.gmail.com"
+smtp-port = 487
+smtp-login = "candido.ale@gmail.com"
+smtp-passwd-cmd = "bw get Password cbe2a9ed-4efd-43a4-80f1-ab140115e92d"
+
+[infn]
+default = true
+email = "alessandro.candido@mi.infn.it"
+downloads-dir = "~/Mail/infn"
+imap-host = "idefix.mi.infn.it"
+imap-port = 993
+imap-login = "acandido"
+imap-passwd-cmd = "bw get Password 'INFN mi mail'"
+smtp-host = "mboxauth.mi.infn.it"
+smtp-port = 465
+smtp-starttls = true
+smtp-login = "acandido"
+smtp-passwd-cmd = "bw get Password 'INFN mi mail'"
+
+[unimi]
+email = "alessandro.candido1@unimi.it"
+downloads-dir = "~/Mail/unimi"
+imap-host = "mailserver.unimi.it"
+imap-port = 993
+imap-login = "alessandro.candido1@unimi.it"
+imap-passwd-cmd = "bw get Password 'Unimi email'"
+smtp-host = "smtp.unimi.it"
+smtp-port = 465
+smtp-starttls = true
+smtp-login = "alessandro.candido1@unimi.it"
+smtp-passwd-cmd = "bw get Password 'Unimi email'"

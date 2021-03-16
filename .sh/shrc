@@ -12,3 +12,4 @@ export SH_DIR=$HOME/.sh
 . $SH_DIR/sh_my
 . $SH_DIR/sh_aliases
 . $SH_DIR/fzf.sh
+. $SH_DIR/secrets

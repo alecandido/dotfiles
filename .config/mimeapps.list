@@ -7,7 +7,7 @@ application/x-extension-xht=firefox.desktop;thunderbird.desktop;
 application/x-extension-xhtml=firefox.desktop;thunderbird.desktop;
 application/xhtml+xml=firefox.desktop;thunderbird.desktop;
 attachment/json=vim.desktop;
-image/svg+xml=inkscape.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;inkscape.desktop;
 inode/directory=ranger.desktop;
 text/html=chromium_chromium.desktop;firefox.desktop;vim.desktop;thunderbird.desktop;
 text/markdown=org.gnome.gedit.desktop;vim.desktop;chromium.desktop;
@@ -21,7 +21,7 @@ text/plain=org.gnome.gedit.desktop;
 application/rtf=calibre-ebook-viewer.desktop;calibre-gui.desktop;
 application/pdf=com.github.xournalpp.xournalpp.desktop;org.gnome.Evince.desktop;inkscape.desktop;xournal.desktop;glimpse-editor_glimpse-editor.desktop;
 application/rss+xml=thunderbird_thunderbird.desktop;
-image/png=glimpse-editor_glimpse-editor.desktop;org.gnome.eog.desktop;
+image/png=com.github.xournalpp.xournalpp.desktop;glimpse-editor_glimpse-editor.desktop;org.gnome.eog.desktop;
 image/jpeg=glimpse-editor_glimpse-editor.desktop;inkscape.desktop;
 video/mp4=vlc.desktop;
 text/csv=org.gnome.gedit.desktop;
@@ -30,6 +30,7 @@ image/webp=firefox.desktop;org.gnome.Evince.desktop;org.gnome.eog.desktop;
 application/x-mobipocket-ebook=org.gnome.gedit.desktop;
 image/x-xcf=glimpse-editor_glimpse-editor.desktop;
 text/x-tex=org.gnome.gedit.desktop;
+text/x-makefile=org.gnome.gedit.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
