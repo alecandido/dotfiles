@@ -20,3 +20,4 @@ zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=do
 
 # tmux preview: requires tmux 3.2
 # zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+# zstyle ':fzf-tab:*' fzf-command 'fzf-tmux -r 20%'
