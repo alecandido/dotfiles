@@ -1,8 +1,7 @@
 name = "Alessandro Candido"
 
-# notify-cmd = "notify-send"
 [gmail]
-default = true
+# default = true
 email = "candido.ale@gmail.com"
 downloads-dir = "~/Mail/gmail"
 imap-host = "imap.gmail.com"
@@ -15,6 +14,7 @@ smtp-login = "candido.ale@gmail.com"
 smtp-passwd-cmd = "bw get Password cbe2a9ed-4efd-43a4-80f1-ab140115e92d"
 
 [infn]
+default = true
 email = "alessandro.candido@mi.infn.it"
 downloads-dir = "~/Mail/infn"
 imap-host = "idefix.mi.infn.it"
