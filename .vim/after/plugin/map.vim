@@ -14,6 +14,7 @@ noremap $                        L
 " -----------
 nnoremap o                       o<Esc>
 nnoremap O                       O<Esc>
+nnoremap <silent> §              :set list!<CR>
 
 " Cut & paste stuffs
 " yank till the end of line

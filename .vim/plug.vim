@@ -211,7 +211,7 @@ Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 "  VimOS
 " -------
 Plug 'jez/vim-superman' " manpages
-Plug 'soywod/iris.vim' " email client
+Plug 'soywod/himalaya.vim' " email client
 Plug 'itchyny/calendar.vim' " calendar
 Plug 'vim/killersheep' " just a game
 

@@ -2,3 +2,4 @@
 
 **/.venv_this
 /tags
+.gdb_history

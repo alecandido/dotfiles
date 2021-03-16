@@ -1,10 +1,17 @@
-let g:iris_name  = "Alessandro Candido"
-let g:iris_mail = "alessandro.candido@mi.infn.it"
+" List view mappings
+nmap gm   <plug>(himalaya-mbox-input)
+nmap gp   <plug>(himalaya-mbox-prev-page)
+nmap gn   <plug>(himalaya-mbox-next-page)
+nmap <cr> <plug>(himalaya-msg-read)
+nmap gw   <plug>(himalaya-msg-write)
+nmap gr   <plug>(himalaya-msg-reply)
+nmap gR   <plug>(himalaya-msg-reply-all)
+nmap gf   <plug>(himalaya-msg-forward)
+nmap ga   <plug>(himalaya-msg-attachments)
 
-let g:iris_imap_host  = "idefix.mi.infn.it"
-let g:iris_imap_port  = 993
-let g:iris_imap_login = "acandido"
-
-let g:iris_smtp_host  = "mboxauth.mi.infn.it" "Default to g:iris_imap_host
-let g:iris_smtp_port  = 465
-let g:iris_smtp_login = "acandido" "Default to g:iris_mail
+" Read view mappings
+nmap gw <plug>(himalaya-msg-write)
+nmap gr <plug>(himalaya-msg-reply)
+nmap gR <plug>(himalaya-msg-reply-all)
+nmap gf <plug>(himalaya-msg-forward)
+nmap ga <plug>(himalaya-msg-attachments)

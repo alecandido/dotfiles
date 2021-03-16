@@ -110,9 +110,14 @@ yarn global add dockerfile-language-server-nodejs \
                 sql-language-server
 yarn global add serve
 yarn global add elm @elm-tooling/elm-language-server elm-format
+yarn global add @bitwarden/cli
 # --- with git
 git clone https://github.com/eth-p/bat-extras.git --depth 1 && cd bat-extras && ./build.sh --install --prefix=$HOME/.local
 rm -rf bat-extras; cd .. && rm -rf bat-extras
+
+# himalaya email client
+curl -sSL https://raw.githubusercontent.com/soywod/himalaya/master/install.sh | bash
+mkdir ~/Mail
 
 # gnome extensions
 sudo apt install -y gnome-tweaks

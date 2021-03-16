@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@bitwarden/cli": "^1.15.0",
     "@elm-tooling/elm-language-server": "^2.0.3",
     "create-next-app": "^10.0.7",
     "create-react-app": "^3.4.1",
