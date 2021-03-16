@@ -22,7 +22,8 @@ sudo apt install -y kitty
 sudo apt install -y zsh
 chsh --shell /bin/zsh $USER
 sudo apt install -y fonts-font-awesome
-echo "\e[94mRemember to install further fonts (already in '$HOME/.local/share/fonts' but zipped)"
+echo "\e[35mInstall fonts:"
+echo "\e[39mhttps://drive.google.com/drive/u/1/folders/1ZCPEf7B7JsFb2CqANJV6xAY8o9xYjJP5"
 
 # fortran installation
 sudo apt install -y gfortran
@@ -69,11 +70,12 @@ GO111MODULE=on go get mvdan.cc/sh/v3/cmd/shfmt
 echo "\e[35mInstall universal-ctags:\e[39m https://github.com/universal-ctags/ctags"
 
 
-# tmux installation	
+# tmux installation
 sudo apt install -y tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sudo apt install -y urlview
 $HOME/.tmux/plugins/tpm/bin/install_plugins
+echo "\e[35mInstall tmux plugins:\e[39m enter tmux > <C-b>I"
 
 # utils
 sudo apt install -y hub
