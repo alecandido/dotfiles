@@ -105,6 +105,7 @@ pip install fortran-language-server
 cargo install exa
 cargo install git-delta
 cargo install --locked bat
+cargo install --force cargo-make
 # --- through yarn
 yarn global add gitignore fixme
 yarn global add npms npms-cli
@@ -141,3 +142,5 @@ sudo apt update && sudo apt install -y telegram
 
 # clean up
 sudo apt autoremove -y
+# unpack encrypted files
+yadm decrypt
