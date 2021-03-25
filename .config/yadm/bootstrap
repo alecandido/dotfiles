@@ -105,6 +105,7 @@ pip install fortran-language-server
 cargo install exa
 cargo install git-delta
 cargo install --locked bat
+cargo install topgrade
 cargo install --force cargo-make
 # --- through yarn
 yarn global add gitignore fixme
