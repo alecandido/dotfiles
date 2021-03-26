@@ -4,14 +4,14 @@
   <property name="pressureSensitivity" value="false"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Toolbar Right Copy"/>
-  <property name="lastSavePath" value="/home/alessandro"/>
+  <property name="lastSavePath" value="/home/alessandro/Documents"/>
   <property name="lastOpenPath" value=""/>
   <property name="lastImagePath" value=""/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
   <property name="mainWndWidth" value="934"/>
-  <property name="mainWndHeight" value="706"/>
+  <property name="mainWndHeight" value="1055"/>
   <property name="maximized" value="false"/>
   <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="50"/>
@@ -126,7 +126,7 @@
     </data>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="eraser"/>
+    <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
@@ -141,7 +141,7 @@
     </data>
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="THIN"/>
       <attribute name="type" type="string" value="default"/>
     </data>
     <data name="hand">
@@ -158,7 +158,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="808080"/>
+      <attribute name="color" type="hex" value="000000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
