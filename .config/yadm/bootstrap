@@ -102,11 +102,11 @@ pip install glances bpytop speedtest-cli
 pip install invoke
 pip install fortran-language-server
 # --- through rust
-cargo install exa
-cargo install git-delta
-cargo install --locked bat
-cargo install cargo-update topgrade
 cargo install --force cargo-make
+cargo install --locked cargo-deny
+cargo install cargo-watch cargo-generate cargo-edit cargo-update cargo-hack
+cargo install exa git-delta topgrade
+cargo install --locked bat
 # --- through yarn
 yarn global add gitignore fixme
 yarn global add npms npms-cli
