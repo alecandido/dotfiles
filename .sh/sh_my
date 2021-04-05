@@ -43,7 +43,7 @@ export CPATH=$CPATH:$HOME/.local/include
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/.local/lib/
 
 # Vim plugins
-export PATH="$PATH:$HOME/.vim/plugged/fzf/bin"
+export PATH=$PATH:$HOME/.vim/plugged/fzf/bin
 
 # LD LIBRARY PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib/
@@ -56,6 +56,9 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # ROOT
 #source /home/alessandro/projects/PDF/root-6.18.04/obj/bin/thisroot.sh
+
+# Sanitize paths
+LIBRARY_PATH=$(echo $LIBRARY_PATH | sed -E -e 's/^:*//' -e 's/:*$//' -e 's/:+/:/g')
 
 # Autocompletion for aliases
 # source make-completion-wrapper.sh
