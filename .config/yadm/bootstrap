@@ -39,7 +39,6 @@ sudo apt-get install -y python3-pip
 pip install -U pip
 sudo apt remove python3-pip
 export PATH="$HOME/.local/bin:$PATH"
-pip install virtualenv
 
 # yarn installation
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -98,9 +97,16 @@ sudo apt install -y thefuck figlet lolcat cowsay neofetch
 git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
 # sudo apt install -y rbenv
 # --- through python
-pip install glances bpytop speedtest-cli
-pip install invoke
-pip install fortran-language-server
+# ecosystem
+pip install pipx
+pipx install virtualenv
+pipx install poetry
+# --- applications
+pipx install glances
+pipx install bpytop
+pipx install speedtest-cli
+pipx install invoke
+pipx install fortran-language-server
 # --- through rust
 cargo install --force cargo-make
 cargo install --locked cargo-deny

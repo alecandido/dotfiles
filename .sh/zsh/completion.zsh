@@ -7,11 +7,11 @@
 # └───────────────────────┘
 
 if [ -f "$ZSH_DIR/omz-completion.zsh" ]; then
-    . $ZSH_DIR/omz-completion.zsh
+  . $ZSH_DIR/omz-completion.zsh
 fi
 
 if [ -f "$ZSH_DIR/fzf-tab.zsh" ]; then
-    . $ZSH_DIR/fzf-tab.zsh
+  . $ZSH_DIR/fzf-tab.zsh
 fi
 
 # ┌──────────────────┐
@@ -22,16 +22,22 @@ source <(inv --print-completion-script zsh)
 
 # pip zsh completion
 if [ ! -f "$HOME/.zinit/completions/_pip" ]; then
-    pip completion --zsh > $HOME/.zinit/completions/_pip
+  pip completion --zsh >$HOME/.zinit/completions/_pip
 fi
 
 # gh zsh completion
-if [ ! -f "$ZSH/completions/_gh" ]; then
-    gh completion -s zsh > $HOME/.zinit/completions/_gh
-fi
+source <(gh completion -s zsh)
 
 if [ -f "$ZSH_DIR/fzf.zsh" ]; then
-    . $ZSH_DIR/fzf.zsh
+  . $ZSH_DIR/fzf.zsh
+fi
+
+# pipx completion
+eval "$(register-python-argcomplete pipx)"
+
+# poetry completion
+if [ ! -f "$HOME/.zinit/completions/_poetry" ]; then
+  poetry completions zsh >$HOME/.zinit/completions/_poetry
 fi
 
 # Vim-superman completion
