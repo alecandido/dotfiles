@@ -146,6 +146,13 @@ sudo apt update && sudo apt install -y xournalpp
 # telegram
 sudo add-apt-repository ppa:atareao/telegram
 sudo apt update && sudo apt install -y telegram
+# youtube CLI
+pipx install youtube-dl
+sudo apt install -y mpv
+sudo apt install -y libxext-dev
+pipx install ueberzug
+curl -sL "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" | tee $HOME/.bin/ytfzf >/dev/null && chmod 755 $HOME/.bin/ytfzf
+
 
 # clean up
 sudo apt autoremove -y
