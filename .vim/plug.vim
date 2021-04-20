@@ -146,7 +146,7 @@ Plug 'elzr/vim-json'
 Plug 'tpope/vim-jdaddy'
 Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
-Plug 'chrisbra/csv.vim'
+" Plug 'chrisbra/csv.vim'
 
 " Pictures
 Plug 'tpope/vim-afterimage'

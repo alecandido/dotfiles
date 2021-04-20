@@ -4,14 +4,14 @@
   <property name="pressureSensitivity" value="false"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Toolbar Right Copy"/>
-  <property name="lastSavePath" value="/home/alessandro/Documents"/>
+  <property name="lastSavePath" value="/home/alessandro/Downloads"/>
   <property name="lastOpenPath" value=""/>
   <property name="lastImagePath" value=""/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
   <property name="mainWndWidth" value="934"/>
-  <property name="mainWndHeight" value="706"/>
+  <property name="mainWndHeight" value="1055"/>
   <property name="maximized" value="false"/>
   <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="50"/>

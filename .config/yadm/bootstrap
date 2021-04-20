@@ -111,7 +111,7 @@ pipx install fortran-language-server
 cargo install --force cargo-make
 cargo install --locked cargo-deny
 cargo install cargo-watch cargo-generate cargo-edit cargo-update cargo-hack
-cargo install exa git-delta topgrade
+cargo install exa git-delta starship topgrade
 cargo install --locked bat
 # --- through yarn
 yarn global add gitignore fixme

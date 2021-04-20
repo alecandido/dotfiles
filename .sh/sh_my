@@ -60,6 +60,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # Sanitize paths
 LIBRARY_PATH=$(echo $LIBRARY_PATH | sed -E -e 's/^:*//' -e 's/:*$//' -e 's/:+/:/g')
+LD_LIBRARY_PATH=$(echo $LD_LIBRARY_PATH | sed -E -e 's/^:*//' -e 's/:*$//' -e 's/:+/:/g')
 
 # Autocompletion for aliases
 # source make-completion-wrapper.sh
