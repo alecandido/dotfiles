@@ -110,6 +110,8 @@ eval $(thefuck --alias)
 
 alias youtube="ytfzf -t"
 
+alias aleph="$HOME/.deno/bin/aleph"
+
 mkpdf() {
   latexmk -pdf $1
   latexmk -c

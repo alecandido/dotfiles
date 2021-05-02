@@ -10,6 +10,27 @@ noremap 0                        H
 noremap ^                        0
 noremap $                        L
 
+" Common shortcuts
+" ----------------
+
+" Map commands in insert mode with <C-o>
+" to run command and keep position
+" Map commands in visual mode with <C-c>
+" to kill selection before
+noremap  <silent> <C-s>          :update<CR>
+vnoremap <silent> <C-s>          <C-c>:update<CR>
+inoremap <silent> <C-s>          <C-o>:update<CR>
+noremap  <silent> <C-q>          :qa<CR>
+vnoremap <silent> <C-q>          <C-c>:qa<CR>
+inoremap <silent> <C-q>          <C-o>:qa<CR>
+noremap  <silent> <C-w>          :bd<CR>
+vnoremap <silent> <C-w>          <C-c>:bd<CR>
+inoremap <silent> <C-w>          <C-o>:bd<CR>
+noremap  <silent> <C-a>          ggVG<CR>
+vnoremap <silent> <C-a>          <C-c>ggVG<CR>
+inoremap <silent> <C-a>          <Esc>ggVG<CR>
+
+
 " Normal mode
 " -----------
 nnoremap o                       o<Esc>
@@ -26,27 +47,9 @@ nnoremap <silent> <leader>sv     :call vimrc#SourceVimrc()<CR>
 " move down
 noremap <C-f>                    :normal! <C-D><CR>
 
-" foldings
-vnoremap <space>                 zf
-nnoremap <expr> <space>          foldclosed('.') != -1 ? 'zO' : 'zc'
-" <C-space> seems to be special and not available,
-" <C-@> instead do the job (it works as ctrl + space)
-"nnoremap <expr> <C-@>            &foldlevel != 0 ? 'zM' :'zR'
-nnoremap <expr> <silent> zl      ":set foldenable foldlevel=" . input("Fold Level: ") . "\<CR>"
-
-" Map commands in insert mode with <C-o>
-" to run command and keep position
-" Map commands in visual mode with <C-c>
-" to kill selection before
-noremap  <silent> <C-s>          :update<CR>
-vnoremap <silent> <C-s>          <C-c>:update<CR>
-inoremap <silent> <C-s>          <C-o>:update<CR>
-noremap  <silent> <C-q>          :qa<CR>
-vnoremap <silent> <C-q>          <C-c>:qa<CR>
-inoremap <silent> <C-q>          <C-o>:qa<CR>
-noremap  <silent> <C-w>          :bd<CR>
-vnoremap <silent> <C-w>          <C-c>:bd<CR>
-inoremap <silent> <C-w>          <C-o>:bd<CR>
+" Map increment/decrement
+nnoremap <A-a>                   <C-a>
+nnoremap <A-x>                   <C-x>
 
 " Insert mode
 " -----------
@@ -58,6 +61,17 @@ inoremap <C-u>                   <Esc>gUawa
 " visual mode blockwise indent
 vnoremap >                       >gv
 vnoremap <                       <gv
+
+" foldings
+vnoremap <space>                 zf
+nnoremap <expr> <space>          foldclosed('.') != -1 ? 'zO' : 'zc'
+" <C-space> seems to be special and not available,
+" <C-@> instead do the job (it works as ctrl + space)
+"nnoremap <expr> <C-@>            &foldlevel != 0 ? 'zM' :'zR'
+nnoremap <expr> <silent> zl      ":set foldenable foldlevel=" . input("Fold Level: ") . "\<CR>"
+
+" Navigation
+" ----------
 
 " tabs
 noremap <silent> <C-PageUp> :tabprevious<CR>

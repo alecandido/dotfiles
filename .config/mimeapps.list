@@ -31,6 +31,8 @@ application/x-mobipocket-ebook=org.gnome.gedit.desktop;
 image/x-xcf=glimpse-editor_glimpse-editor.desktop;
 text/x-tex=org.gnome.gedit.desktop;
 text/x-makefile=org.gnome.gedit.desktop;
+application/x-info=org.gnome.gedit.desktop;
+application/x-shellscript=org.gnome.gedit.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
