@@ -311,8 +311,9 @@
     ;#############
     ;subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
     ;subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
-    ;subup = submodule update --init --recursive
-    ;subpull = !git submodule foreach git pull --tags origin master
+	; subup = submodule update --init --recursive
+	; subpull = !git submodule foreach git pull --tags origin master
+	subpull = submodule update --remote --merge
     ;#############
     ;assume = update-index --assume-unchanged
     ;unassume = update-index --no-assume-unchanged

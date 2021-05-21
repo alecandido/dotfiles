@@ -126,6 +126,9 @@ Plug 'sotte/presenting.vim'
 "  Language specific plugins
 " ---------------------------
 
+" Syntax bundle
+Plug 'sheerun/vim-polyglot'
+
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -157,7 +160,7 @@ Plug 'tpope/vim-afterimage'
 "  - refactoring
 "  - template engine
 Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
-Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
+" Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -165,11 +168,10 @@ Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jmcantrell/vim-virtualenv'
 
 " Typescript/X & JS/X & MDX
-Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'Quramy/vim-js-pretty-template'
+" Plug 'peitalin/vim-jsx-typescript'
 Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'Quramy/vim-js-pretty-template'
 Plug 'jxnblk/vim-mdx-js'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn global add; yarn global add prettier prettier-plugin-toml' }
