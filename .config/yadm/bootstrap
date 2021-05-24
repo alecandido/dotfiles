@@ -119,6 +119,8 @@ cargo install --locked cargo-deny
 cargo install cargo-watch cargo-generate cargo-edit cargo-update cargo-hack
 cargo install exa git-delta starship topgrade
 cargo install --locked bat
+cargo install --locked trunk
+rustup target add wasm32-unknown-unknown
 # --- through yarn
 yarn global add gitignore fixme
 yarn global add npms npms-cli
