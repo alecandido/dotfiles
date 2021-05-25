@@ -46,6 +46,9 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt update && sudo apt install -y yarn
 sudo apt install -y npm
 
+# deno installation
+curl -fsSL https://deno.land/x/install/install.sh | sh
+
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -116,7 +119,8 @@ cargo install --locked cargo-deny
 cargo install cargo-watch cargo-generate cargo-edit cargo-update cargo-hack
 cargo install exa git-delta starship topgrade
 cargo install --locked bat
-cargo install --locked deno
+cargo install --locked trunk
+rustup target add wasm32-unknown-unknown
 # --- through yarn
 yarn global add gitignore fixme
 yarn global add npms npms-cli
@@ -128,6 +132,9 @@ yarn global add dockerfile-language-server-nodejs \
 yarn global add serve
 yarn global add elm @elm-tooling/elm-language-server elm-format
 yarn global add @bitwarden/cli
+# --- through deno
+deno run -A https://deno.land/x/aleph/install.ts
+deno install -A --unstable -n trex --no-check https://deno.land/x/trex/cli.ts
 # --- through ruby
 sudo gem install bundler
 # --- with git

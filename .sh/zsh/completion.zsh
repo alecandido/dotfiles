@@ -40,6 +40,11 @@ if [ ! -f "$HOME/.zinit/completions/_poetry" ]; then
   poetry completions zsh >$HOME/.zinit/completions/_poetry
 fi
 
+# deno completion
+if [ ! -f "$HOME/.zinit/completions/_deno" ]; then
+  deno completions zsh >$HOME/.zinit/completions/_deno
+fi
+
 # Vim-superman completion
 compdef _man vman
 compdef _man bman
