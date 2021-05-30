@@ -28,8 +28,8 @@ export PATH=$PATH:~/.julia/julia/bin
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$(yarn global bin --offline):$PATH"
 # npm config (install user-wide, i.e. global w/o sudo)
-export NPM_PACKAGES="${HOME}/.npm-packages"
-export PATH="$PATH:$NPM_PACKAGES/bin"
+export NPM_CONFIG_USERCONFIG=$HOME/.config/npm/npmrc
+export PATH="$PATH:$HOME/.npm/bin"
 # deno
 export PATH="$PATH:/home/alessandro/.deno/bin"
 

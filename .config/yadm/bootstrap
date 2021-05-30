@@ -51,7 +51,6 @@ sudo apt install -y npm
 
 # deno installation
 curl -fsSL https://deno.land/x/install/install.sh | sh
-
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -126,7 +125,7 @@ cargo install --locked trunk
 rustup target add wasm32-unknown-unknown
 # --- through yarn
 yarn global add gitignore fixme
-yarn global add npms npms-cli
+yarn global add pnpm npms npms-cli
 yarn global add prettier tsc tsserver webpack webpack-cli
 yarn global add dockerfile-language-server-nodejs \
                 graphql-lsp \
