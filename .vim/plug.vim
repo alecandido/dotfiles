@@ -150,6 +150,7 @@ Plug 'tpope/vim-jdaddy'
 Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
 " Plug 'chrisbra/csv.vim'
+Plug 'jparise/vim-graphql'
 
 " Pictures
 Plug 'tpope/vim-afterimage'
