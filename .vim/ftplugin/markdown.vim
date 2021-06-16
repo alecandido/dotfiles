@@ -50,9 +50,6 @@ let g:vim_markdown_no_extensions_in_markdown = 1
 " Code
 " ----
 
-" Formatter
-autocmd BufWritePre * execute ':silent Prettier'
-
 " Plugin mappings
 " ---------------
 
