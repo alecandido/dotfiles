@@ -175,7 +175,9 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'jxnblk/vim-mdx-js'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'prettier/vim-prettier', { 'do': 'yarn global add; yarn global add prettier prettier-plugin-toml' }
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn global add prettier prettier-plugin-toml',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 " Plug 'jparise/vim-graphql'
 
 " Css
