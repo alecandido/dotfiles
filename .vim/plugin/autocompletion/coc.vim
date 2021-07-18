@@ -140,12 +140,12 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
     execute "set <M-j>=\ej"
     execute "set <M-k>=\ek"
   endif
-  nnoremap <silent><nowait><expr> <M-j> coc#float#has_scroll() ? coc#float#scroll(1, 10) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <M-k> coc#float#has_scroll() ? coc#float#scroll(0, 10) : "\<C-b>"
-  inoremap <silent><nowait><expr> <M-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1, 10)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <M-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0, 10)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <M-j> coc#float#has_scroll() ? coc#float#scroll(1, 10) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <M-k> coc#float#has_scroll() ? coc#float#scroll(0, 10) : "\<C-b>"
+  nnoremap <silent><nowait><expr> <M-j> coc#float#has_scroll() ? coc#float#scroll(1, 10) : ""
+  nnoremap <silent><nowait><expr> <M-k> coc#float#has_scroll() ? coc#float#scroll(0, 10) : ""
+  inoremap <silent><nowait><expr> <M-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1, 10)\<cr>" : ""
+  inoremap <silent><nowait><expr> <M-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0, 10)\<cr>" : ""
+  vnoremap <silent><nowait><expr> <M-j> coc#float#has_scroll() ? coc#float#scroll(1, 10) : ""
+  vnoremap <silent><nowait><expr> <M-k> coc#float#has_scroll() ? coc#float#scroll(0, 10) : ""
 endif
 
 " Use CTRL-S for selections ranges.

@@ -39,6 +39,10 @@ eval "$(register-python-argcomplete pipx)"
 if [ ! -f "$HOME/.zinit/completions/_poetry" ]; then
   poetry completions zsh >$HOME/.zinit/completions/_poetry
 fi
+# poe
+if [ ! -f "$HOME/.zinit/completions/_poe" ]; then
+  poe _zsh_completion >$HOME/.zinit/completions/_poe
+fi
 
 # deno completion
 if [ ! -f "$HOME/.zinit/completions/_deno" ]; then
