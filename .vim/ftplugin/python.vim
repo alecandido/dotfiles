@@ -8,7 +8,6 @@
 au BufNewFile, BufRead *.py
     \ set encoding=utf-8
     \ let python_highlight_all=1
-    \ syntax on
 
 " Indent for python
 setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4

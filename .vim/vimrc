@@ -4,5 +4,6 @@ filetype off                  " required
 
 let mapleader = "à"
 let localleader = "\\"
+set maxmempattern=10000
 
 source $HOME/.vim/plug.vim
