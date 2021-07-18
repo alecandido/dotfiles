@@ -128,7 +128,7 @@ rustup target add wasm32-unknown-unknown
 # --- through yarn
 yarn global add gitignore fixme
 yarn global add pnpm npms npms-cli
-yarn global add prettier tsc tsserver webpack webpack-cli
+yarn global add prettier prettier-plugin-toml prettier-plugin-svelte tsc tsserver webpack webpack-cli
 yarn global add dockerfile-language-server-nodejs \
                 graphql-lsp \
                 graphql-language-service-cli \
