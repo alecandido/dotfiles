@@ -15,13 +15,13 @@ let g:vimtex_complete_close_braces = 1
 
 :execute "normal \<plug>(vimtex-toc-open)"
 
-let g:vimtex_quickfix_warnings = {
-    \ 'default' : 0,
-    \}
-let g:vimtex_syntax_autoload_packages = [
-    \ 'amsmath',
-    "\ 'physics',
-    \]
+" let g:vimtex_quickfix_warnings = {
+    " \ 'default' : 0,
+    " \}
+" let g:vimtex_syntax_autoload_packages = [
+    " \ 'amsmath',
+    " "\ 'physics',
+    " \]
 "\ 'undefined_reference' : 1,
 "\ 'multiply_defined_references' : 1,
 "\}

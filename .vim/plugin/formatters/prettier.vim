@@ -13,8 +13,3 @@ let g:prettier#config#tab_width = 'auto'
 
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
-
-augroup MyPrettier
-    autocmd!
-    autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.toml,*.xml,*.html PrettierAsync
-augroup end

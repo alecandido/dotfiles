@@ -7,7 +7,6 @@
 " Set encoding for python
 au BufNewFile, BufRead *.py
     \ set encoding=utf-8
-    \ syntax on
 
 " Indent for python
 setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4

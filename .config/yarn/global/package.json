@@ -15,7 +15,7 @@
     "npms": "^0.3.2",
     "npms-cli": "^1.6.0",
     "pnpm": "^6.4.0",
-    "prettier": "^2.3.1",
+    "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.3.0",
     "prettier-plugin-toml": "^0.3.1",
     "serve": "^11.3.2",

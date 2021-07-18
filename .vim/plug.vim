@@ -32,9 +32,6 @@ Plug 'svermeulen/vim-yoink'
 " Plugin for autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Syntax highlight
-Plug 'scrooloose/syntastic'
-
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -139,12 +136,11 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-pandoc-after'
 
 " ReStructuredText
-"Plug 'gu-fan/riv.vim'
-"Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
+Plug 'gu-fan/riv.vim'
+" Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
 
 " Data
 Plug 'tpope/vim-dadbod'
-Plug 'kevinoid/vim-jsonc'
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-jdaddy'
 Plug 'stephpy/vim-yaml'
