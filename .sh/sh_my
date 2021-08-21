@@ -103,3 +103,7 @@ eval "$(fasd --init auto)"
 _FASD_BACKENDS="$_FASD_BACKENDS viminfo recently-used"
 
 anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool
+
+# sdkman
+export SDKMAN_DIR=$HOME/.sdkman
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"

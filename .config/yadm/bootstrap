@@ -44,11 +44,11 @@ export PATH="$HOME/.local/bin:$PATH"
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt install -y nodejs
 # yarn installation
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
-echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get install -y yarn
+# curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+# echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+# sudo apt-get install -y yarn
 # pnpm installation
-curl -f https://get.pnpm.io/v6.js | sudo node - add --global pnpm
+curl -f https://get.pnpm.io/v6.7.js | node - add --global pnpm
 sudo apt install -y npm
 
 # deno installation
@@ -66,6 +66,9 @@ export PATH="$HOME/.go/bin:$PATH"
 
 # lua
 sudo apt install -y lua5.3
+
+# java
+curl -s "https://get.sdkman.io?rcupdate=false" | bash
 
 # language headers
 sudo apt install -y python3-dev
@@ -126,16 +129,16 @@ cargo install --locked bat
 cargo install --locked trunk
 rustup target add wasm32-unknown-unknown
 # --- through yarn
-yarn global add gitignore fixme
-yarn global add pnpm npms npms-cli
-yarn global add prettier prettier-plugin-toml prettier-plugin-svelte tsc tsserver webpack webpack-cli
-yarn global add dockerfile-language-server-nodejs \
+pnpm add -g gitignore fixme
+pnpm add -g npms npms-cli
+pnpm add -g prettier prettier-plugin-toml prettier-plugin-svelte tsc tsserver
+pnpm add -g dockerfile-language-server-nodejs \
                 graphql-lsp \
                 graphql-language-service-cli \
                 sql-language-server
-yarn global add serve
-yarn global add elm @elm-tooling/elm-language-server elm-format
-yarn global add @bitwarden/cli
+pnpm add -g serve
+# pnpm add -g elm @elm-tooling/elm-language-server elm-format
+pnpm add -g @bitwarden/cli
 # --- through deno
 deno run -A https://deno.land/x/aleph/install.ts
 deno install -A --unstable -n trex --no-check https://deno.land/x/trex/cli.ts

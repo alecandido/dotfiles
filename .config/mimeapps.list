@@ -112,6 +112,9 @@ audio/x-pls=mpv.desktop;
 audio/amr-wb=mpv.desktop;
 audio/m3u=mpv.desktop;
 application/x-xopp=com.github.xournalpp.xournalpp.desktop;
+chemical/x-gamess-input=org.gnome.gedit.desktop;
+text/x-python=org.gnome.gedit.desktop;
+binary/octet-stream=org.gnome.gedit.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
