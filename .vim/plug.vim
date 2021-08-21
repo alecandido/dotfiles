@@ -178,6 +178,7 @@ Plug 'prettier/vim-prettier', {
 
 " Css
 Plug 'tpope/vim-haml'
+Plug 'stephenway/postcss.vim'
 
 " Plugin for HTML
 Plug 'mattn/emmet-vim'

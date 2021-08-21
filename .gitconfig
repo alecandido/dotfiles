@@ -74,7 +74,6 @@
     co = checkout
     st = status
     br = branch
-    pop = stash pop
     cob = checkout -b
 
     # ┌────────────────┐
@@ -84,8 +83,6 @@
     coob = checkout --orphan
     amend = commit --amend -m
 
-    ; aacm = !git add -A . && git commit -m
-    ci = commit
     master = !git checkout master && git pull origin
     unstage = reset HEAD --
 
@@ -139,9 +136,8 @@
     find = !git ls-files | grep -i
     gr = grep
     rg = "!git grep $1 `git show-ref --heads` #"
-    ;rg = "!echo $1; echo ciao;#"
 
-    # info
+	# info
     type = cat-file -t
     dump = cat-file -p
 
@@ -154,36 +150,16 @@
     # ctags
     ctags = "!.git/hooks/ctags"
 
-    # co-authore-commit: https://github.com/nagoya-foundation/co-authored-commit
-    co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
-    ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
 
     ai = add -i
     ;#############
-    ;ap = apply
-    ;as = apply --stat
-    ;ac = apply --check
-    ;#############
-    ;ama = am --abort
-    ;amr = am --resolved
-    ;ams = am --skip
-    ;#############
-    ;bra = branch -a
-    ;brd = branch -d
-    ;brdd = branch -D
-    ;brr = branch -r
     brc = rev-parse --abbrev-ref HEAD
     bru = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
-    ;brs = !git-branch-status
     ;#############
-    ;ca = commit -a
-    ;cam = commit -am
-    ;cem = commit --allow-empty -m
-    ;ced = commit --allow-empty --amend
-    ;#############
-    ;clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
-    ;clgp = !sh -c 'git clone git@github.com:$1 $(basename $1)' -
-    ;clgu = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1 $1' -
+    ci = commit
+	;co-authore-commit: https://github.com/nagoya-foundation/co-authored-commit
+    co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
+    ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
     ;#############
     ;cpa = cherry-pick --abort
     ;cpc = cherry-pick --continue
@@ -192,24 +168,9 @@
     ;dc = diff --cached
     ;dk = diff --check
     ;dck = diff --cached --check
-    ;dt = difftool
+	;dt = difftool
     ;dct = difftool --cached
     ;#############
-    ;f = fetch
-    ;fo = fetch origin
-    ;fu = fetch upstream
-    ;#############
-    ;fp = format-patch
-    ;#############
-    ;fk = fsck
-    ;#############
-    ;g = grep -p
-    ;#############
-    ;ls = ls-files
-    ;#############
-    ;o = checkout
-    ;om = checkout master
-    ;ob = checkout -b
     ;opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
     ;#############
     ;pr = prune -v
@@ -235,11 +196,6 @@
     ;psu = push -u
     ;pst = push --tags
     ;#############
-    ;pso = push origin
-    ;psao = push --all origin
-    ;psfo = push -f origin
-    ;psuo = push -u origin
-    ;#############
     ;psom = push origin master
     ;psaom = push --all origin master
     ;psfom = push -f origin master
@@ -256,38 +212,13 @@
     ;rbi = rebase --interactive
     ;rbs = rebase --skip
     ;#############
-    ;re = reset
-    ;rh = reset HEAD
-    ;reh = reset --hard
-    ;rem = reset --mixed
-    ;res = reset --soft
-    ;rehh = reset --hard HEAD
-    ;remh = reset --mixed HEAD
-    ;resh = reset --soft HEAD
-    ;rehom = reset --hard origin/master
-    ;#############
-    ;r = remote
-    ;ra = remote add
-    ;rr = remote rm
-    ;rv = remote -v
-    ;rn = remote rename
-    ;rp = remote prune
-    ;rs = remote show
-    ;rao = remote add origin
-    ;rau = remote add upstream
-    ;rro = remote remove origin
-    ;rru = remote remove upstream
-    ;rso = remote show origin
-    ;rsu = remote show upstream
-    ;rpo = remote prune origin
-    ;rpu = remote prune upstream
-    ;#############
     ;rmf = rm -f
     ;rmrf = rm -r -f
     ;#############
     ;s = status
     ;sb = status -s -b
     ;#############
+    pop = stash pop
     ;sa = stash apply
     ;sc = stash clear
     ;sd = stash drop
@@ -295,7 +226,6 @@
     ;sp = stash pop
     ;ss = stash save
     ;ssk = stash save -k
-    ;sw = stash show
     stash-num = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
     ;#############
     ;t = tag
@@ -314,6 +244,8 @@
 	; subup = submodule update --init --recursive
 	; subpull = !git submodule foreach git pull --tags origin master
 	subpull = submodule update --remote --merge
+    ;#############
+	sw = switch
     ;#############
     ;assume = update-index --assume-unchanged
     ;unassume = update-index --no-assume-unchanged
