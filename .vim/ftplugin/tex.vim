@@ -26,6 +26,14 @@ let g:vimtex_complete_close_braces = 1
 "\ 'multiply_defined_references' : 1,
 "\}
 
+
+" ========
+" mappings
+" ========
+vnoremap <M-b> <Esc>`>a{}<Esc>dh`<i\textbf{<Esc>
+vnoremap <M-i> <Esc>`>a{}<Esc>dh`<i\textit{<Esc>
+vnoremap <M-t> <Esc>`>a{}<Esc>dh`<i\texttt{<Esc>
+
 " ===========
 " tex-conceal
 " ===========
