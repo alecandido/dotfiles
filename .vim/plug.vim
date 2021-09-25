@@ -172,9 +172,10 @@ Plug 'Quramy/vim-js-pretty-template'
 Plug 'jxnblk/vim-mdx-js'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'pnpm add --global prettier prettier-plugin-toml',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'do': 'pnpm add --global prettier prettier-plugin-toml prettier-plugin-svelte',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
 " Plug 'jparise/vim-graphql'
+Plug 'evanleck/vim-svelte'
 
 " Css
 Plug 'tpope/vim-haml'
