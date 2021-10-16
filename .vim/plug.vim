@@ -118,6 +118,13 @@ Plug 'easymotion/vim-easymotion'
 " Slides
 Plug 'sotte/presenting.vim'
 
+" -------------------------
+" Natural languages plugins
+" -------------------------
+
+" Japanese
+Plug 'vim-skk/eskk.vim'
+Plug 'vim-skk/skkdict.vim'
 
 " ---------------------------
 "  Language specific plugins
@@ -190,7 +197,7 @@ Plug 'parkr/vim-jekyll'
 Plug 'rust-lang/rust.vim'
 
 " Go
-Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Dart
