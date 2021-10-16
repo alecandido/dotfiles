@@ -2,6 +2,9 @@
 # ║ My shellhrc further stuffs ║
 # ╚════════════════════════════╝
 
+# Prefix
+export PREFIX=$HOME/.local
+
 # Mybin
 export PATH=$PATH:~/.bin
 export PATH=$PATH:~/.local/bin

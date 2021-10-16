@@ -198,7 +198,7 @@ Plug 'parkr/vim-jekyll'
 Plug 'rust-lang/rust.vim'
 
 " Go
-Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'tag': '*' } ", 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Dart
