@@ -8,7 +8,10 @@
 # sudo apt-get install xclip
 # xclip -selection clipboard < ~/.ssh/id_rsa.pub
 # ssh -T git@github.com
-#
+
+# if not restarted after cloning AleCandido/dotfiles
+source ~/.bashrc
+
 # yadm clone git@github.com:AleCandido/dotfiles.git
 # yadm bootstrap
 sudo apt install -y curl
@@ -32,12 +35,12 @@ echo "\e[39mhttps://drive.google.com/drive/u/1/folders/1ZCPEf7B7JsFb2CqANJV6xAY8
 sudo apt install -y gfortran
 
 # python pip installation
-sudo apt-get install python3-distutils python3-venv
+sudo apt install -y python3-distutils python3-venv
 # ensurepip is disabled in Debian/Ubuntu for the system python.
 #python3 -m ensurepip
 sudo apt-get install -y python3-pip
 pip install -U pip
-sudo apt remove python3-pip
+sudo apt remove -y python3-pip
 export PATH="$HOME/.local/bin:$PATH"
 
 # node installation
@@ -58,10 +61,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # go
-wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
-tar -C $HOME/.local -xzf go1.15.7.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
+tar -C $HOME/.local -xzf go1.17.2.linux-amd64.tar.gz
 mv $HOME/.local/go $HOME/.go
-rm -f go1.15.7.linux-amd64.tar.gz
+rm -f go1.17.2.linux-amd64.tar.gz
 export PATH="$HOME/.go/bin:$PATH"
 
 # lua
@@ -149,7 +152,7 @@ git clone https://github.com/eth-p/bat-extras.git --depth 1 && cd bat-extras && 
 rm -rf bat-extras; cd .. && rm -rf bat-extras
 
 # himalaya email client
-curl -sSL https://raw.githubusercontent.com/soywod/himalaya/master/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/soywod/himalaya/master/install.sh | PREFIX=~/.local sh
 mkdir ~/Mail
 
 # gnome extensions
@@ -159,7 +162,7 @@ sudo apt install -y gnome-tweak-tool
 # github-cli
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
 sudo apt-add-repository https://cli.github.com/packages
-sudo apt update && sudo apt install gh
+sudo apt update && sudo apt install -y gh
 # xournalpp
 sudo add-apt-repository ppa:apandada1/xournalpp-stable
 sudo apt update && sudo apt install -y xournalpp
@@ -178,3 +181,6 @@ curl -sL "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" | tee
 sudo apt autoremove -y
 # unpack encrypted files
 yadm decrypt
+
+# Interactive
+echo "Change default terminal emulator: https://itsfoss.com/change-default-terminal-ubuntu/"

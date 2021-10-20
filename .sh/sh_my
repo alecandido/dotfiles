@@ -29,7 +29,7 @@ export PATH=$PATH:~/.julia/julia/bin
 #eval "$(rbenv init -)"
 
 # yarn
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$(yarn global bin --offline):$PATH"
+# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$(yarn global bin --offline):$PATH"
 # npm config (install user-wide, i.e. global w/o sudo)
 export NPM_CONFIG_USERCONFIG="$HOME/.npmrc"
 export PATH="$PATH:$HOME/.npm/bin"
@@ -37,7 +37,7 @@ export PATH="$PATH:$HOME/.npm/bin"
 export PATH="$PATH:/home/alessandro/.deno/bin"
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"
 
 # Go
 export GOPATH="$HOME/.go/gopath"

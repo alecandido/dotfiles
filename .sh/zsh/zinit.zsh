@@ -31,6 +31,7 @@ zinit wait lucid for \
     OMZL::misc.zsh \
     OMZL::termsupport.zsh \
     OMZL::theme-and-appearance.zsh \
+    OMZP::cargo \
     OMZP::command-not-found \
     OMZP::copybuffer OMZP::copydir OMZP::copyfile \
     OMZP::cp \
@@ -67,7 +68,6 @@ zinit snippet OMZP::git-escape-magic
 
 zinit wait lucid as"completion" for \
     OMZP::bundler/_bundler \
-    OMZP::cargo/_cargo \
     OMZP::django \
     OMZP::fd/_fd \
     OMZP::gem/_gem \
