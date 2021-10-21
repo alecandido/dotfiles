@@ -173,7 +173,7 @@ Plug 'jxnblk/vim-mdx-js'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'pnpm add --global prettier prettier-plugin-toml prettier-plugin-svelte',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte', 'toml'] }
 " Plug 'jparise/vim-graphql'
 Plug 'evanleck/vim-svelte'
 
