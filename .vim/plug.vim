@@ -100,6 +100,7 @@ Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'chriskempson/base16-vim'
 
 " Distraction free
 Plug 'junegunn/goyo.vim'
@@ -163,7 +164,7 @@ Plug 'tpope/vim-afterimage'
 "  - docstring generation
 "  - refactoring
 "  - template engine
-Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
+Plug 'psf/black', { 'branch': 'stable' }
 " Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'Glench/Vim-Jinja2-Syntax'
