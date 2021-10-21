@@ -22,7 +22,7 @@ application/rtf=calibre-ebook-viewer.desktop;calibre-gui.desktop;
 application/pdf=com.github.xournalpp.xournalpp.desktop;org.inkscape.Inkscape.desktop;org.gnome.Evince.desktop;inkscape.desktop;xournal.desktop;glimpse-editor_glimpse-editor.desktop;
 application/rss+xml=thunderbird_thunderbird.desktop;
 image/png=glimpse-editor_glimpse-editor.desktop;firefox.desktop;com.github.xournalpp.xournalpp.desktop;org.gnome.eog.desktop;
-image/jpeg=org.inkscape.Inkscape.desktop;glimpse-editor_glimpse-editor.desktop;inkscape.desktop;
+image/jpeg=glimpse-editor_glimpse-editor.desktop;org.inkscape.Inkscape.desktop;inkscape.desktop;
 video/mp4=vlc.desktop;
 text/csv=org.gnome.gedit.desktop;
 application/x-maker=org.gnome.gedit.desktop;
@@ -115,6 +115,7 @@ application/x-xopp=com.github.xournalpp.xournalpp.desktop;
 chemical/x-gamess-input=org.gnome.gedit.desktop;
 text/x-python=org.gnome.gedit.desktop;
 binary/octet-stream=org.gnome.gedit.desktop;
+application/x-cd-image=gnome-disk-image-writer.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
