@@ -5,10 +5,10 @@
 # bind keys and shortcuts
 # -----------------
 xmod_delayed() {
-	sleep 2
-	xmodmap $HOME/.xutils/xmodmap
+  sleep 2
+  xmodmap $HOME/.xutils/xmodmap
 }
-xmod_delayed &
+# xmod_delayed &
 # good to kill other instances, but I would like to kill those related to the
 # same tty, otherwise it will kill the one running on main when using the others
 #if [[ ${HOST#*-} = "arch" ]]; then

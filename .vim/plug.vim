@@ -100,6 +100,7 @@ Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'chriskempson/base16-vim'
 
 " Distraction free
 Plug 'junegunn/goyo.vim'
@@ -163,7 +164,7 @@ Plug 'tpope/vim-afterimage'
 "  - docstring generation
 "  - refactoring
 "  - template engine
-Plug 'psf/black', { 'tag': '*', 'do': 'pip install black' }
+Plug 'psf/black', { 'branch': 'stable' }
 " Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -180,7 +181,7 @@ Plug 'jxnblk/vim-mdx-js'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'pnpm add --global prettier prettier-plugin-toml prettier-plugin-svelte',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte', 'toml'] }
 " Plug 'jparise/vim-graphql'
 Plug 'evanleck/vim-svelte'
 
