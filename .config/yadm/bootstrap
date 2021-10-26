@@ -118,6 +118,7 @@ pip install pipx
 pipx install virtualenv
 pipx install poetry
 # - applications
+pipx install ipython
 pipx install glances
 pipx install bpytop
 pipx install speedtest-cli
