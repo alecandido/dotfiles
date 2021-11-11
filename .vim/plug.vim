@@ -161,10 +161,12 @@ Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-afterimage'
 
 " Plugin for python:
+"  - python IDE
 "  - formatter
 "  - docstring generation
 "  - refactoring
 "  - template engine
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'psf/black', { 'branch': 'stable' }
 " Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'tmhedberg/SimpylFold'
