@@ -177,6 +177,8 @@ sudo apt install -y libxext-dev
 pipx install ueberzug
 curl -sL "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" | tee $HOME/.bin/ytfzf >/dev/null && chmod 755 $HOME/.bin/ytfzf
 
+# ssh server
+sudo apt install -y openssh-server
 
 # clean up
 sudo apt autoremove -y
