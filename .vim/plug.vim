@@ -55,6 +55,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
+Plug 'projekt0n/github-nvim-theme'
 "Plug 'bagrat/vim-buffet'
 
 " Tags
