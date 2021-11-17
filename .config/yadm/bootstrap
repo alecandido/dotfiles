@@ -132,7 +132,9 @@ cargo install exa git-delta starship topgrade
 cargo install --locked bat
 cargo install --locked trunk
 rustup target add wasm32-unknown-unknown
-# --- through yarn
+# --- through go
+go get -u github.com/cheat/cheat/cmd/cheat
+# --- through js
 pnpm add -g gitignore fixme
 pnpm add -g npms npms-cli
 pnpm add -g prettier prettier-plugin-toml prettier-plugin-svelte tsc tsserver
