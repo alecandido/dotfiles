@@ -42,6 +42,10 @@ export GOPATH="$HOME/.go/gopath"
 export GOROOT="$HOME/.go"
 export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 
+# Swift
+export PATH="$PATH:$HOME/.swift/bin"
+export LIBRARY_PATH="$LIBRARY_PATH:$HOME/.swift/lib/"
+
 # C/C++
 export CPATH=$CPATH:$HOME/.local/include
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/.local/lib/
