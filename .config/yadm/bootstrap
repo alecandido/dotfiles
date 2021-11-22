@@ -84,7 +84,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 vim +PlugInstall
 #python3 $HOME/.vim/plugged/YouCompleteMe/install.py --all
 # vim externals
-GO111MODULE=on go get mvdan.cc/sh/v3/cmd/shfmt
 echo "\e[35mInstall universal-ctags:\e[39m https://github.com/universal-ctags/ctags"
 
 
@@ -148,6 +147,8 @@ deno run -A https://deno.land/x/aleph/install.ts
 deno install -A --unstable -n trex --no-check https://deno.land/x/trex/cli.ts
 # --- through ruby
 sudo gem install bundler
+# --- through go
+go install mvdan.cc/sh/v3/cmd/shfmt@latest
 # --- with git
 git clone https://github.com/eth-p/bat-extras.git --depth 1 && cd bat-extras && ./build.sh --install --prefix=$HOME/.local
 rm -rf bat-extras; cd .. && rm -rf bat-extras

@@ -32,7 +32,7 @@ export PATH=$PATH:~/.julia/julia/bin
 export NPM_CONFIG_USERCONFIG="$HOME/.npmrc"
 export PATH="$PATH:$HOME/.npm/bin"
 # deno
-export PATH="$PATH:/home/alessandro/.deno/bin"
+export PATH="$PATH:$HOME/.deno/bin"
 
 # Rust
 . "$HOME/.cargo/env"
@@ -41,6 +41,9 @@ export PATH="$PATH:/home/alessandro/.deno/bin"
 export GOPATH="$HOME/.go/gopath"
 export GOROOT="$HOME/.go"
 export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
+
+# Julia
+export PATH="$PATH:$HOME/.julia/bin"
 
 # C/C++
 export CPATH=$CPATH:$HOME/.local/include
