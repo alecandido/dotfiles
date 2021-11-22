@@ -22,7 +22,7 @@ export PYTHONPATH=''
 export PATH=$PATH:~/.poetry/bin
 
 # Julia
-export PATH=$PATH:~/.julia/julia/bin
+export PATH=$PATH:~/.julia/bin
 
 # Ruby rbenv
 #export PATH=$PATH:~/.rbenv/bin:~/.gem/ruby/2.7.0/bin:
