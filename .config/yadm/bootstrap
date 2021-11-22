@@ -154,6 +154,10 @@ sudo gem install bundler
 git clone https://github.com/eth-p/bat-extras.git --depth 1 && cd bat-extras && ./build.sh --install --prefix=$HOME/.local
 rm -rf bat-extras; cd .. && rm -rf bat-extras
 
+# setup cheatsheets manager
+wget -O ~/.local/bin/cheatsheets https://raw.githubusercontent.com/cheat/cheat/master/scripts/git/cheatsheets
+chmod +x ~/.local/bin/cheatsheets
+
 # himalaya email client
 curl -sSL https://raw.githubusercontent.com/soywod/himalaya/master/install.sh | PREFIX=~/.local sh
 mkdir ~/Mail
