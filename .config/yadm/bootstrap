@@ -62,10 +62,17 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # go
 wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
-tar -C $HOME/.local -xzf go1.17.2.linux-amd64.tar.gz
+tar -C $HOME/.local -xzf go1.*.linux-amd64.tar.gz
 mv $HOME/.local/go $HOME/.go
-rm -f go1.17.2.linux-amd64.tar.gz
+rm -f go1.*.linux-amd64.tar.gz
 export PATH="$HOME/.go/bin:$PATH"
+
+# julia
+wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.4-linux-x86_64.tar.gz
+tar -C $HOME/.local -xzf julia-1.*-linux-x86_64.tar.gz
+mv $HOME/.local/julia-1.* $HOME/.julia
+rm -f julia-1.*-linux-x86_64.tar.gz
+export PATH="$HOME/.julia/bin:$PATH"
 
 # lua
 sudo apt install -y lua5.3
@@ -131,7 +138,12 @@ cargo install exa git-delta starship topgrade
 cargo install --locked bat
 cargo install --locked trunk
 rustup target add wasm32-unknown-unknown
-# --- through yarn
+# --- through go
+go install mvdan.cc/sh/v3/cmd/shfmt@latest
+go install github.com/cheat/cheat/cmd/cheat@latest
+# --- through julia
+julia -e 'using Pkg; Pkg.add("PackageCompiler")'
+# --- through js
 pnpm add -g gitignore fixme
 pnpm add -g npms npms-cli
 pnpm add -g prettier prettier-plugin-toml prettier-plugin-svelte tsc tsserver
@@ -147,11 +159,13 @@ deno run -A https://deno.land/x/aleph/install.ts
 deno install -A --unstable -n trex --no-check https://deno.land/x/trex/cli.ts
 # --- through ruby
 sudo gem install bundler
-# --- through go
-go install mvdan.cc/sh/v3/cmd/shfmt@latest
 # --- with git
 git clone https://github.com/eth-p/bat-extras.git --depth 1 && cd bat-extras && ./build.sh --install --prefix=$HOME/.local
 rm -rf bat-extras; cd .. && rm -rf bat-extras
+
+# setup cheatsheets manager
+wget -O ~/.local/bin/cheatsheets https://raw.githubusercontent.com/cheat/cheat/master/scripts/git/cheatsheets
+chmod +x ~/.local/bin/cheatsheets
 
 # himalaya email client
 curl -sSL https://raw.githubusercontent.com/soywod/himalaya/master/install.sh | PREFIX=~/.local sh

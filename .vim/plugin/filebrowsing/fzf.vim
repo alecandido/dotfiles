@@ -1,7 +1,7 @@
 " fzf.vim
-noremap <silent> <C-p>           :Files<CR>
-noremap <silent> <C-p>p          :Files<CR>
-noremap <silent> <C-p>b          :Buffers<CR>
-noremap <silent> <C-p>c          :CocFzfList<CR>
-noremap <silent> <C-p>r          :Rg<CR>
-noremap <silent> <C-p>t          :Tags<CR>
+noremap <silent> <space><space>           :Files<CR>
+noremap <silent> <space><space>p          :Files<CR>
+noremap <silent> <space><space>b          :Buffers<CR>
+noremap <silent> <space><space>c          :CocFzfList<CR>
+noremap <silent> <space><space>r          :Rg<CR>
+noremap <silent> <space><space>t          :Tags<CR>

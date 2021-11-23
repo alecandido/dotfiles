@@ -21,6 +21,7 @@ Plug 'ryanoasis/vim-devicons'
 " Git
 Plug 'tpope/vim-fugitive' | Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-git' " Git filetypes
+Plug 'sindrets/diffview.nvim'
 Plug 'junegunn/vim-github-dashboard' " Ruby required
 Plug 'junegunn/gv.vim'
 
@@ -132,9 +133,6 @@ Plug 'vim-skk/skkdict.vim'
 "  Language specific plugins
 " ---------------------------
 
-" Syntax bundle
-Plug 'sheerun/vim-polyglot'
-
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -202,8 +200,7 @@ Plug 'parkr/vim-jekyll'
 Plug 'rust-lang/rust.vim'
 
 " Go
-Plug 'fatih/vim-go', { 'tag': '*' } ", 'do': ':GoUpdateBinaries' }
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
@@ -214,12 +211,15 @@ Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Shell
 Plug 'z0mbix/vim-shfmt'
-Plug 'zinit-zsh/zinit-vim-syntax'
+Plug 'zdharma-continuum/zinit-vim-syntax'
 Plug 'meatballs/vim-xonsh'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
+
+" Syntax bundle
+Plug 'sheerun/vim-polyglot'
 
 " -------
 "  VimOS

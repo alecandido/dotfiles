@@ -63,8 +63,7 @@ vnoremap >                       >gv
 vnoremap <                       <gv
 
 " foldings
-vnoremap <space>                 zf
-nnoremap <expr> <space>          foldclosed('.') != -1 ? 'zO' : 'zc'
+nnoremap <expr> zf               foldclosed('.') != -1 ? 'zO' : 'zc'
 " <C-space> seems to be special and not available,
 " <C-@> instead do the job (it works as ctrl + space)
 "nnoremap <expr> <C-@>            &foldlevel != 0 ? 'zM' :'zR'
