@@ -1,4 +1,2 @@
-. $HOME/.sh/shrc
-. $HOME/.sh/bash/bashrc
-
-. "$HOME/.cargo/env"
+. $HOME/.config/sh/shrc
+. $HOME/.config/sh/bash/bashrc

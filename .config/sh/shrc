@@ -4,7 +4,7 @@
 #
 # source all files with definitions in common to all shells
 
-export SH_DIR=$HOME/.sh
+export SH_DIR=$HOME/.config/sh
 
 # load x environment variables
 . $HOME/.xutils/xenvvar

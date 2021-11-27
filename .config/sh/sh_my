@@ -5,14 +5,18 @@
 # Prefix
 export PREFIX=$HOME/.local
 
+# XDG
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+
 # Mybin
 export PATH=$PATH:~/.bin
 export PATH=$PATH:~/.local/bin
-export PATH=$PATH:~/.local/share/flatpak/exports/bin/ #flatpak apps
 
-# Anaconda
-#source ~/anaconda3/etc/profile.d/conda.sh
-#export PATH+=:~/anaconda3/bin
+# flatpal
+export PATH=$PATH:~/.local/share/flatpak/exports/bin/
 
 # PYTHONPATH
 #export PYTHONPATH=$PYTHONPATH:~/.local/lib
@@ -28,6 +32,8 @@ export PATH=$PATH:~/.poetry/bin
 # npm config (install user-wide, i.e. global w/o sudo)
 export NPM_CONFIG_USERCONFIG="$HOME/.npmrc"
 export PATH="$PATH:$HOME/.npm/bin"
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 # deno
 export PATH="$PATH:$HOME/.deno/bin"
 
@@ -59,9 +65,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib/
 # PKG_CONFIG
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/.local/lib/pkgconfig/
 
-# XDG
-export XDG_CONFIG_HOME=$HOME/.config
-
 # ROOT
 #source /home/alessandro/projects/PDF/root-6.18.04/obj/bin/thisroot.sh
 
@@ -74,7 +77,8 @@ LD_LIBRARY_PATH=$(echo $LD_LIBRARY_PATH | sed -E -e 's/^:*//' -e 's/:*$//' -e 's
 
 # Disable Suspend, enabling the forward search (Ctrl+S)
 if [[ $- == *i* ]]; then
-  stty -ixon
+  # silence stderr in any case
+  stty -ixon 2>/dev/null
 fi
 
 # Desktoprc should be sourced at login, not by any shell

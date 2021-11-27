@@ -225,7 +225,7 @@ Plug 'sheerun/vim-polyglot'
 "  VimOS
 " -------
 Plug 'jez/vim-superman' " manpages
-Plug 'soywod/himalaya.vim' " email client
+Plug 'soywod/himalaya', {'rtp': 'vim'} " email client
 Plug 'itchyny/calendar.vim' " calendar
 Plug 'vim/killersheep' " just a game
 
