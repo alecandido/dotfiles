@@ -11,5 +11,5 @@ export SH_DIR=$HOME/.config/sh
 
 . $SH_DIR/sh_my
 . $SH_DIR/sh_aliases
+. $SH_DIR/bw.sh
 . $SH_DIR/fzf.sh
-. $SH_DIR/secrets

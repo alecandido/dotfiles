@@ -15,7 +15,7 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
 
 # Oh-my-zsh plugins
 # -----------------

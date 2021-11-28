@@ -51,7 +51,8 @@ sudo apt install -y nodejs
 # echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 # sudo apt-get install -y yarn
 # pnpm installation
-curl -f https://get.pnpm.io/v6.7.js | node - add --global pnpm
+mkdir -p $HOME/.local/share/pnpm
+curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
 sudo apt install -y npm
 
 # deno installation
@@ -146,9 +147,10 @@ julia -e 'using Pkg; Pkg.add("PackageCompiler")'
 # --- through js
 pnpm add -g gitignore fixme
 pnpm add -g npms npms-cli
-pnpm add -g prettier prettier-plugin-toml prettier-plugin-svelte tsc tsserver
+pnpm add -g prettier prettier-plugin-toml
+pnpm add -g typescript
 pnpm add -g dockerfile-language-server-nodejs \
-                graphql-lsp \
+                graphql \
                 graphql-language-service-cli \
                 sql-language-server
 pnpm add -g serve

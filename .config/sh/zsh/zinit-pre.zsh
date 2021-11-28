@@ -11,6 +11,6 @@ source $ZSH_DIR/forgit.zsh
 
 # hstr
 
-export HISTFILE=$HOME/.zsh_history # ensure history file visibility
+export HISTFILE=$XDG_CACHE_HOME/zsh/history # ensure history file visibility
 export HSTR_CONFIG=hicolor         # get more colors
 bindkey -s "\C-r" "\eqhstr\n"      # bind hstr to Ctrl-r (for Vi mode check doc, experiment with --)

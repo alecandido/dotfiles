@@ -2,8 +2,9 @@ set nocompatible              " be iMproved, required
 
 filetype off                  " required
 
-let mapleader = "à"
+let mapleader = ",,"
 let localleader = "\\"
 set maxmempattern=10000
 
-source $HOME/.vim/plug.vim
+call mkdir($XDG_CACHE_HOME . "/vim", "p")
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
