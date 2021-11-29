@@ -49,6 +49,10 @@ if [ ! -f "$HOME/.zinit/completions/_deno" ]; then
   deno completions zsh >$HOME/.zinit/completions/_deno
 fi
 
+if [ ! -f "$HOME/.zinit/completions/_himalaya" ]; then
+  himalaya completion zsh >$HOME/.zinit/completions/_himalaya
+fi
+
 # Vim-superman completion
 compdef _man vman
 compdef _man bman

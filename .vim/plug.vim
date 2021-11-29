@@ -77,10 +77,6 @@ Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 
-" Start screen
-" keep it after prosession!!
-Plug 'mhinz/vim-startify'
-
 " Folding
 Plug 'Konfekt/FastFold'
 

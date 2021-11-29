@@ -1,4 +1,8 @@
 name = "Alessandro Candido"
+downloads-dir = "~/Downloads"
+signature = ""
+default-page-size = 48
+watch-cmds = ["mbsync -a"]
 
 [gmail]
 # default = true
@@ -20,12 +24,12 @@ downloads-dir = "~/Mail/infn"
 imap-host = "idefix.mi.infn.it"
 imap-port = 993
 imap-login = "acandido"
-imap-passwd-cmd = "bw get Password 'INFN mi mail'"
+imap-passwd-cmd = "bw get password 'INFN mi mail'"
 smtp-host = "mboxauth.mi.infn.it"
 smtp-port = 465
 smtp-starttls = true
 smtp-login = "acandido"
-smtp-passwd-cmd = "bw get Password 'INFN mi mail'"
+smtp-passwd-cmd = "bw get password 'INFN mi mail'"
 
 [unimi]
 email = "alessandro.candido1@unimi.it"

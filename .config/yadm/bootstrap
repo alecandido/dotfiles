@@ -172,6 +172,7 @@ chmod +x ~/.local/bin/cheatsheets
 # himalaya email client
 curl -sSL https://raw.githubusercontent.com/soywod/himalaya/master/install.sh | PREFIX=~/.local sh
 mkdir ~/Mail
+sudo apt install -y isync
 
 # gnome extensions
 sudo apt install -y gnome-tweaks

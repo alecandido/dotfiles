@@ -61,7 +61,8 @@ alias mixer="ncpamixer"
 
 alias canto='canto-curses'
 
-alias m='neomutt'
+alias m="nvim -c 'autocmd VimEnter * Himalaya'"
+alias himail="nvim -c 'autocmd VimEnter * Himalaya'"
 alias mutt='neomutt'
 
 alias gcc='gcc-10'
