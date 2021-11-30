@@ -3,3 +3,4 @@
 **/.venv_this
 /tags
 .gdb_history
+~/.config/neomutt/accounts/passwords.mutt

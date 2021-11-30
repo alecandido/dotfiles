@@ -1,0 +1,20 @@
+# Addresses
+
+set imap_user = "candido.ale@gmail.com"
+set imap_pass = $my_gmail_personal_pass
+set smtp_url = "smtp://candido.ale@smtp.gmail.com:465"
+set smtp_pass = $my_gmail_personal_pass
+set folder = "imaps://imap.gmail.com:993"
+
+# Further infos
+
+set realname = "Alessandro Candido"
+set from = "candido.ale@gmail.com"
+
+# Files
+
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set header_cache = ~/Mail/gmail.personal/cache/headers
+set message_cachedir = ~/Mail/gmail.personal/cache/bodies
+set certificate_file = ~/Mail/gmail.personal/certificates

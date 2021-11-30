@@ -1,10 +1,18 @@
 # Addresses
 
-set folder = "imaps://alessandro.candido1@mailserver.unimi.it:993"
-set smtp_url = "smtp://alessandro.candido1@smtp.unimi.it:465"
+set imap_user = "alessandro.candido1@unimi.it"
 set imap_pass = $my_unimi_pass
+set smtp_url = "smtp://alessandro.candido1@smtp.unimi.it:465"
+set smtp_pass = $my_unimi_pass
+set folder = "imaps://alessandro.candido1@mailserver.unimi.it:993"
 
 # Further infos
 
 set realname = "Alessandro Candido"
-set from = "alessandro.candido@unimi.it"
+set from = "alessandro.candido1@unimi.it"
+
+# Files
+
+set header_cache = ~/Mail/unimi/cache/headers
+set message_cachedir = ~/Mail/unimi/cache/bodies
+set certificate_file = ~/Mail/unimi/certificates

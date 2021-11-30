@@ -11,9 +11,13 @@ set folder         = "~/Mail"
 
 ## Set accounts
 
-# source "gpg -d ~/.config/neomutt/passwords.gpg |"
-source ~/.config/neomutt/accounts/infn.mutt
-source ~/.config/neomutt/accounts/unimi.mutt
+source ~/.config/neomutt/accounts/passwords.mutt
+# account-hook 'infn' 'source ~/.config/neomutt/accounts/gmail.personal.mutt'
+account-hook 'mi.infn' 'source ~/.config/neomutt/accounts/mi.infn.mutt'
+account-hook 'unimi' 'source ~/.config/neomutt/accounts/unimi.mutt'
+
+# Default account
+source ~/.config/neomutt/accounts/mi.infn.mutt
 
 ## common
 
@@ -36,7 +40,7 @@ set sort = reverse-threads
 # Compose
 #==========================================================
 
-set editor         = "vim -c 'set tw=60' -c 'startinsert' -c 'set spell spelllang=en'"
+# set editor         = "vim -c 'set tw=60' -c 'startinsert' -c 'set spell spelllang=en'"
 set edit_headers
 
 
@@ -50,9 +54,9 @@ set reverse_alias
 #==========================================================
 # Index
 #==========================================================
-set pager_index_lines        = 10
-#set date_format="%a, %d. %b %H:%M"
-set date_format="%y/%m/%d %I:%M%p"
+set pager_index_lines        = 5
+# #set date_format="%a, %d. %b %H:%M"
+set date_format="%d/%m/%y %I:%M%p"
 set folder_format="%2C %8s %d %t %N %f"
 set index_format="%1H %4C %Z %D [%-22.22F] (%<l?%4l&%4c>) %s"
 
@@ -73,15 +77,8 @@ unignore List-Id
 source ~/.config/neomutt/colors2.mutt
 
 #==========================================================
-set pager_index_lines = 5
 set help = yes
 set status_on_top = no
-
-# <KEY>
-color body brightdefault  blue "<[[:print:]]+>"
-# neomutt 'names' (Index, Pager,)
-color body cyan default "'index'"
-color body cyan default "'pager'"
 
 #==========================================================
 # Source a bunch of files

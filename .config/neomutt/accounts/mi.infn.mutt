@@ -1,0 +1,19 @@
+# Addresses
+
+set imap_user = "acandido@idefix.mi.infn.it"
+set imap_pass = $my_mi_infn_pass
+set smtp_url = "smtp://acandido@mboxauth.mi.infn.it:465"
+set smtp_pass = $my_mi_infn_pass
+set folder = "imaps://acandido@idefix.mi.infn.it:993"
+
+
+# Further infos
+
+set realname = "Alessandro Candido"
+set from = "alessandro.candido@mi.infn.it"
+
+# Files
+
+set header_cache = ~/Mail/mi.infn/cache/headers
+set message_cachedir = ~/Mail/mi.infn/cache/bodies
+set certificate_file = ~/Mail/mi.infn/certificates
