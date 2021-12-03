@@ -54,9 +54,9 @@ sudo apt install -y nodejs
 mkdir -p $HOME/.local/share/pnpm
 curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
 sudo apt install -y npm
-
 # deno installation
 curl -fsSL https://deno.land/x/install/install.sh | sh
+
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 export PATH="$HOME/.cargo/bin:$PATH"
