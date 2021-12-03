@@ -2,7 +2,7 @@
     name = Alessandro Candido
     email = candido.ale@gmail.com
 [core]
-    editor = vim
+    editor = nvim
     excludesFile = ~/.config/git/ignore ;already the default
     quotepath = false
     pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended Bright'
