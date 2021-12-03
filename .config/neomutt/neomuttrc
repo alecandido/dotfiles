@@ -17,6 +17,7 @@ account-hook 'mi.infn' 'source ~/.config/neomutt/accounts/mi.infn.mutt'
 account-hook 'unimi' 'source ~/.config/neomutt/accounts/unimi.mutt'
 
 # Default account
+source ~/.config/neomutt/accounts/unimi.mutt
 source ~/.config/neomutt/accounts/mi.infn.mutt
 
 ## common
@@ -29,36 +30,50 @@ set trash          = "+Trash"
 
 set tmpdir         = "/tmp"
 
-mailboxes          = "+Inbox" "+Drafts" "+Sent" "+Trash" "+Junk" "+Other"
+mailboxes          = "+Inbox" "+Drafts" "+Sent" "+Trash" "+Junk"
 
 ## SORT
 
-set sort_aux = last-date-received                           
-set sort = reverse-threads
+# set sort_aux = last-date-received                           
+set sort = reverse-date-received
+
+#==========================================================
+# Check mail
+#==========================================================
+
+# check for mail every 60 seconds
+set mail_check=60
+set timeout=10
+
+# get all subscribed folders
+set imap_check_subscribed
+set imap_idle=yes
+set ssl_force_tls=yes
 
 #==========================================================
 # Compose
 #==========================================================
 
-# set editor         = "vim -c 'set tw=60' -c 'startinsert' -c 'set spell spelllang=en'"
-set edit_headers
-
+set editor = "nvim -c 'set tw=80' -c 'set spell spelllang=en' -c 'set formatoptions=awt | normal }'"
+set edit_headers = yes
+set text_flowed = yes
 
 #==========================================================
 # alias - neomutt's addressbook
 #==========================================================
 
+set alias_file="~/Mail/aliases"
 set reverse_alias
-
+source "$alias_file"
 
 #==========================================================
 # Index
 #==========================================================
-set pager_index_lines        = 5
-# #set date_format="%a, %d. %b %H:%M"
-set date_format="%d/%m/%y %I:%M%p"
-set folder_format="%2C %8s %d %t %N %f"
-set index_format="%1H %4C %Z %D [%-22.22F] (%<l?%4l&%4c>) %s"
+set pager_index_lines = 5
+set pager_stop = yes
+set date_format = "%d %b %Y %I:%M%p"
+set folder_format = "%2C %8s %d %t %N %f"
+set index_format = "%1H %4C %Z %D %-30.30L %<l?%4l&%4c> %s"
 
 #==========================================================
 # View E-Mail - pager
@@ -66,19 +81,40 @@ set index_format="%1H %4C %Z %D [%-22.22F] (%<l?%4l&%4c>) %s"
 
 ignore *
 unignore From Subject To Cc Bcc 
-unignore Reply-To User-Agent
+unignore Reply-To User-Agent X-Mailer
 unignore Organization
 unignore List-Id
+
+# when displaying email wrap at 80 characters and don't show linebreaks
+set wrap=80
+set markers=no
 
 #==========================================================
 # Neomutt Guide Colors
 #==========================================================
 
-source ~/.config/neomutt/colors2.mutt
+source ~/.config/neomutt/colors.main.mutt
 
 #==========================================================
 set help = yes
 set status_on_top = no
+
+#==========================================================
+# External programs
+#==========================================================
+
+# prefer plain text messages over html
+alternative_order text/plain text/enriched text/html
+# prefer plain text messages over html
+auto_view text/html text/calendar application/ics
+# configure external programs to view mail content
+set mailcap_path="~/.config/neomutt/mailcap"
+
+#==========================================================
+# Notifications
+#==========================================================
+
+set new_mail_command="~/.bin/notmuch-update"
 
 #==========================================================
 # Source a bunch of files
@@ -86,4 +122,5 @@ set status_on_top = no
 
 source ~/.config/neomutt/bind.mutt
 source ~/.config/neomutt/sidebar.mutt
+source ~/.config/neomutt/misc.mutt
 

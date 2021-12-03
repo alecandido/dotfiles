@@ -1,15 +1,15 @@
 ## Sidebar config
 
-set sidebar_visible = "yes"
-set sidebar_width = "22"
-set sidebar_short_path = "yes"
-set sidebar_folder_indent = "yes"
+set sidebar_visible = yes
+set sidebar_width = 22
+set sidebar_short_path = yes
+set sidebar_folder_indent = yes
 set sidebar_indent_string = "-"
 set sidebar_divider_char = " │ "
 set sidebar_delim_chars = "/."
 set sidebar_format = "%B %?N?(%N)?%*"
 set sidebar_sort_method = "unsorted"
-set sidebar_new_mail_only = "no"
+set sidebar_new_mail_only = no
 macro index b "<enter-command>toggle sidebar_visible<enter><refresh>"
 macro pager b "<enter-command>toggle sidebar_visible<enter><redraw-screen>"
 

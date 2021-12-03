@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENV_ROOT={{ pwd }}
+ENV_ROOT={{ env_root }}
 ENV_NAME={{ env_name }}
 
 source $ENV_ROOT/$ENV_NAME/bin/activate

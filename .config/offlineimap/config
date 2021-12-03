@@ -1,0 +1,48 @@
+[general]
+accounts = mi.infn,unimi
+maxsyncaccounts = 2
+
+[DEFAULT]
+postsynchook = notmuch-update
+
+[Account mi.infn]
+localrepository = mi.infn.local
+remoterepository = mi.infn.remote
+autorefresh = 0.5
+quick = 10
+
+[Repository mi.infn.local]
+type = Maildir
+localfolders = ~/Mail/mi.infn
+
+[Repository mi.infn.remote]
+type = IMAP
+remotehost = 
+remoteuser = 
+keepalive = 60
+holdconnectionopen = yes
+
+[Account unimi]
+localrepository = unimi.local
+remoterepository = unimi.remote
+autorefresh = 0.5
+quick = 10
+
+[Repository unimi.local]
+type = Maildir
+localfolders = ~/Mail/unimi
+
+[Repository unimi.remote]
+type = IMAP
+remotehost = 
+remoteuser = 
+keepalive = 60
+holdconnectionopen = yes
+
+[mbnames]
+enabled = yes
+filename = ~/.config/neomutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
