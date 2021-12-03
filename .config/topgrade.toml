@@ -11,10 +11,10 @@ disable = ["shell", "vim"]
 #only = ["system", "emacs"]
 
 # Do not ask to retry failed steps (default: false)
-#no_retry = true
+no_retry = true
 
 # Run inside tmux
-#run_in_tmux = true
+# run_in_tmux = true
 
 # List of remote machines with Topgrade installed on them
 #remote_topgrades = ["toothless", "pi", "parnas"]
@@ -57,7 +57,7 @@ disable = ["shell", "vim"]
 
 # Custom commands
 [commands]
-#"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
+"Manually Installed" = "upgrade-manual"
 
 [brew]
 #greedy_cask = true
