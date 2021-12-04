@@ -1,0 +1,10 @@
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+home=['<Primary><Alt>h']
+terminal=@as []
+www=['<Primary><Alt>f']
+
+[custom-keybindings/custom0]
+binding='<Primary><Alt>t'
+command='kitty'
+name='Launch kitty'

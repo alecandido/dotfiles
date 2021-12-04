@@ -1,0 +1,10 @@
+[
+  {
+    "name": "media-keys",
+    "path": "/org/gnome/settings-daemon/plugins/media-keys/"
+  },
+  {
+    "name": "shell-volume-mixer",
+    "path": "/org/gnome/shell/extensions/shell-volume-mixer/"
+  }
+]
