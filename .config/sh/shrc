@@ -10,6 +10,20 @@ export SH_DIR=$HOME/.config/sh
 . $HOME/.xutils/xenvvar
 
 . $SH_DIR/sh_my
-. $SH_DIR/sh_aliases
+
+# ┌──────────────┐
+# │ more aliases │
+# └──────────────┘
+
+if [ -f $SH_DIR/extra.aliases ]; then
+  . $SH_DIR/utils.aliases
+  . $SH_DIR/app.aliases
+  . $SH_DIR/extra.aliases
+fi
+
+# ┌──────────────┐
+# │ app specific │
+# └──────────────┘
+
 . $SH_DIR/bw.sh
 . $SH_DIR/fzf.sh

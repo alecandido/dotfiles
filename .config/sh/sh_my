@@ -104,9 +104,6 @@ export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 
 source $HOME/.bin/open.sh
 
-# Wrap git automatically by adding the following to ~/.zshrc:
-eval "$(hub alias -s)"
-
 # fasd
 eval "$(fasd --init auto)"
 _FASD_BACKENDS="$_FASD_BACKENDS viminfo recently-used"

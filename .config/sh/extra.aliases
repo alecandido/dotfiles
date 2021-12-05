@@ -2,171 +2,12 @@
 # ║ My aliases ║
 # ╚════════════╝
 #
-# aliases working on most the shells
-#
-# part 2: continues from `.sh_aliases`
+# extra aliases working on most shells
+# mainly functions
 
-alias happy='cat ~/.my/ascii_art/happy | lolcat'
-alias surprised='cat ~/.my/ascii_art/surprised_pikachu | lolcat'
-alias tuxsay='cowsay -f tux'
-alias tuxthink='cowthink -f tux'
-alias manycows='apt-get moo | cowthink -n -e"♥♥" | cowthink -n | cowthink -nt'
-alias knf='neofetch --kitty'
-alias knf-profile='neofetch --kitty ~/.face.icon'
-alias kittynf='neofetch --kitty ~/Pictures/Desktop/KIKI-Cat.jpg --crop_mode fill'
-alias star-wars='telnet towel.blinkenlights.nl'
-
-# ┌──────┐
-# │system│
-# └──────┘
-
-alias mydev='mount | grep -E "/dev/sd\w[[:digit:]]*"'
-win-info() {
-  xprop | awk '
-  /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
-  /^WM_NAME/{sub(/.* =/, "title:"); print}
-  '
-}
-alias dim-screen='xset dpms force off'
-alias current-term='ps -p $(ps -p $$ -o ppid=) o args='
-
-# ┌────────┐
-# │programs│
-# └────────┘
-alias lspy="ls -T --ignore-glob='__pycache__'"
-
-alias vi='vim'
-alias vimexec='nvim -i NONE -u NORC -U NONE -nNES'
-alias ve=vimexec
-alias nv=nvim
-
-alias t='tmux attach -t base || tmux new -s base'
-alias tn='tmux new'
-
-alias tzf="fzf-tmux --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-alias bzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-
-follow() {
-  tail -f $1 | bat --paging=never -l log
-}
-
-alias tel='telegramtui'
-
-alias kcat="kitty +kitten icat"
-alias kdiff="kitty +kitten diff"
-
-alias fd="fdfind"
-
-alias mixer="ncpamixer"
-
-alias canto='canto-curses'
-
-alias m="neomutt"
-alias himail="nvim -c 'autocmd VimEnter * Himalaya'"
-alias mutt='neomutt'
-
-alias gcc='gcc-10'
-alias gfortran='gfortran-10'
-
-alias ipy='ipython3'
-alias ipy3='ipython3'
-alias ipy2='ipython2'
-alias ipylab='ipython3 --pylab'
-
-alias py='python3'
-alias py3='python3'
-alias py2='python2'
-alias pip='python3 -m pip'
-alias pip3='python3 -m pip'
-alias pip2='python2 -m pip'
-alias jupyter-here='jupyter notebook --notebook-dir .'
-
-rust-err() {
-  rustc --explain $1 | nvim -c 'set filetype=markdown' -
-}
-
-alias dfree='df -h | grep -v tmpfs'
-
-# bat stuffs
-#alias bat="batcat"
-#alias brg="batgrep"
-#alias batdiff="$HOME/.bin/bat-extras/src/batdiff.sh"
-#alias batgrep="$HOME/.bin/bat-extras/src/batgrep.sh"
-#alias batman="$HOME/.bin/bat-extras/src/batman.sh"
-#alias batwatch="$HOME/.bin/bat-extras/src/batwatch.sh"
-#alias prettybat="$HOME/.bin/bat-extras/src/prettybat.sh"
-
-# dart-sass
-alias sass='dart-sass --no-source-map'
-# ruby-sass
-#alias sass='sass --sourcemap=none'
-
-alias paste-image='xclip -selection clipboard -t image/png -o >'
-
-alias backup-home-to='rsync -aAXHv ~'
-
-alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
-
-eval $(thefuck --alias)
-
-alias youtube="ytfzf -t"
-
-alias aleph="$HOME/.deno/bin/aleph"
-
-mkpdf() {
-  latexmk -pdf $1
-  latexmk -c
-}
-
-# ┌────────────┐
-# │sh utilities│
-# └────────────┘
-
-alias cal='gcal'
-
-# fasd
-alias v='f -t -e vim -b viminfo'
-c() {
-  # cd in the dir of the file
-  cd $(dirname $(fasd -i $@))
-
-  # instead of:
-  # alias c='fasd -e cd'
-}
-
-# ┌────┐
-# │envs│
-# └────┘
-
-# alias cact='. ~/.miniconda3/bin/activate'
-# alias cdact='conda deactivate'
-
-aenv() {
-  env_path=$(python3 $HOME/.bin/activate_environment.py $PWD)
-  if [ ! -z $env_path ]; then
-    . $env_path
-  else
-    echo "No environment found"
-  fi
-}
-
-# ┌───┐
-# │ssh│
-# └───┘
-
-# alias infn_grid='ssh -X acandido@gridui3.pi.infn.it'
-# alias piero='ssh -X acandido@131.114.142.201'
-# alias marco='ssh -X acandido@login.marconi.cineca.it'
-
-# ┌──────┐
-# │backup│
-# └──────┘
-
-# now use `yadm`
-
-# ┌──────────────┐
-# │misc functions│
-# └──────────────┘
+# ┌────────────────┐
+# │ misc functions │
+# └────────────────┘
 
 # launch app
 launch() {
@@ -270,8 +111,6 @@ img_to_gray() {
   fi
 }
 
-# ... and similar
-
 # rclone "aliases"
 rclone() {
   x="$@"
@@ -282,4 +121,12 @@ rclone() {
   else
     command rclone "$@"
   fi
+}
+
+# get infos about a window
+win-info() {
+  xprop | awk '
+  /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
+  /^WM_NAME/{sub(/.* =/, "title:"); print}
+  '
 }

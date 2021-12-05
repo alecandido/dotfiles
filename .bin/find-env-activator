@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+import argparse
+import pathlib
+
+
+def parse():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "start",
+        nargs="?",
+        type=pathlib.Path,
+        default=pathlib.Path.cwd(),
+        help="location to start search environment activator from",
+    )
+    parser.add_argument(
+        "-a",
+        "--activator-names",
+        nargs="+",
+        default=[".venv_this"],
+        metavar="ACT",
+        help="candidate names for the activator",
+    )
+
+    return parser.parse_args()
+
+
+def find_env(start, activators):
+    current_path = pathlib.Path(start).absolute()
+
+    while len(current_path.parents) > 0:
+        for act in activators:
+            env_activator = current_path / act
+            if env_activator.is_file():
+                return env_activator
+        current_path = current_path.parent
+
+
+if __name__ == "__main__":
+    args = parse()
+
+    print(find_env(args.start.absolute(), args.activator_names))
