@@ -58,5 +58,6 @@ if [ -f $ZSH_DIR/aliases.zsh ]; then
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+P10K_CONFIG=$ZSH_DIR/p10k.zsh
+[[ ! -f $P10K_CONFIG ]] || source $P10K_CONFIG
 # eval "$(starship init zsh)"
