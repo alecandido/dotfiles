@@ -12,6 +12,8 @@ alias ls='exa'
 alias rm='rm -I'
 alias sudo='sudo '
 
+alias wget='wget --hsts-file $XDG_CACHE_HOME/wget-hsts'
+
 # ┌────────┐
 # │ system │
 # └────────┘

@@ -1,0 +1,2 @@
+global-dir = ${XDG_CACHE_HOME}/pnpm/pnpm-global
+store-dir = ${XDG_CACHE_HOME}/pnpm/pnpm-store

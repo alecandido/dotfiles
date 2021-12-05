@@ -28,8 +28,7 @@ export PYTHONSTARTUP=$XDG_CONFIG_HOME/python/startup.py
 #eval "$(rbenv init -)"
 
 # npm config (install user-wide, i.e. global w/o sudo)
-export NPM_CONFIG_USERCONFIG="$HOME/.npmrc"
-export PATH="$PATH:$HOME/.npm/bin"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # deno
@@ -94,6 +93,9 @@ export FILEMANAGER=nautilus
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# less history
+export LESSHISTFILE=$XDG_CACHE_HOME/lesshst
 
 # interactive kernels & notebook configurations
 export IPYTHONDIR=$XDG_CONFIG_HOME/ipython

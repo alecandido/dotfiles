@@ -9,17 +9,15 @@ export SH_DIR=$HOME/.config/sh
 # load x environment variables
 . $HOME/.xutils/xenvvar
 
-. $SH_DIR/sh_my
+. $SH_DIR/my.sh
 
 # ┌──────────────┐
 # │ more aliases │
 # └──────────────┘
 
-if [ -f $SH_DIR/extra.aliases ]; then
-  . $SH_DIR/utils.aliases
-  . $SH_DIR/app.aliases
-  . $SH_DIR/extra.aliases
-fi
+. $SH_DIR/utils.aliases.sh
+. $SH_DIR/app.aliases.sh
+. $SH_DIR/extra.aliases.sh
 
 # ┌──────────────┐
 # │ app specific │
