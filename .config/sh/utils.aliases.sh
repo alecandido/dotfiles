@@ -30,6 +30,8 @@ alias paste-image='xclip -selection clipboard -t image/png -o >'
 alias paste-text='xclip -selection clipboard -o >'
 alias copy-file='xclip -selection clipboard'
 
+alias replace='rsync -a'
+
 alias lspy="exa -T --ignore-glob='__pycache__'"
 
 # ┌──────────────┐
