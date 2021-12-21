@@ -29,6 +29,8 @@ alias current-term='ps -p $(ps -p $$ -o ppid=) o args='
 alias pasteimage='xclip -selection clipboard -t image/png -o'
 alias pastetext='xclip -selection clipboard -o'
 
+alias replace='rsync -a'
+
 alias lspy="exa -T --ignore-glob='__pycache__'"
 
 # ┌──────────────┐

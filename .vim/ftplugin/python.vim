@@ -68,3 +68,6 @@ let g:riv_python_rst_hl=1
 let g:pymode_options_colorcolumn = 0
 let g:pymode_lint_options_pep8 =
     \ {'max_line_length': 100}
+" let g:pymode_doc = 0
+let g:pymode_doc_bind = '^[K'
+" let g:pymode_rope = 0
