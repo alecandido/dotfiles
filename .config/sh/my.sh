@@ -101,13 +101,11 @@ export LESSHISTFILE=$XDG_CACHE_HOME/lesshst
 export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
 export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 
-# go command
-# (https://blog.patshead.com/2011/05/my-take-on-the-go-command.html)
-source $HOME/.bin/open.sh
-
 # fasd
 eval "$(fasd --init auto)"
 _FASD_BACKENDS="$_FASD_BACKENDS viminfo recently-used"
+# remove 'passive' (just listing) fasd aliases
+unalias a s d f sd sf
 
 anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool
 

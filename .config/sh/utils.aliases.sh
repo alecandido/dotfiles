@@ -26,9 +26,8 @@ alias current-term='ps -p $(ps -p $$ -o ppid=) o args='
 # │ sh utilities │
 # └──────────────┘
 
-alias paste-image='xclip -selection clipboard -t image/png -o >'
-alias paste-text='xclip -selection clipboard -o >'
-alias copy-file='xclip -selection clipboard'
+alias pasteimage='xclip -selection clipboard -t image/png -o'
+alias pastetext='xclip -selection clipboard -o'
 
 alias lspy="exa -T --ignore-glob='__pycache__'"
 

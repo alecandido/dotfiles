@@ -11,7 +11,6 @@ alias vi='vim'
 alias vimexec='nvim -i NONE -u NORC -U NONE -nNES'
 alias ve=vimexec
 alias nv=nvim
-alias v='f -t -e vim -b viminfo'
 
 alias t='tmux attach -t base || tmux new -s base'
 alias tn='tmux new'

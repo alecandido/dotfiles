@@ -111,6 +111,9 @@ sudo apt install -y pdfgrep
 sudo apt install -y network-manager-vpnc-gnome
 sudo apt install -y rename
 sudo apt install -y bat
+sudo apt install -y git-extras
+# snap
+sudo snap install btop
 #
 sudo apt install -y thefuck figlet lolcat cowsay neofetch
 git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
@@ -123,7 +126,6 @@ pipx install poetry
 # - applications
 pipx install ipython
 pipx install glances
-pipx install bpytop
 pipx install speedtest-cli
 pipx install invoke
 pipx install fortran-language-server

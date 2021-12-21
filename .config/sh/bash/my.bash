@@ -7,11 +7,6 @@ if [ -f ~/.bin/acd_func.sh ]; then
   source ~/.bin/acd_func.sh
 fi
 
-# fasd
-if [ -f ~/.config/fasd/bash.sh ]; then
-  source ~/.config/fasd/bash.sh
-fi
-
 # broot
 if [ -f ~/.config/broot/launcher/bash/br ]; then
   source ~/.config/broot/launcher/bash/br

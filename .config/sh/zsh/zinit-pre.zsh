@@ -1,13 +1,8 @@
-# fasd
-#source /home/alessandro/.config/fasd/zsh.sh
-
 # fzf
 
 export FZF_COMPLETION_TRIGGER=''
 #bindkey '^\t' fzf-completion
 #bindkey '^I' $fzf_default_completion
-
-source $ZSH_DIR/forgit.zsh
 
 # hstr
 
