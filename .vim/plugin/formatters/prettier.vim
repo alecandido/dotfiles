@@ -1,5 +1,5 @@
-"let g:prettier#autoformat = 1
-"let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 " Max line length that prettier will wrap on: a number or 'auto' (use
 " textwidth).
