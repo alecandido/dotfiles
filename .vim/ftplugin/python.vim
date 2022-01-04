@@ -52,7 +52,7 @@ noremap <F9> :Py<CR>
 augroup LocalPython
     autocmd!
 
-    autocmd BufWritePre *.py execute ':silent Black'
+    " autocmd BufWritePre *.py execute ':silent Black'
 augroup END
 
 " Pylint
