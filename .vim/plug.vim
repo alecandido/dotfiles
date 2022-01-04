@@ -31,7 +31,7 @@ Plug 'svermeulen/vim-cutlass'
 Plug 'svermeulen/vim-yoink'
 
 " Plugin for autocompletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocUpdate'}
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -63,8 +63,8 @@ Plug 'liuchengxu/vista.vim'
 
 " Project tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
 
 " File browser
 Plug 'Shougo/unite.vim'

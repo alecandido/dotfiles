@@ -71,3 +71,6 @@ let g:pymode_lint_options_pep8 =
 " let g:pymode_doc = 0
 let g:pymode_doc_bind = '^[K'
 " let g:pymode_rope = 0
+
+" https://github.com/fannheyward/coc-pyright/issues/521#issuecomment-858530052
+let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']

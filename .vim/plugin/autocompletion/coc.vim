@@ -1,4 +1,5 @@
 let g:coc_global_extensions = ['coc-git', 
+                                \'coc-marketplace',
                                 \'coc-lists',
                                 \'coc-fzf-preview',
                                 \'coc-dictionary',
