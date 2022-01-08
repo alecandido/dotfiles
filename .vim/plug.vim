@@ -31,7 +31,7 @@ Plug 'svermeulen/vim-cutlass'
 Plug 'svermeulen/vim-yoink'
 
 " Plugin for autocompletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocUpdate'}
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -63,8 +63,8 @@ Plug 'liuchengxu/vista.vim'
 
 " Project tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
 
 " File browser
 Plug 'Shougo/unite.vim'
@@ -161,7 +161,6 @@ Plug 'tpope/vim-afterimage'
 "  - refactoring
 "  - template engine
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'psf/black', { 'branch': 'stable' }
 " Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -176,9 +175,6 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'jxnblk/vim-mdx-js'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'pnpm add --global prettier prettier-plugin-toml prettier-plugin-svelte',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte', 'toml'] }
 " Plug 'jparise/vim-graphql'
 Plug 'evanleck/vim-svelte'
 
@@ -214,14 +210,17 @@ Plug 'meatballs/vim-xonsh'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'AtsushiSakai/julia.vim' " require to manually install JuliaFormatter.jl
 
-" Syntax bundle
+" Bundles
+" -- syntax
 Plug 'sheerun/vim-polyglot'
+" -- format
+Plug 'sbdchd/neoformat'
 
 " -------
 "  VimOS
 " -------
 Plug 'jez/vim-superman' " manpages
-Plug 'soywod/himalaya', {'rtp': 'vim'} " email client
+" Plug 'soywod/himalaya', {'rtp': 'vim'} " email client
 Plug 'itchyny/calendar.vim' " calendar
 Plug 'vim/killersheep' " just a game
 

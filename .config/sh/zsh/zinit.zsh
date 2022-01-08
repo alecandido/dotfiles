@@ -51,7 +51,7 @@ zinit wait lucid for \
     OMZP::python \
     OMZP::rbenv \
     OMZP::rsync \
-    OMZP::rustup \
+    OMZP::rust \
     OMZP::thefuck \
     OMZP::tmux \
     OMZP::urltools

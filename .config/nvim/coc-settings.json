@@ -25,6 +25,7 @@
       "rootPatterns": ["elm.json"]
     }
   },
+  "coc.preferences.extensionUpdateCheck": "daily",
   "coc.source.emoji.filetypes": ["markdown", "markdown.mdx", "pandoc"],
   "codeLens.enable": true,
   "svelte.enable-ts-plugin": true
