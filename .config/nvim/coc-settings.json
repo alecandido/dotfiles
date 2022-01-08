@@ -26,5 +26,6 @@
     }
   },
   "coc.source.emoji.filetypes": ["markdown", "markdown.mdx", "pandoc"],
-  "codeLens.enable": true
+  "codeLens.enable": true,
+  "svelte.enable-ts-plugin": true
 }
