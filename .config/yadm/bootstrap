@@ -103,6 +103,7 @@ sudo apt install -y hub
 sudo apt install -y fasd
 sudo apt install -y ripgrep
 sudo apt install -y fd-find
+sudo apt install -y duf
 sudo apt install -y htop
 sudo apt install -y ncdu
 sudo apt install -y tldr && tldr -u
