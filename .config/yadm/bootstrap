@@ -151,6 +151,7 @@ pnpm add -g dockerfile-language-server-nodejs \
                 graphql \
                 graphql-language-service-cli \
                 sql-language-server
+pnpm add -g @taplo/cli
 pnpm add -g serve
 # pnpm add -g elm @elm-tooling/elm-language-server elm-format
 pnpm add -g @bitwarden/cli
