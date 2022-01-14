@@ -9,5 +9,7 @@ let mapleader = ",,"
 let localleader = "\\"
 set maxmempattern=10000
 
+set shada='1000,f1,<500
+
 source $HOME/.vim/plug.vim
 
