@@ -53,6 +53,10 @@ if [ ! -f "$HOME/.zinit/completions/_himalaya" ]; then
   himalaya completion zsh >$HOME/.zinit/completions/_himalaya
 fi
 
+# todoist CLI
+source $GOPATH/pkg/mod/github.com/sachaos/todoist@v*/todoist_functions_fzf.sh
+PROG=todoist source $GOPATH/pkg/mod/github.com/urfave/cli@v*/autocomplete/zsh_autocomplete
+
 # Vim-superman completion
 compdef _man vman
 compdef _man bman
