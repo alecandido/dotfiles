@@ -1,286 +1,286 @@
 [user]
-    name = Alessandro Candido
-    email = candido.ale@gmail.com
+	name = Alessandro Candido
+	email = candido.ale@gmail.com
 [core]
-    editor = nvim
-    excludesFile = ~/.config/git/ignore ;already the default
-    quotepath = false
-    pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended Bright'
+	editor = nvim
+	excludesFile = ~/.config/git/ignore ;already the default
+	quotepath = false
+	pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended Bright'
 [color]
-    status = auto
-    branch = auto
-    interactive = auto
-    diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
 [color "branch"]
-    current = yellow bold
-    local = green ; bold
-    remote = blue ; bold
-    upstream = blue bold
-    plain = 250
+	current = yellow bold
+	local = green ; bold
+	remote = blue ; bold
+	upstream = blue bold
+	plain = 250
 [color "diff"]
-    ;meta = yellow bold
-    ;frag = magenta bold
-    old = red ; bold
-    ;new = green bold
-    ;whitespace = red reverse
+	;meta = yellow bold
+	;frag = magenta bold
+	old = red ; bold
+	;new = green bold
+	;whitespace = red reverse
 [color "status"]
-    ;added = green bold
-    changed = yellow ; bold
-    ;untracked = red bold
+	;added = green bold
+	changed = yellow ; bold
+	;untracked = red bold
 [color "decorate"]
-    branch = green bold
-    remoteBranch = blue
-    stash = yellow
-    HEAD = cyan bold
+	branch = green bold
+	remoteBranch = blue
+	stash = yellow
+	HEAD = cyan bold
 [column]
-    ui = auto,nodense
+	ui = auto,nodense
 [completion]
-    ;commdands = -fetch,instaweb
+	;commdands = -fetch,instaweb
 [diff]
-    tool = vimdiff
+	tool = vimdiff
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [delta]
-    features = decorations
-    side-by-side = true
-    whitespace-error-style = 22 reverse
+	features = decorations
+	side-by-side = true
+	whitespace-error-style = 22 reverse
 [delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
 [difftool]
-    prompt = false
+	prompt = false
 [instaweb]
-    local = true
-    httpd = python
-    port = 4321
-    browser = firefox
+	local = true
+	httpd = python
+	port = 4321
+	browser = firefox
 [pretty]
-    pretty-history = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+	pretty-history = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
 [rerere]
-    enabled = true
-    autoupdate = true
+	enabled = true
+	autoupdate = true
 ;[sequence]
-    ;editor = interactive-rebase-tool
+	;editor = interactive-rebase-tool
 [web]
-    browser = firefox
+	browser = firefox
 [alias]
-    # ┌───────────────┐
-    # │ Most frequent │
-    # └───────────────┘
-    aa = add -A .
-    au = add -u
-    cm = commit -m
-    co = checkout
-    st = status
-    br = branch
-    cob = checkout -b
+	# ┌───────────────┐
+	# │ Most frequent │
+	# └───────────────┘
+	aa = add -A .
+	au = add -u
+	cm = commit -m
+	co = checkout
+	st = status
+	br = branch
+	cob = checkout -b
 
-    # ┌────────────────┐
-    # │ Quite frequent │
-    # └────────────────┘
-    cp = cherry-pick
-    coob = checkout --orphan
-    amend = commit --amend -m
+	# ┌────────────────┐
+	# │ Quite frequent │
+	# └────────────────┘
+	cp = cherry-pick
+	coob = checkout --orphan
+	amend = commit --amend -m
 
-    master = !git checkout master && git pull origin
-    unstage = reset HEAD --
+	master = !git checkout master && git pull origin
+	unstage = reset HEAD --
 
-    # new repo
-    shallow = clone --depth 1
+	# new repo
+	shallow = clone --depth 1
 
-    # tag
-    pytag = !git tag -a v$(python setup.py --version) -m
+	# tag
+	pytag = !git tag -a v$(python setup.py --version) -m
 
-    # revert
-    undo = reset --soft --keep HEAD^
-    unstage = reset HEAD --
+	# revert
+	undo = reset --soft --keep HEAD^
+	unstage = reset HEAD --
 
-    # remove
-    delete-branch = !sh -c 'git branch -D $1 && git push origin :$1' -
+	# remove
+	delete-branch = !sh -c 'git branch -D $1 && git push origin :$1' -
 
-    # enhanced diffs
-    chs = diff --compact-summary
-    diffm = diff --diff-filter=M
-    diffword = diff --word-diff
-    vimdiff = difftool -t vimdiff -y
+	# enhanced diffs
+	chs = diff --compact-summary
+	diffm = diff --diff-filter=M
+	diffword = diff --word-diff
+	vimdiff = difftool -t vimdiff -y
 
-    # ┌─────┐
-    # │ lol │
-    # └─────┘
-    bringz = pull
-    chicken = add
-    hackzor = init
-    letcat = checkout
-    oanward = commit -m
-    ooanward = commit -am
-    rulz = push
-    violenz = rebase
-    yolo = "!git commit -m "\"$(curl -s http://whatthecommit.com/index.txt)\"
+	# ┌─────┐
+	# │ lol │
+	# └─────┘
+	bringz = pull
+	chicken = add
+	hackzor = init
+	letcat = checkout
+	oanward = commit -m
+	ooanward = commit -am
+	rulz = push
+	violenz = rebase
+	yolo = "!git commit -m "\"$(curl -s http://whatthecommit.com/index.txt)\"
 
-    # history aliases
-    hist = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%C(white)\\ |\\ %s%C(green)%d\\ %C(blue)[%an]" --graph --date=short --decorate
-    first = !sh -c 'git log origin/master --pretty=format:%H  --reverse | head -1'
-    last = show --stat
-    lasttag = !sh -c 'git log --simplify-by-decoration --decorate=short --tags --format="%H" |head -1'
-    changes = log --oneline --decorate
+	# history aliases
+	hist = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%C(white)\\ |\\ %s%C(green)%d\\ %C(blue)[%an]" --graph --date=short --decorate
+	first = !sh -c 'git log origin/master --pretty=format:%H  --reverse | head -1'
+	last = show --stat
+	lasttag = !sh -c 'git log --simplify-by-decoration --decorate=short --tags --format="%H" |head -1'
+	changes = log --oneline --decorate
 	summary = log --oneline --stat
-    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    timelog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
-    timerel = log --pretty=format:'%Cblue%h %Cred%cr %Creset%cn %Cgreen%s%Creset' --date-order --graph
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	timelog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
+	timerel = log --pretty=format:'%Cblue%h %Cred%cr %Creset%cn %Cgreen%s%Creset' --date-order --graph
 
-    # search
-    f = "!git ls-files | grep -i"
-    fd = !git ls-files | grep -i
-    find = !git ls-files | grep -i
-    gr = grep
-    rg = "!git grep $1 `git show-ref --heads` #"
+	# search
+	f = "!git ls-files | grep -i"
+	fd = !git ls-files | grep -i
+	find = !git ls-files | grep -i
+	gr = grep
+	rg = "!git grep $1 `git show-ref --heads` #"
 
 	# info
-    type = cat-file -t
-    dump = cat-file -p
+	type = cat-file -t
+	dump = cat-file -p
 
-    # external
-    aliases = "!git config -l | grep alias | cut -c 7- | awk 'BEGIN { FS = \"=\" }; { printf \"%15s   %s\\n\", $1, $2 }'"
-    visual = !gitk --all&
-    rm-updated = "!f() { echo "Removing updated files matching the \"(grep)\" pattern: \\\"${1:-'^ M.*'}\\\""; echo; git status --porcelain | grep -v "^?" | grep "${1:-'^ M.*'}" | cut -c4- | xargs git rm --cached; }; f"
-    example-alias = "!f() { echo "value passed as parameter is ${1}"; }; f"
+	# external
+	aliases = "!git config -l | grep alias | cut -c 7- | awk 'BEGIN { FS = \"=\" }; { printf \"%15s   %s\\n\", $1, $2 }'"
+	visual = !gitk --all&
+	rm-updated = "!f() { echo "Removing updated files matching the \"(grep)\" pattern: \\\"${1:-'^ M.*'}\\\""; echo; git status --porcelain | grep -v "^?" | grep "${1:-'^ M.*'}" | cut -c4- | xargs git rm --cached; }; f"
+	example-alias = "!f() { echo "value passed as parameter is ${1}"; }; f"
 
-    # ctags
-    ctags = "!.git/hooks/ctags"
+	# ctags
+	ctags = "!.git/hooks/ctags"
 
 
-    ai = add -i
-    ;#############
-    brc = rev-parse --abbrev-ref HEAD
-    bru = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
-    ;#############
-    ci = commit
+	ai = add -i
+	;#############
+	brc = rev-parse --abbrev-ref HEAD
+	bru = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+	;#############
+	ci = commit
 	;co-authore-commit: https://github.com/nagoya-foundation/co-authored-commit
-    co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
-    ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
-    ;#############
-    ;cpa = cherry-pick --abort
-    ;cpc = cherry-pick --continue
-    ;#############
-    ;dp = diff --patience
-    ;dc = diff --cached
-    ;dk = diff --check
-    ;dck = diff --cached --check
+	co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
+	ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
+	;#############
+	;cpa = cherry-pick --abort
+	;cpc = cherry-pick --continue
+	;#############
+	;dp = diff --patience
+	;dc = diff --cached
+	;dk = diff --check
+	;dck = diff --cached --check
 	;dt = difftool
-    ;dct = difftool --cached
-    ;#############
-    ;opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
-    ;#############
-    ;pr = prune -v
-    ;#############
-    ;pl = pull
-    ;pb = pull --rebase
-    ;#############
-    ;plo = pull origin
-    ;pbo = pull --rebase origin
-    ;plom = pull origin master
-    ;ploc = !git pull origin $(git bc)
-    ;pbom = pull --rebase origin master
-    ;pboc = !git pull --rebase origin $(git bc)
-    ;#############
-    ;plu = pull upstream
-    ;plum = pull upstream master
-    ;pluc = !git pull upstream $(git bc)
-    ;pbum = pull --rebase upstream master
-    ;pbuc = !git pull --rebase upstream $(git bc)
-    ;#############
-    ;ps = push
-    ;psf = push -f
-    ;psu = push -u
-    ;pst = push --tags
-    ;#############
-    ;psom = push origin master
-    ;psaom = push --all origin master
-    ;psfom = push -f origin master
-    ;psuom = push -u origin master
-    ;psoc = !git push origin $(git brc)
-    ;psaoc = !git push --all origin $(git brc)
-    ;psfoc = !git push -f origin $(git brc)
-    psuoc = !git push -u origin $(git brc)
-    ;psdc = !git push origin :$(git brc)
-    ;#############
-    ;rb = rebase
-    ;rba = rebase --abort
-    ;rbc = rebase --continue
-    ;rbi = rebase --interactive
-    ;rbs = rebase --skip
-    ;#############
-    ;rmf = rm -f
-    ;rmrf = rm -r -f
-    ;#############
-    ;s = status
-    ;sb = status -s -b
-    ;#############
-    pop = stash pop
-    ;sa = stash apply
-    ;sc = stash clear
-    ;sd = stash drop
-    ;sl = stash list
-    ;sp = stash pop
-    ;ss = stash save
-    ;ssk = stash save -k
-    stash-num = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
-    ;#############
-    ;t = tag
-    ;td = tag -d
-    ;#############
-    ;w = show
-    ;wp = show -p
-    ;wr = show -p --no-color
-    ;#############
-    ;svnr = svn rebase
-    ;svnd = svn dcommit
-    ;svnl = svn log --oneline --show-commit
-    ;#############
-    ;subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
-    ;subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
+	;dct = difftool --cached
+	;#############
+	;opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
+	;#############
+	;pr = prune -v
+	;#############
+	;pl = pull
+	;pb = pull --rebase
+	;#############
+	;plo = pull origin
+	;pbo = pull --rebase origin
+	;plom = pull origin master
+	;ploc = !git pull origin $(git bc)
+	;pbom = pull --rebase origin master
+	;pboc = !git pull --rebase origin $(git bc)
+	;#############
+	;plu = pull upstream
+	;plum = pull upstream master
+	;pluc = !git pull upstream $(git bc)
+	;pbum = pull --rebase upstream master
+	;pbuc = !git pull --rebase upstream $(git bc)
+	;#############
+	;ps = push
+	;psf = push -f
+	;psu = push -u
+	;pst = push --tags
+	;#############
+	;psom = push origin master
+	;psaom = push --all origin master
+	;psfom = push -f origin master
+	;psuom = push -u origin master
+	;psoc = !git push origin $(git brc)
+	;psaoc = !git push --all origin $(git brc)
+	;psfoc = !git push -f origin $(git brc)
+	psuoc = !git push -u origin $(git brc)
+	;psdc = !git push origin :$(git brc)
+	;#############
+	;rb = rebase
+	;rba = rebase --abort
+	;rbc = rebase --continue
+	;rbi = rebase --interactive
+	;rbs = rebase --skip
+	;#############
+	;rmf = rm -f
+	;rmrf = rm -r -f
+	;#############
+	;s = status
+	;sb = status -s -b
+	;#############
+	pop = stash pop
+	;sa = stash apply
+	;sc = stash clear
+	;sd = stash drop
+	;sl = stash list
+	;sp = stash pop
+	;ss = stash save
+	;ssk = stash save -k
+	stash-num = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
+	;#############
+	;t = tag
+	;td = tag -d
+	;#############
+	;w = show
+	;wp = show -p
+	;wr = show -p --no-color
+	;#############
+	;svnr = svn rebase
+	;svnd = svn dcommit
+	;svnl = svn log --oneline --show-commit
+	;#############
+	;subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
+	;subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	; subup = submodule update --init --recursive
 	; subpull = !git submodule foreach git pull --tags origin master
 	subpull = submodule update --remote --merge
-    ;#############
+	;#############
 	sw = switch
-    ;#############
-    ;assume = update-index --assume-unchanged
-    ;unassume = update-index --no-assume-unchanged
-    ;assumed = !git ls -v | grep ^h | cut -c 3-
-    ;unassumeall = !git assumed | xargs git unassume
-    ;assumeall = !git status -s | awk {'print $2'} | xargs git assume
-    ;#############
-    ;bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git release $1' -
-    ;release = !sh -c 'git tag v$1 && git pst' -
-    ;unrelease = !sh -c 'git tag -d v$1 && git pso :v$1' -
-    ;merged = !sh -c 'git o master && git plom && git bd $1 && git rpo' -
-    ;snap = !git stash save 'snapshot: $(date)' && git stash apply 'stash@{0}'
-    ;bare = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
-    ;whois = !sh -c 'git log -i -1 --author=\"$1\" --pretty=\"format:%an <%ae>\"' -
-    ;serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
-    ;#############
-    ;behind = !git rev-list --left-only --count $(git bu)...HEAD
-    ;ahead = !git rev-list --right-only --count $(git bu)...HEAD
-    ;#############
-    ;ours = "!f() { git checkout --ours $@ && git add $@; }; f"
-    ;theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
-    ;subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
-    ;human = name-rev --name-only --refs=refs/heads/*
+	;#############
+	;assume = update-index --assume-unchanged
+	;unassume = update-index --no-assume-unchanged
+	;assumed = !git ls -v | grep ^h | cut -c 3-
+	;unassumeall = !git assumed | xargs git unassume
+	;assumeall = !git status -s | awk {'print $2'} | xargs git assume
+	;#############
+	;bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git release $1' -
+	;release = !sh -c 'git tag v$1 && git pst' -
+	;unrelease = !sh -c 'git tag -d v$1 && git pso :v$1' -
+	;merged = !sh -c 'git o master && git plom && git bd $1 && git rpo' -
+	;snap = !git stash save 'snapshot: $(date)' && git stash apply 'stash@{0}'
+	;bare = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
+	;whois = !sh -c 'git log -i -1 --author=\"$1\" --pretty=\"format:%an <%ae>\"' -
+	;serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+	;#############
+	;behind = !git rev-list --left-only --count $(git bu)...HEAD
+	;ahead = !git rev-list --right-only --count $(git bu)...HEAD
+	;#############
+	;ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+	;theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+	;subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
+	;human = name-rev --name-only --refs=refs/heads/*
 [pull]
-    rebase = false
+	rebase = true
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [merge]
-    log = true
+	log = true
 [init]
-    defaultBranch = main
-    templatedir = ~/.config/git/template
+	defaultBranch = main
+	templatedir = ~/.config/git/template
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
