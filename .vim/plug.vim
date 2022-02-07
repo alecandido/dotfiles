@@ -164,7 +164,7 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'Glench/Vim-Jinja2-Syntax'
-Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'davidhalter/jedi-vim'
 Plug 'jmcantrell/vim-virtualenv'
 

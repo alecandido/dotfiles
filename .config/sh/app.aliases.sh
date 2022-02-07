@@ -65,6 +65,7 @@ alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 eval $(thefuck --alias)
 
 alias youtube="ytfzf -t"
+alias download-playlist="youtube-dl -cix --audio-format mp3 --yes-playlist"
 
 alias aleph="$HOME/.deno/bin/aleph"
 
