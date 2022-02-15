@@ -134,9 +134,9 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " Pandoc
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'vim-pandoc/vim-pandoc-after'
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
+" Plug 'vim-pandoc/vim-pandoc-after'
 
 " ReStructuredText
 Plug 'gu-fan/riv.vim'

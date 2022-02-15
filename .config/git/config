@@ -5,7 +5,7 @@
 	editor = nvim
 	excludesFile = ~/.config/git/ignore ;already the default
 	quotepath = false
-	pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended Bright'
+	pager = delta --syntax-theme='Monokai Extended Bright'
 [color]
 	status = auto
 	branch = auto
