@@ -204,6 +204,11 @@ curl -sL "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" | tee
 # ssh server
 sudo apt install -y openssh-server
 
+# zotero
+curl -sL https://github.com/retorquere/zotero-deb/releases/download/apt-get/install.sh | sudo bash
+sudo apt update
+sudo apt install -y zotero
+
 # clean up
 sudo apt autoremove -y
 # unpack encrypted files
