@@ -31,9 +31,8 @@ zinit wait lucid for \
     OMZL::misc.zsh \
     OMZL::termsupport.zsh \
     OMZL::theme-and-appearance.zsh \
-    OMZP::cargo \
     OMZP::command-not-found \
-    OMZP::copybuffer OMZP::copydir OMZP::copyfile \
+    OMZP::copybuffer OMZP::copypath OMZP::copyfile \
     OMZP::cp \
     OMZP::dirhistory \
     OMZP::emoji-clock \
