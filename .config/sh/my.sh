@@ -43,7 +43,7 @@ export GOROOT="$HOME/.go"
 export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 
 # Julia
-export PATH="$PATH:$HOME/.julia/bin"
+# export PATH="$PATH:$HOME/.julia/bin"
 
 # Swift
 export PATH="$PATH:$HOME/.swift/bin"
