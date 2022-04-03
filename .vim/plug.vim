@@ -77,6 +77,9 @@ Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 
+" Move through indentation
+Plug 'jeetsukumaran/vim-indentwise'
+
 " Folding
 Plug 'Konfekt/FastFold'
 
