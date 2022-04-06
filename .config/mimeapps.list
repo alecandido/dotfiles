@@ -19,7 +19,7 @@ x-scheme-handler/terminal=st.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=firefox.desktop;
 text/plain=org.gnome.gedit.desktop;
 application/rtf=calibre-ebook-viewer.desktop;calibre-gui.desktop;
-application/pdf=brave-browser.desktop;com.github.xournalpp.xournalpp.desktop;org.inkscape.Inkscape.desktop;org.gnome.Evince.desktop;inkscape.desktop;xournal.desktop;glimpse-editor_glimpse-editor.desktop;
+application/pdf=org.gnome.Evince.desktop;inkscape.desktop;brave-browser.desktop;com.github.xournalpp.xournalpp.desktop;org.inkscape.Inkscape.desktop;xournal.desktop;glimpse-editor_glimpse-editor.desktop;
 application/rss+xml=thunderbird_thunderbird.desktop;
 image/png=glimpse-editor_glimpse-editor.desktop;firefox.desktop;com.github.xournalpp.xournalpp.desktop;org.gnome.eog.desktop;
 image/jpeg=glimpse-editor_glimpse-editor.desktop;org.inkscape.Inkscape.desktop;inkscape.desktop;
@@ -119,7 +119,7 @@ application/x-cd-image=gnome-disk-image-writer.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=org.gnome.Evince.desktop;
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop

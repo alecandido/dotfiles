@@ -18,6 +18,8 @@ alias tn='tmux new'
 alias tzf="fzf-tmux --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias bzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
+alias open=xdg-open
+
 follow() {
   tail -f $1 | bat --paging=never -l log
 }
