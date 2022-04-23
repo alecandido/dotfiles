@@ -60,6 +60,7 @@ alias dfree='df -h | grep -v tmpfs'
 
 alias sass='dart-sass --no-source-map'
 
+alias wget-dir='wget -r -N --no-parent --reject "*index.html*" -nH --cut-dirs=1'
 alias backup-home-to='rsync -aAXHv ~'
 
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
