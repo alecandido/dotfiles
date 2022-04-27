@@ -117,6 +117,7 @@ text/x-python=org.gnome.gedit.desktop;
 binary/octet-stream=org.gnome.gedit.desktop;
 application/x-cd-image=gnome-disk-image-writer.desktop;
 message/rfc822=org.gnome.gedit.desktop;
+application/octet-stream=org.gnome.gedit.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
