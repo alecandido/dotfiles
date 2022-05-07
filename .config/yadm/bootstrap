@@ -55,6 +55,7 @@ pipx install speedtest-cli
 pipx install invoke
 pipx install fortran-language-server
 pipx install jill
+pipx install rich-cli
 
 # node installation
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
