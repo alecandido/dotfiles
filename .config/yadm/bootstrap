@@ -194,6 +194,9 @@ sudo apt install -y gnome-tweak-tool
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
 sudo apt-add-repository https://cli.github.com/packages
 sudo apt update && sudo apt install -y gh
+gh extension install dlvhdr/gh-dash
+gh extension install gennaro-tedesco/gh-s
+gh extension install vilmibm/gh-screensaver
 # xournalpp
 sudo add-apt-repository ppa:apandada1/xournalpp-stable
 sudo apt update && sudo apt install -y xournalpp
