@@ -91,12 +91,13 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # --- through rust
-cargo install --force cargo-make
+cargo install cargo-make
 cargo install --locked cargo-deny
 cargo install cargo-watch cargo-generate cargo-edit cargo-update cargo-hack
 cargo install exa git-delta sd starship topgrade
 cargo install --locked bat
 cargo install --locked trunk
+cargo install kmon
 rustup target add wasm32-unknown-unknown
 
 # go
