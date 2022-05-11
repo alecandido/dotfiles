@@ -15,7 +15,7 @@ source ~/.bashrc
 # yadm clone git@github.com:AleCandido/dotfiles.git
 # yadm bootstrap
 sudo apt install -y curl
-sudo apt install -y build-essential cmake autoconf libtool
+sudo apt install -y build-essential cmake autoconf libtool pkg-config
 sudo apt install -y subversion
 
 # terminal installation
