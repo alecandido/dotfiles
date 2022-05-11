@@ -48,6 +48,7 @@ export PATH="$HOME/.local/bin:$PATH"
 pip install pipx
 pipx install virtualenv
 pipx install poetry
+pipx inject --include-apps poetry poethepoet
 # - applications
 pipx install ipython
 pipx install glances
