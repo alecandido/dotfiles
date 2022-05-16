@@ -51,6 +51,8 @@ pipx install poetry
 pipx inject --include-apps poetry poethepoet
 # - applications
 pipx install ipython
+pipx install pre-commit
+pipx install black
 pipx install glances
 pipx install speedtest-cli
 pipx install invoke
