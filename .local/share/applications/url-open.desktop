@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=URL Opener
+GenericName=URL Opener
+Comment=Open URLs in browser
+TryExec=url-open
+Exec=url-open %F
+Icon=applications-internet
+Categories=Network;
+MimeType=application/x-mswinurl;
+
