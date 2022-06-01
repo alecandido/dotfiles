@@ -53,9 +53,7 @@ pipx inject --include-apps poetry poethepoet
 pipx install ipython
 pipx install pre-commit
 pipx install black
-pipx install glances
 pipx install speedtest-cli
-pipx install invoke
 pipx install fortran-language-server
 pipx install jill
 pipx install rich-cli

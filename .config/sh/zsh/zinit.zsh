@@ -30,7 +30,7 @@ zinit wait lucid for \
     OMZL::history.zsh \
     OMZL::misc.zsh \
     OMZL::termsupport.zsh \
-    OMZL::theme-and-appearance.zsh \
+    atload"alias ls='exa'" OMZL::theme-and-appearance.zsh \
     OMZP::command-not-found \
     OMZP::copybuffer OMZP::copypath OMZP::copyfile \
     OMZP::cp \
