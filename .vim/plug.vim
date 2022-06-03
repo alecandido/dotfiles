@@ -164,6 +164,7 @@ Plug 'tpope/vim-afterimage'
 "  - refactoring
 "  - template engine
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 " Plug 'python-rope/ropevim', { 'tag': '*', 'do': 'pip install ropevim' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'Glench/Vim-Jinja2-Syntax'
