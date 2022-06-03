@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'nvim-lua/plenary.nvim'
+
 " Tim Pope's first bunch
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-eunuch'
@@ -21,7 +23,7 @@ Plug 'ryanoasis/vim-devicons'
 " Git
 Plug 'tpope/vim-fugitive' | Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-git' " Git filetypes
-Plug 'sindrets/diffview.nvim'
+" Plug 'sindrets/diffview.nvim'
 Plug 'junegunn/vim-github-dashboard' " Ruby required
 Plug 'junegunn/gv.vim'
 

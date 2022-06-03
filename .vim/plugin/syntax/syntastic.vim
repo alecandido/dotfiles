@@ -1,6 +1,6 @@
 " Drop Syntastic settings at the end of the config file "
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 0
@@ -24,6 +24,6 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_rst_checkers = ['sphinx']
 
 let g:syntastic_mode_map = {
-        \ "mode": "active",
-        \ "active_filetypes": ["rst"],
-        \ "passive_filetypes": ["python"] }
+                        \ "mode": "active",
+                        \ "active_filetypes": ["rst"],
+                        \ "passive_filetypes": ["python"] }
