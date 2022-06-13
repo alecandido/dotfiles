@@ -9,5 +9,6 @@ hi semshiSelected        ctermfg=7   guifg=#ffffff cterm=bold gui=bold ctermbg=1
 
 let g:semshi#error_sign = v:false
 let g:semshi#simplify_markup = v:false
+let g:semshi#mark_selected_nodes = 0
 let g:semshi#no_default_builtin_highlight = v:false
-let g:semshi#excluded_hl_groups = ['local', 'builtin', 'unresolved', 'free']
+let g:semshi#excluded_hl_groups = ['local', 'builtin', 'unresolved', 'free', 'selected']
