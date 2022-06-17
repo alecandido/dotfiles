@@ -9,4 +9,5 @@ Exec=url-open %F
 Icon=applications-internet
 Categories=Network;
 MimeType=application/x-mswinurl;
+StartupNotify=true
 

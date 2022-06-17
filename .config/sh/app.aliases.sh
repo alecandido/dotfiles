@@ -23,6 +23,7 @@ alias open=xdg-open
 follow() {
   tail -f $1 | bat --paging=never -l log
 }
+alias richp="rich --pager"
 
 alias tel='telegramtui'
 
