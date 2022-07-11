@@ -4,3 +4,4 @@
 /tags
 .gdb_history
 ~/.config/neomutt/accounts/passwords.mutt
+.pnpm-debug.log

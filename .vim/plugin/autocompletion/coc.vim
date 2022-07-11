@@ -138,7 +138,7 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
-" Remap <C-f> and <C-b> for scroll float windows/popups.
+" Remap <M-j> and <M-k> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
     if has('nvim') != 1
         execute "set <M-j>=\ej"
