@@ -1,7 +1,10 @@
 [/]
 always-show-input-streams=false
+pinned-profiles=['{"card":"alsa_card.pci-0000_00_1f.3","profile":"output:hdmi-stereo","switcher":true,"show":true}']
 position='right'
 remove-original=true
+show-detailed-sliders=true
 show-percentage-label=true
 show-system-sounds=true
 show-virtual-streams=true
+use-symbolic-icons=true
