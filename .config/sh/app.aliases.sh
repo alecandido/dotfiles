@@ -78,6 +78,13 @@ mkpdf() {
   latexmk -c
 }
 
+# ┌────────┐
+# │ server │
+# └────────┘
+
+alias fbcave="filebrowser -r cave -p 9001"
+alias tunnel-fb="ssh -L 9001:localhost:9001 -N -T phantomblot &"
+
 # ┌─────┐
 # │ Fun │
 # └─────┘
