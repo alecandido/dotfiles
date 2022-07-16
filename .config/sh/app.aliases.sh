@@ -82,7 +82,7 @@ mkpdf() {
 # │ server │
 # └────────┘
 
-alias fbcave="filebrowser -r cave -p 9001"
+alias fbcave="filebrowser -r cave -p 9001 --database $HOME/cave/Drive/filebrowser.db"
 alias tunnel-fb="ssh -L 9001:localhost:9001 -N -T phantomblot &"
 
 # ┌─────┐
