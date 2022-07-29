@@ -123,6 +123,7 @@ application/x-mswinurl=url-open.desktop;
 application/x-executable=org.gnome.gedit.desktop;
 application/xml=org.gnome.gedit.desktop;
 text/x-bibtex=org.gnome.gedit.desktop;
+application/vnd.rar=org.gnome.Evince.desktop;org.gnome.Nautilus.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;

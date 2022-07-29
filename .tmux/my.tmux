@@ -13,3 +13,5 @@ bind M-l send-keys 'C-l'
 bind c new-window -c "#{pane_current_path}"
 bind '"' split-window -c "#{pane_current_path}"
 bind % split-window -h -c "#{pane_current_path}"
+
+setw -g mouse on
