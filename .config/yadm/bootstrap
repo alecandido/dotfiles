@@ -95,7 +95,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 cargo install cargo-make
 cargo install --locked cargo-deny
 cargo install cargo-watch cargo-generate cargo-edit cargo-update cargo-hack
-cargo install exa git-delta sd starship topgrade
+cargo install exa git-delta sd topgrade battop
 cargo install --locked bat
 cargo install --locked trunk
 cargo install kmon
@@ -187,6 +187,12 @@ chmod +x ~/.local/bin/cheatsheets
 # touch ~/Mail/aliases
 # pipx install mutt-ics
 
+# flatpak
+sudo apt install -y flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install -y telegram --app
+flatpak install -y xournalpp
+
 # gnome extensions
 sudo apt install -y gnome-tweaks
 sudo apt install -y gnome-tweak-tool
@@ -198,12 +204,6 @@ sudo apt update && sudo apt install -y gh
 gh extension install dlvhdr/gh-dash
 gh extension install gennaro-tedesco/gh-s
 gh extension install vilmibm/gh-screensaver
-# xournalpp
-sudo add-apt-repository ppa:apandada1/xournalpp-stable
-sudo apt update && sudo apt install -y xournalpp
-# telegram
-sudo add-apt-repository ppa:atareao/telegram
-sudo apt update && sudo apt install -y telegram
 # youtube CLI
 pipx install youtube-dl
 sudo apt install -y mpv

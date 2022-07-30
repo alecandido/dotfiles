@@ -15,8 +15,9 @@ export XDG_STATE_HOME=$HOME/.local/state
 export PATH=$PATH:~/.bin
 export PATH=$PATH:~/.local/bin
 
-# flatpal
+# flatpak
 export PATH=$PATH:~/.local/share/flatpak/exports/bin/
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:$HOME/.local/share/flatpak/exports/share
 
 # PYTHONPATH
 export PYTHONPATH=''
