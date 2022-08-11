@@ -20,6 +20,8 @@ bind c new-window -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 # split current window vertically
 bind v split-window -h -c "#{pane_current_path}"
+unbind %
+unbind \"
 
 # pane navigation
 bind -r h select-pane -L  # move left
