@@ -125,11 +125,10 @@
 	lasttag = !sh -c 'git log --simplify-by-decoration --decorate=short --tags --format="%H" |head -1'
 	changes = log --oneline --decorate
 	summary = log --oneline --stat
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	ls = log --format="%C(#808080)%h\\ %C(green)%<|(20)%cr\\ %C(blue)%<(12,trunc)%an%Creset\\ -%C(magenta)%d%Creset\\ %s"
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\\ %C(green)%cr" --decorate --numstat
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	timelog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
-	timerel = log --pretty=format:'%Cblue%h %Cred%cr %Creset%cn %Cgreen%s%Creset' --date-order --graph
 
 	# search
 	f = "!git ls-files | grep -i"

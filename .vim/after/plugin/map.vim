@@ -17,16 +17,16 @@ noremap $                        L
 " to run command and keep position
 " Map commands in visual mode with <C-c>
 " to kill selection before
-noremap  <silent> <C-s>          :update<CR>
+nnoremap  <silent> <C-s>          :update<CR>
 vnoremap <silent> <C-s>          <C-c>:update<CR>
 inoremap <silent> <C-s>          <C-o>:update<CR>
 noremap  <silent> <C-q>          :qa<CR>
 vnoremap <silent> <C-q>          <C-c>:qa<CR>
 inoremap <silent> <C-q>          <C-o>:qa<CR>
-noremap  <silent> <C-w>          :bd<CR>
+nnoremap  <silent> <C-w>          :bd<CR>
 vnoremap <silent> <C-w>          <C-c>:bd<CR>
 inoremap <silent> <C-w>          <C-o>:bd<CR>
-noremap  <silent> <C-a>          ggVG<CR>
+nnoremap  <silent> <C-a>          ggVG<CR>
 vnoremap <silent> <C-a>          <C-c>ggVG<CR>
 inoremap <silent> <C-a>          <Esc>ggVG<CR>
 
@@ -45,7 +45,8 @@ nnoremap Y                       y$
 nnoremap <silent> <leader>sv     :call vimrc#SourceVimrc()<CR>
 
 " move down
-noremap <C-f>                    :normal! <C-D><CR>
+nnoremap <A-d>                    :normal! <C-d><CR>
+nnoremap <A-f>                    :normal! <C-u><CR>
 
 " Map increment/decrement
 nnoremap <A-a>                   <C-a>
@@ -53,7 +54,9 @@ nnoremap <A-x>                   <C-x>
 
 " Insert mode
 " -----------
-inoremap <C-u>                   <Esc>gUawa
+" switch case
+inoremap <C-u>                   <Esc>mzgUaw`za
+inoremap <C-l>                   <Esc>mzguaw`za
 
 " Visual mode
 " -----------
