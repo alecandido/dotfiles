@@ -6,6 +6,8 @@
 	excludesFile = ~/.config/git/ignore ;already the default
 	quotepath = false
 	pager = delta --syntax-theme='Monokai Extended Bright'
+[include]
+	path = key.config
 [color]
 	status = auto
 	branch = auto
@@ -285,5 +287,3 @@
 	insteadOf = https://github.com/
 [gpg]
 	format = ssh
-[include]
-	path = key.config
