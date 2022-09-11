@@ -1,3 +1,3 @@
-.vim/secrets/calendar.vim
+.config/nvim/secrets/calendar.vim
 .config/sh/bw.sh
 .config/todoist/config.json
