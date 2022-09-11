@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin($XDG_CACHE_HOME . '/nvim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
 
