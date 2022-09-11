@@ -55,7 +55,7 @@ export CPATH=$CPATH:$HOME/.local/include
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/.local/lib/
 
 # Vim plugins
-export PATH=$PATH:$HOME/.vim/plugged/fzf/bin
+export PATH=$PATH:$XDG_CACHE_HOME/nvim/plugged/fzf/bin
 
 # LD LIBRARY PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib/
