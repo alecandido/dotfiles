@@ -1,7 +1,6 @@
 [user]
 	name = Alessandro Candido
 	email = candido.ale@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPfhDec+WyayzQfJu9qps/u7sW63BRgRHGT9Ju6up0TB candido.ale@gmail.com
 [core]
 	editor = nvim
 	excludesFile = ~/.config/git/ignore ;already the default
@@ -286,3 +285,5 @@
 	insteadOf = https://github.com/
 [gpg]
 	format = ssh
+[include]
+	path = key.config
