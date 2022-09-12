@@ -1,10 +1,5 @@
-set nocompatible              " be iMproved, required
-
-filetype off                  " required
-
 let mapleader = ",,"
 let localleader = "\\"
-set maxmempattern=10000
 
 call mkdir($XDG_CACHE_HOME . "/vim", "p")
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
