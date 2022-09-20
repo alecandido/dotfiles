@@ -42,6 +42,7 @@ alias mutt='neomutt'
 
 alias ipy='ipython3'
 alias ipy3='ipython3'
+alias ipython3='ipython'
 alias ipy2='ipython2'
 alias ipylab='ipython3 --pylab'
 
