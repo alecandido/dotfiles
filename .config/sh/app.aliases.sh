@@ -20,9 +20,6 @@ alias bzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {
 
 alias open=xdg-open
 
-follow() {
-  tail -f $1 | bat --paging=never -l log
-}
 alias richp="rich --pager"
 
 alias tel='telegramtui'
@@ -57,8 +54,6 @@ alias jupyter-here='jupyter notebook --notebook-dir .'
 rust-err() {
   rustc --explain $1 | nvim -c 'set filetype=markdown' -
 }
-
-alias dfree='df -h | grep -v tmpfs'
 
 alias sass='dart-sass --no-source-map'
 

@@ -16,6 +16,7 @@ export SH_DIR=$HOME/.config/sh
 # └──────────────┘
 
 . $SH_DIR/utils.aliases.sh
+. $SH_DIR/basic.aliases.sh
 . $SH_DIR/app.aliases.sh
 . $SH_DIR/extra.aliases.sh
 
