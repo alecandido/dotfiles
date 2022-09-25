@@ -1,6 +1,0 @@
-#!/bin/bash
-
-proj_dir=$(dirname $0)
-
-source "$proj_dir"/env/bin/activate
-source "$proj_dir"/env/act.sh

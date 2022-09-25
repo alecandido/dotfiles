@@ -1,8 +1,0 @@
-# copy to /usr/share/xsessions/awesome.desktop
-[Desktop Entry]
-Name=Awesome
-Comment=Tiling Window Manager
-Type=Application
-Exec=/usr/bin/awesome
-TryExec=/usr/bin/awesome
-Type=XSession
