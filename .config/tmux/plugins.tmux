@@ -31,4 +31,4 @@ set -g @plugin 'kristijanhusak/tmux-simple-git-status'
 # set -g @plugin 'git@bitbucket.com/user/plugin'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run -b '~/.tmux/plugins/tpm/tpm'
+run -b '~/.cache/tmux/plugins/tpm/tpm'
