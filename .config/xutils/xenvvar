@@ -10,4 +10,4 @@ export BROWSER=firefox
 #export FILEMANAGER=nautilus
 #export TERM=kitty
 
-. $HOME/.xutils/desktopenvvar
+. $XDG_CONFIG_HOME/xutils/desktopenvvar

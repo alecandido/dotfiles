@@ -7,7 +7,7 @@
 export SH_DIR=$HOME/.config/sh
 
 # load x environment variables
-. $HOME/.xutils/xenvvar
+. $XDG_CONFIG_HOME/xutils/xenvvar
 
 . $SH_DIR/my.sh
 
