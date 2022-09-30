@@ -40,8 +40,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'gfanto/fzf-lsp.nvim'
 Plug 'antoinemadec/coc-fzf'
-" manager
-Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Snippets : the engine is provided by coc
 Plug 'honza/vim-snippets'
