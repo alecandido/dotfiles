@@ -72,7 +72,7 @@ deno install -A --unstable -n trex --no-check https://deno.land/x/trex/cli.ts
 cargo install cargo-make
 cargo install --locked cargo-deny
 cargo install cargo-watch cargo-generate cargo-edit cargo-update cargo-hack
-cargo install exa git-delta sd topgrade battop
+cargo install exa git-delta sd topgrade battop fd-find
 cargo install --locked bat
 cargo install --locked trunk
 cargo install kmon

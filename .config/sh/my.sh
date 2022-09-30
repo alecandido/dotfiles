@@ -36,9 +36,7 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="$PATH:$HOME/.deno/bin"
 
 # Rust
-if [ -f $HOME/.cargo/env ]; then
-  . "$HOME/.cargo/env"
-fi
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # Go
 export GOPATH="$HOME/.go/gopath"
@@ -110,7 +108,9 @@ _FASD_BACKENDS="$_FASD_BACKENDS viminfo recently-used"
 # remove 'passive' (just listing) fasd aliases
 unalias a s d f sd sf
 
-anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool
+if [ -x "$(command -v anacron)" ]; then
+  anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool
+fi
 
 # sdkman
 export SDKMAN_DIR=$HOME/.sdkman

@@ -51,7 +51,6 @@ zinit wait lucid for \
     OMZP::rbenv \
     OMZP::rsync \
     OMZP::rust \
-    OMZP::thefuck \
     OMZP::tmux \
     OMZP::urltools
     # OMZP::archlinux \
@@ -66,12 +65,11 @@ zinit snippet OMZP::git-escape-magic
 
 zinit wait lucid as"completion" for \
     OMZP::bundler/_bundler \
-    OMZP::django \
     OMZP::fd/_fd \
     OMZP::gem/_gem \
     OMZP::pylint/_pylint \
     OMZP::ripgrep/_ripgrep \
-    OMZP::rust/_rust
+    OMZP::rust/_rustc
 
 # fzf-tab completion
 # ------------------
@@ -119,7 +117,3 @@ zinit wait lucid for \
 # ------------
 # zinit wait lucid for \
      # wfxr/forgit
-
-# Prompt theme
-# ------------
-zinit ice depth=1; zinit light romkatv/powerlevel10k

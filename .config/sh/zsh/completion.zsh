@@ -18,7 +18,9 @@ fi
 # │ program specific │
 # └──────────────────┘
 
-source <(inv --print-completion-script zsh)
+if [ -x "$(command -v inv)" ]; then
+	source <(inv --print-completion-script zsh)
+fi
 
 # pip zsh completion
 if [ ! -f "$HOME/.zinit/completions/_pip" ]; then
@@ -26,7 +28,9 @@ if [ ! -f "$HOME/.zinit/completions/_pip" ]; then
 fi
 
 # gh zsh completion
-source <(gh completion -s zsh)
+if [ -x "$(command -v gh)" ]; then
+	source <(gh completion -s zsh)
+fi
 
 if [ -f "$ZSH_DIR/fzf.zsh" ]; then
     . $ZSH_DIR/fzf.zsh
@@ -51,12 +55,6 @@ fi
 
 if [ ! -f "$HOME/.zinit/completions/_himalaya" ]; then
     himalaya completion zsh >$HOME/.zinit/completions/_himalaya
-fi
-
-# todoist CLI
-if [ ! -f $GOPATH/pkg/mod/github.com/sachaos/todoist@v*/todoist_functions_fzf.sh ]; then
-    source $GOPATH/pkg/mod/github.com/sachaos/todoist@v*/todoist_functions_fzf.sh
-    PROG=todoist source $GOPATH/pkg/mod/github.com/urfave/cli@v*/autocomplete/zsh_autocomplete
 fi
 
 # Vim-superman completion

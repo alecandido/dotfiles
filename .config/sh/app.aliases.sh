@@ -24,12 +24,6 @@ alias richp="rich --pager"
 
 alias tel='telegramtui'
 
-alias kcat="kitty +kitten icat"
-alias kdiff="kitty +kitten diff"
-alias kssh="kitty +kitten ssh"
-
-alias fd="fdfind"
-
 alias mixer="ncpamixer"
 
 alias canto='canto-curses'

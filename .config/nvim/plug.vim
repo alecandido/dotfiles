@@ -224,7 +224,6 @@ Plug 'sbdchd/neoformat'
 " -------
 Plug 'jez/vim-superman' " manpages
 " Plug 'soywod/himalaya', {'rtp': 'vim'} " email client
-Plug 'vim/killersheep' " just a game
 
 " Initialize plugin system
 call plug#end()
