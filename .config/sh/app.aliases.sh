@@ -51,21 +51,11 @@ alias pip3='python3 -m pip'
 alias pip2='python2 -m pip'
 alias jupyter-here='jupyter notebook --notebook-dir .'
 
-rust-err() {
+rust_err() {
   rustc --explain $1 | nvim -c 'set filetype=markdown' -
 }
 
-alias sass='dart-sass --no-source-map'
-
-alias wget-dir='wget -r -N --no-parent --reject "*index.html*" -nH --cut-dirs=1'
-alias backup-home-to='rsync -aAXHv ~'
-
-alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
-
-eval $(thefuck --alias)
-
-alias youtube="ytfzf -t"
-alias download-playlist="youtube-dl -cix --audio-format mp3 --yes-playlist"
+alias wget_dir='wget -r -N --no-parent --reject "*index.html*" -nH --cut-dirs=1'
 
 alias aleph="$HOME/.deno/bin/aleph"
 
@@ -73,24 +63,3 @@ mkpdf() {
   latexmk -pdf $1
   latexmk -c
 }
-
-# ┌────────┐
-# │ server │
-# └────────┘
-
-alias fbcave="filebrowser -r $HOME/cave -p 9001 --database $HOME/cave/Drive/filebrowser.db --baseurl '/fb'"
-alias tunnel-fb="ssh -L 9001:localhost:9001 -N -T phantomblot &"
-
-# ┌─────┐
-# │ Fun │
-# └─────┘
-
-alias happy='cat ~/.my/ascii_art/happy | lolcat'
-alias surprised='cat ~/.my/ascii_art/surprised_pikachu | lolcat'
-alias tuxsay='cowsay -f tux'
-alias tuxthink='cowthink -f tux'
-alias manycows='apt-get moo | cowthink -n -e"♥♥" | cowthink -n | cowthink -nt'
-alias knf='neofetch --kitty'
-alias knf-profile='neofetch --kitty ~/.face.icon'
-alias kittynf='neofetch --kitty ~/Pictures/Desktop/KIKI-Cat.jpg --crop_mode fill'
-alias star-wars='telnet towel.blinkenlights.nl'

@@ -36,7 +36,9 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="$PATH:$HOME/.deno/bin"
 
 # Rust
-. "$HOME/.cargo/env"
+if [ -f $HOME/.cargo/env ]; then
+  . "$HOME/.cargo/env"
+fi
 
 # Go
 export GOPATH="$HOME/.go/gopath"

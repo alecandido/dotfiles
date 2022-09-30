@@ -283,7 +283,5 @@
 [init]
 	defaultBranch = main
 	templatedir = ~/.config/git/template
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
 [gpg]
 	format = ssh

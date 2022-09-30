@@ -143,13 +143,17 @@ echo "\e[35mInstall universal-ctags:\e[39m https://github.com/universal-ctags/ct
 # tmux installation
 # sudo apt install -y tmux
 git clone https://github.com/tmux-plugins/tpm $XDG_CACHE_HOME/tmux/plugins/tpm
-sudo apt install -y urlview
+# sudo apt install -y urlview
 $XDG_CACHE_HOME/tmux/plugins/tpm/bin/install_plugins
 echo "\e[35mInstall tmux plugins:\e[39m enter tmux > <C-b>I"
 
+# fasd installation
+git clone --depth 1 https://github.com/clvv/fasd.git
+cd fasd
+PREFIX=$HOME/.local make install
+cd SHOME; rm fasd
+
 # utils
-# sudo apt install -y hub
-# sudo apt install -y fasd
 # sudo apt install -y ripgrep
 # sudo apt install -y fd-find
 # sudo apt install -y duf

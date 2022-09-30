@@ -1,7 +1,0 @@
-[/]
-control-center=['<Primary><Shift><Alt>s']
-custom-keybindings=@as []
-email=['<Primary><Shift><Alt><Super>m']
-home=['<Primary><Shift><Alt><Super>h']
-terminal=['<Primary><Shift><Alt>t']
-www=['<Primary><Shift><Alt>f']

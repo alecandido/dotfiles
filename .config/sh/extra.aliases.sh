@@ -14,34 +14,6 @@ launch() {
   nohup $1 >/dev/null 2>&1 &
 }
 
-# weather
-weather() {
-  # defaults
-  city="Milan"
-  format=""
-
-  while getopts ":c:o" opt; do
-    case ${opt} in
-    c) # select city
-      city=$OPTARG
-      ;;
-    o) # format one line
-      format="?format=3"
-      ;;
-    \?)
-      echo "Usage: cmd [-c CITY] [-o]"
-      ;;
-    esac
-  done
-  curl "wttr.in/${city}${format}"
-}
-
-# Show term stuffs
-keys() {
-  # from arch wiki
-  xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-}
-
 showcolors() {
   # select colored element
   if [[ ! -z $1 && "$1" == "-b" ]]; then
@@ -121,12 +93,4 @@ rclone() {
   else
     command rclone "$@"
   fi
-}
-
-# get infos about a window
-win-info() {
-  xprop | awk '
-  /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
-  /^WM_NAME/{sub(/.* =/, "title:"); print}
-  '
 }
