@@ -206,7 +206,6 @@ Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Shell
-Plug 'z0mbix/vim-shfmt'
 Plug 'zdharma-continuum/zinit-vim-syntax'
 Plug 'meatballs/vim-xonsh'
 
@@ -225,7 +224,6 @@ Plug 'sbdchd/neoformat'
 " -------
 Plug 'jez/vim-superman' " manpages
 " Plug 'soywod/himalaya', {'rtp': 'vim'} " email client
-Plug 'itchyny/calendar.vim' " calendar
 Plug 'vim/killersheep' " just a game
 
 " Initialize plugin system
