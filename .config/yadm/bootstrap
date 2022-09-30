@@ -91,6 +91,12 @@ git clone https://github.com/tmux-plugins/tpm $XDG_CACHE_HOME/tmux/plugins/tpm
 $XDG_CACHE_HOME/tmux/plugins/tpm/bin/install_plugins
 echo "\e[35mInstall tmux plugins:\e[39m enter tmux > <C-b>I"
 
+# fasd installation
+git clone --depth 1 https://github.com/clvv/fasd.git
+cd fasd
+PREFIX=$HOME/.local make install
+cd SHOME; rm fasd
+
 # utils
 # sudo apt install -y ncdu
 # sudo apt install -y tldr && tldr -u
