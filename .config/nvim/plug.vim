@@ -206,7 +206,6 @@ Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Shell
-Plug 'z0mbix/vim-shfmt'
 Plug 'zdharma-continuum/zinit-vim-syntax'
 Plug 'meatballs/vim-xonsh'
 
