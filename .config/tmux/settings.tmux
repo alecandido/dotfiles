@@ -1,10 +1,7 @@
 # -- general -------------------------------------------------------------------
 
-#set -g default-terminal "st-256color" # colors!
-#set -g default-terminal "kitty" # kitty compatibility
-#set -g default-terminal "xterm-kitty" # try this if the previous one does not work
-set -g default-terminal "tmux-256color" # colors!
-set-option -g default-shell /bin/zsh
+set -g default-terminal "tmux-256color"
+set -g default-shell /bin/zsh
 setw -g xterm-keys on
 set -s escape-time 10                     # faster command sequences
 set -sg repeat-time 600                   # increase repeat timeout
@@ -20,9 +17,6 @@ set -g history-limit 5000                 # boost history
 
 # enable mouse events
 setw -g mouse on
-
-# retrieve selection while copying
-set -g @yank_action 'copy-pipe-no-clear'
 
 # -- display -------------------------------------------------------------------
 
