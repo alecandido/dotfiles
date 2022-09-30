@@ -14,33 +14,33 @@ source ~/.bashrc
 
 # yadm clone git@github.com:AleCandido/dotfiles.git
 # yadm bootstrap
-sudo apt install -y curl
-sudo apt install -y build-essential cmake autoconf libtool pkg-config
-sudo apt install -y subversion
+# sudo apt install -y curl
+# sudo apt install -y build-essential cmake autoconf libtool pkg-config
+# sudo apt install -y subversion
 
 # terminal installation
-sudo apt install -y kitty
+# sudo apt install -y kitty
 
 # sh
 touch ~/.config/sh/secrets
 
 # zsh
-sudo apt install -y zsh
+# sudo apt install -y zsh
 chsh --shell /bin/zsh $USER
-sudo apt install -y fonts-font-awesome
-echo "\e[35mInstall fonts:"
-echo "\e[39mhttps://drive.google.com/drive/u/1/folders/1ZCPEf7B7JsFb2CqANJV6xAY8o9xYjJP5"
+# sudo apt install -y fonts-font-awesome
+# echo "\e[35mInstall fonts:"
+# echo "\e[39mhttps://drive.google.com/drive/u/1/folders/1ZCPEf7B7JsFb2CqANJV6xAY8o9xYjJP5"
 
 # fortran installation
-sudo apt install -y gfortran
+# sudo apt install -y gfortran
 
 # python pip installation
-sudo apt install -y python3-distutils python3-venv
+# sudo apt install -y python3-distutils python3-venv
 # ensurepip is disabled in Debian/Ubuntu for the system python.
 #python3 -m ensurepip
-sudo apt-get install -y python3-pip
+# sudo apt-get install -y python3-pip
 pip install -U pip
-sudo apt remove -y python3-pip
+# sudo apt remove -y python3-pip
 export PATH="$HOME/.local/bin:$PATH"
 
 # --- through python
@@ -59,8 +59,8 @@ pipx install jill
 pipx install rich-cli
 
 # node installation
-curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt install -y nodejs
+# curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+# sudo apt install -y nodejs
 # pnpm installation
 mkdir -p $HOME/.local/share/pnpm
 curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
@@ -68,17 +68,17 @@ curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
 
 # --- through js
 pnpm add -g gitignore fixme
-pnpm add -g npms npms-cli
-pnpm add -g prettier prettier-plugin-toml
+# pnpm add -g npms npms-cli
+# pnpm add -g prettier prettier-plugin-toml
 pnpm add -g typescript
 pnpm add -g dockerfile-language-server-nodejs \
   graphql \
   graphql-language-service-cli \
   sql-language-server
 pnpm add -g @taplo/cli
-pnpm add -g serve
+# pnpm add -g serve
 # pnpm add -g elm @elm-tooling/elm-language-server elm-format
-pnpm add -g @bitwarden/cli
+# pnpm add -g @bitwarden/cli
 
 # deno installation
 curl -fsSL https://deno.land/x/install/install.sh | sh
@@ -88,8 +88,8 @@ deno run -A https://deno.land/x/aleph/install.ts
 deno install -A --unstable -n trex --no-check https://deno.land/x/trex/cli.ts
 
 # rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-export PATH="$HOME/.cargo/bin:$PATH"
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# export PATH="$HOME/.cargo/bin:$PATH"
 
 # --- through rust
 cargo install cargo-make
@@ -102,37 +102,37 @@ cargo install kmon
 rustup target add wasm32-unknown-unknown
 
 # go
-wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
-tar -C $HOME/.local -xzf go1.*.linux-amd64.tar.gz
-mv $HOME/.local/go $HOME/.go
-rm -f go1.*.linux-amd64.tar.gz
-export PATH="$HOME/.go/bin:$PATH"
+# wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
+# tar -C $HOME/.local -xzf go1.*.linux-amd64.tar.gz
+# mv $HOME/.local/go $HOME/.go
+# rm -f go1.*.linux-amd64.tar.gz
+# export PATH="$HOME/.go/bin:$PATH"
 
 # --- through go
-go get -v mvdan.cc/sh/v3/cmd/shfmt@latest
-go get -v github.com/cheat/cheat/cmd/cheat@latest
-go get -v github.com/sachaos/todoist@latest
+# go get -v mvdan.cc/sh/v3/cmd/shfmt@latest
+# go get -v github.com/cheat/cheat/cmd/cheat@latest
+# go get -v github.com/sachaos/todoist@latest
 
 # julia
-jill install --install-dir=$HOME/.local/julias
+# jill install --install-dir=$HOME/.local/julias
 # --- through julia
-julia -e 'using Pkg; Pkg.add("PackageCompiler")'
+# julia -e 'using Pkg; Pkg.add("PackageCompiler")'
 
 # lua
-sudo apt install -y lua5.3
+# sudo apt install -y lua5.3
 
 # java
-curl -s "https://get.sdkman.io?rcupdate=false" | bash
+# curl -s "https://get.sdkman.io?rcupdate=false" | bash
 
 # language headers
-sudo apt install -y python3-dev
-sudo apt install -y ruby-dev
+# sudo apt install -y python3-dev
+# sudo apt install -y ruby-dev
 
 # --- through ruby
-sudo gem install bundler
+# sudo gem install bundler
 
 # vim installation
-sudo apt install -y vim neovim
+# sudo apt install -y vim neovim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PlugInstall
@@ -141,30 +141,30 @@ vim +PlugInstall
 echo "\e[35mInstall universal-ctags:\e[39m https://github.com/universal-ctags/ctags"
 
 # tmux installation
-sudo apt install -y tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# sudo apt install -y tmux
+git clone https://github.com/tmux-plugins/tpm $XDG_CACHE_HOME/tmux/plugins/tpm
 sudo apt install -y urlview
-$HOME/.tmux/plugins/tpm/bin/install_plugins
+$XDG_CACHE_HOME/tmux/plugins/tpm/bin/install_plugins
 echo "\e[35mInstall tmux plugins:\e[39m enter tmux > <C-b>I"
 
 # utils
-sudo apt install -y hub
-sudo apt install -y fasd
-sudo apt install -y ripgrep
-sudo apt install -y fd-find
-sudo apt install -y duf
-sudo apt install -y htop
-sudo apt install -y ncdu
-sudo apt install -y tldr && tldr -u
-sudo apt install -y jq
-sudo apt install -y pdfgrep
-sudo apt install -y network-manager-vpnc-gnome
-sudo apt install -y rename
-sudo apt install -y bat
-sudo apt install -y git-extras
-sudo apt install -y thefuck figlet lolcat cowsay neofetch
+# sudo apt install -y hub
+# sudo apt install -y fasd
+# sudo apt install -y ripgrep
+# sudo apt install -y fd-find
+# sudo apt install -y duf
+# sudo apt install -y htop
+# sudo apt install -y ncdu
+# sudo apt install -y tldr && tldr -u
+# sudo apt install -y jq
+# sudo apt install -y pdfgrep
+# sudo apt install -y network-manager-vpnc-gnome
+# sudo apt install -y rename
+# sudo apt install -y bat
+# sudo apt install -y git-extras
+# sudo apt install -y thefuck figlet lolcat cowsay neofetch
 # snap
-sudo snap install btop
+# sudo snap install btop
 #
 git clone --depth 1 git@github.com:eth-p/bat-extras.git $HOME/.bin/bat-extras
 # sudo apt install -y rbenv
@@ -174,8 +174,8 @@ rm -rf bat-extras
 cd .. && rm -rf bat-extras
 
 # setup cheatsheets manager
-wget -O ~/.local/bin/cheatsheets https://raw.githubusercontent.com/cheat/cheat/master/scripts/git/cheatsheets
-chmod +x ~/.local/bin/cheatsheets
+wget -O $HOME/.local/bin/cheatsheets https://raw.githubusercontent.com/cheat/cheat/master/scripts/git/cheatsheets
+chmod +x $HOME/.local/bin/cheatsheets
 
 # himalaya email client
 # curl -sSL https://raw.githubusercontent.com/soywod/himalaya/master/install.sh | PREFIX=~/.local sh
@@ -187,44 +187,15 @@ chmod +x ~/.local/bin/cheatsheets
 # touch ~/Mail/aliases
 # pipx install mutt-ics
 
-# flatpak
-sudo apt install -y flatpak
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install -y telegram --app
-flatpak install -y xournalpp
-
-# gnome extensions
-sudo apt install -y gnome-tweaks
-sudo apt install -y gnome-tweak-tool
-
 # github-cli
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-sudo apt-add-repository https://cli.github.com/packages
-sudo apt update && sudo apt install -y gh
-gh extension install dlvhdr/gh-dash
-gh extension install gennaro-tedesco/gh-s
-gh extension install vilmibm/gh-screensaver
-# youtube CLI
-pipx install youtube-dl
-sudo apt install -y mpv
-sudo apt install -y libxext-dev
-pipx install ueberzug
-curl -sL "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" | tee $HOME/.bin/ytfzf >/dev/null && chmod 755 $HOME/.bin/ytfzf
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+# sudo apt-add-repository https://cli.github.com/packages
+# sudo apt update && sudo apt install -y gh
+# gh extension install dlvhdr/gh-dash
+# gh extension install gennaro-tedesco/gh-s
+# gh extension install vilmibm/gh-screensaver
 
-# ssh server
-sudo apt install -y openssh-server
-
-# zotero
-curl -sL https://github.com/retorquere/zotero-deb/releases/download/apt-get/install.sh | sudo bash
-sudo apt update
-sudo apt install -y zotero
-
-# clean up
-sudo apt autoremove -y
 # unpack encrypted files
 yadm decrypt
-
-# Interactive
-echo "Change default terminal emulator: https://itsfoss.com/change-default-terminal-ubuntu/"
 
 # vim: set ft=sh:
