@@ -1,6 +1,7 @@
 # vim: set filetype=conf:
 
 $pdf_mode = 1;
-$pdflatex = "lualatex -synctex=1 %O %S";
+$pdflatex = "pdflatex -synctex=1 %O %S";
 $xelatex = "xelatex -no-pdf -synctex=1 %O %S";
+$lualatex = "lualatex -synctex=1 %O %S";
 $pdf_previewer = 'evince';
