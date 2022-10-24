@@ -1,0 +1,4 @@
+[user]
+    signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ+GMlDVMmmaySlxSxUbUnHGSKL7M53eaGgE5NVTBRuy candido.ale@gmail.com
+
+# vim: set ft=gitconfig:
