@@ -72,7 +72,10 @@
 	# └───────────────┘
 	aa = add -A .
 	au = add -u
+	ai = add -i
+	ci = commit
 	cm = commit -m
+	csm = commit -S -m
 	co = checkout
 	st = status
 	br = branch
@@ -83,7 +86,7 @@
 	# └────────────────┘
 	cp = cherry-pick
 	coob = checkout --orphan
-	amend = commit --amend -m
+	amend = commit --amend
 
 	master = !git checkout master && git pull origin
 	unstage = reset HEAD --
@@ -153,15 +156,13 @@
 	ctags = "!.git/hooks/ctags"
 
 
-	ai = add -i
 	;#############
 	brc = rev-parse --abbrev-ref HEAD
 	bru = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
 	;#############
-	ci = commit
 	;co-authore-commit: https://github.com/nagoya-foundation/co-authored-commit
 	co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
-	ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
+	; ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
 	;#############
 	;cpa = cherry-pick --abort
 	;cpc = cherry-pick --continue
@@ -198,10 +199,6 @@
 	;psu = push -u
 	;pst = push --tags
 	;#############
-	;psom = push origin master
-	;psaom = push --all origin master
-	;psfom = push -f origin master
-	;psuom = push -u origin master
 	;psoc = !git push origin $(git brc)
 	;psaoc = !git push --all origin $(git brc)
 	;psfoc = !git push -f origin $(git brc)
@@ -221,25 +218,16 @@
 	;sb = status -s -b
 	;#############
 	pop = stash pop
+	drop = stash drop
 	;sa = stash apply
 	;sc = stash clear
-	;sd = stash drop
-	;sl = stash list
-	;sp = stash pop
 	;ss = stash save
 	;ssk = stash save -k
 	stash-num = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
 	;#############
-	;t = tag
-	;td = tag -d
-	;#############
 	;w = show
 	;wp = show -p
 	;wr = show -p --no-color
-	;#############
-	;svnr = svn rebase
-	;svnd = svn dcommit
-	;svnl = svn log --oneline --show-commit
 	;#############
 	;subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
 	;subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
@@ -255,10 +243,6 @@
 	;unassumeall = !git assumed | xargs git unassume
 	;assumeall = !git status -s | awk {'print $2'} | xargs git assume
 	;#############
-	;bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git release $1' -
-	;release = !sh -c 'git tag v$1 && git pst' -
-	;unrelease = !sh -c 'git tag -d v$1 && git pso :v$1' -
-	;merged = !sh -c 'git o master && git plom && git bd $1 && git rpo' -
 	;snap = !git stash save 'snapshot: $(date)' && git stash apply 'stash@{0}'
 	;bare = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
 	;whois = !sh -c 'git log -i -1 --author=\"$1\" --pretty=\"format:%an <%ae>\"' -
@@ -270,7 +254,7 @@
 	;ours = "!f() { git checkout --ours $@ && git add $@; }; f"
 	;theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	;subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
-	;human = name-rev --name-only --refs=refs/heads/*
+	human = name-rev --name-only --refs=refs/heads/*
 [pull]
 	rebase = true
 [filter "lfs"]
