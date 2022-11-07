@@ -43,6 +43,13 @@ let g:tex_superscripts= "[0-9a-zA-W.,:;+-<>/()=]"
 let g:tex_subscripts= "[0-9aehijklmnoprstuvx,+-/().]"
 
 
-" syntastic
-"let g:syntastic_quiet_messages = { 'regex': 'possible unwanted space at "{"' }
-"
+" ======
+" vimtex
+" ======
+" Disable custom warnings based on regexp
+let g:vimtex_quickfix_ignore_filters = []
+
+" Other quickfix settings
+let g:vimtex_quickfix_mode = 2
+let g:vimtex_quickfix_autoclose_after_keystrokes = 10
+
