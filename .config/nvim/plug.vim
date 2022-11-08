@@ -204,6 +204,7 @@ Plug 'dart-lang/dart-vim-plugin'
 " Plugin for LaTeX
 Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+Plug 'peterbjorgensen/sved'
 
 " Shell
 Plug 'zdharma-continuum/zinit-vim-syntax'

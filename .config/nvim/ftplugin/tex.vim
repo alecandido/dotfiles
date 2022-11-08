@@ -53,3 +53,7 @@ let g:vimtex_quickfix_ignore_filters = []
 let g:vimtex_quickfix_mode = 2
 let g:vimtex_quickfix_autoclose_after_keystrokes = 10
 
+" ====
+" sved
+" ====
+nmap <F4> :call SVED_Sync()<CR>
