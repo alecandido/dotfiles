@@ -95,8 +95,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 cargo install cargo-make
 cargo install --locked cargo-deny
 cargo install cargo-watch cargo-generate cargo-edit cargo-update cargo-hack
-cargo install exa git-delta sd topgrade battop
-cargo install --locked bat
+cargo install exa git-delta sd rm-improved zoxide bat
+cargo install eva tokei
+cargo install topgrade
 cargo install --locked trunk
 cargo install kmon
 rustup target add wasm32-unknown-unknown
@@ -152,7 +153,6 @@ sudo apt install texlive-luatex
 
 # utils
 sudo apt install -y hub
-sudo apt install -y fasd
 sudo apt install -y ripgrep
 sudo apt install -y fd-find
 sudo apt install -y duf
