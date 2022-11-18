@@ -11,4 +11,5 @@ vim.opt.maxmempattern = 10000
 --      - increase line saved per register
 vim.opt.shada = "'1000,f1,<500"
 
+vim.cmd("source $XDG_CONFIG_HOME/nvim/before/index.vim")
 vim.cmd("source $XDG_CONFIG_HOME/nvim/plug.vim")
