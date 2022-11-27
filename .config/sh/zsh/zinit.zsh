@@ -36,7 +36,6 @@ zinit wait lucid for \
     OMZP::cp \
     OMZP::dirhistory \
     OMZP::emoji-clock \
-    atload"unalias a s d f sd sf zz j" OMZP::fasd \
     OMZP::gem \
     OMZP::git-auto-fetch \
     OMZP::git-extras \
@@ -53,7 +52,8 @@ zinit wait lucid for \
     OMZP::rust \
     OMZP::thefuck \
     OMZP::tmux \
-    OMZP::urltools
+    OMZP::urltools \
+    atinit"unalias zi" OMZP::zoxide
     # OMZP::archlinux \
     # OMZP::globalias \
     # OMZP::npm \

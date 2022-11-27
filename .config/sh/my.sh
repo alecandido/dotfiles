@@ -102,12 +102,6 @@ export LESSHISTFILE=$XDG_CACHE_HOME/lesshst
 export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
 export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 
-# fasd
-eval "$(fasd --init auto)"
-_FASD_BACKENDS="$_FASD_BACKENDS viminfo recently-used"
-# remove 'passive' (just listing) fasd aliases
-unalias a s d f sd sf
-
 anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spool
 
 # sdkman

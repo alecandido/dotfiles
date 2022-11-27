@@ -26,7 +26,7 @@ function wake() {
     return 1
   fi
 
-  if (( ! $+commands[wakeonlan] )); then
+  if ((!$ + commands[wakeonlan])); then
     echo "ERROR: Can't find \"wakeonlan\".  Are you sure it's installed?"
     return 1
   fi
@@ -36,8 +36,8 @@ function wake() {
 
 # _arguments "1:device to wake:_files -W '$XDG_CONFIG_HOME/.wakeonlan'" && return 0
 
+eval "$(broot --print-shell-function zsh)"
+
 # ┌─────────┐
 # │ unalias │
 # └─────────┘
-
-
