@@ -79,14 +79,15 @@
 	co = checkout
 	st = status
 	br = branch
-	cob = checkout -b
+	sw = switch
 
 	# ┌────────────────┐
 	# │ Quite frequent │
 	# └────────────────┘
-	cp = cherry-pick
-	coob = checkout --orphan
+	orphan = switch --orphan
+	psuoc = !git push -u origin $(git branch-name)
 	amend = commit --amend
+	stull = !git stash && git pull && git pop
 
 	master = !git checkout master && git pull origin
 	unstage = reset HEAD --
@@ -94,34 +95,18 @@
 	# new repo
 	shallow = clone --depth 1
 
-	# tag
-	pytag = !git tag -a v$(python setup.py --version) -m
-
 	# revert
 	undo = reset --soft --keep HEAD^
 	unstage = reset HEAD --
 
-	# remove
-	delete-branch = !sh -c 'git branch -D $1 && git push origin :$1' -
+	# delte branch
+	br-rm = !sh -c 'git branch -D $1 && git push origin :$1' -
 
 	# enhanced diffs
 	chs = diff --compact-summary
 	diffm = diff --diff-filter=M
 	diffword = diff --word-diff
 	vimdiff = difftool -t vimdiff -y
-
-	# ┌─────┐
-	# │ lol │
-	# └─────┘
-	bringz = pull
-	chicken = add
-	hackzor = init
-	letcat = checkout
-	oanward = commit -m
-	ooanward = commit -am
-	rulz = push
-	violenz = rebase
-	yolo = "!git commit -m "\"$(curl -s http://whatthecommit.com/index.txt)\"
 
 	# history aliases
 	hist = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%C(white)\\ |\\ %s%C(green)%d\\ %C(blue)[%an]" --graph --date=short --decorate
@@ -136,10 +121,7 @@
 	timelog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
 
 	# search
-	f = "!git ls-files | grep -i"
-	fd = !git ls-files | grep -i
 	find = !git ls-files | grep -i
-	gr = grep
 	rg = "!git grep $1 `git show-ref --heads` #"
 
 	# info
@@ -148,19 +130,15 @@
 
 	# external
 	aliases = "!git config -l | grep alias | cut -c 7- | awk 'BEGIN { FS = \"=\" }; { printf \"%15s   %s\\n\", $1, $2 }'"
-	visual = !gitk --all&
 	rm-updated = "!f() { echo "Removing updated files matching the \"(grep)\" pattern: \\\"${1:-'^ M.*'}\\\""; echo; git status --porcelain | grep -v "^?" | grep "${1:-'^ M.*'}" | cut -c4- | xargs git rm --cached; }; f"
 	example-alias = "!f() { echo "value passed as parameter is ${1}"; }; f"
 
 	# ctags
 	ctags = "!.git/hooks/ctags"
 
-
 	;#############
 	branch-name = rev-parse --abbrev-ref HEAD
 	branch-full-name = rev-parse --abbrev-ref --symbolic-full-name "@{u}"
-	;#############
-	psuoc = !git push -u origin $(git branch-name)
 	;#############
 	rb = rebase
 	rba = rebase --abort
@@ -176,8 +154,6 @@
 	;subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	subup = submodule update --init --recursive
 	subpull = submodule update --remote --merge
-	;#############
-	sw = switch
 	;#############
 	;assume = update-index --assume-unchanged
 	;unassume = update-index --no-assume-unchanged
@@ -197,6 +173,19 @@
 	;theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	;subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	human = name-rev --name-only --refs=refs/heads/*
+
+	# ┌─────┐
+	# │ lol │
+	# └─────┘
+	bringz = pull
+	chicken = add
+	hackzor = init
+	letcat = checkout
+	oanward = commit -m
+	ooanward = commit -am
+	rulz = push
+	violenz = rebase
+	yolo = "!git commit -m "\"$(curl -s http://whatthecommit.com/index.txt)\"
 [pull]
 	rebase = true
 [filter "lfs"]
