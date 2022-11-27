@@ -130,3 +130,28 @@ win-info() {
   /^WM_NAME/{sub(/.* =/, "title:"); print}
   '
 }
+
+# stopwatch and countdown - thanks https://superuser.com/a/611582/1278707
+countdown() {
+  start="$(($(date +%s) + $1))000000000"
+  while [ "$start" -ge $(date +%s%N) ]; do
+    time=$(($start - $(date +%s%N)))
+    nano=$(($time % 1000000000))
+    seconds=$(($time / 1000000000))
+    days=$(($seconds / 86400))
+    printf '%s day(s) and %s\r' "$days" "$(date -u -d "@$seconds" +%H:%M:%S).${nano::2}"
+    sleep 0.1
+  done
+}
+
+stopwatch() {
+  start=$(date +%s%N)
+  while true; do
+    time=$(($(date +%s%N) - $start))
+    nano=$(($time % 1000000000))
+    seconds=$(($time / 1000000000))
+    days=$(($seconds / 86400))
+    printf '%s day(s) and %s\r' "$days" "$(date -u -d "@$seconds" +%H:%M:%S).${nano::2}"
+    sleep 0.1
+  done
+}
