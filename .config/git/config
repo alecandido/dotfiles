@@ -157,82 +157,24 @@
 
 
 	;#############
-	brc = rev-parse --abbrev-ref HEAD
-	bru = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+	branch-name = rev-parse --abbrev-ref HEAD
+	branch-full-name = rev-parse --abbrev-ref --symbolic-full-name "@{u}"
 	;#############
-	;co-authore-commit: https://github.com/nagoya-foundation/co-authored-commit
-	co-commit = "!co_authored_commit(){ usage='usage: git commit -m \"Commit message\" --co \"co_author_name\"\n'; while [ \"${#}\" -gt 0 ]; do case \"${1}\" in -m) shift; message="${1}"; shift;; --co) shift; co_author=\"Co-authored-by: \"${1}\"\n\"; co_authors=\"${co_authors}${co_author}\"; shift;; *) shift;; esac; done; if [ -z \"${co_authors}\" ]; then echo ${usage}; exit 1; fi; if [ -z \"${message}\" ]; then echo ${usage}; exit 1; fi; co_authored_message=\"${message}\n\n\n${co_authors}\"; git commit -m \"${co_authored_message}\"; }; co_authored_commit"
-	; ccfhm = "co-commit --co \"Felix Hekhorn <felixhekhorn@users.noreply.github.com>\""
+	psuoc = !git push -u origin $(git branch-name)
 	;#############
-	;cpa = cherry-pick --abort
-	;cpc = cherry-pick --continue
-	;#############
-	;dp = diff --patience
-	;dc = diff --cached
-	;dk = diff --check
-	;dck = diff --cached --check
-	;dt = difftool
-	;dct = difftool --cached
-	;#############
-	;opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
-	;#############
-	;pr = prune -v
-	;#############
-	;pl = pull
-	;pb = pull --rebase
-	;#############
-	;plo = pull origin
-	;pbo = pull --rebase origin
-	;plom = pull origin master
-	;ploc = !git pull origin $(git bc)
-	;pbom = pull --rebase origin master
-	;pboc = !git pull --rebase origin $(git bc)
-	;#############
-	;plu = pull upstream
-	;plum = pull upstream master
-	;pluc = !git pull upstream $(git bc)
-	;pbum = pull --rebase upstream master
-	;pbuc = !git pull --rebase upstream $(git bc)
-	;#############
-	;ps = push
-	;psf = push -f
-	;psu = push -u
-	;pst = push --tags
-	;#############
-	;psoc = !git push origin $(git brc)
-	;psaoc = !git push --all origin $(git brc)
-	;psfoc = !git push -f origin $(git brc)
-	psuoc = !git push -u origin $(git brc)
-	;psdc = !git push origin :$(git brc)
-	;#############
-	;rb = rebase
-	;rba = rebase --abort
-	;rbc = rebase --continue
-	;rbi = rebase --interactive
-	;rbs = rebase --skip
-	;#############
-	;rmf = rm -f
-	;rmrf = rm -r -f
-	;#############
-	;s = status
-	;sb = status -s -b
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase --interactive
+	rbs = rebase --skip
 	;#############
 	pop = stash pop
 	drop = stash drop
-	;sa = stash apply
-	;sc = stash clear
-	;ss = stash save
-	;ssk = stash save -k
 	stash-num = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
-	;#############
-	;w = show
-	;wp = show -p
-	;wr = show -p --no-color
 	;#############
 	;subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
 	;subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
-	; subup = submodule update --init --recursive
-	; subpull = !git submodule foreach git pull --tags origin master
+	subup = submodule update --init --recursive
 	subpull = submodule update --remote --merge
 	;#############
 	sw = switch
