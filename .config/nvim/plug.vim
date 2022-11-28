@@ -141,7 +141,7 @@ Plug 'plasticboy/vim-markdown'
 " Plug 'vim-pandoc/vim-pandoc-after'
 
 " ReStructuredText
-Plug 'gu-fan/riv.vim'
+Plug 'gu-fan/riv.vim', { 'for': 'rst' }
 " Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
 
 " Data
@@ -186,7 +186,7 @@ Plug 'tpope/vim-haml'
 Plug 'stephenway/postcss.vim'
 
 " Plugin for HTML
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'markdown', 'markdown.mdx', 'pandoc'] }
 Plug 'Glench/Vim-Jinja2-Syntax'
 " Jekyll
 Plug 'parkr/vim-jekyll'
