@@ -17,18 +17,27 @@ noremap $                        L
 " to run command and keep position
 " Map commands in visual mode with <C-c>
 " to kill selection before
-nnoremap  <silent> <C-s>          :update<CR>
+nnoremap <silent> <C-s>          :update<CR>
 vnoremap <silent> <C-s>          <C-c>:update<CR>
 inoremap <silent> <C-s>          <C-o>:update<CR>
 noremap  <silent> <C-q>          :qa<CR>
 vnoremap <silent> <C-q>          <C-c>:qa<CR>
 inoremap <silent> <C-q>          <C-o>:qa<CR>
-nnoremap  <silent> <C-w>          :bd<CR>
-vnoremap <silent> <C-w>          <C-c>:bd<CR>
-inoremap <silent> <C-w>          <C-o>:bd<CR>
-nnoremap  <silent> <C-a>          ggVG<CR>
+nnoremap <silent> <C-a>          ggVG<CR>
 vnoremap <silent> <C-a>          <C-c>ggVG<CR>
 inoremap <silent> <C-a>          <Esc>ggVG<CR>
+
+" close buffer without closing the window
+function s:bufclose()
+    bprevious
+    split
+    bnext
+    bdelete
+endfunction
+
+nnoremap <silent> <C-w>          :call <SID>bufclose()<CR>
+vnoremap <silent> <C-w>          <C-c>:call <SID>bufclose()<CR>
+inoremap <silent> <C-w>          <C-o>:call <SID>bufclose()<CR>
 
 
 " Normal mode
@@ -45,8 +54,10 @@ nnoremap Y                       y$
 nnoremap <silent> <leader>sv     :call vimrc#SourceVimrc()<CR>
 
 " move down
-nnoremap <A-d>                    :normal! <C-d><CR>
-nnoremap <A-f>                    :normal! <C-u><CR>
+nnoremap <silent> <A-d>          :normal! <C-d><CR>
+nnoremap <silent> <A-f>          :normal! <C-u><CR>
+nnoremap <silent> <A-e>          :normal! <C-b><CR>
+nnoremap <silent> <A-r>          :normal! <C-f><CR>
 
 " Map increment/decrement
 nnoremap <A-a>                   <C-a>
