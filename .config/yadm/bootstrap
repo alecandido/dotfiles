@@ -97,6 +97,7 @@ cargo install cargo-make cargo-edit cargo-watch cargo-generate cargo-deny
 cargo install exa zoxide broot rm-improved bat git-delta sd procs dua watchexec
 cargo install kmon eva tokei hexyl
 cargo install topgrade
+cargo install stylua --features luau
 # cargo install trunk
 rustup target add wasm32-unknown-unknown
 
