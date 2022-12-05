@@ -100,13 +100,10 @@ noremap <silent> <S-PageDown> :bnext<CR>
 " Function keys
 " -------------
 
-" toggle paste mode
-set pastetoggle=<F3>
+" open nvim-tree in split
+noremap <silent> <F2> :NvimTreeToggle<CR>
 
 " <F5> is reserved for open "undotree"
-
-" open vimfiler in split
-noremap <silent> <F6> :NvimTreeToggle<CR>
 
 " <F7> is reserved for open "local index" (like markdown)
 
