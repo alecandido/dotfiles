@@ -65,10 +65,6 @@ Plug 'liuchengxu/vista.vim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 
-" File browser
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim'
-
 " values
 Plug 'tpope/vim-characterize'
 

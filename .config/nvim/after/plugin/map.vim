@@ -91,7 +91,7 @@ noremap <silent> <C-PageUp> :tabprevious<CR>
 noremap <silent> <C-PageDown> :tabnext<CR>
 noremap <silent> <M-PageUp> :tabmove +1<CR>
 noremap <silent> <M-PageDown> :tabmove -1<CR>
-noremap <silent> <C-t> :VimFilerTab<CR>
+noremap <silent> <C-t> :tabedit .<CR>
 
 " buffers
 noremap <silent> <S-PageUp> :bprevious<CR>
