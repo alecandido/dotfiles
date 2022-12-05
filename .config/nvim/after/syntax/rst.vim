@@ -15,17 +15,15 @@ let b:af_rst_loaded = 1
 let s:cpo_save = &cpo
 set cpo-=C
 
-let s:s = g:_riv_s
-
 syn sync match rstHighlight groupthere NONE #^\_s\@!#
 
 " Link "{{{1
 fun! s:def_inline_char(name, start, end, char_left, char_right) "{{{
     exe 'syn match rst'.a:name
-      \ '+'.a:char_left.'\zs'.a:start.'\ze[^[:space:]'
-      \.a:char_right.a:start[strlen(a:start)-1].'][^'
-      \.a:start[strlen(a:start)-1]
-      \.'\\]*'.a:end.'\ze\%($\|\s\|[''")\]}>/:.,;!?\\-]\)+'
+                \ '+'.a:char_left.'\zs'.a:start.'\ze[^[:space:]'
+                \.a:char_right.a:start[strlen(a:start)-1].'][^'
+                \.a:start[strlen(a:start)-1]
+                \.'\\]*'.a:end.'\ze\%($\|\s\|[''")\]}>/:.,;!?\\-]\)+'
 endfun "}}}
 
 for s:_pair in ['""', "''", '()', '{}', '<>']
@@ -45,18 +43,13 @@ syn match rstBibliographicField `\v^\s*:(Author|Authors|Organization|Contact|Add
 
 syn match rstBlockQuoteAttr  `\v%(\_^\s*\n)@<=\s+---=\s.*`
 
-syn match   rstCommentTitle '\v(^\s+|(^\.\.\s+)@<=):=\u\w*(\s+\u\w*)*:' contained 
+syn match   rstCommentTitle '\v(^\s+|(^\.\.\s+)@<=):=\u\w*(\s+\u\w*)*:' contained
 syn cluster rstCommentGroup contains=rstCommentTitle,rstTodo
 
 
 " File: "{{{1
 syn cluster rstCruft add=rstStandaloneHyperlink
 syn cluster rstCommentGroup add=@rstLinkGroup
-if g:riv_file_ext_link_hl == 1
-    exe 'syn match rstFileExtLink &'.s:s.rstFileExtLink.'& contains=rstFileExtLinkConceal'
-    exe 'syn match rstFileExtLinkConceal &\v\.rst(\_s)@=& conceal contained'
-    syn cluster rstCruft add=rstFileExtLink
-endif
 
 " Code: "{{{1
 
@@ -66,71 +59,19 @@ syn match rstCodeBlockIndicator `^\_.` contained
 " FIXME To Fix #61 ( Not Working!!!)
 " For no code file contained , we still highlight in code group.
 exe 'syn region rstDirective_code matchgroup=rstDirective fold '
-    \.'start=#\%(sourcecode\|code\%(-block\)\=\)::\s\+\S\+\s*$# '
-    \.'skip=#^$# '
-    \.'end=#^\s\@!# contains=@NoSpell,rstCodeBlockIndicator,@rst_code'
+            \.'start=#\%(sourcecode\|code\%(-block\)\=\)::\s\+\S\+\s*$# '
+            \.'skip=#^$# '
+            \.'end=#^\s\@!# contains=@NoSpell,rstCodeBlockIndicator,@rst_code'
 exe 'syn cluster rstDirectives add=rstDirective_code'
-" TODO Can we use dynamical loading? 
+" TODO Can we use dynamical loading?
 " parse the code name of code directives dynamicly and load the syntax file?
 
 if exists("b:af_py_loaded")
     finish
 endif
-for code in g:_riv_t.highlight_code
-    " for performance , use $VIMRUNTIME and first in &rtp
-    let path = join([$VIMRUNTIME, split(&rtp,',')[0]],',')
-
-    " NOTE: As pygments are using differnet syntax name versus vim.
-    " The highlight_code will contain a name pair, which is pygments|vim
-    
-    if code =~ '[^|]\+|[^|]\+'
-        let [pcode, vcode] = split(code, '|')
-    else
-        let [pcode, vcode] = [code, code]
-    endif
-    
-    " NOTE: the syntax_group_name must be words only.
-    let scode = substitute(pcode, '[^0-9a-zA-Z]', 'x','g')
-
-    let paths = split(globpath(path, "syntax/".vcode.".vim"), '\n')
-   
-    if !empty(paths)
-        let s:rst_{vcode}path= paths[0]
-        if filereadable(s:rst_{vcode}path)
-            unlet! b:current_syntax
-            " echohl WarningMsg 
-            " echom "SYN INCLUDE ". scode
-            " echohl None
-            " echom fnameescape(s:rst_{vcode}path)
-            " echom "syntax/".vcode.".vim"
-          
-            " " NOTE: Use this can not include correctly.
-            " (maybe with space in 'program file' dir name)
-            " exe "syn include @rst_".scode." ".s:{vcode}path
-           
-            exe "syn include @rst_".scode." "."syntax/".vcode.".vim"
-            exe 'syn region rstDirective_'.scode.' matchgroup=rstDirective fold '
-                \.'start=#\%(sourcecode\|code\%(-block\)\=\)::\s\+'.pcode.'\s*$# '
-                \.'skip=#^$# '
-                \.'end=#^\s\@!# contains=@NoSpell,rstCodeBlockIndicator,@rst_'.scode
-            exe 'syn cluster rstDirectives add=rstDirective_'.scode
-
-            " For sphinx , the highlight directive can be used for highlighting
-            " code block
-            exe 'syn region rstDirective_hl_'.scode.' matchgroup=rstDirective fold '
-                \.'start=#highlights::\s\+'.pcode.'\_s*# '
-                \.'skip=#^$# '
-                \.'end=#\_^\(..\shighlights::\)\@=# contains=@NoSpell,@rst_'.scode
-            exe 'syn cluster rstDirectives add=rstDirective_hl_'.scode
-        endif
-        if exists("s:rst_".vcode."path")
-            unlet s:rst_{vcode}path
-        endif
-    endif
-endfor
 let b:current_syntax = "rst"
 
-if !exists("g:_riv_including_python_rst") && has("spell")
+if !exists("g:_rst_including_python_rst") && has("spell")
     " Enable spelling on the whole file if we're not being included to parse
     " docstrings
     syn spell toplevel
@@ -138,15 +79,6 @@ endif
 
 " Todo: "{{{1
 syn cluster rstTodoGroup contains=rstTodoItem,rstTodoPrior,rstTodoTmBgn,rstTodoTmsEnd
-
-exe 'syn match rstTodoRegion `' . s:s.rstTodoRegion .'` transparent contains=@rstTodoGroup'
-
-exe 'syn match rstTodoItem `'.s:s.rstTodoItem.'` contained nextgroup=rstTodoPrior'
-exe 'syn match rstTodoPrior `'.s:s.rstTodoPrior.'` contained nextgroup=rstTodoTmBgn'
-exe 'syn match rstTodoTmBgn `'.s:s.rstTodoTmBgn.'` contained nextgroup=rstTodoTmEnd'
-exe 'syn match rstTodoTmEnd `'.s:s.rstTodoTmEnd.'` contained'
-
-exe 'syn match rstDoneRegion `' . s:s.rstDoneRegion .'`'
 
 " Highlights: "{{{1
 if &background == 'light'
@@ -157,7 +89,7 @@ endif
 hi link rstFileExtLink rstFileLink
 hi link rstFileExtLinkConceal rstFileLink
 
-if exists("g:riv_code_indicator") && g:riv_code_indicator == 1
+if exists("g:rst_code_indicator") && g:rst_code_indicator == 1
     hi def link rstCodeBlockIndicator DiffAdd
 endif
 
