@@ -106,7 +106,7 @@ set pastetoggle=<F3>
 " <F5> is reserved for open "undotree"
 
 " open vimfiler in split
-noremap <silent> <F6> :VimFilerSplit<CR>
+noremap <silent> <F6> :NvimTreeToggle<CR>
 
 " <F7> is reserved for open "local index" (like markdown)
 
