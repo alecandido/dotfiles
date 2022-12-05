@@ -43,3 +43,6 @@ let g:instant_rst_slow = 1
 " ---------------
 "  <C-e> already used by riv.vim
 "  <C-e>s# for title of depth #
+
+let g:riv_i_tab_pum_next = 1
+

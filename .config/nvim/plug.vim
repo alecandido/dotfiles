@@ -33,6 +33,7 @@ Plug 'svermeulen/vim-yoink'
 
 " Plugin for autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocUpdate'}
+Plug 'rafcamlet/coc-nvim-lua'
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -61,9 +62,8 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'liuchengxu/vista.vim'
 
 " Project tree
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
 
 " File browser
 Plug 'Shougo/unite.vim'
@@ -141,7 +141,7 @@ Plug 'plasticboy/vim-markdown'
 " Plug 'vim-pandoc/vim-pandoc-after'
 
 " ReStructuredText
-Plug 'gu-fan/riv.vim', { 'for': 'rst' }
+" Plug 'gu-fan/riv.vim', { 'for': 'rst' }
 " Plug 'gu-fan/InstantRst', { 'do': 'pip install https://github.com/gu-fan/instant-rst.py/archive/master.zip' }
 
 " Data
