@@ -120,6 +120,8 @@ zinit wait lucid for \
 # zinit wait lucid for \
      # wfxr/forgit
 
+zinit light ellie/atuin
+
 # Prompt theme
 # ------------
 zinit ice depth=1; zinit light romkatv/powerlevel10k
