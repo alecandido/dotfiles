@@ -45,6 +45,7 @@ export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 
 # Julia
 # export PATH="$PATH:$HOME/.julia/bin"
+export JULIA_DEPOT_PATH="$XDG_CACHE_HOME/julia"
 
 # Swift
 export PATH="$PATH:$HOME/.swift/bin"
