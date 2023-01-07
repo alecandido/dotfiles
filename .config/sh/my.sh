@@ -113,3 +113,7 @@ anacron -t ${HOME}/.config/anacron/etc/anacrontab -S ${HOME}/.config/anacron/spo
 # sdkman
 export SDKMAN_DIR=$HOME/.sdkman
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+
+# enable ssh agent
+eval $(ssh-agent) >/dev/null
+ssh-add 2>/dev/null

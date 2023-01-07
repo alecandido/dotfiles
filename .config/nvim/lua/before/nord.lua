@@ -12,6 +12,7 @@ vim.cmd([[
         autocmd ColorScheme nord highlight VertSplit guibg=NONE
         " Swap foreground and background color in cterm selection
         autocmd ColorScheme nord highlight Visual cterm=reverse
+        autocmd ColorScheme nord highlight Folded ctermfg='4' ctermbg='0' cterm=italic guifg='#81A1C1' guibg='#2E3440' gui=italic
     augroup END
 ]])
 

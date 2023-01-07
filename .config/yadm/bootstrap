@@ -109,9 +109,10 @@ rm -f go1.*.linux-amd64.tar.gz
 export PATH="$HOME/.go/bin:$PATH"
 
 # --- through go
-go get -v mvdan.cc/sh/v3/cmd/shfmt@latest
-go get -v github.com/cheat/cheat/cmd/cheat@latest
-go get -v github.com/sachaos/todoist@latest
+go install -v mvdan.cc/sh/v3/cmd/shfmt@latest
+go install -v github.com/cheat/cheat/cmd/cheat@latest
+go install -v github.com/sachaos/todoist@latest
+go install -v github.com/sachaos/viddy@latest
 
 # julia
 jill install --install-dir=$HOME/.local/julias
