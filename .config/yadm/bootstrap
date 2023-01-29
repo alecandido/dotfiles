@@ -71,6 +71,7 @@ pnpm add -g gitignore fixme
 pnpm add -g npms npms-cli
 pnpm add -g prettier prettier-plugin-toml
 pnpm add -g typescript
+pnpm add -g js-beautify typescript-formatter remark-cli
 pnpm add -g dockerfile-language-server-nodejs \
   graphql \
   graphql-language-service-cli \
@@ -124,6 +125,11 @@ sudo apt install -y lua5.3
 
 # java
 curl -s "https://get.sdkman.io?rcupdate=false" | bash
+
+# haskell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+# --- thorugh haskell
+stack install hlint
 
 # language headers
 sudo apt install -y python3-dev

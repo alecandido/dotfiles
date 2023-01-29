@@ -54,6 +54,9 @@ export LIBRARY_PATH="$LIBRARY_PATH:$HOME/.swift/lib/"
 export CPATH=$CPATH:$HOME/.local/include
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/.local/lib/
 
+# Haskell
+source $HOME/.ghcup/env
+
 # Vim plugins
 export PATH=$PATH:$XDG_CACHE_HOME/nvim/plugged/fzf/bin
 

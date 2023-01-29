@@ -13,7 +13,7 @@
     "graphql": {
       "command": "graphql-lsp",
       "args": ["server", "-m", "stream"],
-      "filetypes": ["typescript", "typescriptreact", "graphql"]
+      "filetypes": ["graphql"]
     },
     "digestif": {
       "command": "digestif",
@@ -23,10 +23,36 @@
       "command": "elm-language-server",
       "filetypes": ["elm"],
       "rootPatterns": ["elm.json"]
+    },
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+        ".stack.yaml",
+        ".hie-bios",
+        "BUILD.bazel",
+        "cabal.config",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
+      "initializationOptions": {
+        "languageServerHaskell": {
+          "hlintOn": true,
+          "maxNumberOfProblems": 10,
+          "completionSnippetsOn": true
+        }
+      }
     }
   },
   "coc.preferences.extensionUpdateCheck": "daily",
   "coc.source.emoji.filetypes": ["markdown", "markdown.mdx", "pandoc"],
+  "npm.binPath": "pnpm",
   "codeLens.enable": true,
   "svelte.enable-ts-plugin": true,
   "snippets.ultisnips.pythonPrompt": false
