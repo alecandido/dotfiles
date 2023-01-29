@@ -36,11 +36,11 @@ setlocal formatoptions+=t
 " plasticboy/vim-markdown configurations
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_fenced_languages = ['c++=cpp',
-                                        \'viml=vim',
-                                        \'bash=sh',
-                                        \'ini=dosini',
-                                        \'shell=sh'
-                                        \]
+            \'viml=vim',
+            \'bash=sh',
+            \'ini=dosini',
+            \'shell=sh'
+            \]
 let g:vim_markdown_math = 1
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
@@ -66,3 +66,7 @@ if has('nvim') != 1
 endif
 
 noremap <silent> <M-i> :call <SID>TocToggle()<CR>
+
+" Neoformat
+" ---------
+autocmd! fmt
