@@ -10,7 +10,7 @@ set updatetime=300
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
-let g:coc_data_home="~/.cache/coc"
+let g:coc_data_home="$XDG_CACHE_HOME/coc"
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
