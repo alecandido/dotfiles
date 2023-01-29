@@ -115,6 +115,9 @@ Plug 'easymotion/vim-easymotion'
 " Slides
 Plug 'sotte/presenting.vim'
 
+" GhostText
+Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()', 'for': 'ghosttext'}
+
 " -------------------------
 " Natural languages plugins
 " -------------------------
