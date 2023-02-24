@@ -63,7 +63,7 @@ Plug 'liuchengxu/vista.vim'
 
 " Project tree
 Plug 'nvim-tree/nvim-web-devicons'
-Plug 'nvim-tree/nvim-tree.lua'
+" Plug 'nvim-tree/nvim-tree.lua'
 
 " values
 Plug 'tpope/vim-characterize'
