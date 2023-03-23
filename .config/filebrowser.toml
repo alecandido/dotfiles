@@ -1,0 +1,6 @@
+port = 7113
+baseURL = "/f"
+address = ""
+log = ""
+database = "~/.cache/filebrowser.db"
+root = "/home/alessandro/"
