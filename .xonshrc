@@ -1,2 +1,0 @@
-source-bash $HOME/.sh/shrc
-source $HOME/.sh/xonsh/xonshrc
