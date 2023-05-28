@@ -12,7 +12,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
 # Mybin
-export PATH=$PATH:~/.bin
+export PATH=$PATH:~/.my/bin
 export PATH=$PATH:~/.local/bin
 
 # flatpak

@@ -1,4 +1,0 @@
-#!/bin/sh
-$BROWSER $(cat $1)
-
-# thanks: https://b1thunt3r.se/2010/01/url-files-in-linux-gnome

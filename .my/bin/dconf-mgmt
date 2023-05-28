@@ -1,0 +1,90 @@
+#!/bin/bash
+
+config_dir=~/.config/dconf
+mgmt_config=$config_dir/save.json
+mgmt_storage=$config_dir/saved
+
+save() {
+  updated=0
+  mkdir -p $mgmt_storage
+
+  echo -n "Dumping dconf options..."
+
+  for info in $(jq -c '.[]' $mgmt_config); do
+    name=$(jq -r '.name' <<<"$info")
+    path=$(jq -r '.path' <<<"$info")
+
+    filename=$mgmt_storage/$name
+    if [ -f $filename ]; then
+      cp $filename ${filename}_old
+    else
+      touch ${filename}_old
+    fi
+
+    dconf dump $path >$filename
+
+    diff $filename ${filename}_old >/dev/null
+    if [ $? -ne 0 ]; then
+      updated=1
+      echo -ne "\nSaved: $name"
+    fi
+    rm -f ${filename}_old
+  done
+
+  # echo nothing_done $nothing_done
+  if [ $updated -eq 1 ]; then
+    echo
+  else
+    echo " nothing done."
+  fi
+}
+
+load() {
+  updated=0
+  echo -n "Loading dconf options..."
+
+  for info in $(jq -c '.[]' $mgmt_config); do
+    name=$(jq -r '.name' <<<"$info")
+    path=$(jq -r '.path' <<<"$info")
+
+    filename=$mgmt_storage/$name
+    if [ -f $filename ]; then
+      dconf load $path <$filename
+      updated=1
+      echo -ne "\nLoaded: $name"
+    fi
+  done
+
+  # echo nothing_done $nothing_done
+  if [ $updated -eq 1 ]; then
+    echo
+  else
+    echo " nothing done."
+  fi
+}
+
+help() {
+  cli_name=${0##*/}
+  echo "$cli_name
+Usage: $cli_name [command]
+
+Commands:
+  save      Dump dconf entries on files
+  load      Load dconf entries from files
+  edit      Edit this manager configurations
+  *         Print this help
+
+Configurations for this CLI are stored in $mgmt_config"
+}
+
+case "$1" in
+save | load)
+  "$1"
+  ;;
+edit)
+  $EDITOR $mgmt_config
+  ;;
+*)
+  help
+  ;;
+esac
