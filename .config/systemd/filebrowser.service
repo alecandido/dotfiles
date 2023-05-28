@@ -1,0 +1,8 @@
+[Unit]
+Description=Filebrowser
+
+[Service]
+ExecStart=/usr/local/bin/filebrowser -c %h/.config/filebrowser.toml -d %h/.cache/filebrowser.db
+
+[Install]
+WantedBy=multi-user.target
