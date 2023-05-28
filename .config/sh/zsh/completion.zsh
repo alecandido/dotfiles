@@ -18,8 +18,6 @@ fi
 # │ program specific │
 # └──────────────────┘
 
-source <(inv --print-completion-script zsh)
-
 # pip zsh completion
 if [ ! -f "$HOME/.zinit/completions/_pip" ]; then
     pip completion --zsh >$HOME/.zinit/completions/_pip

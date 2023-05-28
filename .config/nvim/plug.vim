@@ -63,7 +63,7 @@ Plug 'liuchengxu/vista.vim'
 
 " Project tree
 Plug 'nvim-tree/nvim-web-devicons'
-" Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-tree.lua'
 
 " values
 Plug 'tpope/vim-characterize'
@@ -88,9 +88,6 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-tbone'
-
-" Docstring generation
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 " Color scheme
 Plug 'arcticicestudio/nord-vim'
