@@ -47,7 +47,7 @@ zinit wait lucid for \
     OMZP::man \
     OMZP::node \
     OMZP::pylint \
-    OMZP::python \
+    atload"unalias ipython" OMZP::python \
     OMZP::rbenv \
     OMZP::rsync \
     OMZP::rust \
