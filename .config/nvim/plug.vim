@@ -184,9 +184,6 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 " Jekyll
 Plug 'parkr/vim-jekyll'
 
-" Rust
-Plug 'rust-lang/rust.vim'
-
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
