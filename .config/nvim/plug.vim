@@ -185,7 +185,7 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'parkr/vim-jekyll'
 
 " Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
