@@ -127,6 +127,7 @@ application/vnd.rar=org.gnome.Evince.desktop;org.gnome.Nautilus.desktop;
 application/x-trash=org.gnome.TextEditor.desktop;
 application/vnd.apple.mpegurl=org.gnome.TextEditor.desktop;
 text/x-c++hdr=org.gnome.TextEditor.desktop;
+text/x-python-script=org.gnome.TextEditor.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-gui.desktop;
